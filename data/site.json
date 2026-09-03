@@ -51,16 +51,8 @@
   ],
   "skills": [
     {
-      "group": { "id": "Bahasa & Tools", "en": "Languages & Tools" },
-      "items": ["Python", "JavaScript", "SQL", "Bash", "Git"]
-    },
-    {
-      "group": { "id": "Data & Analisis", "en": "Data & Analytics" },
-      "items": ["Pandas", "NumPy", "scikit-learn", "Data Pipeline", "Web Scraping"]
-    },
-    {
-      "group": { "id": "Web", "en": "Web" },
-      "items": ["HTML/CSS", "Node.js", "REST API", "Static Sites"]
+      "group": { "id": "Keahlian", "en": "Skills" },
+      "items": ["Data Analisis", "Machine Learning"]
     }
   ],
   "experience": [
@@ -83,12 +75,12 @@
       }
     },
     {
-      "period": "now",
-      "org": "Open University",
-      "role": { "id": "Mahasiswa", "en": "Student" },
+      "period": "2024 — now",
+      "org": "Universitas Terbuka",
+      "role": { "id": "S1 Ilmu Hukum", "en": "Bachelor of Laws (LL.B.)" },
       "desc": {
-        "id": "Pendidikan tinggi dengan fokus pada bidang hukum.",
-        "en": "Higher education with a focus on field of law."
+        "id": "Mahasiswa aktif.",
+        "en": "Undergraduate Law Student."
       }
     }
   ],
@@ -100,7 +92,7 @@
       "switchHref": "/en/",
       "switchLabel": "Switch to English",
       "title": "sugarate — Landing Page",
-      "description": "Halaman pribadi Sugarate (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
+      "description": "Halaman pribadi sugarate (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
       "nav": {
         "about": "Tentang",
         "projects": "Proyek",
@@ -111,7 +103,7 @@
       "hero": {
         "eyebrow": "Halo, saya",
         "title": "sugarate",
-        "tagline": "data engineer.",
+        "tagline": "Data Engineer, sedang menempuh pendidikan sarjana hukum",
         "lead": "Saya membangun alat berbasis data untuk memahami pasar saham Indonesia — dari scraper, pipeline, sampai model prediksi. Analisis pakai data, bukan feeling.",
         "ctaPrimary": "Lihat proyek",
         "ctaSecondary": "Hubungi saya",
@@ -124,7 +116,7 @@
         "factsHeading": "Fakta singkat",
         "facts": [
           { "k": "Basis", "v": "Semarang, ID" },
-          { "k": "Fokus", "v": "Data, Hukum & Pasar Modal" },
+          { "k": "Fokus", "v": "Data, Hukum, Machine Learning" },
           { "k": "Bahasa utama", "v": "Python" },
           { "k": "Repositori publik", "v": "28+" }
         ]
@@ -157,8 +149,8 @@
       "switchTo": "ID",
       "switchHref": "/",
       "switchLabel": "Ganti ke Bahasa Indonesia",
-      "title": "cugarete — Data & vibe coder from Semarang",
-      "description": "Personal page of cugarete (Arya Rifki). Building data pipelines, stock screeners, and Indonesian capital-market research tools.",
+      "title": "sugarate — Data Engineer & Law Student from Semarang",
+      "description": "Personal page of sugarate (Arya Rifki). Building data pipelines, stock screeners, and Indonesian capital-market research tools.",
       "nav": {
         "about": "About",
         "projects": "Projects",
@@ -168,8 +160,8 @@
       },
       "hero": {
         "eyebrow": "Hi, I'm",
-        "title": "cugarete",
-        "tagline": "just vibe coder btw.",
+        "title": "sugarate",
+        "tagline": "Data Engineer, currently pursuing a Bachelor of Laws",
         "lead": "I build data-driven tools for understanding the Indonesian stock market — from scrapers and pipelines to predictive models. Analysis by data, not gut feeling.",
         "ctaPrimary": "See projects",
         "ctaSecondary": "Get in touch",
@@ -177,12 +169,12 @@
       },
       "about": {
         "heading": "About",
-        "body1": "My name is Arya Rifki, known online as sugarate. I'm based in Semarang and spend most of my time turning messy raw data into something readable and useful for decision-making.",
-        "body2": "My focus sits at the intersection of data engineering, analysis, and the Indonesian capital market. The rest: writing code that is simple, reproducible, and doesn't give other people headaches.",
+        "body1": "My name is Arya Rifki, known online as sugarate. Based in Semarang, I spend most of my time turning messy raw data into something readable and actionable for decision-making.",
+        "body2": "My focus lies at the intersection of data engineering, analytics, law, and the Indonesian capital market. The rest: writing clean, reproducible code that doesn't give others a headache.",
         "factsHeading": "Quick facts",
         "facts": [
           { "k": "Based in", "v": "Semarang, ID" },
-          { "k": "Focus", "v": "Data & capital markets" },
+          { "k": "Focus", "v": "Data, Law, Machine Learning" },
           { "k": "Main language", "v": "Python" },
           { "k": "Public repos", "v": "28+" }
         ]
