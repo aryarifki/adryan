@@ -71,7 +71,7 @@
               <h3 class="project-name">{{ p.name }}</h3>
               <span class="project-year">{{ p.year }}</span>
             </div>
-            <p class="project-desc">{{ p.en }}</p>
+            <p class="project-desc">{{ t.lang == "id" ? p.id : p.en }}</p>
             <ul class="tags" aria-label="Stack">
               {{#each p.stack as s~}}<li class="tag">{{ s }}</li>{{~/each}}
             </ul>
@@ -80,74 +80,3 @@
         </li>
         {{~/each}}
       </ul>
-      <div class="project-foot">
-        <a class="btn btn-ghost" href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank">{{ t.projects.viewAll }} &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- SKILLS --}}
-<section id="skills" class="section" aria-labelledby="skills-title">
-  <div class="container section-grid">
-    <div class="section-head">
-      <h2 id="skills-title" class="section-title">{{ t.skills.heading }}</h2>
-      <p class="section-sub">{{ t.skills.sub }}</p>
-    </div>
-    <div class="section-body">
-      <div class="skills-groups">
-        {{#each skills as g~}}
-        <div class="skill-group">
-          <h3 class="skill-group-title">{{ g.group.en }}</h3>
-          <ul class="tags">
-            {{#each g.items as item~}}<li class="tag">{{ item }}</li>{{~/each}}
-          </ul>
-        </div>
-        {{~/each}}
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- EXPERIENCE --}}
-<section id="experience" class="section" aria-labelledby="experience-title">
-  <div class="container section-grid">
-    <div class="section-head">
-      <h2 id="experience-title" class="section-title">{{ t.experience.heading }}</h2>
-    </div>
-    <div class="section-body">
-      <ol class="timeline">
-        {{#each experience as exp~}}
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-period">{{ exp.period }}</span>
-            <span class="timeline-org">{{ exp.org }}</span>
-          </div>
-          <div class="timeline-content">
-            <h3 class="timeline-role">{{ exp.role.en }}</h3>
-            <p class="timeline-desc">{{ exp.desc.en }}</p>
-          </div>
-        </li>
-        {{~/each}}
-      </ol>
-    </div>
-  </div>
-</section>
-
-{{!-- CONTACT --}}
-<section id="contact" class="section section-contact" aria-labelledby="contact-title">
-  <div class="container section-grid">
-    <div class="section-head">
-      <h2 id="contact-title" class="section-title">{{ t.contact.heading }}</h2>
-    </div>
-    <div class="section-body">
-      <div class="contact-card">
-        <p class="contact-body">{{ t.contact.body }}</p>
-        <a class="btn btn-primary" href="mailto:{{ site.email }}">{{ t.contact.cta }}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{/block}}
-{{/extend}}
