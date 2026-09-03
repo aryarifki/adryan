@@ -11,10 +11,5 @@
       <a href="#experience">{{ t.nav.experience }}</a>
       <a href="#contact">{{ t.nav.contact }}</a>
     </nav>
-    <a class="lang-switch" href="{{ t.switchHref }}" hreflang="{{ t.switchTo == "EN" ? "en" : "id" }}" aria-label="{{ t.switchLabel }}">
-      <span class="lang-current">{{ t.switchTo == "EN" ? "ID" : "EN" }}</span>
-      <span class="lang-sep" aria-hidden="true">/</span>
-      <span class="lang-other">{{ t.switchTo }}</span>
-    </a>
   </div>
 </header>
