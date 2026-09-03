@@ -3,7 +3,7 @@
     "domain": "cugarete.me",
     "url": "https://cugarete.me",
     "name": "sugarate",
-    "handle": "aryarifki",
+    "handle": "rifqiaarya",
     "location": "Semarang, Indonesia",
     "email": "amadryanrifky@gmail.com",
     "avatar": "/assets/avatar.png",
@@ -11,17 +11,24 @@
     "year": 2026
   },
   "socials": [
+    { "label": "Instagram", "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr", "handle": "@rifqiaarya" },
     { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki" },
-    { "label": "Email", "url": "amadryanrifky@gmail.com", "handle": "aryarifki" }
+    { "label": "Email", "url": "mailto:amadryanrifky@gmail.com", "handle": "amadryanrifky@gmail.com" }
   ],
   "projects": [
+    {
+      "name": "The Invest Owl",
+      "url": "https://theinvestowl.cugarete.me/",
+      "stack": ["Python", "FastAPI", "Financial Data"],
+      "year": "2026",
+      "en": "Data-driven capital market and investment research platform built to track insights and trends."
+    },
     {
       "name": "SMtracker",
       "url": "https://github.com/aryarifki/SMtracker",
       "stack": ["Python", "Pandas", "scikit-learn"],
       "year": "2025",
-      "id": "Pipeline data end-to-end untuk menguji apakah akumulasi smart-money (bandar/asing) bisa memprediksi pergerakan harga saham Indonesia. Data engineering, analisis, dan ML.",
       "en": "End-to-end data pipeline testing whether smart-money (bandar/foreign) accumulation predicts price moves in Indonesian stocks. Data engineering, analysis, and ML."
     },
     {
@@ -29,7 +36,6 @@
       "url": "https://github.com/aryarifki/IDX-XOXO",
       "stack": ["Python", "REST API"],
       "year": "2025",
-      "id": "Wrapper API Bursa Efek Indonesia untuk integrasi data trading yang rapi dan mudah dipakai.",
       "en": "Indonesian Stock Exchange API wrapper for clean, easy-to-use trading data integration."
     },
     {
@@ -37,7 +43,6 @@
       "url": "https://github.com/aryarifki/IDX-DASHBOARD",
       "stack": ["Python", "Data Viz"],
       "year": "2025",
-      "id": "Screener saham Indonesia: analisis pakai data, bukan feeling.",
       "en": "Indonesian stock screener: analysis driven by data, not gut feeling."
     },
     {
@@ -45,110 +50,45 @@
       "url": "https://github.com/aryarifki/Putusan-MA-RI",
       "stack": ["Python", "Scraping", "PDF"],
       "year": "2024",
-      "id": "Web scraper untuk mengekstrak putusan pengadilan dari situs Mahkamah Agung RI, lengkap dengan unduhan PDF/ZIP dan alat analisis data.",
       "en": "Web scraper extracting court decisions from Indonesia's Supreme Court website, with PDF/ZIP downloads and data analysis tooling."
     }
   ],
   "skills": [
     {
-      "group": { "id": "Keahlian", "en": "Skills" },
-      "items": ["Data Analisis", "Machine Learning"]
+      "group": { "en": "Skills" },
+      "items": ["Data Analysis", "Machine Learning"]
     }
   ],
   "experience": [
     {
       "period": "2025 — now",
       "org": "Independent",
-      "role": { "id": "Data & Automation Builder", "en": "Data & Automation Builder" },
+      "role": { "en": "Data & Automation Builder" },
       "desc": {
-        "id": "Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia sebagai proyek mandiri.",
         "en": "Building data pipelines, stock screeners, and Indonesian capital-market research tools as independent projects."
       }
     },
     {
       "period": "2024",
       "org": "Open Source",
-      "role": { "id": "Kontributor", "en": "Contributor" },
+      "role": { "en": "Contributor" },
       "desc": {
-        "id": "Merilis scraper dan alat analisis data publik untuk data hukum dan finansial di Indonesia.",
         "en": "Released scrapers and public-data analysis tools for Indonesian legal and financial data."
       }
     },
     {
       "period": "2024 — now",
       "org": "Universitas Terbuka",
-      "role": { "id": "S1 Ilmu Hukum", "en": "Bachelor of Laws (LL.B.)" },
+      "role": { "en": "Bachelor of Laws (LL.B.)" },
       "desc": {
-        "id": "Mahasiswa aktif.",
         "en": "Undergraduate Law Student."
       }
     }
   ],
   "i18n": {
-    "id": {
-      "lang": "id",
-      "htmlLang": "id",
-      "switchTo": "EN",
-      "switchHref": "/en/",
-      "switchLabel": "Switch to English",
-      "title": "sugarate — Landing Page",
-      "description": "Halaman pribadi sugarate (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
-      "nav": {
-        "about": "Tentang",
-        "projects": "Proyek",
-        "skills": "Keahlian",
-        "experience": "Pengalaman",
-        "contact": "Kontak"
-      },
-      "hero": {
-        "eyebrow": "Halo, saya",
-        "title": "sugarate",
-        "tagline": "Data Engineer, sedang menempuh pendidikan sarjana hukum",
-        "lead": "Saya membangun alat berbasis data untuk memahami pasar saham Indonesia — dari scraper, pipeline, sampai model prediksi. Analisis pakai data, bukan feeling.",
-        "ctaPrimary": "Lihat proyek",
-        "ctaSecondary": "Hubungi saya",
-        "status": "Terbuka untuk kolaborasi"
-      },
-      "about": {
-        "heading": "Tentang",
-        "body1": "Nama saya Arya Rifki, dikenal online sebagai sugarate. Saya berbasis di Semarang dan menghabiskan banyak waktu mengubah data mentah yang berantakan menjadi sesuatu yang bisa dibaca dan dipakai untuk mengambil keputusan.",
-        "body2": "Fokus saya ada di irisan antara data engineering, analisis, hukum dan pasar modal Indonesia. Sisanya: menulis kode yang sederhana, bisa dijalankan ulang, dan tidak bikin pusing orang lain.",
-        "factsHeading": "Fakta singkat",
-        "facts": [
-          { "k": "Basis", "v": "Semarang, ID" },
-          { "k": "Fokus", "v": "Data, Hukum, Machine Learning" },
-          { "k": "Bahasa utama", "v": "Python" },
-          { "k": "Repositori publik", "v": "28+" }
-        ]
-      },
-      "projects": {
-        "heading": "Proyek pilihan",
-        "sub": "Sebagian pekerjaan yang sudah dirilis publik.",
-        "viewAll": "Semua repositori di GitHub"
-      },
-      "skills": {
-        "heading": "Keahlian",
-        "sub": "Yang saya pakai hampir setiap hari."
-      },
-      "experience": {
-        "heading": "Pengalaman & pendidikan"
-      },
-      "contact": {
-        "heading": "Mari terhubung",
-        "body": "Punya ide, data yang perlu dibereskan, atau sekadar ingin ngobrol soal saham dan kode? Kirim pesan.",
-        "cta": "Kirim email"
-      },
-      "footer": {
-        "built": "Dirender statis dengan",
-        "rights": "Semua hak dilindungi."
-      }
-    },
     "en": {
       "lang": "en",
       "htmlLang": "en",
-      "switchTo": "ID",
-      "switchHref": "/",
-      "switchLabel": "Ganti ke Bahasa Indonesia",
       "title": "sugarate — Data Engineer & Law Student from Semarang",
       "description": "Personal page of sugarate (Arya Rifki). Building data pipelines, stock screeners, and Indonesian capital-market research tools.",
       "nav": {
