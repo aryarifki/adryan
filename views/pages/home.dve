@@ -26,7 +26,7 @@
       <figcaption class="hero-meta">
         <span>{{ site.location }}</span>
         <span aria-hidden="true">·</span>
-        <a href="https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr" rel="noopener" target="_blank">@rifqiaarya</a>
+        <a href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank">@{{ site.handle }}</a>
       </figcaption>
     </figure>
   </div>
