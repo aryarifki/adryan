@@ -2,10 +2,10 @@
   "site": {
     "domain": "cugarete.me",
     "url": "https://cugarete.me",
-    "name": "cugarete",
+    "name": "sugarate",
     "handle": "aryarifki",
     "location": "Semarang, Indonesia",
-    "email": "hello@cugarete.me",
+    "email": "amadryanrifky@gmail.com",
     "avatar": "/assets/avatar.png",
     "themeColor": "#F0E3D3",
     "year": 2026
@@ -13,7 +13,7 @@
   "socials": [
     { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki" },
-    { "label": "Email", "url": "mailto:hello@cugarete.me", "handle": "hello@cugarete.me" }
+    { "label": "Email", "url": "amadryanrifky@gmail.com", "handle": "aryarifki" }
   ],
   "projects": [
     {
@@ -83,12 +83,12 @@
       }
     },
     {
-      "period": "2020 — 2024",
-      "org": "Universitas",
+      "period": "now",
+      "org": "Open University",
       "role": { "id": "Mahasiswa", "en": "Student" },
       "desc": {
-        "id": "Pendidikan tinggi dengan fokus pada analisis data dan pemrograman.",
-        "en": "Higher education with a focus on data analysis and programming."
+        "id": "Pendidikan tinggi dengan fokus pada bidang hukum.",
+        "en": "Higher education with a focus on field of law."
       }
     }
   ],
@@ -99,8 +99,8 @@
       "switchTo": "EN",
       "switchHref": "/en/",
       "switchLabel": "Switch to English",
-      "title": "cugarete — Data & vibe coder dari Semarang",
-      "description": "Halaman pribadi cugarete (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
+      "title": "sugarate — Landing Page",
+      "description": "Halaman pribadi Sugarate (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
       "nav": {
         "about": "Tentang",
         "projects": "Proyek",
@@ -110,8 +110,8 @@
       },
       "hero": {
         "eyebrow": "Halo, saya",
-        "title": "cugarete",
-        "tagline": "just vibe coder btw.",
+        "title": "sugarate",
+        "tagline": "data engineer.",
         "lead": "Saya membangun alat berbasis data untuk memahami pasar saham Indonesia — dari scraper, pipeline, sampai model prediksi. Analisis pakai data, bukan feeling.",
         "ctaPrimary": "Lihat proyek",
         "ctaSecondary": "Hubungi saya",
@@ -119,12 +119,12 @@
       },
       "about": {
         "heading": "Tentang",
-        "body1": "Nama saya Arya Rifki, dikenal online sebagai cugarete. Saya berbasis di Semarang dan menghabiskan banyak waktu mengubah data mentah yang berantakan menjadi sesuatu yang bisa dibaca dan dipakai untuk mengambil keputusan.",
-        "body2": "Fokus saya ada di irisan antara data engineering, analisis, dan pasar modal Indonesia. Sisanya: menulis kode yang sederhana, bisa dijalankan ulang, dan tidak bikin pusing orang lain.",
+        "body1": "Nama saya Arya Rifki, dikenal online sebagai sugarate. Saya berbasis di Semarang dan menghabiskan banyak waktu mengubah data mentah yang berantakan menjadi sesuatu yang bisa dibaca dan dipakai untuk mengambil keputusan.",
+        "body2": "Fokus saya ada di irisan antara data engineering, analisis, hukum dan pasar modal Indonesia. Sisanya: menulis kode yang sederhana, bisa dijalankan ulang, dan tidak bikin pusing orang lain.",
         "factsHeading": "Fakta singkat",
         "facts": [
           { "k": "Basis", "v": "Semarang, ID" },
-          { "k": "Fokus", "v": "Data & pasar modal" },
+          { "k": "Fokus", "v": "Data, Hukum & Pasar Modal" },
           { "k": "Bahasa utama", "v": "Python" },
           { "k": "Repositori publik", "v": "28+" }
         ]
@@ -177,7 +177,7 @@
       },
       "about": {
         "heading": "About",
-        "body1": "My name is Arya Rifki, known online as cugarete. I'm based in Semarang and spend most of my time turning messy raw data into something readable and useful for decision-making.",
+        "body1": "My name is Arya Rifki, known online as sugarate. I'm based in Semarang and spend most of my time turning messy raw data into something readable and useful for decision-making.",
         "body2": "My focus sits at the intersection of data engineering, analysis, and the Indonesian capital market. The rest: writing code that is simple, reproducible, and doesn't give other people headaches.",
         "factsHeading": "Quick facts",
         "facts": [
