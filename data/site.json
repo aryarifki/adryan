@@ -1,0 +1,213 @@
+{
+  "site": {
+    "domain": "cugarete.me",
+    "url": "https://cugarete.me",
+    "name": "cugarete",
+    "handle": "aryarifki",
+    "location": "Semarang, Indonesia",
+    "email": "hello@cugarete.me",
+    "avatar": "/assets/avatar.png",
+    "themeColor": "#F0E3D3",
+    "year": 2026
+  },
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki" },
+    { "label": "Email", "url": "mailto:hello@cugarete.me", "handle": "hello@cugarete.me" }
+  ],
+  "projects": [
+    {
+      "name": "SMtracker",
+      "url": "https://github.com/aryarifki/SMtracker",
+      "stack": ["Python", "Pandas", "scikit-learn"],
+      "year": "2025",
+      "id": "Pipeline data end-to-end untuk menguji apakah akumulasi smart-money (bandar/asing) bisa memprediksi pergerakan harga saham Indonesia. Data engineering, analisis, dan ML.",
+      "en": "End-to-end data pipeline testing whether smart-money (bandar/foreign) accumulation predicts price moves in Indonesian stocks. Data engineering, analysis, and ML."
+    },
+    {
+      "name": "IDX-XOXO",
+      "url": "https://github.com/aryarifki/IDX-XOXO",
+      "stack": ["Python", "REST API"],
+      "year": "2025",
+      "id": "Wrapper API Bursa Efek Indonesia untuk integrasi data trading yang rapi dan mudah dipakai.",
+      "en": "Indonesian Stock Exchange API wrapper for clean, easy-to-use trading data integration."
+    },
+    {
+      "name": "IDX-DASHBOARD",
+      "url": "https://github.com/aryarifki/IDX-DASHBOARD",
+      "stack": ["Python", "Data Viz"],
+      "year": "2025",
+      "id": "Screener saham Indonesia: analisis pakai data, bukan feeling.",
+      "en": "Indonesian stock screener: analysis driven by data, not gut feeling."
+    },
+    {
+      "name": "Putusan MA RI",
+      "url": "https://github.com/aryarifki/Putusan-MA-RI",
+      "stack": ["Python", "Scraping", "PDF"],
+      "year": "2024",
+      "id": "Web scraper untuk mengekstrak putusan pengadilan dari situs Mahkamah Agung RI, lengkap dengan unduhan PDF/ZIP dan alat analisis data.",
+      "en": "Web scraper extracting court decisions from Indonesia's Supreme Court website, with PDF/ZIP downloads and data analysis tooling."
+    }
+  ],
+  "skills": [
+    {
+      "group": { "id": "Bahasa & Tools", "en": "Languages & Tools" },
+      "items": ["Python", "JavaScript", "SQL", "Bash", "Git"]
+    },
+    {
+      "group": { "id": "Data & Analisis", "en": "Data & Analytics" },
+      "items": ["Pandas", "NumPy", "scikit-learn", "Data Pipeline", "Web Scraping"]
+    },
+    {
+      "group": { "id": "Web", "en": "Web" },
+      "items": ["HTML/CSS", "Node.js", "REST API", "Static Sites"]
+    }
+  ],
+  "experience": [
+    {
+      "period": "2025 — now",
+      "org": "Independent",
+      "role": { "id": "Data & Automation Builder", "en": "Data & Automation Builder" },
+      "desc": {
+        "id": "Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia sebagai proyek mandiri.",
+        "en": "Building data pipelines, stock screeners, and Indonesian capital-market research tools as independent projects."
+      }
+    },
+    {
+      "period": "2024",
+      "org": "Open Source",
+      "role": { "id": "Kontributor", "en": "Contributor" },
+      "desc": {
+        "id": "Merilis scraper dan alat analisis data publik untuk data hukum dan finansial di Indonesia.",
+        "en": "Released scrapers and public-data analysis tools for Indonesian legal and financial data."
+      }
+    },
+    {
+      "period": "2020 — 2024",
+      "org": "Universitas",
+      "role": { "id": "Mahasiswa", "en": "Student" },
+      "desc": {
+        "id": "Pendidikan tinggi dengan fokus pada analisis data dan pemrograman.",
+        "en": "Higher education with a focus on data analysis and programming."
+      }
+    }
+  ],
+  "i18n": {
+    "id": {
+      "lang": "id",
+      "htmlLang": "id",
+      "switchTo": "EN",
+      "switchHref": "/en/",
+      "switchLabel": "Switch to English",
+      "title": "cugarete — Data & vibe coder dari Semarang",
+      "description": "Halaman pribadi cugarete (Arya Rifki). Membangun pipeline data, screener saham, dan alat riset pasar modal Indonesia.",
+      "nav": {
+        "about": "Tentang",
+        "projects": "Proyek",
+        "skills": "Keahlian",
+        "experience": "Pengalaman",
+        "contact": "Kontak"
+      },
+      "hero": {
+        "eyebrow": "Halo, saya",
+        "title": "cugarete",
+        "tagline": "just vibe coder btw.",
+        "lead": "Saya membangun alat berbasis data untuk memahami pasar saham Indonesia — dari scraper, pipeline, sampai model prediksi. Analisis pakai data, bukan feeling.",
+        "ctaPrimary": "Lihat proyek",
+        "ctaSecondary": "Hubungi saya",
+        "status": "Terbuka untuk kolaborasi"
+      },
+      "about": {
+        "heading": "Tentang",
+        "body1": "Nama saya Arya Rifki, dikenal online sebagai cugarete. Saya berbasis di Semarang dan menghabiskan banyak waktu mengubah data mentah yang berantakan menjadi sesuatu yang bisa dibaca dan dipakai untuk mengambil keputusan.",
+        "body2": "Fokus saya ada di irisan antara data engineering, analisis, dan pasar modal Indonesia. Sisanya: menulis kode yang sederhana, bisa dijalankan ulang, dan tidak bikin pusing orang lain.",
+        "factsHeading": "Fakta singkat",
+        "facts": [
+          { "k": "Basis", "v": "Semarang, ID" },
+          { "k": "Fokus", "v": "Data & pasar modal" },
+          { "k": "Bahasa utama", "v": "Python" },
+          { "k": "Repositori publik", "v": "28+" }
+        ]
+      },
+      "projects": {
+        "heading": "Proyek pilihan",
+        "sub": "Sebagian pekerjaan yang sudah dirilis publik.",
+        "viewAll": "Semua repositori di GitHub"
+      },
+      "skills": {
+        "heading": "Keahlian",
+        "sub": "Yang saya pakai hampir setiap hari."
+      },
+      "experience": {
+        "heading": "Pengalaman & pendidikan"
+      },
+      "contact": {
+        "heading": "Mari terhubung",
+        "body": "Punya ide, data yang perlu dibereskan, atau sekadar ingin ngobrol soal saham dan kode? Kirim pesan.",
+        "cta": "Kirim email"
+      },
+      "footer": {
+        "built": "Dirender statis dengan",
+        "rights": "Semua hak dilindungi."
+      }
+    },
+    "en": {
+      "lang": "en",
+      "htmlLang": "en",
+      "switchTo": "ID",
+      "switchHref": "/",
+      "switchLabel": "Ganti ke Bahasa Indonesia",
+      "title": "cugarete — Data & vibe coder from Semarang",
+      "description": "Personal page of cugarete (Arya Rifki). Building data pipelines, stock screeners, and Indonesian capital-market research tools.",
+      "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience",
+        "contact": "Contact"
+      },
+      "hero": {
+        "eyebrow": "Hi, I'm",
+        "title": "cugarete",
+        "tagline": "just vibe coder btw.",
+        "lead": "I build data-driven tools for understanding the Indonesian stock market — from scrapers and pipelines to predictive models. Analysis by data, not gut feeling.",
+        "ctaPrimary": "See projects",
+        "ctaSecondary": "Get in touch",
+        "status": "Open to collaboration"
+      },
+      "about": {
+        "heading": "About",
+        "body1": "My name is Arya Rifki, known online as cugarete. I'm based in Semarang and spend most of my time turning messy raw data into something readable and useful for decision-making.",
+        "body2": "My focus sits at the intersection of data engineering, analysis, and the Indonesian capital market. The rest: writing code that is simple, reproducible, and doesn't give other people headaches.",
+        "factsHeading": "Quick facts",
+        "facts": [
+          { "k": "Based in", "v": "Semarang, ID" },
+          { "k": "Focus", "v": "Data & capital markets" },
+          { "k": "Main language", "v": "Python" },
+          { "k": "Public repos", "v": "28+" }
+        ]
+      },
+      "projects": {
+        "heading": "Selected projects",
+        "sub": "Some of the work released publicly.",
+        "viewAll": "All repositories on GitHub"
+      },
+      "skills": {
+        "heading": "Skills",
+        "sub": "What I use almost every day."
+      },
+      "experience": {
+        "heading": "Experience & education"
+      },
+      "contact": {
+        "heading": "Let's connect",
+        "body": "Have an idea, data that needs cleaning, or just want to talk stocks and code? Send a message.",
+        "cta": "Send an email"
+      },
+      "footer": {
+        "built": "Statically rendered with",
+        "rights": "All rights reserved."
+      }
+    }
+  }
+}

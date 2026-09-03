@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; {{ site.year }} {{ site.name }}. {{ t.footer.rights }}</p>
+    <p class="footer-built">
+      {{ t.footer.built }}
+      <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank">DVE</a>
+    </p>
+  </div>
+</footer>

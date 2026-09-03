@@ -1,0 +1,146 @@
+{{< layouts/main.dve}}
+{{#block title}}{{ t.title }}{{/block}}
+{{#block body}}
+
+{{!-- HERO --}}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="status-dot" aria-hidden="true"></span>
+        {{ t.hero.status }}
+      </p>
+      <h1 id="hero-title" class="hero-title">
+        <span class="hero-eyebrow">{{ t.hero.eyebrow }}</span>
+        {{ t.hero.title }}<span class="accent">.</span>
+      </h1>
+      <p class="hero-tagline">{{ t.hero.tagline }}</p>
+      <p class="hero-lead">{{ t.hero.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">{{ t.hero.ctaPrimary }}</a>
+        <a class="btn btn-ghost" href="#contact">{{ t.hero.ctaSecondary }}</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <img src="{{ site.avatar }}" alt="{{ site.name }}" width="480" height="480" loading="eager" fetchpriority="high">
+      <figcaption class="hero-meta">
+        <span>{{ site.location }}</span>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank">@{{ site.handle }}</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+{{!-- ABOUT --}}
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container section-grid">
+    <div class="section-head">
+      <h2 id="about-title" class="section-title">{{ t.about.heading }}</h2>
+    </div>
+    <div class="section-body about-body">
+      <div class="prose">
+        <p>{{ t.about.body1 }}</p>
+        <p>{{ t.about.body2 }}</p>
+      </div>
+      <dl class="facts" aria-label="{{ t.about.factsHeading }}">
+        {{#each t.about.facts as f~}}
+        <div class="fact">
+          <dt>{{ f.k }}</dt>
+          <dd>{{ f.v }}</dd>
+        </div>
+        {{~/each}}
+      </dl>
+    </div>
+  </div>
+</section>
+
+{{!-- PROJECTS --}}
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="container section-grid">
+    <div class="section-head">
+      <h2 id="projects-title" class="section-title">{{ t.projects.heading }}</h2>
+      <p class="section-sub">{{ t.projects.sub }}</p>
+    </div>
+    <div class="section-body">
+      <ul class="project-list">
+        {{#each projects as p~}}
+        <li class="project">
+          <a class="project-link" href="{{ p.url }}" rel="noopener" target="_blank">
+            <div class="project-top">
+              <h3 class="project-name">{{ p.name }}</h3>
+              <span class="project-year">{{ p.year }}</span>
+            </div>
+            <p class="project-desc">{{ t.lang == "id" ? p.id : p.en }}</p>
+            <ul class="tags" aria-label="Stack">
+              {{#each p.stack as s~}}<li class="tag">{{ s }}</li>{{~/each}}
+            </ul>
+            <span class="project-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        {{~/each}}
+      </ul>
+      <a class="text-link" href="https://github.com/{{ site.handle }}?tab=repositories" rel="noopener" target="_blank">{{ t.projects.viewAll }} &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{{!-- SKILLS --}}
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container section-grid">
+    <div class="section-head">
+      <h2 id="skills-title" class="section-title">{{ t.skills.heading }}</h2>
+      <p class="section-sub">{{ t.skills.sub }}</p>
+    </div>
+    <div class="section-body skills-grid">
+      {{#each skills as g~}}
+      <div class="skill-group">
+        <h3 class="skill-group-title">{{ t.lang == "id" ? g.group.id : g.group.en }}</h3>
+        <ul class="skill-items">
+          {{#each g.items as item~}}<li>{{ item }}</li>{{~/each}}
+        </ul>
+      </div>
+      {{~/each}}
+    </div>
+  </div>
+</section>
+
+{{!-- EXPERIENCE --}}
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <div class="container section-grid">
+    <div class="section-head">
+      <h2 id="experience-title" class="section-title">{{ t.experience.heading }}</h2>
+    </div>
+    <div class="section-body">
+      <ol class="timeline">
+        {{#each experience as x~}}
+        <li class="timeline-item">
+          <span class="timeline-period">{{ x.period }}</span>
+          <div class="timeline-body">
+            <h3 class="timeline-role">{{ t.lang == "id" ? x.role.id : x.role.en }}</h3>
+            <p class="timeline-org">{{ x.org }}</p>
+            <p class="timeline-desc">{{ t.lang == "id" ? x.desc.id : x.desc.en }}</p>
+          </div>
+        </li>
+        {{~/each}}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{{!-- CONTACT --}}
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+  <div class="container contact-inner">
+    <h2 id="contact-title" class="contact-title">{{ t.contact.heading }}</h2>
+    <p class="contact-body">{{ t.contact.body }}</p>
+    <a class="btn btn-primary btn-lg" href="mailto:{{ site.email }}">{{ t.contact.cta }}</a>
+    <ul class="socials">
+      {{#each socials as s~}}
+      <li><a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.label }}<span class="social-handle">{{ s.handle }}</span></a></li>
+      {{~/each}}
+    </ul>
+  </div>
+</section>
+
+{{/block}}
+{{/}}
