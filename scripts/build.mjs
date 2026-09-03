@@ -20,46 +20,48 @@ const dve = new DVE({
   }
 })
 
-// Compile + validate once; render per locale.
+// Compile + validasi template sekali
 const homeSource = readFileSync(join(viewsDir, 'pages', 'home.dve'), 'utf8')
 const home = dve.compile(homeSource, 'home')
 dve.validate(home, 'home')
 
-const locales = [
-  { code: 'id', outDir: '', base: '/' },
-  { code: 'en', outDir: 'en', base: '/en/' }
-]
-
 export function build({ quiet = false } = {}) {
+  // Bersihkan dan inisialisasi ulang direktori dist/
   rmSync(distDir, { recursive: true, force: true })
   mkdirSync(distDir, { recursive: true })
 
-  for (const locale of locales) {
-    const t = data.i18n[locale.code]
-    const html = dve.render(
-      home,
-      {
-        site: data.site,
-        socials: data.socials,
-        projects: data.projects,
-        skills: data.skills,
-        experience: data.experience,
-        t,
-        base: locale.base,
-        canonical: `${data.site.url}${locale.base}`
-      },
-      `home:${locale.code}`
-    )
-    const outDir = join(distDir, locale.outDir)
-    mkdirSync(outDir, { recursive: true })
-    writeFileSync(join(outDir, 'index.html'), html)
-    if (!quiet) console.log(`✓ ${locale.outDir || '.'}/index.html (${html.length.toLocaleString()} chars)`)
+  // Render langsung ke root dist/index.html dengan bahasa Inggris
+  const t = data.i18n.en || data.i18n
+  const html = dve.render(
+    home,
+    {
+      site: data.site,
+      socials: data.socials,
+      projects: data.projects,
+      skills: data.skills,
+      experience: data.experience,
+      t,
+      lang: 'en',
+      base: '/',
+      canonical: `${data.site.url}/`
+    },
+    'home:en'
+  )
+
+  writeFileSync(join(distDir, 'index.html'), html)
+  if (!quiet) console.log(`✓ index.html (${html.length.toLocaleString()} chars)`)
+
+  // Salin file aset statis & berkas wajib GitHub Pages
+  if (existsSync(publicDir)) {
+    cpSync(publicDir, distDir, { recursive: true })
   }
 
-  // Static assets + GitHub Pages files.
-  cpSync(publicDir, distDir, { recursive: true })
   const cname = join(root, 'CNAME')
-  if (existsSync(cname)) cpSync(cname, join(distDir, 'CNAME'))
+  if (existsSync(cname)) {
+    cpSync(cname, join(distDir, 'CNAME'))
+  }
+
+  // Mencegah Jekyll menimpa atau mengabaikan folder aset
   writeFileSync(join(distDir, '.nojekyll'), '')
 
   if (!quiet) console.log('✓ assets copied → dist/')
