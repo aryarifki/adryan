@@ -19,7 +19,7 @@
   "projects": [
     {
       "name": "The Invest Owl",
-      "url": "https://theinvestowl.cugarete.me/",
+      "url": "https://investowl.cugarete.me/",
       "stack": ["Python", "FastAPI", "Financial Data"],
       "year": "2026",
       "en": "Data-driven capital market and investment research platform built to track insights and trends."
