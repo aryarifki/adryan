@@ -1,15 +1,58 @@
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="{{ base }}" aria-label="{{ site.name }} — home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">{{ site.name }}</span>
+<header class="site-header" id="site-header">
+  <div class="header-floating-pill">
+    <a class="brand" href="{{ base }}" aria-label="{{ site.name }} — homepage">
+      <span class="brand-avatar-mini">
+        <img src="{{ site.avatar }}" alt="{{ site.name }}" width="28" height="28" loading="eager">
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.name }}</span>
+        <span class="brand-dot" aria-hidden="true">·</span>
+        <span class="brand-sub">{{ site.location }}</span>
+      </span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#about">{{ t.nav.about }}</a>
-      <a href="#projects">{{ t.nav.projects }}</a>
-      <a href="#skills">{{ t.nav.skills }}</a>
-      <a href="#experience">{{ t.nav.experience }}</a>
-      <a href="#contact">{{ t.nav.contact }}</a>
+
+    <nav class="nav-desktop" aria-label="Main Navigation">
+      <a class="nav-link" href="#about">{{ t.nav.about }}</a>
+      <a class="nav-link" href="#projects">{{ t.nav.projects }}</a>
+      <a class="nav-link" href="#skills">{{ t.nav.skills }}</a>
+      <a class="nav-link" href="#experience">{{ t.nav.experience }}</a>
+      <a class="nav-link" href="#contact">{{ t.nav.contact }}</a>
     </nav>
+
+    <div class="header-actions">
+      <div class="status-chip" title="{{ t.hero.status }}">
+        <span class="status-dot-pulse" aria-hidden="true"></span>
+        <span class="status-text">{{ t.nav.statusBadge }}</span>
+      </div>
+      <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+      </button>
+    </div>
+  </div>
+
+  {{!-- Mobile Navigation Drawer --}}
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-head">
+        <span class="mobile-drawer-title">{{ site.fullName }}</span>
+        <button type="button" class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a class="mobile-nav-link" href="#about">{{ t.nav.about }}</a>
+        <a class="mobile-nav-link" href="#projects">{{ t.nav.projects }}</a>
+        <a class="mobile-nav-link" href="#skills">{{ t.nav.skills }}</a>
+        <a class="mobile-nav-link" href="#experience">{{ t.nav.experience }}</a>
+        <a class="mobile-nav-link" href="#contact">{{ t.nav.contact }}</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <div class="mobile-status">
+          <span class="status-dot-pulse" aria-hidden="true"></span>
+          <span>{{ t.hero.status }}</span>
+        </div>
+        <a class="btn btn-primary btn-sm" href="mailto:{{ site.email }}">{{ t.contact.cta }}</a>
+      </div>
+    </div>
   </div>
 </header>

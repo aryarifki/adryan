@@ -4,84 +4,106 @@
     "url": "https://cugarete.me",
     "name": "sugarate",
     "handle": "rifqiaarya",
+    "fullName": "Arya Rifki",
     "location": "Semarang, Indonesia",
     "email": "amadryanrifky@gmail.com",
     "avatar": "/assets/avatar.png",
-    "themeColor": "#F0E3D3",
+    "themeColor": "#F8F3ED",
     "year": 2026
   },
   "socials": [
-    { "label": "Instagram", "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr", "handle": "@rifqiaarya" },
-    { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki" },
-    { "label": "Email", "url": "mailto:amadryanrifky@gmail.com", "handle": "amadryanrifky@gmail.com" }
+    { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki", "icon": "github" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki", "icon": "linkedin" },
+    { "label": "Instagram", "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr", "handle": "@rifqiaarya", "icon": "instagram" },
+    { "label": "Email", "url": "mailto:amadryanrifky@gmail.com", "handle": "amadryanrifky@gmail.com", "icon": "email" }
   ],
   "projects": [
     {
       "name": "The Invest Owl",
       "url": "https://investowl.cugarete.me/",
-      "stack": ["Python", "FastAPI", "Financial Data"],
+      "stack": ["Python", "FastAPI", "Financial Data", "Pipelines"],
       "year": "2026",
-      "en": "Data-driven capital market and investment research platform built to track insights and trends."
+      "badge": "Flagship Platform",
+      "featured": true,
+      "en": "Data-driven capital market research platform engineered to track market dynamics, institutional sentiment, and valuation trends across Indonesian equities."
     },
     {
       "name": "SMtracker",
       "url": "https://github.com/aryarifki/SMtracker",
-      "stack": ["Python", "Pandas", "scikit-learn"],
+      "stack": ["Python", "Pandas", "scikit-learn", "ML"],
       "year": "2025",
-      "en": "End-to-end data pipeline testing whether smart-money (bandar/foreign) accumulation predicts price moves in Indonesian stocks. Data engineering, analysis, and ML."
+      "badge": "Quantitative Engine",
+      "featured": false,
+      "en": "End-to-end data pipeline testing whether smart-money (bandar / foreign) accumulation statistically predicts price trajectory in Indonesian stocks."
     },
     {
       "name": "IDX-XOXO",
       "url": "https://github.com/aryarifki/IDX-XOXO",
-      "stack": ["Python", "REST API"],
+      "stack": ["Python", "REST API", "Market Data"],
       "year": "2025",
-      "en": "Indonesian Stock Exchange API wrapper for clean, easy-to-use trading data integration."
+      "badge": "API Wrapper",
+      "featured": false,
+      "en": "Indonesian Stock Exchange API wrapper designed for seamless, reproducible trading data extraction and quantitative integration."
     },
     {
       "name": "IDX-DASHBOARD",
       "url": "https://github.com/aryarifki/IDX-DASHBOARD",
-      "stack": ["Python", "Data Viz"],
+      "stack": ["Python", "Data Viz", "Screening"],
       "year": "2025",
-      "en": "Indonesian stock screener: analysis driven by data, not gut feeling."
+      "badge": "Screener",
+      "featured": false,
+      "en": "Indonesian equity screener and market analytics dashboard built on empirical data rather than speculative intuition."
     },
     {
       "name": "Putusan MA RI",
       "url": "https://github.com/aryarifki/Putusan-MA-RI",
-      "stack": ["Python", "Scraping", "PDF"],
+      "stack": ["Python", "Web Scraping", "PDF Parser", "Legal Tech"],
       "year": "2024",
-      "en": "Web scraper extracting court decisions from Indonesia's Supreme Court website, with PDF/ZIP downloads and data analysis tooling."
+      "badge": "Legal Informatics",
+      "featured": true,
+      "en": "Automated legal corpus crawler extracting court decisions from Indonesia's Supreme Court (Mahkamah Agung), complete with PDF/ZIP parsing pipelines."
     }
   ],
   "skills": [
     {
-      "group": { "en": "Skills" },
-      "items": ["Data Analysis", "Machine Learning"]
+      "group": { "en": "Data Engineering & Pipelines" },
+      "desc": { "en": "Turning raw, noisy web and market data into reliable pipelines" },
+      "items": ["Python 3.11+", "FastAPI", "Pandas", "ETL Architecture", "Web Crawling & Scraping", "SQL & Relational Models", "REST API Design"]
+    },
+    {
+      "group": { "en": "Quantitative & Machine Learning" },
+      "desc": { "en": "Empirical modeling and exploratory financial analytics" },
+      "items": ["Predictive Modeling", "scikit-learn", "IDX Capital Market Analysis", "Smart Money Tracking", "Time Series Analysis", "Data Visualization"]
+    },
+    {
+      "group": { "en": "Legal Informatics & Research" },
+      "desc": { "en": "Intersection of statutory law, judicial corpus, and automation" },
+      "items": ["Court Decision Mining", "Legal Corpus Extraction", "Indonesian Statutory Analysis", "Regulatory Research", "Document Structuring"]
     }
   ],
   "experience": [
     {
-      "period": "2025 — now",
+      "period": "2025 — Present",
       "org": "Independent",
-      "role": { "en": "Data & Automation Builder" },
+      "role": { "en": "Data & Automation Engineer" },
       "desc": {
-        "en": "Building data pipelines, stock screeners, and Indonesian capital-market research tools as independent projects."
+        "en": "Engineering autonomous data pipelines, IDX market screeners, and quantitative research platforms for Indonesian equities."
+      }
+    },
+    {
+      "period": "2024 — Present",
+      "org": "Universitas Terbuka",
+      "role": { "en": "Bachelor of Laws (LL.B. Candidate)" },
+      "desc": {
+        "en": "Undergraduate law studies focusing on statutory frameworks, judicial precedence, and corporate governance in Indonesia."
       }
     },
     {
       "period": "2024",
-      "org": "Open Source",
-      "role": { "en": "Contributor" },
+      "org": "Open Source Community",
+      "role": { "en": "Legal-Tech & Open Data Contributor" },
       "desc": {
-        "en": "Released scrapers and public-data analysis tools for Indonesian legal and financial data."
-      }
-    },
-    {
-      "period": "2024 — now",
-      "org": "Universitas Terbuka",
-      "role": { "en": "Bachelor of Laws (LL.B.)" },
-      "desc": {
-        "en": "Undergraduate Law Student."
+        "en": "Authored and published scrapers and analytical tools unlocking publicly accessible legal and financial datasets for developers."
       }
     }
   ],
@@ -89,56 +111,73 @@
     "en": {
       "lang": "en",
       "htmlLang": "en",
-      "title": "sugarate — Data Engineer & Law Student from Semarang",
-      "description": "Personal page of sugarate (Arya Rifki). Building data pipelines, stock screeners, and Indonesian capital-market research tools.",
+      "title": "sugarate — Data Engineer & Legal Tech Builder",
+      "description": "Personal landing page of Arya Rifki (sugarate). Data engineering, Indonesian capital market analytics, and legal informatics from Semarang.",
       "nav": {
         "about": "About",
         "projects": "Projects",
         "skills": "Skills",
         "experience": "Experience",
-        "contact": "Contact"
+        "contact": "Contact",
+        "statusBadge": "Available for Collab"
       },
       "hero": {
-        "eyebrow": "Hi, I'm",
+        "status": "Available for Projects & Research",
+        "eyebrow": "Data Engineer & LL.B. Candidate",
         "title": "sugarate",
-        "tagline": "Data Engineer, currently pursuing a Bachelor of Laws",
-        "lead": "I build data-driven tools for understanding the Indonesian stock market — from scrapers and pipelines to predictive models. Analysis by data, not gut feeling.",
-        "ctaPrimary": "See projects",
+        "tagline": "Engineering capital market & legal data into structured clarity.",
+        "lead": "I build robust data pipelines, equity screeners, and machine learning models for the Indonesian stock market — with a legal scholar's eye for regulation, accuracy, and empirical truth.",
+        "ctaPrimary": "Explore Selected Works",
         "ctaSecondary": "Get in touch",
-        "status": "Open to collaboration"
+        "quickFacts": [
+          { "label": "Based in", "val": "Semarang, ID" },
+          { "label": "Discipline", "val": "Data × Law × ML" },
+          { "label": "Public Repos", "val": "28+ on GitHub" }
+        ]
       },
       "about": {
-        "heading": "About",
-        "body1": "My name is Arya Rifki, known online as sugarate. Based in Semarang, I spend most of my time turning messy raw data into something readable and actionable for decision-making.",
-        "body2": "My focus lies at the intersection of data engineering, analytics, law, and the Indonesian capital market. The rest: writing clean, reproducible code that doesn't give others a headache.",
-        "factsHeading": "Quick facts",
+        "sectionNumber": "01",
+        "heading": "About & Philosophy",
+        "sub": "Bridging quantitative engineering and statutory analysis.",
+        "body1": "I am Arya Rifki (online handle: sugarate), an independent developer and undergraduate law student based in Semarang, Indonesia. I spend my days turning unstructured, messy public feeds into clean, reproducible data pipelines that enable confident decision-making.",
+        "body2": "My work sits at the rare convergence of data engineering, Indonesian capital markets (IDX), and legal informatics. I believe that whether evaluating market depth or analyzing judicial rulings, conclusions must be grounded in verified data rather than speculation.",
+        "factsHeading": "Key Attributes",
         "facts": [
-          { "k": "Based in", "v": "Semarang, ID" },
-          { "k": "Focus", "v": "Data, Law, Machine Learning" },
-          { "k": "Main language", "v": "Python" },
-          { "k": "Public repos", "v": "28+" }
+          { "k": "Location", "v": "Semarang, Central Java" },
+          { "k": "Primary Stack", "v": "Python, FastAPI, Pandas" },
+          { "k": "Academic Path", "v": "Bachelor of Laws (LL.B.)" },
+          { "k": "Code Philosophy", "v": "Zero-bloat & Reproducible" }
         ]
       },
       "projects": {
-        "heading": "Selected projects",
-        "sub": "Some of the work released publicly.",
-        "viewAll": "All repositories on GitHub"
+        "sectionNumber": "02",
+        "heading": "Selected Works",
+        "sub": "Curated platforms, financial engines, and open data scrapers.",
+        "viewAll": "View all repositories on GitHub"
       },
       "skills": {
-        "heading": "Skills",
-        "sub": "What I use almost every day."
+        "sectionNumber": "03",
+        "heading": "Technical Stack",
+        "sub": "Core tools and domains applied in production and research."
       },
       "experience": {
-        "heading": "Experience & education"
+        "sectionNumber": "04",
+        "heading": "Experience & Path",
+        "sub": "Academic milestones and independent engineering journey."
       },
       "contact": {
-        "heading": "Let's connect",
-        "body": "Have an idea, data that needs cleaning, or just want to talk stocks and code? Send a message.",
-        "cta": "Send an email"
+        "sectionNumber": "05",
+        "heading": "Let's Connect",
+        "sub": "Initiate collaboration or discuss quantitative & legal data challenges.",
+        "body": "Have an interesting dataset, capital market hypothesis, or legal-tech inquiry? I'm always open to thoughtful discussions, research partnerships, and technical collaboration.",
+        "cta": "Send an Email",
+        "copyEmail": "Copy Email Address",
+        "copied": "Copied to clipboard!"
       },
       "footer": {
-        "built": "Statically rendered with",
-        "rights": "All rights reserved."
+        "built": "Rendered statically via",
+        "rights": "All rights reserved.",
+        "tagline": "Crafted with Material 3 Expressive & Hallmark anti-slop principles."
       }
     }
   }

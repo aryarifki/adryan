@@ -1,9 +1,45 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p class="footer-copy">&copy; {{ site.year }} {{ site.name }}. {{ t.footer.rights }}</p>
-    <p class="footer-built">
-      {{ t.footer.built }}
-      <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank">DVE</a>
-    </p>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="{{ base }}">
+          <span class="brand-avatar-mini">
+            <img src="{{ site.avatar }}" alt="{{ site.name }}" width="24" height="24" loading="lazy">
+          </span>
+          <span class="brand-name">{{ site.name }}</span>
+        </a>
+        <p class="footer-motto">{{ t.hero.tagline }}</p>
+      </div>
+
+      <div class="footer-social-col">
+        <p class="footer-col-label">Channels & Profiles</p>
+        <ul class="footer-social-list">
+          {{#each socials as s~}}
+          <li>
+            <a class="footer-social-link" href="{{ s.url }}" rel="noopener" target="_blank">
+              <span>{{ s.label }}</span>
+              <span class="footer-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </li>
+          {{~/each}}
+        </ul>
+      </div>
+
+      <div class="footer-back-col">
+        <a class="btn-top" href="#site-header" aria-label="Back to top">
+          <span>Back to top</span>
+          <span aria-hidden="true">&uarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; {{ site.year }} {{ site.fullName }} ({{ site.name }}). {{ t.footer.rights }}</p>
+      <p class="footer-tagline">{{ t.footer.tagline }}</p>
+      <p class="footer-built">
+        {{ t.footer.built }}
+        <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank" class="engine-link">DVE</a>
+      </p>
+    </div>
   </div>
 </footer>
