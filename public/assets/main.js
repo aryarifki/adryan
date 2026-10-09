@@ -3,46 +3,6 @@
   'use strict';
   document.documentElement.classList.add('js');
 
-  // --- Mobile Drawer Toggle ---
-  var menuToggle = document.getElementById('mobile-menu-toggle');
-  var drawer = document.getElementById('mobile-drawer');
-  var drawerClose = document.getElementById('mobile-drawer-close');
-  var drawerBackdrop = document.getElementById('mobile-drawer-backdrop');
-  var mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-  function openDrawer() {
-    if (!drawer || !menuToggle) return;
-    drawer.classList.add('is-open');
-    drawer.setAttribute('aria-hidden', 'false');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeDrawer() {
-    if (!drawer || !menuToggle) return;
-    drawer.classList.remove('is-open');
-    drawer.setAttribute('aria-hidden', 'true');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
-      if (drawer.classList.contains('is-open')) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-  }
-
-  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
-
-  mobileLinks.forEach(function (link) {
-    link.addEventListener('click', closeDrawer);
-  });
-
   // --- Copy Email to Clipboard ---
   var copyBtn = document.getElementById('copy-email-btn');
   if (copyBtn) {

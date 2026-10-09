@@ -21,47 +21,38 @@
     {
       "name": "The Invest Owl",
       "url": "https://investowl.cugarete.me/",
-      "stack": ["Python", "FastAPI", "Financial Data", "Pipelines"],
+      "stack": ["Python", "FastAPI", "Next.js", "Financial Data", "Market Analytics"],
       "year": "2026",
       "badge": "Flagship Platform",
       "featured": true,
       "en": "Data-driven capital market research platform engineered to track market dynamics, institutional sentiment, and valuation trends across Indonesian equities."
     },
     {
+      "name": "O-Crawler",
+      "url": "https://ocrawler.cugarete.me/",
+      "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF", "Async ETL"],
+      "year": "2026",
+      "badge": "Legal Ingestion Engine",
+      "featured": false,
+      "en": "High-speed legal data ingestion engine crawling regulations (peraturan.go.id), Supreme Court decisions (MA RI), and Constitutional Court rulings (MK RI) with anti-WAF TLS impersonation and zero-egress Cloudflare R2 streaming."
+    },
+    {
+      "name": "OWLEXIA Legal AI",
+      "url": "https://owlexia.cugarete.me/",
+      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Legal Informatics"],
+      "year": "2026",
+      "badge": "Agentic AI Intelligence",
+      "featured": false,
+      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+    },
+    {
       "name": "SMtracker",
       "url": "https://github.com/aryarifki/SMtracker",
-      "stack": ["Python", "Pandas", "scikit-learn", "ML"],
+      "stack": ["Python", "Pandas", "scikit-learn", "Telegram Bot", "Market Analytics"],
       "year": "2025",
       "badge": "Quantitative Engine",
-      "featured": false,
-      "en": "End-to-end data pipeline testing whether smart-money (bandar / foreign) accumulation statistically predicts price trajectory in Indonesian stocks."
-    },
-    {
-      "name": "IDX-XOXO",
-      "url": "https://github.com/aryarifki/IDX-XOXO",
-      "stack": ["Python", "REST API", "Market Data"],
-      "year": "2025",
-      "badge": "API Wrapper",
-      "featured": false,
-      "en": "Indonesian Stock Exchange API wrapper designed for seamless, reproducible trading data extraction and quantitative integration."
-    },
-    {
-      "name": "IDX-DASHBOARD",
-      "url": "https://github.com/aryarifki/IDX-DASHBOARD",
-      "stack": ["Python", "Data Viz", "Screening"],
-      "year": "2025",
-      "badge": "Screener",
-      "featured": false,
-      "en": "Indonesian equity screener and market analytics dashboard built on empirical data rather than speculative intuition."
-    },
-    {
-      "name": "Putusan MA RI",
-      "url": "https://github.com/aryarifki/Putusan-MA-RI",
-      "stack": ["Python", "Web Scraping", "PDF Parser", "Legal Tech"],
-      "year": "2024",
-      "badge": "Legal Informatics",
       "featured": true,
-      "en": "Automated legal corpus crawler extracting court decisions from Indonesia's Supreme Court (Mahkamah Agung), complete with PDF/ZIP parsing pipelines."
+      "en": "End-to-end data pipeline auditing smart-money (bandar / foreign) accumulation to statistically evaluate price trajectory in Indonesian stocks."
     }
   ],
   "skills": [
@@ -152,7 +143,7 @@
       "projects": {
         "sectionNumber": "02",
         "heading": "Selected Works",
-        "sub": "Curated platforms, financial engines, and open data scrapers.",
+        "sub": "Curated production platforms, legal-tech systems, and financial intelligence engines.",
         "viewAll": "View all repositories on GitHub"
       },
       "skills": {
