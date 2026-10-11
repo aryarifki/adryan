@@ -2,187 +2,97 @@
 {{#block title}}{{ t.title }}{{/block}}
 {{#block body}}
 
-{{!-- HERO SECTION: PROJECT & MESH SHOWCASE --}}
+{{!-- HERO SECTION: PERSONAL INTRODUCTION --}}
 <section class="hero-section" id="hero" aria-labelledby="hero-title">
-  <div class="container hero-container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-badge-row">
-          <span class="status-chip-hero">
-            <span class="status-dot-pulse" aria-hidden="true"></span>
-            <span>{{ t.hero.status }}</span>
-          </span>
-          <span class="location-pill">
-            <svg class="geo-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>{{ site.location }}</span>
-          </span>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-status-pill">
+        <span class="status-pulse-dot" aria-hidden="true"></span>
+        <span class="status-status-text">{{ t.hero.status }}</span>
+      </div>
+
+      <div class="hero-identity">
+        <h1 id="hero-title" class="hero-name">{{ site.fullName }}</h1>
+        <p class="hero-tagline">{{ t.hero.tagline }}</p>
+      </div>
+
+      <p class="hero-lead">{{ t.hero.lead }}</p>
+
+      <div class="hero-meta-row">
+        <div class="meta-item">
+          <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>{{ site.location }}</span>
         </div>
-
-        <h1 id="hero-title" class="hero-title">
-          <span class="hero-eyebrow-text">{{ t.hero.eyebrow }}</span>
-          {{ t.hero.tagline }}
-        </h1>
-
-        <p class="hero-lead">{{ t.hero.lead }}</p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
-            <span>{{ t.hero.ctaPrimary }}</span>
-            <span class="btn-arrow" aria-hidden="true">&darr;</span>
-          </a>
-          <a class="btn btn-tonal" href="#skills">
-            <span>{{ t.hero.ctaSecondary }}</span>
-          </a>
-          <a class="btn btn-outlined btn-icon-link" href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>GitHub</span>
-            <span class="btn-external" aria-hidden="true">&nearr;</span>
-          </a>
+        <div class="meta-divider" aria-hidden="true">·</div>
+        <div class="meta-item">
+          <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span>IDX Analytics &amp; Legal Tech</span>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-console-deck">
-          <div class="console-deck-header">
-            <div class="console-header-info">
-              <span class="console-kicker">Network Directory</span>
-              <h2 class="console-deck-heading">Live Systems &amp; Endpoints</h2>
-            </div>
-            <div class="console-status-pill">
-              <span class="status-dot-pulse" aria-hidden="true"></span>
-              <span>ACTIVE</span>
-            </div>
-          </div>
-
-          <div class="console-deck-body">
-            <a class="deck-project-row" href="https://investowl.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-top">
-                <span class="deck-row-title">The Invest Owl</span>
-                <span class="deck-tag">Capital Markets</span>
-              </div>
-              <div class="deck-row-bottom">
-                <span class="deck-row-url">
-                  <span class="url-protocol">https://</span>investowl.avenia.my.id
-                </span>
-                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
-              </div>
-            </a>
-
-            <a class="deck-project-row" href="https://ocrawler.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-top">
-                <span class="deck-row-title">O-Crawler Engine</span>
-                <span class="deck-tag">Anti-WAF ETL</span>
-              </div>
-              <div class="deck-row-bottom">
-                <span class="deck-row-url">
-                  <span class="url-protocol">https://</span>ocrawler.avenia.my.id
-                </span>
-                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
-              </div>
-            </a>
-
-            <a class="deck-project-row" href="https://owlexia.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-top">
-                <span class="deck-row-title">OWLEXIA Legal AI</span>
-                <span class="deck-tag">Legal Reasoning</span>
-              </div>
-              <div class="deck-row-bottom">
-                <span class="deck-row-url">
-                  <span class="url-protocol">https://</span>owlexia.avenia.my.id
-                </span>
-                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
-              </div>
-            </a>
-
-            <a class="deck-project-row" href="https://github.com/aryarifki/SMtracker" rel="noopener" target="_blank">
-              <div class="deck-row-top">
-                <span class="deck-row-title">SMtracker Bot</span>
-                <span class="deck-tag">Smart Money ML</span>
-              </div>
-              <div class="deck-row-bottom">
-                <span class="deck-row-url">
-                  github.com/aryarifki/SMtracker
-                </span>
-                <span class="deck-arrow" aria-hidden="true">Code &nearr;</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="hero-card-footer">
-            <div class="hero-stat-badge">
-              <span class="stat-number">4</span>
-              <span class="stat-label">Core Systems</span>
-            </div>
-            <div class="hero-stat-divider" aria-hidden="true"></div>
-            <div class="hero-stat-badge">
-              <span class="stat-number">IDX & Law</span>
-              <span class="stat-label">Domain</span>
-            </div>
-            <div class="hero-stat-divider" aria-hidden="true"></div>
-            <div class="hero-stat-badge">
-              <span class="stat-number">Live</span>
-              <span class="stat-label">Mesh Status</span>
-            </div>
-          </div>
-        </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">
+          <span>{{ t.hero.ctaPrimary }}</span>
+          <span class="btn-arrow" aria-hidden="true">&darr;</span>
+        </a>
+        <a class="btn btn-secondary" href="#contact">
+          <span>{{ t.hero.ctaSecondary }}</span>
+        </a>
+        <a class="btn btn-outlined" href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank" aria-label="GitHub Profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+          <span class="btn-external-arrow" aria-hidden="true">&nearr;</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-{{!-- SECTION 01: SELECTED WORKS & PRODUCTION PLATFORMS (UTAMA & PALING AWAL) --}}
+{{!-- SECTION: FEATURED PROJECTS (PORTFOLIO CORE) --}}
 <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag-row">
-        <span class="section-num">{{ t.projects.sectionNumber }}</span>
-        <span class="section-line" aria-hidden="true"></span>
-        <h2 id="projects-heading" class="section-title">{{ t.projects.heading }}</h2>
-      </div>
+      <h2 id="projects-heading" class="section-title">{{ t.projects.heading }}</h2>
       <p class="section-subtitle">{{ t.projects.sub }}</p>
     </div>
 
-    <div class="bento-grid">
+    <div class="projects-grid">
       {{#each projects as p~}}
-      <article class="bento-card {{#if p.featured}}bento-span-2{{/if}}">
-        <div class="bento-card-inner">
-          <div class="bento-top">
-            <div class="bento-badges">
-              <span class="category-badge">{{ p.badge }}</span>
-              <span class="year-badge">{{ p.year }}</span>
-            </div>
-            <a class="bento-arrow-btn" href="{{ p.url }}" rel="noopener" target="_blank" aria-label="Open {{ p.name }}">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
+      <article class="project-card {{#if p.featured}}project-card-featured{{/if}}">
+        <div class="project-card-header">
+          <div class="project-meta-badges">
+            <span class="project-badge">{{ p.badge }}</span>
+            <span class="project-year">{{ p.year }}</span>
           </div>
+          <a class="project-external-link" href="{{ p.url }}" rel="noopener" target="_blank" aria-label="Visit {{ p.name }}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
 
-          <div class="bento-main">
-            <h3 class="bento-title">
-              <a href="{{ p.url }}" rel="noopener" target="_blank">{{ p.name }}</a>
-            </h3>
-            <p class="bento-desc">{{ p.en }}</p>
-          </div>
+        <div class="project-card-body">
+          <h3 class="project-title">
+            <a href="{{ p.url }}" rel="noopener" target="_blank">{{ p.name }}</a>
+          </h3>
+          <p class="project-description">{{ p.en }}</p>
+        </div>
 
-          <div class="bento-footer">
-            <ul class="tag-chips" aria-label="Technology Stack">
-              {{#each p.stack as s~}}
-              <li class="chip">{{ s }}</li>
-              {{~/each}}
-            </ul>
-            <div class="bento-cta-action">
-              <a class="bento-direct-link" href="{{ p.url }}" rel="noopener" target="_blank">
-                <span>Open Project</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
+        <div class="project-card-footer">
+          <ul class="project-stack" aria-label="Technology Stack">
+            {{#each p.stack as s~}}
+            <li class="stack-tag">{{ s }}</li>
+            {{~/each}}
+          </ul>
+          <a class="project-action-link" href="{{ p.url }}" rel="noopener" target="_blank">
+            <span>Explore</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </article>
       {{~/each}}
     </div>
 
-    <div class="projects-action-row">
-      <a class="btn btn-tonal" href="https://github.com/{{ site.handle }}?tab=repositories" rel="noopener" target="_blank">
+    <div class="section-bottom-action">
+      <a class="btn btn-secondary" href="https://github.com/{{ site.handle }}?tab=repositories" rel="noopener" target="_blank">
         <span>{{ t.projects.viewAll }}</span>
         <span class="btn-arrow" aria-hidden="true">&nearr;</span>
       </a>
@@ -190,31 +100,25 @@
   </div>
 </section>
 
-{{!-- SECTION 02: TECHNICAL STACK & ARCHITECTURE --}}
+{{!-- SECTION: TECHNICAL STACK & DISCIPLINES --}}
 <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag-row">
-        <span class="section-num">{{ t.skills.sectionNumber }}</span>
-        <span class="section-line" aria-hidden="true"></span>
-        <h2 id="skills-heading" class="section-title">{{ t.skills.heading }}</h2>
-      </div>
+      <h2 id="skills-heading" class="section-title">{{ t.skills.heading }}</h2>
       <p class="section-subtitle">{{ t.skills.sub }}</p>
     </div>
 
-    <div class="skills-pods-grid">
+    <div class="skills-grid">
       {{#each skills as g~}}
-      <div class="skills-pod-card">
-        <div class="skills-pod-head">
-          <div class="skills-icon-mark" aria-hidden="true">
-            <span class="pod-dot"></span>
-          </div>
-          <h3 class="skills-pod-title">{{ g.group.en }}</h3>
+      <div class="skill-category-card">
+        <div class="skill-head">
+          <span class="skill-accent-bar" aria-hidden="true"></span>
+          <h3 class="skill-group-title">{{ g.group.en }}</h3>
         </div>
-        <p class="skills-pod-desc">{{ g.desc.en }}</p>
-        <ul class="skills-chip-list">
+        <p class="skill-group-desc">{{ g.desc.en }}</p>
+        <ul class="skill-chip-list">
           {{#each g.items as item~}}
-          <li class="m3-chip">{{ item }}</li>
+          <li class="skill-chip">{{ item }}</li>
           {{~/each}}
         </ul>
       </div>
@@ -223,37 +127,32 @@
   </div>
 </section>
 
-{{!-- SECTION 03: ABOUT THE BUILDER & PHILOSOPHY --}}
+{{!-- SECTION: ABOUT THE BUILDER --}}
 <section class="section about-section" id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag-row">
-        <span class="section-num">{{ t.about.sectionNumber }}</span>
-        <span class="section-line" aria-hidden="true"></span>
-        <h2 id="about-heading" class="section-title">{{ t.about.heading }}</h2>
-      </div>
+      <h2 id="about-heading" class="section-title">{{ t.about.heading }}</h2>
       <p class="section-subtitle">{{ t.about.sub }}</p>
     </div>
 
-    <div class="about-bento-grid">
-      <div class="about-narrative-card">
-        <div class="prose">
-          <p class="lead-paragraph">{{ t.about.body1 }}</p>
-          <p>{{ t.about.body2 }}</p>
-        </div>
-        <div class="code-quote-block">
-          <span class="quote-prefix" aria-hidden="true">#</span>
-          <code>Analysis grounded in verified data, not speculative gut feeling.</code>
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="about-lead">{{ t.about.body1 }}</p>
+        <p class="about-text">{{ t.about.body2 }}</p>
+
+        <div class="about-quote">
+          <span class="quote-symbol" aria-hidden="true">&ldquo;</span>
+          <p class="quote-text">Analysis grounded in verified data, zero-bloat architecture, and reproducible automation.</p>
         </div>
       </div>
 
-      <div class="about-facts-card">
-        <h3 class="facts-card-title">{{ t.about.factsHeading }}</h3>
-        <dl class="facts-list">
+      <div class="about-specs-card">
+        <h3 class="specs-title">{{ t.about.factsHeading }}</h3>
+        <dl class="specs-list">
           {{#each t.about.facts as f~}}
-          <div class="fact-item">
-            <dt class="fact-key">{{ f.k }}</dt>
-            <dd class="fact-val">{{ f.v }}</dd>
+          <div class="spec-row">
+            <dt class="spec-key">{{ f.k }}</dt>
+            <dd class="spec-value">{{ f.v }}</dd>
           </div>
           {{~/each}}
         </dl>
@@ -262,32 +161,24 @@
   </div>
 </section>
 
-{{!-- SECTION 04: EXPERIENCE & EDUCATION --}}
+{{!-- SECTION: EXPERIENCE & TIMELINE --}}
 <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag-row">
-        <span class="section-num">{{ t.experience.sectionNumber }}</span>
-        <span class="section-line" aria-hidden="true"></span>
-        <h2 id="experience-heading" class="section-title">{{ t.experience.heading }}</h2>
-      </div>
+      <h2 id="experience-heading" class="section-title">{{ t.experience.heading }}</h2>
       <p class="section-subtitle">{{ t.experience.sub }}</p>
     </div>
 
-    <div class="timeline-stepper">
+    <div class="timeline-list">
       {{#each experience as x~}}
-      <div class="stepper-item">
-        <div class="stepper-marker-col">
-          <div class="stepper-dot"></div>
-          <div class="stepper-rail"></div>
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-period">{{ x.period }}</span>
+          <span class="timeline-org">{{ x.org }}</span>
         </div>
-        <div class="stepper-content-card">
-          <div class="stepper-meta">
-            <span class="stepper-period">{{ x.period }}</span>
-            <span class="stepper-org">{{ x.org }}</span>
-          </div>
-          <h3 class="stepper-role">{{ x.role.en }}</h3>
-          <p class="stepper-desc">{{ x.desc.en }}</p>
+        <div class="timeline-detail">
+          <h3 class="timeline-role">{{ x.role.en }}</h3>
+          <p class="timeline-desc">{{ x.desc.en }}</p>
         </div>
       </div>
       {{~/each}}
@@ -295,44 +186,38 @@
   </div>
 </section>
 
-{{!-- SECTION 05: CONTACT --}}
+{{!-- SECTION: CONTACT --}}
 <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
   <div class="container">
-    <div class="contact-card-expressive">
+    <div class="contact-card">
       <div class="contact-header">
-        <div class="section-tag-row contact-tag-row">
-          <span class="section-num contact-num">{{ t.contact.sectionNumber }}</span>
-          <span class="section-line contact-line" aria-hidden="true"></span>
-          <h2 id="contact-heading" class="contact-title">{{ t.contact.heading }}</h2>
-        </div>
-        <p class="contact-lead">{{ t.contact.body }}</p>
+        <h2 id="contact-heading" class="contact-title">{{ t.contact.heading }}</h2>
+        <p class="contact-subtitle">{{ t.contact.sub }}</p>
+        <p class="contact-body">{{ t.contact.body }}</p>
       </div>
 
-      <div class="contact-interactive-box">
-        <div class="contact-email-row">
+      <div class="contact-actions">
+        <div class="contact-cta-row">
           <a class="btn btn-primary btn-lg" href="mailto:{{ site.email }}">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <span>{{ t.contact.cta }}</span>
           </a>
-          <button type="button" class="btn btn-tonal btn-lg copy-email-btn" id="copy-email-btn" data-email="{{ site.email }}">
+          <button type="button" class="btn btn-secondary btn-lg copy-email-btn" id="copy-email-btn" data-email="{{ site.email }}">
             <span class="copy-text">{{ t.contact.copyEmail }}</span>
             <span class="copy-success" style="display: none;">{{ t.contact.copied }}</span>
           </button>
         </div>
 
-        <div class="contact-socials-group">
-          <p class="socials-label">Or reach out directly via:</p>
-          <ul class="socials-pill-list">
+        <div class="contact-channels">
+          <span class="channels-label">Direct profiles:</span>
+          <div class="channels-list">
             {{#each socials as s~}}
-            <li>
-              <a class="social-pill-link" href="{{ s.url }}" rel="noopener" target="_blank">
-                <span>{{ s.label }}</span>
-                <span class="social-handle-text">{{ s.handle }}</span>
-                <span class="social-pill-arrow" aria-hidden="true">&nearr;</span>
-              </a>
-            </li>
+            <a class="channel-link" href="{{ s.url }}" rel="noopener" target="_blank">
+              <span>{{ s.label }}</span>
+              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+            </a>
             {{~/each}}
-          </ul>
+          </div>
         </div>
       </div>
     </div>

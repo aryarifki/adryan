@@ -2,9 +2,11 @@
   "site": {
     "domain": "avenia.my.id",
     "url": "https://avenia.my.id",
-    "name": "sugarate",
+    "name": "Rifky Arya",
     "handle": "aryarifki",
-    "fullName": "Arya Rifki",
+    "fullName": "Rifky Arya",
+    "alias": "sugarate",
+    "role": "Software & Data Engineer",
     "location": "Semarang, Indonesia",
     "email": "amadryanrifky@gmail.com",
     "avatar": "/assets/avatar.png",
@@ -58,17 +60,17 @@
   "skills": [
     {
       "group": { "en": "Data Engineering & Pipelines" },
-      "desc": { "en": "Turning raw, noisy web and market data into reliable pipelines" },
-      "items": ["Python 3.11+", "FastAPI", "Pandas", "ETL Architecture", "Web Crawling & Scraping", "SQL & Relational Models", "REST API Design"]
+      "desc": { "en": "Turning raw, noisy web and market data into reliable automated pipelines" },
+      "items": ["Python 3.11+", "FastAPI", "Pandas", "ETL Architecture", "Web Scraping & Crawling", "SQL & Relational Models", "REST API Design"]
     },
     {
       "group": { "en": "Quantitative & Machine Learning" },
-      "desc": { "en": "Empirical modeling and exploratory financial analytics" },
-      "items": ["Predictive Modeling", "scikit-learn", "IDX Capital Market Analysis", "Smart Money Tracking", "Time Series Analysis", "Data Visualization"]
+      "desc": { "en": "Empirical modeling and exploratory financial analytics for Indonesian equities" },
+      "items": ["Predictive Modeling", "scikit-learn", "IDX Market Analysis", "Smart Money Tracking", "Time Series Analysis", "Data Visualization"]
     },
     {
       "group": { "en": "Legal Informatics & Research" },
-      "desc": { "en": "Intersection of statutory law, judicial corpus, and automation" },
+      "desc": { "en": "Intersection of statutory law, judicial corpus, and autonomous reasoning" },
       "items": ["Court Decision Mining", "Legal Corpus Extraction", "Indonesian Statutory Analysis", "Regulatory Research", "Document Structuring"]
     }
   ],
@@ -102,62 +104,52 @@
     "en": {
       "lang": "en",
       "htmlLang": "en",
-      "title": "avenia — Systems & Projects Exhibition",
-      "description": "Exhibition of production platforms, capital market analytics engines, and legal informatics systems by Arya Rifki (sugarate).",
+      "title": "Rifky Arya — Software & Data Engineer",
+      "description": "Personal landing page and portfolio of projects engineered by Rifky Arya. High-integrity data pipelines, capital market platforms, and legal informatics.",
       "nav": {
         "projects": "Projects",
-        "skills": "Architecture",
+        "skills": "Stack",
         "about": "About",
-        "experience": "Path",
+        "experience": "Experience",
         "contact": "Contact",
-        "statusBadge": "Mesh Online"
+        "statusBadge": "Available"
       },
       "hero": {
-        "status": "4 Production Systems Live",
-        "eyebrow": "Engineering Exhibition & Live Mesh",
-        "title": "avenia",
-        "tagline": "Capital Market Platforms & Legal Informatics Systems.",
-        "lead": "A dedicated showcase of live systems, high-speed ingestion engines, and quantitative intelligence tools engineered for Indonesian capital markets and legal jurisprudence.",
+        "status": "Available for select engineering & research projects",
+        "eyebrow": "Personal Portfolio",
+        "name": "Rifky Arya",
+        "tagline": "Software & Data Engineer",
+        "lead": "I engineer autonomous data pipelines, capital market intelligence platforms, and legal informatics systems. Based in Semarang, Indonesia—crafted with zero-bloat architecture and verified data integrity.",
         "ctaPrimary": "Explore Projects",
-        "ctaSecondary": "System Architecture",
-        "quickFacts": [
-          { "label": "Domain", "val": "Finance × Law" },
-          { "label": "Mesh", "val": "Cloudflare Tunnel" },
-          { "label": "Live Platforms", "val": "4 Production" }
-        ]
+        "ctaSecondary": "Get in Touch"
       },
       "projects": {
-        "sectionNumber": "01",
-        "heading": "Production Systems & Projects",
-        "sub": "Curated live platforms, legal-tech engines, and quantitative intelligence tools engineered from Semarang, Indonesia.",
+        "heading": "Featured Projects",
+        "sub": "Personal production platforms and quantitative systems engineered by Rifky Arya.",
         "viewAll": "Explore All Repositories on GitHub"
       },
       "skills": {
-        "sectionNumber": "02",
-        "heading": "Technical Architecture",
-        "sub": "Engineering disciplines, infrastructure patterns, and tools deployed across production systems."
+        "heading": "Technical Stack",
+        "sub": "Core engineering disciplines and tools deployed across my projects."
       },
       "about": {
-        "sectionNumber": "03",
-        "heading": "About the Builder",
+        "heading": "About",
         "sub": "Engineering capital market platforms with a legal scholar's precision.",
-        "body1": "I am Arya Rifki (sugarate), an independent developer and undergraduate law student based in Semarang, Indonesia. I design and build production-grade systems that solve complex data problems in Indonesian capital markets and statutory jurisprudence.",
+        "body1": "I am Rifky Arya (sugarate), an independent developer and undergraduate law student based in Semarang, Indonesia. I design and build production-grade systems that solve complex data challenges across Indonesian capital markets and statutory jurisprudence.",
         "body2": "My work bridges distributed web crawling, market microstructure auditing, and legal informatics. Every system is built on one core premise: high data integrity, minimal speculative noise, and robust automation.",
-        "factsHeading": "System Specs",
+        "factsHeading": "Key Overview",
         "facts": [
           { "k": "Primary Focus", "v": "IDX Analytics & Legal AI" },
           { "k": "Core Stack", "v": "Python, FastAPI, Next.js, Cloudflare" },
           { "k": "Academic Path", "v": "Bachelor of Laws (LL.B.)" },
-          { "k": "Architecture", "v": "Zero-bloat & Reproducible" }
+          { "k": "Engineering Style", "v": "Zero-bloat & Reproducible" }
         ]
       },
       "experience": {
-        "sectionNumber": "04",
-        "heading": "Experience & Path",
-        "sub": "Academic milestones and independent engineering journey."
+        "heading": "Experience",
+        "sub": "Academic milestones and independent engineering path."
       },
       "contact": {
-        "sectionNumber": "05",
         "heading": "Let's Connect",
         "sub": "Inquiries, collaboration, or discussing quantitative and legal informatics challenges.",
         "body": "Interested in deploying similar data architectures, collaborating on market research, or discussing legal-tech systems? Feel free to reach out directly.",
@@ -166,9 +158,9 @@
         "copied": "Copied to clipboard!"
       },
       "footer": {
-        "built": "Rendered statically via",
+        "built": "Rendered statically with",
         "rights": "All rights reserved.",
-        "tagline": "Crafted with Material 3 Expressive & Hallmark anti-slop principles."
+        "tagline": "Crafted with simple minimalist principles."
       }
     }
   }
