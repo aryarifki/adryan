@@ -1,7 +1,7 @@
 {
   "site": {
-    "domain": "cugarete.me",
-    "url": "https://cugarete.me",
+    "domain": "avenia.my.id",
+    "url": "https://avenia.my.id",
     "name": "sugarate",
     "handle": "rifqiaarya",
     "fullName": "Arya Rifki",
@@ -20,7 +20,7 @@
   "projects": [
     {
       "name": "The Invest Owl",
-      "url": "https://investowl.cugarete.me/",
+      "url": "https://investowl.avenia.my.id/",
       "stack": ["Python", "FastAPI", "Next.js", "Financial Data", "Market Analytics"],
       "year": "2026",
       "badge": "Flagship Platform",
@@ -29,7 +29,7 @@
     },
     {
       "name": "O-Crawler",
-      "url": "https://ocrawler.cugarete.me/",
+      "url": "https://ocrawler.avenia.my.id/",
       "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF", "Async ETL"],
       "year": "2026",
       "badge": "Legal Ingestion Engine",
@@ -38,7 +38,7 @@
     },
     {
       "name": "OWLEXIA Legal AI",
-      "url": "https://owlexia.cugarete.me/",
+      "url": "https://owlexia.avenia.my.id/",
       "stack": ["Python", "LLM Reasoner", "Agentic AI", "Legal Informatics"],
       "year": "2026",
       "badge": "Agentic AI Intelligence",
