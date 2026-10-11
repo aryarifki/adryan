@@ -1,4 +1,4 @@
-# cugarete.me
+# avenia.my.id
 
 Landing page pribadi, dirender statis dengan [DVE (Deserve View Engine)](https://github.com/NeaByteLab/DVE) dan di-deploy ke GitHub Pages.
 
@@ -28,7 +28,7 @@ File workflow disediakan di `setup/github-pages-deploy.yml` (v0 tidak punya izin
 
 1. Salin `setup/github-pages-deploy.yml` ke `.github/workflows/deploy.yml` dan commit.
 2. Di repo: Settings → Pages → Source, pilih **GitHub Actions**.
-3. Setiap push ke `main` akan menjalankan `npm run build` dan mempublikasikan `dist/` (termasuk `CNAME` untuk cugarete.me).
+3. Setiap push ke `main` akan menjalankan `npm run build` dan mempublikasikan `dist/` (termasuk `CNAME` untuk avenia.my.id).
 
 ## Mengubah konten
 
