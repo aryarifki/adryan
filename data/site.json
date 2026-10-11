@@ -3,7 +3,7 @@
     "domain": "avenia.my.id",
     "url": "https://avenia.my.id",
     "name": "sugarate",
-    "handle": "rifqiaarya",
+    "handle": "aryarifki",
     "fullName": "Arya Rifki",
     "location": "Semarang, Indonesia",
     "email": "amadryanrifky@gmail.com",
@@ -102,54 +102,54 @@
     "en": {
       "lang": "en",
       "htmlLang": "en",
-      "title": "sugarate — Data Engineer & Legal Tech Builder",
-      "description": "Personal landing page of Arya Rifki (sugarate). Data engineering, Indonesian capital market analytics, and legal informatics from Semarang.",
+      "title": "avenia — Systems & Projects Exhibition",
+      "description": "Exhibition of production platforms, capital market analytics engines, and legal informatics systems by Arya Rifki (sugarate).",
       "nav": {
-        "about": "About",
         "projects": "Projects",
-        "skills": "Skills",
-        "experience": "Experience",
+        "skills": "Architecture",
+        "about": "About",
+        "experience": "Path",
         "contact": "Contact",
-        "statusBadge": "Available for Collab"
+        "statusBadge": "Mesh Online"
       },
       "hero": {
-        "status": "Available for Projects & Research",
-        "eyebrow": "Data Engineer & LL.B. Candidate",
-        "title": "sugarate",
-        "tagline": "Engineering capital market & legal data into structured clarity.",
-        "lead": "I build robust data pipelines, equity screeners, and machine learning models for the Indonesian stock market — with a legal scholar's eye for regulation, accuracy, and empirical truth.",
-        "ctaPrimary": "Explore Selected Works",
-        "ctaSecondary": "Get in touch",
+        "status": "4 Production Systems Live",
+        "eyebrow": "Engineering Exhibition & Live Mesh",
+        "title": "avenia",
+        "tagline": "Capital Market Platforms & Legal Informatics Systems.",
+        "lead": "A dedicated showcase of live systems, high-speed ingestion engines, and quantitative intelligence tools engineered for Indonesian capital markets and legal jurisprudence.",
+        "ctaPrimary": "Explore Projects",
+        "ctaSecondary": "System Architecture",
         "quickFacts": [
-          { "label": "Based in", "val": "Semarang, ID" },
-          { "label": "Discipline", "val": "Data × Law × ML" },
-          { "label": "Public Repos", "val": "28+ on GitHub" }
-        ]
-      },
-      "about": {
-        "sectionNumber": "01",
-        "heading": "About & Philosophy",
-        "sub": "Bridging quantitative engineering and statutory analysis.",
-        "body1": "I am Arya Rifki (online handle: sugarate), an independent developer and undergraduate law student based in Semarang, Indonesia. I spend my days turning unstructured, messy public feeds into clean, reproducible data pipelines that enable confident decision-making.",
-        "body2": "My work sits at the rare convergence of data engineering, Indonesian capital markets (IDX), and legal informatics. I believe that whether evaluating market depth or analyzing judicial rulings, conclusions must be grounded in verified data rather than speculation.",
-        "factsHeading": "Key Attributes",
-        "facts": [
-          { "k": "Location", "v": "Semarang, Central Java" },
-          { "k": "Primary Stack", "v": "Python, FastAPI, Pandas" },
-          { "k": "Academic Path", "v": "Bachelor of Laws (LL.B.)" },
-          { "k": "Code Philosophy", "v": "Zero-bloat & Reproducible" }
+          { "label": "Domain", "val": "Finance × Law" },
+          { "label": "Mesh", "val": "Cloudflare Tunnel" },
+          { "label": "Live Platforms", "val": "4 Production" }
         ]
       },
       "projects": {
-        "sectionNumber": "02",
-        "heading": "Selected Works",
-        "sub": "Curated production platforms, legal-tech systems, and financial intelligence engines.",
-        "viewAll": "View all repositories on GitHub"
+        "sectionNumber": "01",
+        "heading": "Production Systems & Projects",
+        "sub": "Curated live platforms, legal-tech engines, and quantitative intelligence tools engineered from Semarang, Indonesia.",
+        "viewAll": "Explore All Repositories on GitHub"
       },
       "skills": {
+        "sectionNumber": "02",
+        "heading": "Technical Architecture",
+        "sub": "Engineering disciplines, infrastructure patterns, and tools deployed across production systems."
+      },
+      "about": {
         "sectionNumber": "03",
-        "heading": "Technical Stack",
-        "sub": "Core tools and domains applied in production and research."
+        "heading": "About the Builder",
+        "sub": "Engineering capital market platforms with a legal scholar's precision.",
+        "body1": "I am Arya Rifki (sugarate), an independent developer and undergraduate law student based in Semarang, Indonesia. I design and build production-grade systems that solve complex data problems in Indonesian capital markets and statutory jurisprudence.",
+        "body2": "My work bridges distributed web crawling, market microstructure auditing, and legal informatics. Every system is built on one core premise: high data integrity, minimal speculative noise, and robust automation.",
+        "factsHeading": "System Specs",
+        "facts": [
+          { "k": "Primary Focus", "v": "IDX Analytics & Legal AI" },
+          { "k": "Core Stack", "v": "Python, FastAPI, Next.js, Cloudflare" },
+          { "k": "Academic Path", "v": "Bachelor of Laws (LL.B.)" },
+          { "k": "Architecture", "v": "Zero-bloat & Reproducible" }
+        ]
       },
       "experience": {
         "sectionNumber": "04",
@@ -159,8 +159,8 @@
       "contact": {
         "sectionNumber": "05",
         "heading": "Let's Connect",
-        "sub": "Initiate collaboration or discuss quantitative & legal data challenges.",
-        "body": "Have an interesting dataset, capital market hypothesis, or legal-tech inquiry? I'm always open to thoughtful discussions, research partnerships, and technical collaboration.",
+        "sub": "Inquiries, collaboration, or discussing quantitative and legal informatics challenges.",
+        "body": "Interested in deploying similar data architectures, collaborating on market research, or discussing legal-tech systems? Feel free to reach out directly.",
         "cta": "Send an Email",
         "copyEmail": "Copy Email Address",
         "copied": "Copied to clipboard!"

@@ -3,8 +3,11 @@
     <div class="footer-top">
       <div class="footer-brand-col">
         <a class="brand footer-brand" href="{{ base }}">
-          <span class="brand-avatar-mini">
-            <img src="{{ site.avatar }}" alt="{{ site.name }}" width="24" height="24" loading="lazy">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
           </span>
           <span class="brand-name">{{ site.name }}</span>
         </a>

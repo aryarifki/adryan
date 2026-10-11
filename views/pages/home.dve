@@ -2,7 +2,7 @@
 {{#block title}}{{ t.title }}{{/block}}
 {{#block body}}
 
-{{!-- HERO SECTION --}}
+{{!-- HERO SECTION: PROJECT & MESH SHOWCASE --}}
 <section class="hero-section" id="hero" aria-labelledby="hero-title">
   <div class="container hero-container">
     <div class="hero-grid">
@@ -30,7 +30,7 @@
             <span>{{ t.hero.ctaPrimary }}</span>
             <span class="btn-arrow" aria-hidden="true">&darr;</span>
           </a>
-          <a class="btn btn-tonal" href="#contact">
+          <a class="btn btn-tonal" href="#skills">
             <span>{{ t.hero.ctaSecondary }}</span>
           </a>
           <a class="btn btn-outlined btn-icon-link" href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank">
@@ -42,24 +42,95 @@
       </div>
 
       <div class="hero-visual">
-        <div class="hero-card-asymmetric">
-          <div class="hero-avatar-wrapper">
-            <img class="hero-avatar-img" src="{{ site.avatar }}" alt="{{ site.fullName }} — {{ site.name }}" width="380" height="380" fetchpriority="high">
+        <div class="hero-console-deck">
+          <div class="console-deck-header">
+            <div class="console-deck-dots" aria-hidden="true">
+              <span class="deck-dot deck-dot-red"></span>
+              <span class="deck-dot deck-dot-amber"></span>
+              <span class="deck-dot deck-dot-green"></span>
+            </div>
+            <div class="console-deck-title">
+              <span class="console-prefix">$</span>
+              <span>avenia.mesh // live-endpoints</span>
+            </div>
+            <span class="console-status-pill">
+              <span class="status-dot-pulse" aria-hidden="true"></span>
+              <span>LIVE</span>
+            </span>
           </div>
+
+          <div class="console-deck-body">
+            <a class="deck-project-row" href="https://investowl.avenia.my.id/" rel="noopener" target="_blank">
+              <div class="deck-row-left">
+                <span class="deck-pulse-indicator" aria-hidden="true"></span>
+                <div class="deck-row-text">
+                  <span class="deck-row-title">The Invest Owl</span>
+                  <span class="deck-row-url">investowl.avenia.my.id</span>
+                </div>
+              </div>
+              <div class="deck-row-right">
+                <span class="deck-tag">Capital Markets</span>
+                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+            </a>
+
+            <a class="deck-project-row" href="https://ocrawler.avenia.my.id/" rel="noopener" target="_blank">
+              <div class="deck-row-left">
+                <span class="deck-pulse-indicator" aria-hidden="true"></span>
+                <div class="deck-row-text">
+                  <span class="deck-row-title">O-Crawler Engine</span>
+                  <span class="deck-row-url">ocrawler.avenia.my.id</span>
+                </div>
+              </div>
+              <div class="deck-row-right">
+                <span class="deck-tag">Anti-WAF ETL</span>
+                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+            </a>
+
+            <a class="deck-project-row" href="https://owlexia.avenia.my.id/" rel="noopener" target="_blank">
+              <div class="deck-row-left">
+                <span class="deck-pulse-indicator" aria-hidden="true"></span>
+                <div class="deck-row-text">
+                  <span class="deck-row-title">OWLEXIA Legal AI</span>
+                  <span class="deck-row-url">owlexia.avenia.my.id</span>
+                </div>
+              </div>
+              <div class="deck-row-right">
+                <span class="deck-tag">Legal AI</span>
+                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+            </a>
+
+            <a class="deck-project-row" href="https://github.com/aryarifki/SMtracker" rel="noopener" target="_blank">
+              <div class="deck-row-left">
+                <span class="deck-pulse-indicator" aria-hidden="true"></span>
+                <div class="deck-row-text">
+                  <span class="deck-row-title">SMtracker Bot</span>
+                  <span class="deck-row-url">github.com/aryarifki/SMtracker</span>
+                </div>
+              </div>
+              <div class="deck-row-right">
+                <span class="deck-tag">Smart Money ML</span>
+                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+            </a>
+          </div>
+
           <div class="hero-card-footer">
             <div class="hero-stat-badge">
-              <span class="stat-number">28+</span>
-              <span class="stat-label">Public Repos</span>
+              <span class="stat-number">4</span>
+              <span class="stat-label">Core Systems</span>
             </div>
             <div class="hero-stat-divider" aria-hidden="true"></div>
             <div class="hero-stat-badge">
-              <span class="stat-number">IDX & ML</span>
-              <span class="stat-label">Core Focus</span>
+              <span class="stat-number">IDX & Law</span>
+              <span class="stat-label">Domain</span>
             </div>
             <div class="hero-stat-divider" aria-hidden="true"></div>
             <div class="hero-stat-badge">
-              <span class="stat-number">LL.B.</span>
-              <span class="stat-label">Law Student</span>
+              <span class="stat-number">Live</span>
+              <span class="stat-label">Mesh Status</span>
             </div>
           </div>
         </div>
@@ -68,46 +139,7 @@
   </div>
 </section>
 
-{{!-- ABOUT & PHILOSOPHY SECTION --}}
-<section class="section about-section" id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag-row">
-        <span class="section-num">{{ t.about.sectionNumber }}</span>
-        <span class="section-line" aria-hidden="true"></span>
-        <h2 id="about-heading" class="section-title">{{ t.about.heading }}</h2>
-      </div>
-      <p class="section-subtitle">{{ t.about.sub }}</p>
-    </div>
-
-    <div class="about-bento-grid">
-      <div class="about-narrative-card">
-        <div class="prose">
-          <p class="lead-paragraph">{{ t.about.body1 }}</p>
-          <p>{{ t.about.body2 }}</p>
-        </div>
-        <div class="code-quote-block">
-          <span class="quote-prefix" aria-hidden="true">#</span>
-          <code>Analysis grounded in verified data, not speculative gut feeling.</code>
-        </div>
-      </div>
-
-      <div class="about-facts-card">
-        <h3 class="facts-card-title">{{ t.about.factsHeading }}</h3>
-        <dl class="facts-list">
-          {{#each t.about.facts as f~}}
-          <div class="fact-item">
-            <dt class="fact-key">{{ f.k }}</dt>
-            <dd class="fact-val">{{ f.v }}</dd>
-          </div>
-          {{~/each}}
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- SELECTED WORKS (BENTO GRID) --}}
+{{!-- SECTION 01: SELECTED WORKS & PRODUCTION PLATFORMS (UTAMA & PALING AWAL) --}}
 <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
   <div class="container">
     <div class="section-header">
@@ -146,6 +178,12 @@
               <li class="chip">{{ s }}</li>
               {{~/each}}
             </ul>
+            <div class="bento-cta-action">
+              <a class="bento-direct-link" href="{{ p.url }}" rel="noopener" target="_blank">
+                <span>Open Project</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
       </article>
@@ -161,7 +199,7 @@
   </div>
 </section>
 
-{{!-- TECHNICAL STACK & SKILLS SECTION --}}
+{{!-- SECTION 02: TECHNICAL STACK & ARCHITECTURE --}}
 <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
   <div class="container">
     <div class="section-header">
@@ -194,7 +232,46 @@
   </div>
 </section>
 
-{{!-- EXPERIENCE & EDUCATION SECTION --}}
+{{!-- SECTION 03: ABOUT THE BUILDER & PHILOSOPHY --}}
+<section class="section about-section" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag-row">
+        <span class="section-num">{{ t.about.sectionNumber }}</span>
+        <span class="section-line" aria-hidden="true"></span>
+        <h2 id="about-heading" class="section-title">{{ t.about.heading }}</h2>
+      </div>
+      <p class="section-subtitle">{{ t.about.sub }}</p>
+    </div>
+
+    <div class="about-bento-grid">
+      <div class="about-narrative-card">
+        <div class="prose">
+          <p class="lead-paragraph">{{ t.about.body1 }}</p>
+          <p>{{ t.about.body2 }}</p>
+        </div>
+        <div class="code-quote-block">
+          <span class="quote-prefix" aria-hidden="true">#</span>
+          <code>Analysis grounded in verified data, not speculative gut feeling.</code>
+        </div>
+      </div>
+
+      <div class="about-facts-card">
+        <h3 class="facts-card-title">{{ t.about.factsHeading }}</h3>
+        <dl class="facts-list">
+          {{#each t.about.facts as f~}}
+          <div class="fact-item">
+            <dt class="fact-key">{{ f.k }}</dt>
+            <dd class="fact-val">{{ f.v }}</dd>
+          </div>
+          {{~/each}}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- SECTION 04: EXPERIENCE & EDUCATION --}}
 <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
   <div class="container">
     <div class="section-header">
@@ -227,7 +304,7 @@
   </div>
 </section>
 
-{{!-- CONTACT SECTION --}}
+{{!-- SECTION 05: CONTACT --}}
 <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-card-expressive">
