@@ -44,75 +44,66 @@
       <div class="hero-visual">
         <div class="hero-console-deck">
           <div class="console-deck-header">
-            <div class="console-deck-dots" aria-hidden="true">
-              <span class="deck-dot deck-dot-red"></span>
-              <span class="deck-dot deck-dot-amber"></span>
-              <span class="deck-dot deck-dot-green"></span>
+            <div class="console-header-info">
+              <span class="console-kicker">Network Directory</span>
+              <h2 class="console-deck-heading">Live Systems &amp; Endpoints</h2>
             </div>
-            <div class="console-deck-title">
-              <span class="console-prefix">$</span>
-              <span>avenia.mesh // live-endpoints</span>
-            </div>
-            <span class="console-status-pill">
+            <div class="console-status-pill">
               <span class="status-dot-pulse" aria-hidden="true"></span>
-              <span>LIVE</span>
-            </span>
+              <span>ACTIVE</span>
+            </div>
           </div>
 
           <div class="console-deck-body">
             <a class="deck-project-row" href="https://investowl.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-left">
-                <span class="deck-pulse-indicator" aria-hidden="true"></span>
-                <div class="deck-row-text">
-                  <span class="deck-row-title">The Invest Owl</span>
-                  <span class="deck-row-url">investowl.avenia.my.id</span>
-                </div>
-              </div>
-              <div class="deck-row-right">
+              <div class="deck-row-top">
+                <span class="deck-row-title">The Invest Owl</span>
                 <span class="deck-tag">Capital Markets</span>
-                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+              <div class="deck-row-bottom">
+                <span class="deck-row-url">
+                  <span class="url-protocol">https://</span>investowl.avenia.my.id
+                </span>
+                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
               </div>
             </a>
 
             <a class="deck-project-row" href="https://ocrawler.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-left">
-                <span class="deck-pulse-indicator" aria-hidden="true"></span>
-                <div class="deck-row-text">
-                  <span class="deck-row-title">O-Crawler Engine</span>
-                  <span class="deck-row-url">ocrawler.avenia.my.id</span>
-                </div>
-              </div>
-              <div class="deck-row-right">
+              <div class="deck-row-top">
+                <span class="deck-row-title">O-Crawler Engine</span>
                 <span class="deck-tag">Anti-WAF ETL</span>
-                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+              <div class="deck-row-bottom">
+                <span class="deck-row-url">
+                  <span class="url-protocol">https://</span>ocrawler.avenia.my.id
+                </span>
+                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
               </div>
             </a>
 
             <a class="deck-project-row" href="https://owlexia.avenia.my.id/" rel="noopener" target="_blank">
-              <div class="deck-row-left">
-                <span class="deck-pulse-indicator" aria-hidden="true"></span>
-                <div class="deck-row-text">
-                  <span class="deck-row-title">OWLEXIA Legal AI</span>
-                  <span class="deck-row-url">owlexia.avenia.my.id</span>
-                </div>
+              <div class="deck-row-top">
+                <span class="deck-row-title">OWLEXIA Legal AI</span>
+                <span class="deck-tag">Legal Reasoning</span>
               </div>
-              <div class="deck-row-right">
-                <span class="deck-tag">Legal AI</span>
-                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              <div class="deck-row-bottom">
+                <span class="deck-row-url">
+                  <span class="url-protocol">https://</span>owlexia.avenia.my.id
+                </span>
+                <span class="deck-arrow" aria-hidden="true">Open &nearr;</span>
               </div>
             </a>
 
             <a class="deck-project-row" href="https://github.com/aryarifki/SMtracker" rel="noopener" target="_blank">
-              <div class="deck-row-left">
-                <span class="deck-pulse-indicator" aria-hidden="true"></span>
-                <div class="deck-row-text">
-                  <span class="deck-row-title">SMtracker Bot</span>
-                  <span class="deck-row-url">github.com/aryarifki/SMtracker</span>
-                </div>
-              </div>
-              <div class="deck-row-right">
+              <div class="deck-row-top">
+                <span class="deck-row-title">SMtracker Bot</span>
                 <span class="deck-tag">Smart Money ML</span>
-                <span class="deck-arrow" aria-hidden="true">&nearr;</span>
+              </div>
+              <div class="deck-row-bottom">
+                <span class="deck-row-url">
+                  github.com/aryarifki/SMtracker
+                </span>
+                <span class="deck-arrow" aria-hidden="true">Code &nearr;</span>
               </div>
             </a>
           </div>
