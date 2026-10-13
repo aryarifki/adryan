@@ -1,30 +1,41 @@
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="brand-symbol" aria-hidden="true"></span>
-      <span>Avenia.id &mdash; {{ t.footer.tagline }}</span>
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <span class="brand-symbol" aria-hidden="true"></span>
+          <span class="footer-brand-title">Avenia<span class="text-amber">.id</span></span>
+        </div>
+        <p class="footer-tagline">{{ t.footer.tagline }}</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Tautan Ekosistem &amp; Media">
+        <div class="footer-links-group">
+          <span class="footer-group-label">Ekosistem &amp; Media</span>
+          <ul class="footer-links">
+            {{#each socials as s~}}
+            <li>
+              <a class="footer-link-item" href="{{ s.url }}" rel="noopener noreferrer" target="_blank">
+                <span>{{ s.label }}</span>
+                <span class="footer-arrow" aria-hidden="true">&nearr;</span>
+              </a>
+            </li>
+            {{~/each}}
+          </ul>
+        </div>
+      </nav>
     </div>
 
-    <ul class="footer-links" aria-label="Tautan Platform">
-      {{#each socials as s~}}
-      <li>
-        <a href="{{ s.url }}" rel="noopener" target="_blank">
-          <span>{{ s.label }}</span>
-          <span aria-hidden="true">&nearr;</span>
-        </a>
-      </li>
-      {{~/each}}
-      <li>
-        <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank" title="Static Site Generator">
-          <span>Powered by DVE</span>
-        </a>
-      </li>
-    </ul>
-
-    <div>
-      <p style="margin: 0; font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">
+    <div class="footer-bottom">
+      <p class="footer-copy">
         &copy; {{ site.year }} {{ site.name }}. {{ t.footer.rights }} {{ t.footer.author }}.
       </p>
+      <div class="footer-badge-dve">
+        <a href="https://github.com/NeaByteLab/DVE" rel="noopener noreferrer" target="_blank" class="footer-dve-pill" title="Static Engine: Deserve View Engine">
+          <span class="dve-dot" aria-hidden="true"></span>
+          <span>Powered by DVE</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

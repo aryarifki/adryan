@@ -7,11 +7,6 @@
   <canvas id="hero-canvas"></canvas>
 
   <div class="container hero-content">
-    <div class="hero-radar-badge">
-      <span class="pulse-dot" aria-hidden="true"></span>
-      <span>{{ t.hero.badge }}</span>
-    </div>
-
     <h1 id="hero-title" class="hero-title">
       {{ t.hero.headlinePre }}<br>
       <span class="text-amber">{{ t.hero.headlineHighlight }}</span>
