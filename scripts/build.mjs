@@ -38,14 +38,18 @@ export function build({ quiet = false } = {}) {
       site: data.site,
       socials: data.socials,
       projects: data.projects,
+      bento: data.bento,
+      insights: data.insights,
+      interactivePreview: data.interactivePreview,
+      newsletter: data.newsletter,
       skills: data.skills,
       experience: data.experience,
       t,
-      lang: 'en',
+      lang: 'id',
       base: '/',
       canonical: `${data.site.url}/`
     },
-    'home:en'
+    'home:id'
   )
 
   writeFileSync(join(distDir, 'index.html'), html)

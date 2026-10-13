@@ -1,34 +1,29 @@
 <footer class="site-footer">
-  <div class="container footer-container">
-    <div class="footer-main-row">
-      <div class="footer-brand-info">
-        <span class="footer-name">{{ site.fullName }}</span>
-        <span class="footer-dot" aria-hidden="true">·</span>
-        <span class="footer-role">{{ site.role }}</span>
-      </div>
-
-      <ul class="footer-links" aria-label="Social Profiles">
-        {{#each socials as s~}}
-        <li>
-          <a class="footer-link" href="{{ s.url }}" rel="noopener" target="_blank">
-            <span>{{ s.label }}</span>
-            <span class="arrow-glyph" aria-hidden="true">&nearr;</span>
-          </a>
-        </li>
-        {{~/each}}
-      </ul>
-
-      <a class="footer-top-btn" href="#site-header" aria-label="Back to top">
-        <span>Top</span>
-        <span aria-hidden="true">&uarr;</span>
-      </a>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-symbol" aria-hidden="true"></span>
+      <span>Avenia.id &mdash; {{ t.footer.tagline }}</span>
     </div>
 
-    <div class="footer-sub-row">
-      <p class="footer-copy">&copy; {{ site.year }} {{ site.fullName }}. {{ t.footer.rights }}</p>
-      <p class="footer-tech">
-        {{ t.footer.built }}
-        <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank" class="footer-tech-link">DVE</a>
+    <ul class="footer-links" aria-label="Tautan Platform">
+      {{#each socials as s~}}
+      <li>
+        <a href="{{ s.url }}" rel="noopener" target="_blank">
+          <span>{{ s.label }}</span>
+          <span aria-hidden="true">&nearr;</span>
+        </a>
+      </li>
+      {{~/each}}
+      <li>
+        <a href="https://github.com/NeaByteLab/DVE" rel="noopener" target="_blank" title="Static Site Generator">
+          <span>Powered by DVE</span>
+        </a>
+      </li>
+    </ul>
+
+    <div>
+      <p style="margin: 0; font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">
+        &copy; {{ site.year }} {{ site.name }}. {{ t.footer.rights }} {{ t.footer.author }}.
       </p>
     </div>
   </div>

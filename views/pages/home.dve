@@ -2,224 +2,239 @@
 {{#block title}}{{ t.title }}{{/block}}
 {{#block body}}
 
-{{!-- HERO SECTION: PERSONAL INTRODUCTION --}}
+{{!-- SECTION 1: HERO SECTION (THE REALITY CHECK) --}}
 <section class="hero-section" id="hero" aria-labelledby="hero-title">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-status-pill">
-        <span class="status-pulse-dot" aria-hidden="true"></span>
-        <span class="status-status-text">{{ t.hero.status }}</span>
-      </div>
+  <canvas id="hero-canvas"></canvas>
 
-      <div class="hero-identity">
-        <h1 id="hero-title" class="hero-name">{{ site.fullName }}</h1>
-        <p class="hero-tagline">{{ t.hero.tagline }}</p>
-      </div>
-
-      <p class="hero-lead">{{ t.hero.lead }}</p>
-
-      <div class="hero-meta-row">
-        <div class="meta-item">
-          <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>{{ site.location }}</span>
-        </div>
-        <div class="meta-divider" aria-hidden="true">·</div>
-        <div class="meta-item">
-          <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          <span>IDX Analytics &amp; Legal Tech</span>
-        </div>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">
-          <span>{{ t.hero.ctaPrimary }}</span>
-          <span class="btn-arrow" aria-hidden="true">&darr;</span>
-        </a>
-        <a class="btn btn-secondary" href="#contact">
-          <span>{{ t.hero.ctaSecondary }}</span>
-        </a>
-        <a class="btn btn-outlined" href="https://github.com/{{ site.handle }}" rel="noopener" target="_blank" aria-label="GitHub Profile">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>GitHub</span>
-          <span class="btn-external-arrow" aria-hidden="true">&nearr;</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- SECTION: FEATURED PROJECTS (PORTFOLIO CORE) --}}
-<section class="section projects-section" id="projects" aria-labelledby="projects-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="projects-heading" class="section-title">{{ t.projects.heading }}</h2>
-      <p class="section-subtitle">{{ t.projects.sub }}</p>
+  <div class="container hero-content">
+    <div class="hero-radar-badge">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span>{{ t.hero.badge }}</span>
     </div>
 
-    <div class="projects-grid">
-      {{#each projects as p~}}
-      <article class="project-card {{#if p.featured}}project-card-featured{{/if}}">
-        <div class="project-card-header">
-          <div class="project-meta-badges">
-            <span class="project-badge">{{ p.badge }}</span>
-            <span class="project-year">{{ p.year }}</span>
-          </div>
-          <a class="project-external-link" href="{{ p.url }}" rel="noopener" target="_blank" aria-label="Visit {{ p.name }}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-          </a>
-        </div>
+    <h1 id="hero-title" class="hero-title">
+      {{ t.hero.headlinePre }}<br>
+      <span class="text-amber">{{ t.hero.headlineHighlight }}</span>
+    </h1>
 
-        <div class="project-card-body">
-          <h3 class="project-title">
-            <a href="{{ p.url }}" rel="noopener" target="_blank">{{ p.name }}</a>
-          </h3>
-          <p class="project-description">{{ p.en }}</p>
-        </div>
+    <p class="hero-subtitle">
+      {{ t.hero.sub }}
+    </p>
 
-        <div class="project-card-footer">
-          <ul class="project-stack" aria-label="Technology Stack">
-            {{#each p.stack as s~}}
-            <li class="stack-tag">{{ s }}</li>
-            {{~/each}}
-          </ul>
-          <a class="project-action-link" href="{{ p.url }}" rel="noopener" target="_blank">
-            <span>Explore</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-      </article>
-      {{~/each}}
-    </div>
-
-    <div class="section-bottom-action">
-      <a class="btn btn-secondary" href="https://github.com/{{ site.handle }}?tab=repositories" rel="noopener" target="_blank">
-        <span>{{ t.projects.viewAll }}</span>
-        <span class="btn-arrow" aria-hidden="true">&nearr;</span>
+    <div class="hero-actions">
+      <a class="btn-pill-primary" href="#insights">
+        <span>{{ t.hero.ctaPrimary }}</span>
+        <span aria-hidden="true">&darr;</span>
+      </a>
+      <a class="btn-pill-outlined" href="#tools">
+        <span>{{ t.hero.ctaSecondary }}</span>
+        <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
 </section>
 
-{{!-- SECTION: TECHNICAL STACK & DISCIPLINES --}}
-<section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+{{!-- SECTION 2: "THE AVENIA WAY" BENTO BOX (M3 ASYMMETRIC) --}}
+<section class="section bento-section" id="methodology" aria-labelledby="bento-heading">
   <div class="container">
     <div class="section-header">
-      <h2 id="skills-heading" class="section-title">{{ t.skills.heading }}</h2>
-      <p class="section-subtitle">{{ t.skills.sub }}</p>
+      <span class="section-kicker">Metodologi &amp; Prinsip</span>
+      <h2 id="bento-heading" class="section-title">{{ t.bento.heading }}</h2>
+      <p class="section-subtitle">{{ t.bento.sub }}</p>
     </div>
 
-    <div class="skills-grid">
-      {{#each skills as g~}}
-      <div class="skill-category-card">
-        <div class="skill-head">
-          <span class="skill-accent-bar" aria-hidden="true"></span>
-          <h3 class="skill-group-title">{{ g.group.en }}</h3>
-        </div>
-        <p class="skill-group-desc">{{ g.desc.en }}</p>
-        <ul class="skill-chip-list">
-          {{#each g.items as item~}}
-          <li class="skill-chip">{{ item }}</li>
-          {{~/each}}
-        </ul>
-      </div>
-      {{~/each}}
-    </div>
-  </div>
-</section>
-
-{{!-- SECTION: ABOUT THE BUILDER --}}
-<section class="section about-section" id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="about-heading" class="section-title">{{ t.about.heading }}</h2>
-      <p class="section-subtitle">{{ t.about.sub }}</p>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-content">
-        <p class="about-lead">{{ t.about.body1 }}</p>
-        <p class="about-text">{{ t.about.body2 }}</p>
-
-        <div class="about-quote">
-          <span class="quote-symbol" aria-hidden="true">&ldquo;</span>
-          <p class="quote-text">Analysis grounded in verified data, zero-bloat architecture, and reproducible automation.</p>
-        </div>
-      </div>
-
-      <div class="about-specs-card">
-        <h3 class="specs-title">{{ t.about.factsHeading }}</h3>
-        <dl class="specs-list">
-          {{#each t.about.facts as f~}}
-          <div class="spec-row">
-            <dt class="spec-key">{{ f.k }}</dt>
-            <dd class="spec-value">{{ f.v }}</dd>
+    <div class="bento-grid">
+      {{#each bento as b~}}
+      <article class="bento-card bento-card-{{ b.size }}">
+        <div>
+          <div class="bento-card-header">
+            <span class="bento-badge">{{ b.badge }}</span>
+            <span class="bento-stat text-amber">{{ b.stat }}</span>
           </div>
-          {{~/each}}
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- SECTION: EXPERIENCE & TIMELINE --}}
-<section class="section experience-section" id="experience" aria-labelledby="experience-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="experience-heading" class="section-title">{{ t.experience.heading }}</h2>
-      <p class="section-subtitle">{{ t.experience.sub }}</p>
-    </div>
-
-    <div class="timeline-list">
-      {{#each experience as x~}}
-      <div class="timeline-item">
-        <div class="timeline-meta">
-          <span class="timeline-period">{{ x.period }}</span>
-          <span class="timeline-org">{{ x.org }}</span>
+          <h3 class="bento-title">{{ b.title }}</h3>
+          <p class="bento-desc">{{ b.desc }}</p>
         </div>
-        <div class="timeline-detail">
-          <h3 class="timeline-role">{{ x.role.en }}</h3>
-          <p class="timeline-desc">{{ x.desc.en }}</p>
+
+        <div class="bento-footer-meta">
+          <span>{{ b.statLabel }}</span>
+          <span class="text-teal" style="font-weight: 700; font-family: var(--font-mono);">&check; Tervalidasi</span>
         </div>
-      </div>
+      </article>
       {{~/each}}
     </div>
   </div>
 </section>
 
-{{!-- SECTION: CONTACT --}}
-<section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+{{!-- SECTION 3: INTEGRASI WEB APP & TOOLS (INTERACTIVE DATA EXPLORER) --}}
+<section class="section tools-section" id="tools" aria-labelledby="tools-heading">
   <div class="container">
-    <div class="contact-card">
-      <div class="contact-header">
-        <h2 id="contact-heading" class="contact-title">{{ t.contact.heading }}</h2>
-        <p class="contact-subtitle">{{ t.contact.sub }}</p>
-        <p class="contact-body">{{ t.contact.body }}</p>
+    <div class="section-header">
+      <span class="section-kicker">Karya &amp; Ekosistem</span>
+      <h2 id="tools-heading" class="section-title">{{ t.tools.heading }}</h2>
+      <p class="section-subtitle">{{ t.tools.sub }}</p>
+    </div>
+
+    <div class="tools-split-layout">
+      {{!-- KOLOM KIRI: DAFTAR PLATFORM & TOOLS --}}
+      <div class="tools-info-col">
+        <div class="platform-list">
+          {{#each projects as p~}}
+          <article class="platform-mini-card">
+            <div class="platform-card-header">
+              <span class="platform-name">{{ p.name }}</span>
+              <span class="platform-badge">{{ p.badge }}</span>
+            </div>
+            <p class="platform-desc">{{ p.summary }}</p>
+            <div class="platform-tags">
+              {{#each p.stack as s~}}
+              <span class="platform-tag">{{ s }}</span>
+              {{~/each}}
+            </div>
+          </article>
+          {{~/each}}
+        </div>
       </div>
 
-      <div class="contact-actions">
-        <div class="contact-cta-row">
-          <a class="btn btn-primary btn-lg" href="mailto:{{ site.email }}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <span>{{ t.contact.cta }}</span>
+      {{!-- KOLOM KANAN: WIDGET SIMULATOR INTERAKTIF --}}
+      <div class="tools-explorer-col">
+        <div class="explorer-widget-card" id="explorer-card">
+          <div class="explorer-header">
+            <div>
+              <span class="explorer-badge-chip">LIVE INTERACTIVE RADAR</span>
+              <h3 style="margin: 8px 0 0 0; font-size: 1.25rem; font-weight: 800; color: #fff;">
+                Nyangkut Tracker BEI
+              </h3>
+            </div>
+            <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--md-sys-color-on-surface-variant);">
+              KSEI Proxy Engine
+            </span>
+          </div>
+
+          {{!-- TICKER SELECTOR TABS --}}
+          <div class="explorer-tabs" role="tablist">
+            <button type="button" class="explorer-tab-btn active" data-ticker="GOTO" role="tab">GOTO</button>
+            <button type="button" class="explorer-tab-btn" data-ticker="BBRI" role="tab">BBRI</button>
+            <button type="button" class="explorer-tab-btn" data-ticker="BUMI" role="tab">BUMI</button>
+          </div>
+
+          {{!-- SIMULASI HARGA & PROGRESS BAR --}}
+          <div class="explorer-sim-box">
+            <div class="explorer-slider-row">
+              <div class="slider-label">
+                <span>Simulasi Harga Penutupan:</span>
+                <span id="explorer-price-display" class="text-amber" style="font-family: var(--font-mono); font-weight: 800;">Rp 52</span>
+              </div>
+              <input type="range" class="m3-range-slider" id="explorer-price-slider" min="30" max="100" value="52" aria-label="Slider simulasi harga pasar">
+            </div>
+
+            <div class="explorer-metrics-grid">
+              <div class="exp-metric-item">
+                <span class="exp-metric-label">Modal Rata-Rata Ritel</span>
+                <span class="exp-metric-val" id="explorer-avg-display">Rp 68</span>
+              </div>
+              <div class="exp-metric-item">
+                <span class="exp-metric-label">Posisi vs Modal (Underwater)</span>
+                <span class="exp-metric-val" id="explorer-underwater-badge" class="explorer-badge underwater-negative">-23.5%</span>
+              </div>
+              <div class="exp-metric-item">
+                <span class="exp-metric-label">Retail Absorption (RAR)</span>
+                <span class="exp-metric-val text-amber" id="explorer-rar-display">142.5%</span>
+              </div>
+              <div class="exp-metric-item">
+                <span class="exp-metric-label">Total Investor (SID)</span>
+                <span class="exp-metric-val" id="explorer-sid-display">464.710 SID</span>
+              </div>
+            </div>
+
+            <div class="explorer-progress-wrap">
+              <div class="progress-labels">
+                <span>Estimasi Ritel Nyangkut: <strong id="explorer-nyangkut-pct" class="text-rose">68%</strong></span>
+                <span class="text-teal">Aman/Untung</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill-nyangkut" id="explorer-nyangkut-bar" style="width: 68%;"></div>
+              </div>
+            </div>
+
+            <span id="explorer-status-title" class="status-text text-amber">
+              🛡️ Pahlawan Bursa Menahan Tangguh (Zona Underwater)
+            </span>
+          </div>
+
+          <a class="explorer-cta-launch" href="https://investowl.avenia.my.id/nyangkut" target="_blank" rel="noopener">
+            <span>Buka Dashboard Nyangkut Penuh di The Invest Owl</span>
+            <span aria-hidden="true">&nearr;</span>
           </a>
-          <button type="button" class="btn btn-secondary btn-lg copy-email-btn" id="copy-email-btn" data-email="{{ site.email }}">
-            <span class="copy-text">{{ t.contact.copyEmail }}</span>
-            <span class="copy-success" style="display: none;">{{ t.contact.copied }}</span>
-          </button>
-        </div>
-
-        <div class="contact-channels">
-          <span class="channels-label">Direct profiles:</span>
-          <div class="channels-list">
-            {{#each socials as s~}}
-            <a class="channel-link" href="{{ s.url }}" rel="noopener" target="_blank">
-              <span>{{ s.label }}</span>
-              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-            {{~/each}}
-          </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+{{!-- SECTION 4: FEATURED INSIGHTS (RISET & JURNALISME DATA) --}}
+<section class="section insights-section" id="insights" aria-labelledby="insights-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-kicker">Laporan Riset &amp; Investigasi</span>
+      <h2 id="insights-heading" class="section-title">{{ t.insights.heading }}</h2>
+      <p class="section-subtitle">{{ t.insights.sub }}</p>
+    </div>
+
+    <div class="insights-grid">
+      {{#each insights as i~}}
+      <article class="insight-card">
+        <div>
+          <div class="insight-card-top">
+            <span class="insight-category-chip">{{ i.category }}</span>
+            <span class="insight-dataset-badge">{{ i.badge }}</span>
+          </div>
+
+          <h3 class="insight-title">{{ i.title }}</h3>
+          <p class="insight-summary">{{ i.summary }}</p>
+        </div>
+
+        <div>
+          {{!-- MICRO-CHART AREA SVG SPARKLINE --}}
+          <div class="insight-microchart" aria-hidden="true">
+            <svg viewBox="0 0 240 44" class="w-full h-full" style="overflow: visible;">
+              <defs>
+                <linearGradient id="grad-{{ i.slug }}" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FFB300" stop-opacity="0.32"></stop>
+                  <stop offset="100%" stop-color="#FFB300" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M 10 32 C 60 28, 100 12, 140 18 C 180 24, 210 36, 230 38 L 230 44 L 10 44 Z" fill="url(#grad-{{ i.slug }})"></path>
+              <path d="M 10 32 C 60 28, 100 12, 140 18 C 180 24, 210 36, 230 38" fill="none" stroke="#FFB300" stroke-width="2.2" stroke-linecap="round"></path>
+              <circle cx="230" cy="38" r="3.5" fill="#14192A" stroke="#FFB300" stroke-width="2"></circle>
+            </svg>
+          </div>
+
+          <div class="insight-meta-bottom">
+            <span>{{ i.date }} &middot; {{ i.readTime }}</span>
+            <span class="text-amber" style="font-weight: 700;">Baca Riset &rarr;</span>
+          </div>
+        </div>
+      </article>
+      {{~/each}}
+    </div>
+  </div>
+</section>
+
+{{!-- SECTION 5: DATA DISPATCH (NEWSLETTER SUBSCRIPTION) --}}
+<section class="section newsletter-section" id="dispatch" aria-labelledby="dispatch-heading">
+  <div class="container">
+    <div class="newsletter-card">
+      <span class="newsletter-kicker">Data Dispatch Mingguan</span>
+      <h2 id="dispatch-heading" class="newsletter-title">{{ newsletter.heading }}</h2>
+      <p class="newsletter-sub">{{ newsletter.sub }}</p>
+
+      <form class="newsletter-form-pill" id="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Masukkan alamat email Anda..." required aria-label="Alamat Email">
+        <button type="submit" class="newsletter-submit-btn">{{ newsletter.cta }}</button>
+      </form>
+
+      <p class="newsletter-microcopy">{{ newsletter.microcopy }}</p>
+      <div id="newsletter-feedback" class="newsletter-feedback" style="display: none;"></div>
     </div>
   </div>
 </section>

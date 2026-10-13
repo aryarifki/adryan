@@ -35,7 +35,7 @@
   }
 
   // --- Active Nav Indicator Spying ---
-  var navLinks = document.querySelectorAll('.nav-desktop a[href^="#"]');
+  var navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
   var sections = document.querySelectorAll('.section, .hero-section');
 
   if ('IntersectionObserver' in window && sections.length > 0 && navLinks.length > 0) {
@@ -52,10 +52,27 @@
           }
         });
       });
-    }, { rootMargin: '-30% 0px -60% 0px' });
+    }, { rootMargin: '-25% 0px -65% 0px' });
 
     sections.forEach(function (sec) {
       if (sec.id) spy.observe(sec);
+    });
+  }
+
+  // --- Newsletter Form Submission Simulation ---
+  var newsletterForm = document.getElementById('newsletter-form');
+  var newsletterFeedback = document.getElementById('newsletter-feedback');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = newsletterForm.querySelector('input[type="email"]');
+      if (input && input.value) {
+        if (newsletterFeedback) {
+          newsletterFeedback.textContent = '✓ Terima kasih! Email ' + input.value + ' telah terdaftar di Data Dispatch.';
+          newsletterFeedback.style.display = 'block';
+        }
+        input.value = '';
+      }
     });
   }
 })();
