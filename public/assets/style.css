@@ -398,18 +398,19 @@ button {
   background: var(--md-sys-color-surface-container);
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: clamp(24px, 4vw, 38px);
+  padding: clamp(28px, 4vw, 38px);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform var(--duration-medium) var(--ease-spring), border-color var(--duration-short) ease;
+  justify-content: center;
+  transition: transform var(--duration-medium) var(--ease-spring), border-color var(--duration-short) ease, box-shadow var(--duration-short) ease;
 }
 
 .bento-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 179, 0, 0.35);
+  border-color: rgba(255, 179, 0, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .bento-card-large {
@@ -426,35 +427,9 @@ button {
   grid-column: span 12;
 }
 
-.bento-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.bento-badge {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 12px;
-  border-radius: var(--md-sys-shape-corner-full);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--md-sys-color-outline);
-  color: var(--md-sys-color-on-surface);
-}
-
-.bento-stat {
-  font-family: var(--font-mono);
-  font-size: 2.2rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
 .bento-title {
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin: 0 0 10px 0;
@@ -464,19 +439,8 @@ button {
 .bento-desc {
   font-size: 0.95rem;
   color: var(--md-sys-color-on-surface-variant);
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
-}
-
-.bento-footer-meta {
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid var(--md-sys-color-outline-variant);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  color: var(--md-sys-color-on-surface-variant);
 }
 
 @media (max-width: 900px) {
@@ -1108,7 +1072,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-group-label {
@@ -1120,11 +1084,11 @@ button {
   letter-spacing: 0.08em;
 }
 
-.footer-links {
+.footer-links-vertical {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1133,11 +1097,11 @@ button {
 .footer-link-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   background: var(--md-sys-color-surface-container);
   border: 1px solid var(--md-sys-color-outline);
   color: var(--md-sys-color-on-surface);
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: var(--md-sys-shape-corner-full);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1147,14 +1111,27 @@ button {
 
 .footer-link-item:hover {
   background: var(--md-sys-color-surface-container-high);
-  border-color: rgba(255, 179, 0, 0.4);
+  border-color: rgba(255, 179, 0, 0.45);
   color: var(--md-sys-color-secondary);
-  transform: translateY(-2px);
+  transform: translateX(-3px);
+}
+
+.footer-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--md-sys-color-secondary);
+  flex-shrink: 0;
+}
+
+.footer-link-icon svg {
+  display: block;
 }
 
 .footer-arrow {
-  font-size: 0.85rem;
-  opacity: 0.65;
+  font-size: 0.82rem;
+  opacity: 0.55;
+  margin-left: 2px;
   transition: transform var(--duration-short) ease;
 }
 
@@ -1290,9 +1267,20 @@ button {
     width: 100%;
   }
 
-  .footer-links {
-    justify-content: center;
-    gap: 8px 12px;
+  .footer-links-vertical {
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    gap: 10px;
+  }
+
+  .footer-link-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-link-item:hover {
+    transform: translateY(-2px);
   }
 
   .footer-bottom {

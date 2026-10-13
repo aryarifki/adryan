@@ -41,19 +41,8 @@
     <div class="bento-grid">
       {{#each bento as b~}}
       <article class="bento-card bento-card-{{ b.size }}">
-        <div>
-          <div class="bento-card-header">
-            <span class="bento-badge">{{ b.badge }}</span>
-            <span class="bento-stat text-amber">{{ b.stat }}</span>
-          </div>
-          <h3 class="bento-title">{{ b.title }}</h3>
-          <p class="bento-desc">{{ b.desc }}</p>
-        </div>
-
-        <div class="bento-footer-meta">
-          <span>{{ b.statLabel }}</span>
-          <span class="text-teal" style="font-weight: 700; font-family: var(--font-mono);">&check; Tervalidasi</span>
-        </div>
+        <h3 class="bento-title">{{ b.title }}</h3>
+        <p class="bento-desc">{{ b.desc }}</p>
       </article>
       {{~/each}}
     </div>
