@@ -69,7 +69,7 @@
 <section class="section tools-section" id="tools" aria-labelledby="tools-heading">
   <div class="container">
     <div class="section-header">
-      <span class="section-kicker">Karya &amp; Ekosistem</span>
+      <span class="section-kicker">Platform &amp; Ekosistem</span>
       <h2 id="tools-heading" class="section-title">{{ t.tools.heading }}</h2>
       <p class="section-subtitle">{{ t.tools.sub }}</p>
     </div>
@@ -79,10 +79,23 @@
       <div class="tools-info-col">
         <div class="platform-list">
           {{#each projects as p~}}
-          <article class="platform-mini-card">
+          <a class="platform-mini-card" href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.name }} - {{#if p.isDeployed}}Buka Aplikasi{{else}}Buka Source Code di GitHub{{/if}}">
             <div class="platform-card-header">
-              <span class="platform-name">{{ p.name }}</span>
-              <span class="platform-badge">{{ p.badge }}</span>
+              <div class="platform-title-group">
+                <span class="platform-name">{{ p.name }}</span>
+                <span class="platform-badge">{{ p.badge }}</span>
+              </div>
+              {{#if p.isDeployed}}
+              <span class="platform-status-pill status-live" title="Aplikasi telah live dan dapat diakses publik">
+                <span class="status-live-dot" aria-hidden="true"></span>
+                <span>Live App</span>
+              </span>
+              {{else}}
+              <span class="platform-status-pill status-repo" title="Dalam pengembangan &middot; Source code di GitHub">
+                <svg class="status-code-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>Source Code</span>
+              </span>
+              {{/if}}
             </div>
             <p class="platform-desc">{{ p.summary }}</p>
             <div class="platform-tags">
@@ -90,7 +103,24 @@
               <span class="platform-tag">{{ s }}</span>
               {{~/each}}
             </div>
-          </article>
+            <div class="platform-card-action">
+              <span class="platform-action-text {{#if p.isDeployed}}action-live-text{{else}}action-repo-text{{/if}}">
+                {{#if p.isDeployed}}
+                  Buka Web App
+                {{else}}
+                  Lihat Source Code
+                {{/if}}
+                <span class="action-arrow" aria-hidden="true">&nearr;</span>
+              </span>
+              <span class="platform-action-target">
+                {{#if p.isDeployed}}
+                  avenia.my.id
+                {{else}}
+                  github.com
+                {{/if}}
+              </span>
+            </div>
+          </a>
           {{~/each}}
         </div>
       </div>

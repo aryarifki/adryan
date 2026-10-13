@@ -58,7 +58,10 @@
     {
       "name": "The Invest Owl",
       "slug": "investowl",
-      "url": "https://investowl.avenia.my.id/",
+      "isDeployed": true,
+      "liveUrl": "https://investowl.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/investowl",
+      "targetUrl": "https://investowl.avenia.my.id/",
       "stack": ["Python", "FastAPI", "Next.js", "KSEI Pipeline", "Inferential Quant"],
       "year": "2026",
       "badge": "Flagship Platform",
@@ -68,21 +71,12 @@
       "en": "Data-driven capital market research platform engineered to track market dynamics, institutional sentiment, and valuation trends across Indonesian equities."
     },
     {
-      "name": "OWLEXIA Legal AI",
-      "slug": "owlexia",
-      "url": "https://owlexia.avenia.my.id/",
-      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Legal Informatics"],
-      "year": "2026",
-      "badge": "Agentic Intelligence",
-      "featured": true,
-      "tag": "Informatika Hukum",
-      "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki peraturan perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan.",
-      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
-    },
-    {
       "name": "O-Crawler",
       "slug": "ocrawler",
-      "url": "https://ocrawler.avenia.my.id/",
+      "isDeployed": true,
+      "liveUrl": "https://ocrawler.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/O-Crawler",
+      "targetUrl": "https://ocrawler.avenia.my.id/",
       "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF", "Async ETL"],
       "year": "2026",
       "badge": "High-Speed Ingestion",
@@ -92,9 +86,27 @@
       "en": "High-speed legal data ingestion engine crawling statutory regulations and supreme court rulings with anti-WAF TLS impersonation."
     },
     {
+      "name": "OWLEXIA Legal AI",
+      "slug": "owlexia",
+      "isDeployed": false,
+      "liveUrl": "https://owlexia.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/owlexia",
+      "targetUrl": "https://github.com/aryarifki/owlexia",
+      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Legal Informatics"],
+      "year": "2026",
+      "badge": "Agentic Intelligence",
+      "featured": true,
+      "tag": "Informatika Hukum",
+      "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki peraturan perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan.",
+      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+    },
+    {
       "name": "SMtracker",
       "slug": "smtracker",
-      "url": "https://github.com/aryarifki/SMtracker",
+      "isDeployed": false,
+      "liveUrl": null,
+      "repoUrl": "https://github.com/aryarifki/SMtracker",
+      "targetUrl": "https://github.com/aryarifki/SMtracker",
       "stack": ["Python", "Pandas", "scikit-learn", "Telegram Bot", "Market Analytics"],
       "year": "2025",
       "badge": "Quantitative Engine",
@@ -193,7 +205,7 @@
       "nav": {
         "vision": "Visi",
         "methodology": "The Avenia Way",
-        "tools": "Karya & Tools",
+        "tools": "Tools",
         "insights": "Riset Data",
         "newsletter": "Data Dispatch",
         "cta": "Buka Tools"
@@ -211,7 +223,7 @@
         "sub": "Tiga pilar metodologi yang membedakan analisis Avenia dari opini pasar konvensional."
       },
       "tools": {
-        "heading": "Karya & Platform Interaktif",
+        "heading": "Platform & Tools Interaktif",
         "sub": "Sistem otomatisasi dan aplikasi data nyata yang kami bangun untuk publik.",
         "viewFull": "Luncurkan Aplikasi Utuh"
       },
