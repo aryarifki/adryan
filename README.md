@@ -33,3 +33,11 @@ File workflow disediakan di `setup/github-pages-deploy.yml` (v0 tidak punya izin
 ## Mengubah konten
 
 Semua teks, proyek, skill, dan pengalaman ada di `data/site.json`. Bagian `i18n.id` dan `i18n.en` berisi teks UI untuk masing-masing bahasa; item proyek/pengalaman punya field `id` dan `en` sendiri.
+
+### Platform & Showcase Ekosistem
+- **The Invest Owl**: Platform riset pasar modal & smart-money flow BEI.
+- **O-Crawler**: High-speed legal data ingestion engine (MA, MK, Peraturan).
+- **OWLEXIA Legal AI**: Agen kecerdasan hukum otonom hierarki regulasi Indonesia.
+- **Avenia Workers (OSX)**: Infrastruktur serverless edge proxy bertenaga Cloudflare Workers terhubung ke [Telegram Bot (@avaworkers_bot)](https://t.me/avaworkers_bot) dan open source di [GitHub aryarifki/OSX](https://github.com/aryarifki/OSX).
+- **SMtracker**: Pipeline data kuantitatif & Wyckoff bandarmology engine.
+

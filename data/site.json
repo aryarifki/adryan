@@ -67,7 +67,7 @@
       "badge": "Flagship Platform",
       "featured": true,
       "tag": "Pasar Modal & BEI",
-      "summary": "Platform riset dinamika pemegang saham BEI dengan fitur unggulan 'Dashboard Nyangkut', radar Pahlawan Bursa, dan pelacak akumulasi asing vs ritel.",
+      "summary": "Platform riset dinamika pemegang saham BEI dengan fitur unggulan radar Pahlawan Bursa, analitik smart-money, dan pelacak akumulasi asing vs ritel.",
       "en": "Data-driven capital market research platform engineered to track market dynamics, institutional sentiment, and valuation trends across Indonesian equities."
     },
     {
@@ -99,6 +99,23 @@
       "tag": "Informatika Hukum",
       "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki peraturan perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan.",
       "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+    },
+    {
+      "name": "Avenia Workers (OSX)",
+      "slug": "osx-worker",
+      "isDeployed": true,
+      "liveUrl": "https://t.me/avaworkers_bot",
+      "repoUrl": "https://github.com/aryarifki/OSX",
+      "targetUrl": "https://t.me/avaworkers_bot",
+      "actionText": "Buka Bot Telegram",
+      "actionTarget": "t.me/avaworkers_bot",
+      "stack": ["Cloudflare Workers", "VLESS WS", "KV Storage", "Telegram Bot"],
+      "year": "2026",
+      "badge": "Serverless Edge",
+      "featured": true,
+      "tag": "Edge Proxy & Telegram Bot",
+      "summary": "Infrastruktur serverless edge proxy bertenaga Cloudflare Workers dengan provisi akun otomatis via Telegram Bot dan routing Anycast global.",
+      "en": "Serverless edge proxy infrastructure deployed on Cloudflare Workers featuring automated Telegram bot provisioning and global Anycast routing."
     },
     {
       "name": "SMtracker",
@@ -149,44 +166,44 @@
     }
   ],
   "interactivePreview": {
-    "title": "Interactive Data Explorer: Nyangkut Tracker BEI",
-    "subtitle": "Coba simulasi perhitungan inferensial proxy VWAP & absorbansi ritel langsung di sini:",
-    "stocks": [
+    "title": "Interactive Edge Explorer: Avenia Workers (OSX)",
+    "subtitle": "Simulasi status edge node, protokol, dan latensi multi-region Anycast Cloudflare:",
+    "nodes": [
       {
-        "ticker": "GOTO",
-        "name": "GoTo Gojek Tokopedia Tbk",
-        "currentPrice": 52,
-        "avgAccumulationPrice": 68,
-        "underwaterPct": -23.5,
-        "estimatedNyangkutPct": 68.4,
-        "totalSid": "464.710 SID",
-        "retailAbsorption": "142.5%",
-        "pbiScore": 92.4,
-        "status": "Zona Underwater (Pahlawan Bursa)"
+        "id": "SIN",
+        "name": "Singapore (SIN-01)",
+        "region": "Asia-East (Anycast)",
+        "ping": "14 ms",
+        "pingVal": 14,
+        "protocol": "VLESS WS + TLS",
+        "status": "Online (Zero Cold-Start)",
+        "throughput": "99.9%",
+        "gateway": "Cloudflare Anycast",
+        "botIntegration": "Active (@avaworkers_bot)"
       },
       {
-        "ticker": "BBRI",
-        "name": "Bank Rakyat Indonesia (Persero) Tbk",
-        "currentPrice": 4890,
-        "avgAccumulationPrice": 5210,
-        "underwaterPct": -6.14,
-        "estimatedNyangkutPct": 41.2,
-        "totalSid": "512.940 SID",
-        "retailAbsorption": "118.2%",
-        "pbiScore": 84.1,
-        "status": "Akumulasi Tervalidasi"
+        "id": "CGK",
+        "name": "Jakarta (CGK-01)",
+        "region": "Indonesia Local Edge",
+        "ping": "8 ms",
+        "pingVal": 8,
+        "protocol": "Trojan WS + TLS",
+        "status": "Online (Ultra-Low Latency)",
+        "throughput": "99.8%",
+        "gateway": "Telkom & IIX Peering",
+        "botIntegration": "Active (@avaworkers_bot)"
       },
       {
-        "ticker": "BUMI",
-        "name": "Bumi Resources Tbk",
-        "currentPrice": 94,
-        "avgAccumulationPrice": 128,
-        "underwaterPct": -26.56,
-        "estimatedNyangkutPct": 76.8,
-        "totalSid": "389.200 SID",
-        "retailAbsorption": "165.0%",
-        "pbiScore": 95.8,
-        "status": "Resistensi Volume Ekstrem"
+        "id": "NRT",
+        "name": "Tokyo (NRT-01)",
+        "region": "East Asia Hub",
+        "ping": "48 ms",
+        "pingVal": 48,
+        "protocol": "VLESS WS + TLS",
+        "status": "Online (Failover Route)",
+        "throughput": "99.7%",
+        "gateway": "Cloudflare Anycast",
+        "botIntegration": "Active (@avaworkers_bot)"
       }
     ]
   },

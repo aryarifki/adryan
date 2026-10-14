@@ -761,9 +761,9 @@ button {
   overflow: hidden;
 }
 
-.progress-fill-nyangkut {
+.progress-fill-edge {
   height: 100%;
-  background: linear-gradient(90deg, #ff5449, #ff847c);
+  background: linear-gradient(90deg, #03dac6, #38bdf8);
   border-radius: var(--md-sys-shape-corner-full);
   transition: width var(--duration-medium) var(--ease-spring);
 }
@@ -791,6 +791,13 @@ button {
   display: block;
 }
 
+.explorer-actions-dual {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
 .explorer-cta-launch {
   display: flex;
   align-items: center;
@@ -798,13 +805,13 @@ button {
   gap: 8px;
   width: 100%;
   padding: 12px 20px;
-  margin-top: 16px;
   background: rgba(255, 179, 0, 0.12);
   border: 1px solid rgba(255, 179, 0, 0.35);
   color: var(--md-sys-color-secondary);
   border-radius: var(--md-sys-shape-corner-full);
   font-size: 0.88rem;
   font-weight: 800;
+  text-decoration: none;
   transition: all var(--duration-short) var(--ease-spring);
 }
 
@@ -813,6 +820,30 @@ button {
   color: #000000;
   transform: translateY(-2px);
   box-shadow: 0 4px 18px rgba(255, 179, 0, 0.35);
+}
+
+.cta-telegram {
+  background: rgba(0, 136, 204, 0.16) !important;
+  border-color: rgba(0, 136, 204, 0.45) !important;
+  color: #38bdf8 !important;
+}
+
+.cta-telegram:hover {
+  background: #0088cc !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(0, 136, 204, 0.4) !important;
+}
+
+.cta-github {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: var(--md-sys-color-on-surface) !important;
+}
+
+.cta-github:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
 }
 
 @media (max-width: 960px) {
