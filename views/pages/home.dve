@@ -58,146 +58,59 @@
       <p class="section-subtitle">{{ t.tools.sub }}</p>
     </div>
 
-    <div class="tools-split-layout">
-      {{!-- KOLOM KIRI: DAFTAR PLATFORM & TOOLS --}}
-      <div class="tools-info-col">
-        <div class="platform-list">
-          {{#each projects as p~}}
-          <a class="platform-mini-card" href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.name }} - {{#if p.isDeployed}}Buka Aplikasi{{else}}Buka Source Code di GitHub{{/if}}">
-            <div class="platform-card-header">
-              <div class="platform-title-group">
-                <span class="platform-name">{{ p.name }}</span>
-                <span class="platform-badge">{{ p.badge }}</span>
-              </div>
-              {{#if p.isDeployed}}
-              <span class="platform-status-pill status-live" title="Aplikasi telah live dan dapat diakses publik">
-                <span class="status-live-dot" aria-hidden="true"></span>
-                <span>Live App</span>
-              </span>
-              {{else}}
-              <span class="platform-status-pill status-repo" title="Dalam pengembangan &middot; Source code di GitHub">
-                <svg class="status-code-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                <span>Source Code</span>
-              </span>
-              {{/if}}
-            </div>
-            <p class="platform-desc">{{ p.summary }}</p>
-            <div class="platform-tags">
-              {{#each p.stack as s~}}
-              <span class="platform-tag">{{ s }}</span>
-              {{~/each}}
-            </div>
-            <div class="platform-card-action">
-              <span class="platform-action-text {{#if p.isDeployed}}action-live-text{{else}}action-repo-text{{/if}}">
-                {{#if p.actionText}}
-                  {{ p.actionText }}
-                {{else}}
-                  {{#if p.isDeployed}}
-                    Buka Web App
-                  {{else}}
-                    Lihat Source Code
-                  {{/if}}
-                {{/if}}
-                <span class="action-arrow" aria-hidden="true">&nearr;</span>
-              </span>
-              <span class="platform-action-target">
-                {{#if p.actionTarget}}
-                  {{ p.actionTarget }}
-                {{else}}
-                  {{#if p.isDeployed}}
-                    avenia.my.id
-                  {{else}}
-                    github.com
-                  {{/if}}
-                {{/if}}
-              </span>
-            </div>
-          </a>
+    <div class="platform-grid">
+      {{#each projects as p~}}
+      <a class="platform-mini-card" href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.name }} - {{#if p.isDeployed}}Buka Aplikasi{{else}}Buka Source Code di GitHub{{/if}}">
+        <div class="platform-card-header">
+          <div class="platform-title-group">
+            <h3 class="platform-name">{{ p.name }}</h3>
+            <span class="platform-badge">{{ p.badge }}</span>
+          </div>
+          {{#if p.isDeployed}}
+          <span class="platform-status-pill status-live" title="Aplikasi telah live dan dapat diakses publik">
+            <span class="status-live-dot" aria-hidden="true"></span>
+            <span>Live App</span>
+          </span>
+          {{else}}
+          <span class="platform-status-pill status-repo" title="Dalam pengembangan &middot; Source code di GitHub">
+            <svg class="status-code-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>Source Code</span>
+          </span>
+          {{/if}}
+        </div>
+        <p class="platform-desc">{{ p.summary }}</p>
+        <div class="platform-tags">
+          {{#each p.stack as s~}}
+          <span class="platform-tag">{{ s }}</span>
           {{~/each}}
         </div>
-      </div>
-
-      {{!-- KOLOM KANAN: WIDGET SIMULATOR INTERAKTIF CLOUDFLARE EDGE WORKER --}}
-      <div class="tools-explorer-col">
-        <div class="explorer-widget-card" id="explorer-card">
-          <div class="explorer-header">
-            <div>
-              <span class="explorer-badge-chip">CLOUDFLARE EDGE WORKER</span>
-              <h3 style="margin: 8px 0 0 0; font-size: 1.25rem; font-weight: 800; color: #fff;">
-                Avenia Workers (OSX)
-              </h3>
-            </div>
-            <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--md-sys-color-on-surface-variant);">
-              Serverless Edge Proxy
-            </span>
-          </div>
-
-          {{!-- REGION / NODE SELECTOR TABS --}}
-          <div class="explorer-tabs" role="tablist">
-            <button type="button" class="explorer-tab-btn active" data-node="SIN" role="tab">🇸🇬 SIN-01</button>
-            <button type="button" class="explorer-tab-btn" data-node="CGK" role="tab">🇮🇩 CGK-01</button>
-            <button type="button" class="explorer-tab-btn" data-node="NRT" role="tab">🇯🇵 NRT-01</button>
-          </div>
-
-          {{!-- EDGE SIMULATOR & LIVE METRICS --}}
-          <div class="explorer-sim-box">
-            <div class="explorer-slider-row">
-              <div class="slider-label">
-                <span>Simulasi Latensi Anycast:</span>
-                <span id="explorer-ping-display" class="text-teal" style="font-family: var(--font-mono); font-weight: 800;">14 ms</span>
-              </div>
-              <input type="range" class="m3-range-slider" id="explorer-ping-slider" min="5" max="150" value="14" aria-label="Slider simulasi latensi edge">
-            </div>
-
-            <div class="explorer-metrics-grid">
-              <div class="exp-metric-item">
-                <span class="exp-metric-label">Protokol &amp; Transport</span>
-                <span class="exp-metric-val" id="explorer-proto-display">VLESS WS + TLS</span>
-              </div>
-              <div class="exp-metric-item">
-                <span class="exp-metric-label">Status Node Edge</span>
-                <span class="exp-metric-val" id="explorer-node-status" class="explorer-badge underwater-positive">ONLINE (0ms Cold)</span>
-              </div>
-              <div class="exp-metric-item">
-                <span class="exp-metric-label">Routing Gateway</span>
-                <span class="exp-metric-val text-amber" id="explorer-gw-display">Cloudflare Anycast</span>
-              </div>
-              <div class="exp-metric-item">
-                <span class="exp-metric-label">Automasi Akun</span>
-                <span class="exp-metric-val" id="explorer-bot-display">Telegram Bot API</span>
-              </div>
-            </div>
-
-            <div class="explorer-progress-wrap">
-              <div class="progress-labels">
-                <span>Kapasitas Throughput Node: <strong id="explorer-node-pct" class="text-teal">99.9%</strong></span>
-                <span class="text-teal">Zero-Buffer</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill-edge" id="explorer-node-bar" style="width: 98%;"></div>
-              </div>
-            </div>
-
-            <span id="explorer-status-title" class="status-text text-teal">
-              ⚡ Edge Node Aktif — Terintegrasi dengan Bot Telegram &amp; Multi-Region Failover
-            </span>
-          </div>
-
-          {{!-- DUAL CTA LINKS: TELEGRAM BOT & GITHUB REPO --}}
-          <div class="explorer-actions-dual">
-            <a class="explorer-cta-launch cta-telegram" href="https://t.me/avaworkers_bot" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-              <span>Buka Bot Telegram (@avaworkers_bot)</span>
-              <span aria-hidden="true">&nearr;</span>
-            </a>
-            <a class="explorer-cta-launch cta-github" href="https://github.com/aryarifki/OSX" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              <span>Source Code di GitHub (aryarifki/OSX)</span>
-              <span aria-hidden="true">&nearr;</span>
-            </a>
-          </div>
+        <div class="platform-card-action">
+          <span class="platform-action-text {{#if p.isDeployed}}action-live-text{{else}}action-repo-text{{/if}}">
+            {{#if p.actionText}}
+              {{ p.actionText }}
+            {{else}}
+              {{#if p.isDeployed}}
+                Buka Web App
+              {{else}}
+                Lihat Source Code
+              {{/if}}
+            {{/if}}
+            <span class="action-arrow" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="platform-action-target">
+            {{#if p.actionTarget}}
+              {{ p.actionTarget }}
+            {{else}}
+              {{#if p.isDeployed}}
+                avenia.my.id
+              {{else}}
+                github.com
+              {{/if}}
+            {{/if}}
+          </span>
         </div>
-      </div>
+      </a>
+      {{~/each}}
     </div>
   </div>
 </section>

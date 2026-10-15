@@ -38,6 +38,5 @@ Semua teks, proyek, skill, dan pengalaman ada di `data/site.json`. Bagian `i18n.
 - **The Invest Owl**: Platform riset pasar modal & smart-money flow BEI.
 - **O-Crawler**: High-speed legal data ingestion engine (MA, MK, Peraturan).
 - **OWLEXIA Legal AI**: Agen kecerdasan hukum otonom hierarki regulasi Indonesia.
-- **Avenia Workers (OSX)**: Infrastruktur serverless edge proxy bertenaga Cloudflare Workers terhubung ke [Telegram Bot (@avaworkers_bot)](https://t.me/avaworkers_bot) dan open source di [GitHub aryarifki/OSX](https://github.com/aryarifki/OSX).
 - **SMtracker**: Pipeline data kuantitatif & Wyckoff bandarmology engine.
 

@@ -84,7 +84,7 @@ html, body {
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -448,41 +448,41 @@ button {
 }
 
 /* ==========================================================================
-   SECTION 3: INTEGRASI WEB APP (INTERACTIVE DATA EXPLORER)
+   SECTION 3: INTEGRASI WEB APP & TOOLS (PLATFORM SHOWCASE)
    ========================================================================== */
 
-.tools-split-layout {
+.platform-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 36px;
-  align-items: center;
-}
-
-.tools-info-col .platform-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 28px;
 }
 
 .platform-mini-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
   background: var(--md-sys-color-surface-container);
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--md-sys-shape-corner-large);
-  padding: 20px 22px;
-  transition: all var(--duration-short) ease;
+  padding: clamp(18px, 3.5vw, 24px);
+  transition: transform var(--duration-short) ease, border-color var(--duration-short) ease, box-shadow var(--duration-short) ease, background var(--duration-short) ease;
   position: relative;
   cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.platform-mini-card:hover {
-  border-color: rgba(255, 179, 0, 0.45);
-  background: var(--md-sys-color-surface-container-high);
-  transform: translateY(-2px) translateX(4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+@media (hover: hover) and (pointer: fine) {
+  .platform-mini-card:hover {
+    border-color: rgba(255, 179, 0, 0.45);
+    background: var(--md-sys-color-surface-container-high);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .platform-mini-card:focus-visible {
@@ -494,8 +494,10 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+  min-width: 0;
 }
 
 .platform-title-group {
@@ -503,23 +505,33 @@ button {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .platform-name {
-  font-size: 1.1rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
   font-weight: 800;
   color: #FFFFFF;
+  margin: 0;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
 }
 
 .platform-badge {
   font-size: 0.68rem;
   font-family: var(--font-mono);
   font-weight: 700;
-  padding: 2px 8px;
+  padding: 3px 8px;
   border-radius: var(--md-sys-shape-corner-full);
   background: rgba(255, 179, 0, 0.12);
   color: var(--md-sys-color-secondary);
   border: 1px solid rgba(255, 179, 0, 0.25);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 
 /* Status Pill: Live vs Source Code */
@@ -535,6 +547,7 @@ button {
   white-space: nowrap;
   flex-shrink: 0;
   letter-spacing: 0.02em;
+  margin-left: auto;
 }
 
 .status-live {
@@ -566,20 +579,24 @@ button {
 
 .status-code-icon {
   stroke: var(--md-sys-color-on-surface-variant);
+  flex-shrink: 0;
 }
 
 .platform-desc {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: var(--md-sys-color-on-surface-variant);
-  margin: 0 0 12px 0;
-  line-height: 1.5;
+  margin: 0 0 14px 0;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .platform-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  min-width: 0;
 }
 
 .platform-tag {
@@ -587,8 +604,13 @@ button {
   font-family: var(--font-mono);
   background: var(--md-sys-color-surface-container-high);
   color: var(--md-sys-color-on-surface);
-  padding: 2px 7px;
+  padding: 3px 8px;
   border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Card Action Footer */
@@ -596,17 +618,23 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
+  margin-top: auto;
+  min-width: 0;
 }
 
 .platform-action-text {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   font-weight: 700;
   font-family: var(--font-sans);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .action-live-text {
@@ -629,225 +657,42 @@ button {
 
 .platform-action-target {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   color: var(--md-sys-color-on-surface-variant);
-  opacity: 0.7;
+  opacity: 0.75;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  max-width: 100%;
+  margin-left: auto;
 }
 
-/* EXPLORER WIDGET (SISI KANAN) */
-.explorer-widget-card {
-  background: var(--md-sys-color-surface-container);
-  border: 1px solid var(--md-sys-color-outline);
-  border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: clamp(24px, 4vw, 32px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
-  position: relative;
+@media (max-width: 860px) {
+  .platform-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
 }
 
-.explorer-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
+@media (max-width: 480px) {
+  .platform-mini-card {
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-medium);
+  }
 
-.explorer-badge-chip {
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  font-weight: 800;
-  background: rgba(3, 218, 198, 0.12);
-  color: var(--md-sys-color-tertiary);
-  border: 1px solid rgba(3, 218, 198, 0.3);
-  padding: 4px 12px;
-  border-radius: var(--md-sys-shape-corner-full);
-}
+  .platform-card-header {
+    gap: 8px;
+  }
 
-.explorer-tabs {
-  display: flex;
-  gap: 8px;
-  background: var(--md-sys-color-surface-container-high);
-  padding: 4px;
-  border-radius: var(--md-sys-shape-corner-full);
-  margin-bottom: 22px;
-}
+  .platform-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
 
-.explorer-tab-btn {
-  flex: 1;
-  padding: 8px 14px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 800;
-  border-radius: var(--md-sys-shape-corner-full);
-  color: var(--md-sys-color-on-surface-variant);
-  transition: all var(--duration-short) ease;
-}
-
-.explorer-tab-btn.active {
-  background: var(--md-sys-color-secondary);
-  color: #000000;
-  box-shadow: 0 2px 10px rgba(255, 179, 0, 0.35);
-}
-
-.explorer-sim-box {
-  background: var(--md-sys-color-surface-container-high);
-  border: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: var(--md-sys-shape-corner-medium);
-  padding: 18px;
-  margin-bottom: 20px;
-}
-
-.explorer-slider-row {
-  margin-bottom: 16px;
-}
-
-.slider-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.m3-range-slider {
-  width: 100%;
-  accent-color: var(--md-sys-color-secondary);
-  cursor: pointer;
-}
-
-.explorer-metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.exp-metric-item {
-  background: var(--md-sys-color-surface-container);
-  border-radius: var(--md-sys-shape-corner-small);
-  padding: 12px 14px;
-}
-
-.exp-metric-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--md-sys-color-on-surface-variant);
-  text-transform: uppercase;
-  display: block;
-}
-
-.exp-metric-val {
-  font-family: var(--font-mono);
-  font-size: 1.15rem;
-  font-weight: 900;
-}
-
-/* Progress bar underwater */
-.explorer-progress-wrap {
-  margin-top: 14px;
-}
-
-.progress-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.76rem;
-  font-family: var(--font-mono);
-  margin-bottom: 6px;
-}
-
-.progress-track {
-  width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: var(--md-sys-shape-corner-full);
-  overflow: hidden;
-}
-
-.progress-fill-edge {
-  height: 100%;
-  background: linear-gradient(90deg, #03dac6, #38bdf8);
-  border-radius: var(--md-sys-shape-corner-full);
-  transition: width var(--duration-medium) var(--ease-spring);
-}
-
-.explorer-badge {
-  font-size: 0.78rem;
-  font-family: var(--font-mono);
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-.underwater-negative {
-  background: rgba(255, 84, 73, 0.15);
-  color: var(--md-sys-color-error);
-}
-.underwater-positive {
-  background: rgba(3, 218, 198, 0.15);
-  color: var(--md-sys-color-tertiary);
-}
-
-.status-text {
-  font-size: 0.84rem;
-  font-weight: 700;
-  margin-top: 12px;
-  display: block;
-}
-
-.explorer-actions-dual {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.explorer-cta-launch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 20px;
-  background: rgba(255, 179, 0, 0.12);
-  border: 1px solid rgba(255, 179, 0, 0.35);
-  color: var(--md-sys-color-secondary);
-  border-radius: var(--md-sys-shape-corner-full);
-  font-size: 0.88rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: all var(--duration-short) var(--ease-spring);
-}
-
-.explorer-cta-launch:hover {
-  background: var(--md-sys-color-secondary);
-  color: #000000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 18px rgba(255, 179, 0, 0.35);
-}
-
-.cta-telegram {
-  background: rgba(0, 136, 204, 0.16) !important;
-  border-color: rgba(0, 136, 204, 0.45) !important;
-  color: #38bdf8 !important;
-}
-
-.cta-telegram:hover {
-  background: #0088cc !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(0, 136, 204, 0.4) !important;
-}
-
-.cta-github {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-  color: var(--md-sys-color-on-surface) !important;
-}
-
-.cta-github:hover {
-  background: rgba(255, 255, 255, 0.18) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.45) !important;
-}
-
-@media (max-width: 960px) {
-  .tools-split-layout { grid-template-columns: 1fr; }
+  .platform-card-action {
+    gap: 6px;
+    padding-top: 12px;
+  }
 }
 
 /* ==========================================================================

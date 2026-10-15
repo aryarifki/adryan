@@ -29,7 +29,6 @@
   </main>
   {{> partials/footer.dve}}
   <script src="/assets/hero-canvas.js?v=20261013-m3" defer></script>
-  <script src="/assets/interactive-explorer.js?v=20261013-m3" defer></script>
   <script src="/assets/main.js?v=20261013-m3" defer></script>
 </body>
 </html>

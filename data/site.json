@@ -101,23 +101,6 @@
       "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
     },
     {
-      "name": "Avenia Workers (OSX)",
-      "slug": "osx-worker",
-      "isDeployed": true,
-      "liveUrl": "https://t.me/avaworkers_bot",
-      "repoUrl": "https://github.com/aryarifki/OSX",
-      "targetUrl": "https://t.me/avaworkers_bot",
-      "actionText": "Buka Bot Telegram",
-      "actionTarget": "t.me/avaworkers_bot",
-      "stack": ["Cloudflare Workers", "VLESS WS", "KV Storage", "Telegram Bot"],
-      "year": "2026",
-      "badge": "Serverless Edge",
-      "featured": true,
-      "tag": "Edge Proxy & Telegram Bot",
-      "summary": "Infrastruktur serverless edge proxy bertenaga Cloudflare Workers dengan provisi akun otomatis via Telegram Bot dan routing Anycast global.",
-      "en": "Serverless edge proxy infrastructure deployed on Cloudflare Workers featuring automated Telegram bot provisioning and global Anycast routing."
-    },
-    {
       "name": "SMtracker",
       "slug": "smtracker",
       "isDeployed": false,
@@ -165,48 +148,6 @@
       "sparkline": [40, 48, 55, 63, 60]
     }
   ],
-  "interactivePreview": {
-    "title": "Interactive Edge Explorer: Avenia Workers (OSX)",
-    "subtitle": "Simulasi status edge node, protokol, dan latensi multi-region Anycast Cloudflare:",
-    "nodes": [
-      {
-        "id": "SIN",
-        "name": "Singapore (SIN-01)",
-        "region": "Asia-East (Anycast)",
-        "ping": "14 ms",
-        "pingVal": 14,
-        "protocol": "VLESS WS + TLS",
-        "status": "Online (Zero Cold-Start)",
-        "throughput": "99.9%",
-        "gateway": "Cloudflare Anycast",
-        "botIntegration": "Active (@avaworkers_bot)"
-      },
-      {
-        "id": "CGK",
-        "name": "Jakarta (CGK-01)",
-        "region": "Indonesia Local Edge",
-        "ping": "8 ms",
-        "pingVal": 8,
-        "protocol": "Trojan WS + TLS",
-        "status": "Online (Ultra-Low Latency)",
-        "throughput": "99.8%",
-        "gateway": "Telkom & IIX Peering",
-        "botIntegration": "Active (@avaworkers_bot)"
-      },
-      {
-        "id": "NRT",
-        "name": "Tokyo (NRT-01)",
-        "region": "East Asia Hub",
-        "ping": "48 ms",
-        "pingVal": 48,
-        "protocol": "VLESS WS + TLS",
-        "status": "Online (Failover Route)",
-        "throughput": "99.7%",
-        "gateway": "Cloudflare Anycast",
-        "botIntegration": "Active (@avaworkers_bot)"
-      }
-    ]
-  },
   "newsletter": {
     "heading": "Dapatkan Laporan Riset Mingguan Langsung di Inbox Anda",
     "sub": "Bukan spam. Tanpa sensasi. Hanya visualisasi data tajam, kajian inferensial pasar, dan wawasan hukum yang siap diuji.",

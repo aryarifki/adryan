@@ -40,7 +40,6 @@ export function build({ quiet = false } = {}) {
       projects: data.projects,
       bento: data.bento,
       insights: data.insights,
-      interactivePreview: data.interactivePreview,
       newsletter: data.newsletter,
       skills: data.skills,
       experience: data.experience,
