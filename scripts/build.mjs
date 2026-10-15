@@ -38,6 +38,8 @@ export function build({ quiet = false } = {}) {
       site: data.site,
       socials: data.socials,
       projects: data.projects,
+      telemetry: data.telemetry,
+      categories: data.categories,
       bento: data.bento,
       insights: data.insights,
       newsletter: data.newsletter,

@@ -13,14 +13,73 @@
     "location": "Semarang, Indonesia",
     "email": "amadryanrifky@gmail.com",
     "avatar": "/assets/avatar.png",
-    "themeColor": "#1A1B4B",
+    "themeColor": "#2563EB",
     "year": 2026
   },
   "socials": [
-    { "label": "GitHub", "url": "https://github.com/aryarifki", "handle": "@aryarifki", "icon": "github", "iconSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>" },
-    { "label": "Investowl App", "url": "https://investowl.avenia.my.id/", "handle": "investowl", "icon": "trending-up", "iconSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"></line><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"></path></svg>" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/in/aryarifki", "handle": "/in/aryarifki", "icon": "linkedin", "iconSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"></path><rect x=\"2\" y=\"9\" width=\"4\" height=\"12\"></rect><circle cx=\"4\" cy=\"4\" r=\"2\"></circle></svg>" },
-    { "label": "Instagram", "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr", "handle": "@rifqiaarya", "icon": "instagram", "iconSvg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>" }
+    {
+      "label": "GitHub",
+      "url": "https://github.com/aryarifki",
+      "handle": "@aryarifki",
+      "icon": "github",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>"
+    },
+    {
+      "label": "The Investowl",
+      "url": "https://investowl.avenia.my.id/",
+      "handle": "investowl",
+      "icon": "trending-up",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"></polyline><polyline points=\"17 6 23 6 23 12\"></polyline></svg>"
+    },
+    {
+      "label": "O-Crawler Portal",
+      "url": "https://ocrawler.avenia.my.id/",
+      "handle": "ocrawler",
+      "icon": "database",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/aryarifki",
+      "handle": "/in/aryarifki",
+      "icon": "linkedin",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"></path><rect x=\"2\" y=\"9\" width=\"4\" height=\"12\"></rect><circle cx=\"4\" cy=\"4\" r=\"2\"></circle></svg>"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr",
+      "handle": "@rifqiaarya",
+      "icon": "instagram",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>"
+    }
+  ],
+  "telemetry": [
+    {
+      "value": "890+",
+      "label": "Emiten BEI Terindeks",
+      "sub": "Sinkronisasi T+1 & HMM Regimes"
+    },
+    {
+      "value": "2.400+",
+      "label": "Putusan Hukum & Regulasi",
+      "sub": "MA, MK, & Peraturan Resmi"
+    },
+    {
+      "value": "< 0.5ms",
+      "label": "Latensi L1/L2 Cache",
+      "sub": "In-Memory RAM + Redis Cluster"
+    },
+    {
+      "value": "100%",
+      "label": "Data Empiris Terbuka",
+      "sub": "Dataset KSEI, IDX, & MA Teraudit"
+    }
+  ],
+  "categories": [
+    { "key": "all", "label": "Semua Proyek", "count": 6 },
+    { "key": "quant", "label": "Pasar Modal & Quant", "count": 2 },
+    { "key": "legal", "label": "Legal AI & Ingestion", "count": 2 },
+    { "key": "platform", "label": "Platform & DevOps", "count": 2 }
   ],
   "bento": [
     {
@@ -58,62 +117,98 @@
     {
       "name": "The Invest Owl",
       "slug": "investowl",
+      "category": "quant",
       "isDeployed": true,
       "liveUrl": "https://investowl.avenia.my.id/",
       "repoUrl": "https://github.com/aryarifki/investowl",
       "targetUrl": "https://investowl.avenia.my.id/",
-      "stack": ["Python", "FastAPI", "Next.js", "KSEI Pipeline", "Inferential Quant"],
+      "stack": ["Next.js 16", "FastAPI", "Python 3.10+", "PostgreSQL", "Redis L1/L2", "Tailwind CSS v4"],
       "year": "2026",
       "badge": "Flagship Platform",
       "featured": true,
       "tag": "Pasar Modal & BEI",
-      "summary": "Platform riset dinamika pemegang saham BEI dengan fitur unggulan radar Pahlawan Bursa, analitik smart-money, dan pelacak akumulasi asing vs ritel.",
-      "en": "Data-driven capital market research platform engineered to track market dynamics, institutional sentiment, and valuation trends across Indonesian equities."
+      "summary": "Platform riset institusional kuantitatif menganalisis Bandarmologi (Smart Money Flow) dan Foreign Flow saham BEI dengan model Gaussian HMM dan Impulse Response Functions.",
+      "en": "Institutional-grade quantitative analytics platform tracking Smart Money and Foreign Flow across Indonesian equities using HMM and econometric models."
     },
     {
       "name": "O-Crawler",
       "slug": "ocrawler",
+      "category": "legal",
       "isDeployed": true,
       "liveUrl": "https://ocrawler.avenia.my.id/",
       "repoUrl": "https://github.com/aryarifki/O-Crawler",
       "targetUrl": "https://ocrawler.avenia.my.id/",
-      "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF", "Async ETL"],
+      "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF curl_cffi", "WebSocket GUI"],
       "year": "2026",
       "badge": "High-Speed Ingestion",
-      "featured": false,
-      "tag": "Big Data Pipeline",
-      "summary": "Engine ingestion data regulasi berkekuatan tinggi melahap peraturan.go.id, putusan MA RI, dan MK RI dengan TLS impersonation serta zero-egress R2.",
-      "en": "High-speed legal data ingestion engine crawling statutory regulations and supreme court rulings with anti-WAF TLS impersonation."
-    },
-    {
-      "name": "OWLEXIA Legal AI",
-      "slug": "owlexia",
-      "isDeployed": false,
-      "liveUrl": "https://owlexia.avenia.my.id/",
-      "repoUrl": "https://github.com/aryarifki/owlexia",
-      "targetUrl": "https://github.com/aryarifki/owlexia",
-      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Legal Informatics"],
-      "year": "2026",
-      "badge": "Agentic Intelligence",
       "featured": true,
-      "tag": "Informatika Hukum",
-      "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki peraturan perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan.",
-      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+      "tag": "Big Data & Legal",
+      "summary": "Engine ingestion regulasi hukum berkekuatan tinggi melahap peraturan.go.id, putusan Mahkamah Agung, dan Mahkamah Konstitusi RI dengan TLS impersonation dan GUI modern.",
+      "en": "High-speed legal data ingestion engine crawling statutory regulations and supreme court rulings with anti-WAF TLS impersonation and real-time GUI."
     },
     {
-      "name": "SMtracker",
+      "name": "SMtracker (BandarAI)",
       "slug": "smtracker",
+      "category": "quant",
       "isDeployed": false,
       "liveUrl": null,
       "repoUrl": "https://github.com/aryarifki/SMtracker",
       "targetUrl": "https://github.com/aryarifki/SMtracker",
-      "stack": ["Python", "Pandas", "scikit-learn", "Telegram Bot", "Market Analytics"],
+      "stack": ["Python 3.10+", "Playwright", "scikit-learn", "PostgreSQL", "Telegram Bot API"],
       "year": "2025",
       "badge": "Quantitative Engine",
       "featured": false,
-      "tag": "Bandarmology Engine",
-      "summary": "Pipeline data kuantitatif mengaudit akumulasi smart-money (bandar & offshore custody) untuk mengevaluasi trajektori harga saham secara statistik.",
-      "en": "End-to-end data pipeline auditing smart-money accumulation to statistically evaluate price trajectory in Indonesian stocks."
+      "tag": "Bandarmology & AI",
+      "summary": "Pipeline data kuantitatif mengaudit akumulasi smart-money, menjalankan Wyckoff scanner otomatis, dan self-healing database 5 pilar dengan asisten bot Telegram.",
+      "en": "End-to-end data engineering pipeline auditing smart-money accumulation to statistically evaluate price trajectories with automated Telegram alerts."
+    },
+    {
+      "name": "OWLEXIA Legal AI",
+      "slug": "owlexia",
+      "category": "legal",
+      "isDeployed": false,
+      "liveUrl": "https://owlexia.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/owlexia",
+      "targetUrl": "https://github.com/aryarifki/owlexia",
+      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Vector Search", "Legal Informatics"],
+      "year": "2026",
+      "badge": "Agentic Intelligence",
+      "featured": false,
+      "tag": "Informatika Hukum",
+      "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan regulasi.",
+      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+    },
+    {
+      "name": "Avenia Edge Infrastructure",
+      "slug": "edge-cloud",
+      "category": "platform",
+      "isDeployed": true,
+      "liveUrl": "https://avenia.my.id",
+      "repoUrl": "https://github.com/aryarifki",
+      "targetUrl": "https://avenia.my.id",
+      "stack": ["Cloudflare Zero Trust", "QUIC Tunneling", "Smart Tiered Cache", "Systemd", "Linux Hardening"],
+      "year": "2026",
+      "badge": "Zero Trust Network",
+      "featured": false,
+      "tag": "Edge & Security",
+      "summary": "Orkestrasi infrastruktur Cloudflare Zero Trust, QUIC Tunneling, smart tiered edge caching, dan mitigasi DDoS otomatis untuk seluruh domain publik ekosistem avenia.my.id.",
+      "en": "Zero-trust network architecture, Cloudflare QUIC tunneling, and high-performance edge caching orchestration securing all ecosystem subdomains."
+    },
+    {
+      "name": "Avenia.id Static Platform",
+      "slug": "avenia-site",
+      "category": "platform",
+      "isDeployed": true,
+      "liveUrl": "https://avenia.my.id",
+      "repoUrl": "https://github.com/aryarifki/aryarifki.github.io",
+      "targetUrl": "https://github.com/aryarifki/aryarifki.github.io",
+      "stack": ["Deserve View Engine (DVE)", "Node.js", "Semantic HTML5", "Modern CSS Tokens", "GitHub Actions"],
+      "year": "2026",
+      "badge": "Static Engine",
+      "featured": false,
+      "tag": "Data Journalism",
+      "summary": "Platform riset publik dan visualisasi data realita tanpa sensasi, dikompilasi statis dengan Deserve View Engine (DVE) untuk performa instan dan aksesibilitas maksimal.",
+      "en": "Personal portfolio and independent public research portal statically rendered with Deserve View Engine for zero-client runtime and instant loading."
     }
   ],
   "insights": [
@@ -150,7 +245,7 @@
   ],
   "newsletter": {
     "heading": "Dapatkan Laporan Riset Mingguan Langsung di Inbox Anda",
-    "sub": "Bukan spam. Tanpa sensasi. Hanya visualisasi data tajam, kajian inferensial pasar, dan wawasan hukum yang siap diuji.",
+    "sub": "Bukan spam. Tanpa sensasi. Hanya visualisasi data tajam, kajian inferensial pasar modal, dan ringkasan hukum yang siap diuji.",
     "cta": "Langganan Data Dispatch",
     "microcopy": "Gratis setiap Senin pagi. Berhenti langganan kapan saja."
   },
@@ -158,37 +253,49 @@
     "en": {
       "lang": "id",
       "htmlLang": "id",
-      "title": "Avenia.id — Melihat Realita, Dipandu oleh Data",
-      "description": "Pusat riset data independen dan visualisasi realita empiris mengupas dinamika pasar modal Indonesia, hukum, dan fenomena sosial berbasis data terbuka.",
+      "title": "Avenia.id — Riset Data & Visualisasi Realita",
+      "description": "Portofolio rekayasa data & platform riset empiris independen mengupas dinamika pasar modal Indonesia, hukum, dan fenomena sosial berbasis data terbuka.",
       "nav": {
         "vision": "Visi",
         "methodology": "The Avenia Way",
-        "tools": "Tools",
+        "telemetry": "Arsitektur",
+        "projects": "Proyek",
         "insights": "Riset Data",
-        "newsletter": "Data Dispatch",
-        "cta": "Buka Tools"
+        "about": "Tentang",
+        "cta": "Jelajahi Proyek"
       },
       "hero": {
-        "badge": "LIVE DATA RADAR • INDONESIA SOCIAL & MARKET WATCH",
+        "badge": "OPEN EMPIRICAL DATA • SEMARANG, ID",
         "headlinePre": "Melihat Realita,",
         "headlineHighlight": "Dipandu oleh Data.",
-        "sub": "Avenia.id menyajikan analisis mendalam dan visualisasi data tajam mengupas dinamika pasar modal, regulasi hukum, dan fenomena sosial. Tanpa bias sensasional, hanya fakta kuantitatif.",
-        "ctaPrimary": "Jelajahi Riset Data",
-        "ctaSecondary": "Buka Data Explorer"
+        "sub": "Platform portofolio rekayasa data, arsitektur pasar modal institusional, dan mesin kecerdasan regulasi hukum oleh Rifky Arya (@sugarate). Membedah fenomena nyata tanpa sensasi spekulatif.",
+        "ctaPrimary": "Lihat 6 Proyek Unggulan",
+        "ctaSecondary": "Metodologi Empiris"
       },
       "bento": {
         "heading": "The Avenia Way",
-        "sub": "Tiga pilar metodologi yang membedakan analisis Avenia dari opini pasar konvensional."
+        "sub": "Tiga pilar metodologi yang membedakan analisis Avenia dari spekulasi pasar konvensional."
       },
-      "tools": {
-        "heading": "Platform & Tools Interaktif",
-        "sub": "Sistem otomatisasi dan aplikasi data nyata yang kami bangun untuk publik.",
-        "viewFull": "Luncurkan Aplikasi Utuh"
+      "telemetry": {
+        "kicker": "Ekosistem & Arsitektur Inti",
+        "heading": "Sinergi Data Pipeline, Microservices & Edge Security",
+        "sub": "Integrasi menyeluruh dari pengikisan data anti-WAF, penyimpanan multi-tier terdistribusi, hingga antarmuka analitik Next.js 16 berkecepatan tinggi."
+      },
+      "projects": {
+        "kicker": "Karya Rekayasa Nyata",
+        "heading": "Proyek Unggulan & Ekosistem",
+        "sub": "Aplikasi web berkinerja tinggi, pipeline kuantitatif, dan engine ingestion dokumen yang aktif beroperasi di server ini."
       },
       "insights": {
-        "heading": "Featured Insights & Riset",
-        "sub": "Laporan investigasi kuantitatif terbaru dengan dataset terbuka yang dapat diaudit publik.",
-        "read": "Baca Laporan Lengkap"
+        "kicker": "Laporan Investigasi Kuantitatif",
+        "heading": "Featured Insights & Riset Terbuka",
+        "sub": "Kajian mendalam berbasis dataset resmi yang dapat diaudit publik, terbebas dari bias sensasi pasar."
+      },
+      "about": {
+        "kicker": "Di Balik Layar",
+        "heading": "Tentang Pengembang & Pendekatan Teknis",
+        "role": "Software & Data Engineer",
+        "bio": "Mengembangkan solusi end-to-end dari data pipelines performa tinggi (FastAPI, PostgreSQL, Redis, Cloudflare Workers/R2) hingga antarmuka modern yang cepat dan aksesibel. Berfokus pada kuantitatif pasar modal dan informatika hukum."
       },
       "footer": {
         "tagline": "Melihat realita berdasarkan pedoman data empiris yang objektif.",

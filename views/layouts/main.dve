@@ -6,29 +6,91 @@
   <title>{{#slot title}}{{ site.name }} — {{ site.tagline }}{{/slot}}</title>
   <meta name="description" content="{{ t.description }}">
   <meta name="theme-color" content="{{ site.themeColor }}">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="{{ canonical }}">
   <link rel="alternate" hreflang="id" href="{{ site.url }}/">
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  
+  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="{{ t.title }}">
   <meta property="og:description" content="{{ t.description }}">
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:image" content="{{ site.url }}/assets/og.png">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ t.title }}">
+  <meta name="twitter:description" content="{{ t.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/og.png">
+  <meta name="twitter:creator" content="@sugarate">
+
+  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/avatar.png">
+
+  <!-- Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=20261013-m3">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/style.css?v=20261015-pe">
+
+  <!-- JSON-LD Structured Data: Person & CreativeWork Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "{{ site.author }}",
+        "alternateName": "{{ site.alias }}",
+        "jobTitle": "{{ site.role }}",
+        "url": "{{ site.url }}",
+        "email": "mailto:{{ site.email }}",
+        "image": "{{ site.url }}{{ site.avatar }}",
+        "sameAs": [
+          "https://github.com/aryarifki",
+          "https://linkedin.com/in/aryarifki",
+          "https://www.instagram.com/rifqiaarya"
+        ],
+        "knowsAbout": [
+          "Quantitative Market Analytics",
+          "Data Engineering & Pipelines",
+          "FastAPI & Next.js Fullstack",
+          "PostgreSQL & Redis Caching",
+          "Legal Informatics & Anti-WAF Scraping",
+          "Cloudflare Zero Trust Architecture"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}",
+        "name": "{{ site.name }}",
+        "description": "{{ t.description }}",
+        "publisher": { "@id": "{{ site.url }}/#person" }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <a class="skip-to-content" href="#main">Skip to content</a>
+<body class="theme-light">
+  <a class="skip-to-content" href="#main">Menuju konten utama</a>
+
   {{> partials/header.dve}}
+
   <main id="main">
     {{#slot body}}{{/slot}}
   </main>
+
   {{> partials/footer.dve}}
-  <script src="/assets/hero-canvas.js?v=20261013-m3" defer></script>
-  <script src="/assets/main.js?v=20261013-m3" defer></script>
+
+  <!-- Progressive Interactive Script (< 8KB) -->
+  <script src="/assets/main.js?v=20261015-pe" defer></script>
 </body>
 </html>

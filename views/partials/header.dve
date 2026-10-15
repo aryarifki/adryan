@@ -1,23 +1,74 @@
 <header class="site-header" id="site-header">
-  <div class="header-pill">
-    <a class="brand-link" href="{{ base }}" aria-label="Avenia.id — Home">
-      <span class="brand-symbol" aria-hidden="true"></span>
-      <span class="brand-text">Avenia<span class="brand-domain">.id</span></span>
-    </a>
-
-    <nav class="nav-menu" aria-label="Navigasi Utama">
-      <a class="nav-item" href="#hero">{{ t.nav.vision }}</a>
-      <a class="nav-item" href="#methodology">{{ t.nav.methodology }}</a>
-      <a class="nav-item" href="#tools">{{ t.nav.tools }}</a>
-      <a class="nav-item" href="#insights">{{ t.nav.insights }}</a>
-      <a class="nav-item" href="#dispatch">{{ t.nav.newsletter }}</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn-header-cta" href="#tools">
-        <span>{{ t.nav.cta }}</span>
-        <span aria-hidden="true">&rarr;</span>
+  <div class="container header-container">
+    <div class="header-inner">
+      <!-- Brand Logo -->
+      <a class="brand-link" href="{{ base }}" aria-label="Avenia.id — Halaman Utama">
+        <span class="brand-monogram" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </span>
+        <div class="brand-meta">
+          <span class="brand-text">Avenia<span class="brand-accent">.id</span></span>
+          <span class="brand-subtext">{{ site.alias }}</span>
+        </div>
       </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li><a class="nav-item" href="#hero">{{ t.nav.vision }}</a></li>
+          <li><a class="nav-item" href="#methodology">{{ t.nav.methodology }}</a></li>
+          <li><a class="nav-item" href="#telemetry">{{ t.nav.telemetry }}</a></li>
+          <li><a class="nav-item" href="#projects">{{ t.nav.projects }}</a></li>
+          <li><a class="nav-item" href="#insights">{{ t.nav.insights }}</a></li>
+          <li><a class="nav-item" href="#about">{{ t.nav.about }}</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action & Mobile Toggle -->
+      <div class="header-right">
+        <a class="btn-header-cta" href="#projects">
+          <span>{{ t.nav.cta }}</span>
+          <span class="cta-arrow" aria-hidden="true">&darr;</span>
+        </a>
+
+        <!-- Hamburger Toggle Button (Mobile) -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="burger-bar" aria-hidden="true"></span>
+          <span class="burger-bar" aria-hidden="true"></span>
+          <span class="burger-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" hidden>
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+    <div class="mobile-nav-content" role="dialog" aria-modal="true" aria-label="Menu navigasi mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-brand-title">Avenia<span class="brand-accent">.id</span></span>
+        <button type="button" class="mobile-close-btn" id="mobile-close-btn" aria-label="Tutup menu navigasi">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links" aria-label="Menu Mobile">
+        <a class="mobile-nav-link" href="#hero">{{ t.nav.vision }}</a>
+        <a class="mobile-nav-link" href="#methodology">{{ t.nav.methodology }}</a>
+        <a class="mobile-nav-link" href="#telemetry">{{ t.nav.telemetry }}</a>
+        <a class="mobile-nav-link" href="#projects">{{ t.nav.projects }}</a>
+        <a class="mobile-nav-link" href="#insights">{{ t.nav.insights }}</a>
+        <a class="mobile-nav-link" href="#about">{{ t.nav.about }}</a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <a class="btn-primary-full" href="#projects">Jelajahi 6 Proyek Unggulan &darr;</a>
+      </div>
     </div>
   </div>
 </header>

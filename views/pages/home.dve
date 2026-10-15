@@ -2,35 +2,60 @@
 {{#block title}}{{ t.title }}{{/block}}
 {{#block body}}
 
-{{!-- SECTION 1: HERO SECTION (THE REALITY CHECK) --}}
-<section class="hero-section" id="hero" aria-labelledby="hero-title">
-  <canvas id="hero-canvas"></canvas>
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 1: HERO SECTION (PROGRESSIVE ENGAGEMENT · TEMA TERANG)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section-hero" id="hero" aria-labelledby="hero-title">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <!-- Live Status Kicker -->
+      <div class="hero-kicker-pill">
+        <span class="pulse-dot green" aria-hidden="true"></span>
+        <span class="kicker-text">{{ t.hero.badge }}</span>
+      </div>
 
-  <div class="container hero-content">
-    <h1 id="hero-title" class="hero-title">
-      {{ t.hero.headlinePre }}<br>
-      <span class="text-amber">{{ t.hero.headlineHighlight }}</span>
-    </h1>
+      <!-- Main Headline -->
+      <h1 id="hero-title" class="hero-headline">
+        {{ t.hero.headlinePre }}<br>
+        <span class="headline-gradient">{{ t.hero.headlineHighlight }}</span>
+      </h1>
 
-    <p class="hero-subtitle">
-      {{ t.hero.sub }}
-    </p>
+      <!-- Subtitle Description -->
+      <p class="hero-description">
+        {{ t.hero.sub }}
+      </p>
 
-    <div class="hero-actions">
-      <a class="btn-pill-primary" href="#insights">
-        <span>{{ t.hero.ctaPrimary }}</span>
-        <span aria-hidden="true">&darr;</span>
-      </a>
-      <a class="btn-pill-outlined" href="#tools">
-        <span>{{ t.hero.ctaSecondary }}</span>
-        <span aria-hidden="true">&rarr;</span>
-      </a>
+      <!-- Primary Action Buttons -->
+      <div class="hero-actions">
+        <a class="btn-primary" href="#projects">
+          <span>{{ t.hero.ctaPrimary }}</span>
+          <span class="btn-arrow" aria-hidden="true">&darr;</span>
+        </a>
+        <a class="btn-secondary" href="#methodology">
+          <span>{{ t.hero.ctaSecondary }}</span>
+          <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Live Telemetry Strip -->
+    <div class="hero-telemetry-grid" aria-label="Metrik & Telemetri Utama Ekosistem">
+      {{#each telemetry as item~}}
+      <div class="telemetry-card">
+        <div class="telemetry-value">{{ item.value }}</div>
+        <div class="telemetry-label">{{ item.label }}</div>
+        <div class="telemetry-sub">{{ item.sub }}</div>
+      </div>
+      {{~/each}}
     </div>
   </div>
 </section>
 
-{{!-- SECTION 2: "THE AVENIA WAY" BENTO BOX (M3 ASYMMETRIC) --}}
-<section class="section bento-section" id="methodology" aria-labelledby="bento-heading">
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 2: "THE AVENIA WAY" BENTO GRID (METODOLOGI EMPIRIS)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-bento" id="methodology" aria-labelledby="bento-heading">
   <div class="container">
     <div class="section-header">
       <span class="section-kicker">Metodologi &amp; Prinsip</span>
@@ -41,6 +66,13 @@
     <div class="bento-grid">
       {{#each bento as b~}}
       <article class="bento-card bento-card-{{ b.size }}">
+        <div class="bento-card-header">
+          <span class="bento-badge">{{ b.badge }}</span>
+          <div class="bento-stat-pill">
+            <span class="bento-stat-num">{{ b.stat }}</span>
+            <span class="bento-stat-lbl">{{ b.statLabel }}</span>
+          </div>
+        </div>
         <h3 class="bento-title">{{ b.title }}</h3>
         <p class="bento-desc">{{ b.desc }}</p>
       </article>
@@ -49,114 +81,172 @@
   </div>
 </section>
 
-{{!-- SECTION 3: INTEGRASI WEB APP & TOOLS (INTERACTIVE DATA EXPLORER) --}}
-<section class="section tools-section" id="tools" aria-labelledby="tools-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-kicker">Platform &amp; Ekosistem</span>
-      <h2 id="tools-heading" class="section-title">{{ t.tools.heading }}</h2>
-      <p class="section-subtitle">{{ t.tools.sub }}</p>
-    </div>
 
-    <div class="platform-grid">
-      {{#each projects as p~}}
-      <a class="platform-mini-card" href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.name }} - {{#if p.isDeployed}}Buka Aplikasi{{else}}Buka Source Code di GitHub{{/if}}">
-        <div class="platform-card-header">
-          <div class="platform-title-group">
-            <h3 class="platform-name">{{ p.name }}</h3>
-            <span class="platform-badge">{{ p.badge }}</span>
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 3: IMMERSION ZONE 1 (CORE ARCHITECTURE & TELEMETRY RADAR)
+     Aksen Gelap Pekat (Deep Obsidian Navy #0B0F19)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-immersion" id="telemetry" aria-labelledby="immersion-heading">
+  <div class="container">
+    <div class="immersion-panel">
+      <div class="immersion-header">
+        <div class="immersion-kicker-group">
+          <span class="pulse-dot teal" aria-hidden="true"></span>
+          <span class="immersion-kicker">{{ t.telemetry.kicker }}</span>
+        </div>
+        <h2 id="immersion-heading" class="immersion-title">{{ t.telemetry.heading }}</h2>
+        <p class="immersion-subtitle">{{ t.telemetry.sub }}</p>
+      </div>
+
+      <!-- Live Architecture Blueprint -->
+      <div class="blueprint-card">
+        <div class="blueprint-topbar">
+          <div class="blueprint-status">
+            <span class="status-indicator-live"></span>
+            <span class="blueprint-status-text">SYSTEM TOPOLOGY: PRODUCTION</span>
           </div>
-          {{#if p.isDeployed}}
-          <span class="platform-status-pill status-live" title="Aplikasi telah live dan dapat diakses publik">
-            <span class="status-live-dot" aria-hidden="true"></span>
-            <span>Live App</span>
-          </span>
-          {{else}}
-          <span class="platform-status-pill status-repo" title="Dalam pengembangan &middot; Source code di GitHub">
-            <svg class="status-code-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            <span>Source Code</span>
-          </span>
-          {{/if}}
+          <div class="blueprint-env-badge">LINUX x86_64 &bull; QUIC TUNNEL</div>
         </div>
-        <p class="platform-desc">{{ p.summary }}</p>
-        <div class="platform-tags">
-          {{#each p.stack as s~}}
-          <span class="platform-tag">{{ s }}</span>
-          {{~/each}}
+
+        <div class="blueprint-nodes-grid">
+          <!-- Node 1: Ingestion -->
+          <div class="node-box">
+            <div class="node-badge">INGESTION TIER</div>
+            <h4 class="node-title">O-Crawler &amp; SMtracker</h4>
+            <p class="node-desc">curl_cffi TLS/JA3 impersonation, anti-silent throttling, dan token auto-renewal untuk bursa &amp; putusan peradilan.</p>
+            <div class="node-stats">
+              <span>890+ Emiten</span> &bull; <span>34k+ Peraturan</span>
+            </div>
+          </div>
+
+          <!-- Node 2: Storage & Cache -->
+          <div class="node-box active-node">
+            <div class="node-badge highlight">STORAGE &amp; CACHE TIER</div>
+            <h4 class="node-title">PostgreSQL 17 &bull; Redis L1/L2</h4>
+            <p class="node-desc">Hirarki cache multi-tier L1 In-Memory RAM (0ms) + L2 Redis persistent, dilengkapi 5 pilar DB self-healing harian.</p>
+            <div class="node-stats highlight-stats">
+              <span>Cache: &lt; 0.5ms</span> &bull; <span>DB Score: 100%</span>
+            </div>
+          </div>
+
+          <!-- Node 3: Edge & Platform -->
+          <div class="node-box">
+            <div class="node-badge">EDGE &amp; UI TIER</div>
+            <h4 class="node-title">The Investowl Platform</h4>
+            <p class="node-desc">Next.js 16 Turbopack dengan MD3 Expressive, disajikan melalui Cloudflare Zero Trust QUIC tunnel &amp; Smart Tiered Cache.</p>
+            <div class="node-stats">
+              <span>HTTP/3 QUIC</span> &bull; <span>Edge Cached</span>
+            </div>
+          </div>
         </div>
-        <div class="platform-card-action">
-          <span class="platform-action-text {{#if p.isDeployed}}action-live-text{{else}}action-repo-text{{/if}}">
-            {{#if p.actionText}}
-              {{ p.actionText }}
-            {{else}}
-              {{#if p.isDeployed}}
-                Buka Web App
-              {{else}}
-                Lihat Source Code
-              {{/if}}
-            {{/if}}
-            <span class="action-arrow" aria-hidden="true">&nearr;</span>
-          </span>
-          <span class="platform-action-target">
-            {{#if p.actionTarget}}
-              {{ p.actionTarget }}
-            {{else}}
-              {{#if p.isDeployed}}
-                avenia.my.id
-              {{else}}
-                github.com
-              {{/if}}
-            {{/if}}
-          </span>
+
+        <div class="blueprint-footer">
+          <div class="blueprint-telemetry-tags">
+            <span class="telemetry-chip">Cloudflare Access: Secured</span>
+            <span class="telemetry-chip">HSTS: Preloaded</span>
+            <span class="telemetry-chip">Zero-Egress Storage: Cloudflare R2</span>
+          </div>
+          <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="blueprint-cta-btn">
+            <span>Buka Platform Unggulan (Investowl)</span>
+            <span aria-hidden="true">&nearr;</span>
+          </a>
         </div>
-      </a>
-      {{~/each}}
+      </div>
     </div>
   </div>
 </section>
 
-{{!-- SECTION 4: FEATURED INSIGHTS (RISET & JURNALISME DATA) --}}
-<section class="section insights-section" id="insights" aria-labelledby="insights-heading">
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 4: INTERACTIVE PROJECT GALLERY (TEMA TERANG · FILTERING)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-projects" id="projects" aria-labelledby="projects-heading">
   <div class="container">
     <div class="section-header">
-      <span class="section-kicker">Laporan Riset &amp; Investigasi</span>
-      <h2 id="insights-heading" class="section-title">{{ t.insights.heading }}</h2>
-      <p class="section-subtitle">{{ t.insights.sub }}</p>
+      <span class="section-kicker">{{ t.projects.kicker }}</span>
+      <h2 id="projects-heading" class="section-title">{{ t.projects.heading }}</h2>
+      <p class="section-subtitle">{{ t.projects.sub }}</p>
     </div>
 
-    <div class="insights-grid">
-      {{#each insights as i~}}
-      <article class="insight-card">
-        <div>
-          <div class="insight-card-top">
-            <span class="insight-category-chip">{{ i.category }}</span>
-            <span class="insight-dataset-badge">{{ i.badge }}</span>
+    <!-- Category Filter Tabs -->
+    <div class="project-filter-bar" role="tablist" aria-label="Filter kategori proyek">
+      {{#each categories as cat~}}
+      <button 
+        type="button" 
+        class="filter-tab-btn {{#if @first}}active{{/if}}" 
+        data-filter="{{ cat.key }}" 
+        role="tab" 
+        aria-selected="{{#if @first}}true{{else}}false{{/if}}"
+      >
+        <span>{{ cat.label }}</span>
+        <span class="filter-count">{{ cat.count }}</span>
+      </button>
+      {{~/each}}
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="projects-grid" id="projects-grid">
+      {{#each projects as p~}}
+      <article class="project-card" data-category="{{ p.category }}" data-slug="{{ p.slug }}">
+        <!-- Card Header Meta -->
+        <div class="project-card-header">
+          <div class="project-header-left">
+            <span class="project-tag-pill">{{ p.tag }}</span>
+            <span class="project-year">{{ p.year }}</span>
           </div>
 
-          <h3 class="insight-title">{{ i.title }}</h3>
-          <p class="insight-summary">{{ i.summary }}</p>
+          {{#if p.isDeployed}}
+          <span class="status-badge status-live" title="Aplikasi aktif dan dapat diakses publik">
+            <span class="status-dot-pulse" aria-hidden="true"></span>
+            <span>Live App</span>
+          </span>
+          {{else}}
+          <span class="status-badge status-source" title="Source code repositori aktif di GitHub">
+            <svg class="code-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>Source Code</span>
+          </span>
+          {{/if}}
         </div>
 
-        <div>
-          {{!-- MICRO-CHART AREA SVG SPARKLINE --}}
-          <div class="insight-microchart" aria-hidden="true">
-            <svg viewBox="0 0 240 44" class="w-full h-full" style="overflow: visible;">
-              <defs>
-                <linearGradient id="grad-{{ i.slug }}" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#FFB300" stop-opacity="0.32"></stop>
-                  <stop offset="100%" stop-color="#FFB300" stop-opacity="0"></stop>
-                </linearGradient>
-              </defs>
-              <path d="M 10 32 C 60 28, 100 12, 140 18 C 180 24, 210 36, 230 38 L 230 44 L 10 44 Z" fill="url(#grad-{{ i.slug }})"></path>
-              <path d="M 10 32 C 60 28, 100 12, 140 18 C 180 24, 210 36, 230 38" fill="none" stroke="#FFB300" stroke-width="2.2" stroke-linecap="round"></path>
-              <circle cx="230" cy="38" r="3.5" fill="#14192A" stroke="#FFB300" stroke-width="2"></circle>
-            </svg>
-          </div>
+        <!-- Project Identity -->
+        <div class="project-identity">
+          <h3 class="project-name">
+            <a href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer">
+              {{ p.name }}
+            </a>
+          </h3>
+          <span class="project-badge">{{ p.badge }}</span>
+        </div>
 
-          <div class="insight-meta-bottom">
-            <span>{{ i.date }} &middot; {{ i.readTime }}</span>
-            <span class="text-amber" style="font-weight: 700;">Baca Riset &rarr;</span>
-          </div>
+        <!-- Summary Description -->
+        <p class="project-summary">
+          {{ p.summary }}
+        </p>
+
+        <!-- Tech Stack Tags -->
+        <div class="project-stack-list" aria-label="Teknologi yang digunakan">
+          {{#each p.stack as s~}}
+          <span class="stack-badge">{{ s }}</span>
+          {{~/each}}
+        </div>
+
+        <!-- Card Action Footer -->
+        <div class="project-card-footer">
+          <a href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" class="project-main-link" aria-label="Buka {{ p.name }}">
+            {{#if p.isDeployed}}
+              <span>Luncurkan Web App</span>
+            {{else}}
+              <span>Periksa Source Code</span>
+            {{/if}}
+            <span class="link-arrow" aria-hidden="true">&nearr;</span>
+          </a>
+
+          {{#if p.repoUrl}}
+          <a href="{{ p.repoUrl }}" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="Buka GitHub Repository">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span class="sr-only">GitHub</span>
+          </a>
+          {{/if}}
         </div>
       </article>
       {{~/each}}
@@ -164,21 +254,120 @@
   </div>
 </section>
 
-{{!-- SECTION 5: DATA DISPATCH (NEWSLETTER SUBSCRIPTION) --}}
-<section class="section newsletter-section" id="dispatch" aria-labelledby="dispatch-heading">
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 5: FEATURED INSIGHTS (RISET & JURNALISME DATA EMPIRIS)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-insights" id="insights" aria-labelledby="insights-heading">
   <div class="container">
-    <div class="newsletter-card">
-      <span class="newsletter-kicker">Data Dispatch Mingguan</span>
-      <h2 id="dispatch-heading" class="newsletter-title">{{ newsletter.heading }}</h2>
-      <p class="newsletter-sub">{{ newsletter.sub }}</p>
+    <div class="section-header">
+      <span class="section-kicker">{{ t.insights.kicker }}</span>
+      <h2 id="insights-heading" class="section-title">{{ t.insights.heading }}</h2>
+      <p class="section-subtitle">{{ t.insights.sub }}</p>
+    </div>
 
-      <form class="newsletter-form-pill" id="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Masukkan alamat email Anda..." required aria-label="Alamat Email">
-        <button type="submit" class="newsletter-submit-btn">{{ newsletter.cta }}</button>
-      </form>
+    <div class="insights-grid">
+      {{#each insights as i~}}
+      <article class="insight-card">
+        <div class="insight-topbar">
+          <span class="insight-category-chip">{{ i.category }}</span>
+          <span class="insight-dataset-badge">{{ i.badge }}</span>
+        </div>
 
-      <p class="newsletter-microcopy">{{ newsletter.microcopy }}</p>
-      <div id="newsletter-feedback" class="newsletter-feedback" style="display: none;"></div>
+        <h3 class="insight-title">{{ i.title }}</h3>
+        <p class="insight-summary">{{ i.summary }}</p>
+
+        <!-- Dynamic Micro-Sparkline Chart -->
+        <div class="insight-sparkline-box" aria-hidden="true">
+          <svg viewBox="0 0 240 44" class="sparkline-svg">
+            <defs>
+              <linearGradient id="sparkgrad-{{ i.slug }}" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"></stop>
+                <stop offset="100%" stop-color="#2563EB" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38 L 230 44 L 10 44 Z" fill="url(#sparkgrad-{{ i.slug }})"></path>
+            <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round"></path>
+            <circle cx="230" cy="38" r="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"></circle>
+          </svg>
+        </div>
+
+        <div class="insight-footer">
+          <span class="insight-meta">{{ i.date }} &bull; {{ i.readTime }}</span>
+          <span class="insight-action-text">Kajian Lengkap &rarr;</span>
+        </div>
+      </article>
+      {{~/each}}
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 6: ABOUT / AUTHOR SPECS (PROFIL REKAYASA)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-about" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-card">
+      <div class="about-avatar-wrapper">
+        <img src="{{ site.avatar }}" alt="Foto profil {{ site.author }}" class="about-avatar-img" width="128" height="128" loading="lazy">
+        <span class="avatar-verified-badge" title="Verified Creator">✓</span>
+      </div>
+
+      <div class="about-content">
+        <div class="about-kicker-group">
+          <span class="about-kicker">{{ t.about.kicker }}</span>
+        </div>
+        <h2 id="about-heading" class="about-author-name">{{ site.author }}</h2>
+        <p class="about-role-location">{{ site.role }} &bull; {{ site.location }} &bull; <em>@{{ site.alias }}</em></p>
+        
+        <p class="about-bio-text">
+          {{ t.about.bio }}
+        </p>
+
+        <div class="about-actions">
+          <button type="button" class="btn-copy-email" id="copy-email-btn" data-email="{{ site.email }}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span class="copy-label">Salin Email ({{ site.email }})</span>
+            <span class="copy-success" style="display: none;">✓ Berhasil Disalin!</span>
+          </button>
+
+          <a href="https://github.com/aryarifki" target="_blank" rel="noopener noreferrer" class="btn-about-github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>GitHub @aryarifki</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 7: IMMERSION ZONE 2 (DATA DISPATCH & FINAL CTA)
+     Aksen Gelap Pekat (Deep Charcoal #0D1117)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-dark-cta" id="dispatch" aria-labelledby="dispatch-heading">
+  <div class="container">
+    <div class="dark-cta-card">
+      <div class="dark-cta-content">
+        <span class="dark-cta-kicker">Data Dispatch Mingguan</span>
+        <h2 id="dispatch-heading" class="dark-cta-title">{{ newsletter.heading }}</h2>
+        <p class="dark-cta-sub">{{ newsletter.sub }}</p>
+
+        <!-- Newsletter Subscription Form -->
+        <form class="dark-cta-form" id="newsletter-form">
+          <div class="form-input-group">
+            <input type="email" class="dark-cta-input" placeholder="Masukkan alamat email Anda..." required aria-label="Alamat Email untuk Langganan">
+            <button type="submit" class="dark-cta-submit-btn">
+              <span>{{ newsletter.cta }}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+          <p class="dark-cta-microcopy">{{ newsletter.microcopy }}</p>
+          <div id="newsletter-feedback" class="newsletter-feedback" style="display: none;" role="status"></div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
