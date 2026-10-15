@@ -17,7 +17,7 @@
       <!-- Main Headline -->
       <h1 id="hero-title" class="hero-headline">
         {{ t.hero.headlinePre }}<br>
-        <span class="headline-gradient">{{ t.hero.headlineHighlight }}</span>
+        <span class="headline-accent">{{ t.hero.headlineHighlight }}</span>
       </h1>
 
       <!-- Subtitle Description -->
@@ -36,17 +36,6 @@
           <span class="btn-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </div>
-    </div>
-
-    <!-- Live Telemetry Strip -->
-    <div class="hero-telemetry-grid" aria-label="Metrik & Telemetri Utama Ekosistem">
-      {{#each telemetry as item~}}
-      <div class="telemetry-card">
-        <div class="telemetry-value">{{ item.value }}</div>
-        <div class="telemetry-label">{{ item.label }}</div>
-        <div class="telemetry-sub">{{ item.sub }}</div>
-      </div>
-      {{~/each}}
     </div>
   </div>
 </section>

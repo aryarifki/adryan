@@ -29,13 +29,13 @@
   <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Web Fonts -->
+  <!-- Web Fonts (Google Outfit) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/assets/style.css?v=20261015-pe2">
+  <!-- Main Stylesheet (Google Pastel Theme) -->
+  <link rel="stylesheet" href="/assets/style.css?v=20261015-pastel">
 
   <!-- JSON-LD Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
@@ -76,6 +76,6 @@
   {{> partials/footer.dve}}
 
   <!-- Progressive Interactive Script (< 5KB) -->
-  <script src="/assets/main.js?v=20261015-pe2" defer></script>
+  <script src="/assets/main.js?v=20261015-pastel" defer></script>
 </body>
 </html>

@@ -14,10 +14,6 @@
         <p class="footer-bio">
           {{ t.footer.tagline }} Riset kuantitatif dan rekayasa data terbuka independen berbasis dataset resmi terverifikasi.
         </p>
-        <div class="footer-status-pill">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          <span>Sistem Aktif &bull; Ekosistem Avenia Cloudflare QUIC</span>
-        </div>
       </div>
 
       <!-- Col 2: Navigasi Cepat -->
