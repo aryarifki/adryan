@@ -10,7 +10,6 @@
         </span>
         <div class="brand-meta">
           <span class="brand-text">Avenia<span class="brand-accent">.id</span></span>
-          <span class="brand-subtext">{{ site.alias }}</span>
         </div>
       </a>
 
@@ -22,7 +21,7 @@
           <li><a class="nav-item" href="#telemetry">{{ t.nav.telemetry }}</a></li>
           <li><a class="nav-item" href="#projects">{{ t.nav.projects }}</a></li>
           <li><a class="nav-item" href="#insights">{{ t.nav.insights }}</a></li>
-          <li><a class="nav-item" href="#about">{{ t.nav.about }}</a></li>
+          <li><a class="nav-item" href="#dispatch">Data Dispatch</a></li>
         </ul>
       </nav>
 
@@ -63,11 +62,11 @@
         <a class="mobile-nav-link" href="#telemetry">{{ t.nav.telemetry }}</a>
         <a class="mobile-nav-link" href="#projects">{{ t.nav.projects }}</a>
         <a class="mobile-nav-link" href="#insights">{{ t.nav.insights }}</a>
-        <a class="mobile-nav-link" href="#about">{{ t.nav.about }}</a>
+        <a class="mobile-nav-link" href="#dispatch">Data Dispatch</a>
       </nav>
 
       <div class="mobile-nav-footer">
-        <a class="btn-primary-full" href="#projects">Jelajahi 6 Proyek Unggulan &darr;</a>
+        <a class="btn-primary-full" href="#projects">Jelajahi 5 Proyek Unggulan &darr;</a>
       </div>
     </div>
   </div>

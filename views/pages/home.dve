@@ -109,11 +109,11 @@
         </div>
 
         <div class="blueprint-nodes-grid">
-          <!-- Node 1: Ingestion -->
+          <!-- Node 1: Ingestion & Automation -->
           <div class="node-box">
-            <div class="node-badge">INGESTION TIER</div>
-            <h4 class="node-title">O-Crawler &amp; SMtracker</h4>
-            <p class="node-desc">curl_cffi TLS/JA3 impersonation, anti-silent throttling, dan token auto-renewal untuk bursa &amp; putusan peradilan.</p>
+            <div class="node-badge">INGESTION &amp; WORKERS TIER</div>
+            <h4 class="node-title">O-Crawler &bull; SMtracker &bull; Workers</h4>
+            <p class="node-desc">curl_cffi TLS impersonation, anti-silent throttling, dan bot worker Telegram otonom untuk otomatisasi server.</p>
             <div class="node-stats">
               <span>890+ Emiten</span> &bull; <span>34k+ Peraturan</span>
             </div>
@@ -196,9 +196,9 @@
           </div>
 
           {{#if p.isDeployed}}
-          <span class="status-badge status-live" title="Aplikasi aktif dan dapat diakses publik">
+          <span class="status-badge status-live" title="Aplikasi/Layanan aktif dan dapat diakses publik">
             <span class="status-dot-pulse" aria-hidden="true"></span>
-            <span>Live App</span>
+            <span>Live</span>
           </span>
           {{else}}
           <span class="status-badge status-source" title="Source code repositori aktif di GitHub">
@@ -233,10 +233,14 @@
         <!-- Card Action Footer -->
         <div class="project-card-footer">
           <a href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" class="project-main-link" aria-label="Buka {{ p.name }}">
-            {{#if p.isDeployed}}
-              <span>Luncurkan Web App</span>
+            {{#if p.actionText}}
+              <span>{{ p.actionText }}</span>
             {{else}}
-              <span>Periksa Source Code</span>
+              {{#if p.isDeployed}}
+                <span>Luncurkan Web App</span>
+              {{else}}
+                <span>Periksa Source Code</span>
+              {{/if}}
             {{/if}}
             <span class="link-arrow" aria-hidden="true">&nearr;</span>
           </a>
@@ -250,6 +254,23 @@
         </div>
       </article>
       {{~/each}}
+    </div>
+
+    <!-- Repository Source Code Callout Banner -->
+    <div class="landing-source-banner">
+      <div class="source-banner-content">
+        <div class="source-banner-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </div>
+        <div class="source-banner-text">
+          <h4 class="source-banner-title">Kode Sumber Landing Page Ini</h4>
+          <p class="source-banner-desc">Halaman avenia.my.id dibangun &amp; dikompilasi statis dengan DVE (Deserve View Engine) tanpa runtime framework berat di sisi klien.</p>
+        </div>
+      </div>
+      <a href="https://github.com/aryarifki/aryarifki.github.io" target="_blank" rel="noopener noreferrer" class="btn-source-link">
+        <span>Buka Repositori di GitHub</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -304,47 +325,7 @@
 
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 6: ABOUT / AUTHOR SPECS (PROFIL REKAYASA)
-     ══════════════════════════════════════════════════════════════════════ --}}
-<section class="section section-about" id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="about-card">
-      <div class="about-avatar-wrapper">
-        <img src="{{ site.avatar }}" alt="Foto profil {{ site.author }}" class="about-avatar-img" width="128" height="128" loading="lazy">
-        <span class="avatar-verified-badge" title="Verified Creator">✓</span>
-      </div>
-
-      <div class="about-content">
-        <div class="about-kicker-group">
-          <span class="about-kicker">{{ t.about.kicker }}</span>
-        </div>
-        <h2 id="about-heading" class="about-author-name">{{ site.author }}</h2>
-        <p class="about-role-location">{{ site.role }} &bull; {{ site.location }} &bull; <em>@{{ site.alias }}</em></p>
-        
-        <p class="about-bio-text">
-          {{ t.about.bio }}
-        </p>
-
-        <div class="about-actions">
-          <button type="button" class="btn-copy-email" id="copy-email-btn" data-email="{{ site.email }}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span class="copy-label">Salin Email ({{ site.email }})</span>
-            <span class="copy-success" style="display: none;">✓ Berhasil Disalin!</span>
-          </button>
-
-          <a href="https://github.com/aryarifki" target="_blank" rel="noopener noreferrer" class="btn-about-github">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            <span>GitHub @aryarifki</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 7: IMMERSION ZONE 2 (DATA DISPATCH & FINAL CTA)
+     SECTION 6: IMMERSION ZONE 2 (DATA DISPATCH & FINAL CTA)
      Aksen Gelap Pekat (Deep Charcoal #0D1117)
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="section section-dark-cta" id="dispatch" aria-labelledby="dispatch-heading">

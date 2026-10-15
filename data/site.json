@@ -6,14 +6,8 @@
     "fullName": "Avenia.id — Riset Data & Visualisasi Realita",
     "tagline": "Melihat Realita, Dipandu oleh Data",
     "brandKicker": "Independent Data Journalism & Public Quant Analytics",
-    "handle": "aryarifki",
-    "alias": "sugarate",
-    "author": "Rifky Arya",
-    "role": "Software & Data Engineer",
-    "location": "Semarang, Indonesia",
-    "email": "amadryanrifky@gmail.com",
-    "avatar": "/assets/avatar.png",
     "themeColor": "#2563EB",
+    "repoUrl": "https://github.com/aryarifki/aryarifki.github.io",
     "year": 2026
   },
   "socials": [
@@ -39,18 +33,11 @@
       "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>"
     },
     {
-      "label": "LinkedIn",
-      "url": "https://linkedin.com/in/aryarifki",
-      "handle": "/in/aryarifki",
-      "icon": "linkedin",
-      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"></path><rect x=\"2\" y=\"9\" width=\"4\" height=\"12\"></rect><circle cx=\"4\" cy=\"4\" r=\"2\"></circle></svg>"
-    },
-    {
-      "label": "Instagram",
-      "url": "https://www.instagram.com/rifqiaarya?igsi=bzJzbzZhZW1qanFr",
-      "handle": "@rifqiaarya",
-      "icon": "instagram",
-      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>"
+      "label": "Avenia Workers (@avaworkers_bot)",
+      "url": "https://t.me/avaworkers_bot",
+      "handle": "@avaworkers_bot",
+      "icon": "send",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>"
     }
   ],
   "telemetry": [
@@ -76,10 +63,10 @@
     }
   ],
   "categories": [
-    { "key": "all", "label": "Semua Proyek", "count": 6 },
+    { "key": "all", "label": "Semua Proyek", "count": 5 },
     { "key": "quant", "label": "Pasar Modal & Quant", "count": 2 },
     { "key": "legal", "label": "Legal AI & Ingestion", "count": 2 },
-    { "key": "platform", "label": "Platform & DevOps", "count": 2 }
+    { "key": "platform", "label": "Bot & Automation", "count": 1 }
   ],
   "bento": [
     {
@@ -122,6 +109,7 @@
       "liveUrl": "https://investowl.avenia.my.id/",
       "repoUrl": "https://github.com/aryarifki/investowl",
       "targetUrl": "https://investowl.avenia.my.id/",
+      "actionText": "Luncurkan Web App",
       "stack": ["Next.js 16", "FastAPI", "Python 3.10+", "PostgreSQL", "Redis L1/L2", "Tailwind CSS v4"],
       "year": "2026",
       "badge": "Flagship Platform",
@@ -138,6 +126,7 @@
       "liveUrl": "https://ocrawler.avenia.my.id/",
       "repoUrl": "https://github.com/aryarifki/O-Crawler",
       "targetUrl": "https://ocrawler.avenia.my.id/",
+      "actionText": "Buka Portal O-Crawler",
       "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF curl_cffi", "WebSocket GUI"],
       "year": "2026",
       "badge": "High-Speed Ingestion",
@@ -154,6 +143,7 @@
       "liveUrl": null,
       "repoUrl": "https://github.com/aryarifki/SMtracker",
       "targetUrl": "https://github.com/aryarifki/SMtracker",
+      "actionText": "Periksa Source Code",
       "stack": ["Python 3.10+", "Playwright", "scikit-learn", "PostgreSQL", "Telegram Bot API"],
       "year": "2025",
       "badge": "Quantitative Engine",
@@ -170,6 +160,7 @@
       "liveUrl": "https://owlexia.avenia.my.id/",
       "repoUrl": "https://github.com/aryarifki/owlexia",
       "targetUrl": "https://github.com/aryarifki/owlexia",
+      "actionText": "Spesifikasi & Kode Sumber",
       "stack": ["Python", "LLM Reasoner", "Agentic AI", "Vector Search", "Legal Informatics"],
       "year": "2026",
       "badge": "Agentic Intelligence",
@@ -179,36 +170,21 @@
       "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
     },
     {
-      "name": "Avenia Edge Infrastructure",
-      "slug": "edge-cloud",
+      "name": "Avenia Workers",
+      "slug": "avenia-workers",
       "category": "platform",
       "isDeployed": true,
-      "liveUrl": "https://avenia.my.id",
-      "repoUrl": "https://github.com/aryarifki",
-      "targetUrl": "https://avenia.my.id",
-      "stack": ["Cloudflare Zero Trust", "QUIC Tunneling", "Smart Tiered Cache", "Systemd", "Linux Hardening"],
+      "liveUrl": "https://t.me/avaworkers_bot",
+      "repoUrl": "https://github.com/aryarifki/OSX",
+      "targetUrl": "https://t.me/avaworkers_bot",
+      "actionText": "Buka Bot Telegram (@avaworkers_bot)",
+      "stack": ["Telegram Bot API", "Cloudflare Workers", "Python", "OSX Automation", "Telemetry"],
       "year": "2026",
-      "badge": "Zero Trust Network",
+      "badge": "Active Telegram Bot",
       "featured": false,
-      "tag": "Edge & Security",
-      "summary": "Orkestrasi infrastruktur Cloudflare Zero Trust, QUIC Tunneling, smart tiered edge caching, dan mitigasi DDoS otomatis untuk seluruh domain publik ekosistem avenia.my.id.",
-      "en": "Zero-trust network architecture, Cloudflare QUIC tunneling, and high-performance edge caching orchestration securing all ecosystem subdomains."
-    },
-    {
-      "name": "Avenia.id Static Platform",
-      "slug": "avenia-site",
-      "category": "platform",
-      "isDeployed": true,
-      "liveUrl": "https://avenia.my.id",
-      "repoUrl": "https://github.com/aryarifki/aryarifki.github.io",
-      "targetUrl": "https://github.com/aryarifki/aryarifki.github.io",
-      "stack": ["Deserve View Engine (DVE)", "Node.js", "Semantic HTML5", "Modern CSS Tokens", "GitHub Actions"],
-      "year": "2026",
-      "badge": "Static Engine",
-      "featured": false,
-      "tag": "Data Journalism",
-      "summary": "Platform riset publik dan visualisasi data realita tanpa sensasi, dikompilasi statis dengan Deserve View Engine (DVE) untuk performa instan dan aksesibilitas maksimal.",
-      "en": "Personal portfolio and independent public research portal statically rendered with Deserve View Engine for zero-client runtime and instant loading."
+      "tag": "Bot & Automation",
+      "summary": "Asisten bot Telegram cerdas dan sistem orkestrasi worker untuk otomatisasi operasional, telemetri server, dan manajemen layanan komputasi ekosistem Avenia.",
+      "en": "Intelligent Telegram bot assistant and worker orchestration system for operational automation, server telemetry, and service management."
     }
   ],
   "insights": [
@@ -254,22 +230,21 @@
       "lang": "id",
       "htmlLang": "id",
       "title": "Avenia.id — Riset Data & Visualisasi Realita",
-      "description": "Portofolio rekayasa data & platform riset empiris independen mengupas dinamika pasar modal Indonesia, hukum, dan fenomena sosial berbasis data terbuka.",
+      "description": "Platform riset data independen dan visualisasi realita empiris mengupas dinamika pasar modal Indonesia, hukum, dan fenomena sosial berbasis data terbuka.",
       "nav": {
         "vision": "Visi",
         "methodology": "The Avenia Way",
         "telemetry": "Arsitektur",
         "projects": "Proyek",
         "insights": "Riset Data",
-        "about": "Tentang",
         "cta": "Jelajahi Proyek"
       },
       "hero": {
-        "badge": "OPEN EMPIRICAL DATA • SEMARANG, ID",
+        "badge": "OPEN EMPIRICAL DATA • PUBLIC RESEARCH",
         "headlinePre": "Melihat Realita,",
         "headlineHighlight": "Dipandu oleh Data.",
-        "sub": "Platform portofolio rekayasa data, arsitektur pasar modal institusional, dan mesin kecerdasan regulasi hukum oleh Rifky Arya (@sugarate). Membedah fenomena nyata tanpa sensasi spekulatif.",
-        "ctaPrimary": "Lihat 6 Proyek Unggulan",
+        "sub": "Platform riset data independen, analitik pasar modal institusional, dan mesin kecerdasan regulasi hukum. Membedah fenomena nyata tanpa sensasi spekulatif.",
+        "ctaPrimary": "Lihat 5 Proyek Unggulan",
         "ctaSecondary": "Metodologi Empiris"
       },
       "bento": {
@@ -284,18 +259,12 @@
       "projects": {
         "kicker": "Karya Rekayasa Nyata",
         "heading": "Proyek Unggulan & Ekosistem",
-        "sub": "Aplikasi web berkinerja tinggi, pipeline kuantitatif, dan engine ingestion dokumen yang aktif beroperasi di server ini."
+        "sub": "Aplikasi web berkinerja tinggi, pipeline kuantitatif, dan bot otomasi yang aktif beroperasi di ekosistem Avenia."
       },
       "insights": {
         "kicker": "Laporan Investigasi Kuantitatif",
         "heading": "Featured Insights & Riset Terbuka",
         "sub": "Kajian mendalam berbasis dataset resmi yang dapat diaudit publik, terbebas dari bias sensasi pasar."
-      },
-      "about": {
-        "kicker": "Di Balik Layar",
-        "heading": "Tentang Pengembang & Pendekatan Teknis",
-        "role": "Software & Data Engineer",
-        "bio": "Mengembangkan solusi end-to-end dari data pipelines performa tinggi (FastAPI, PostgreSQL, Redis, Cloudflare Workers/R2) hingga antarmuka modern yang cepat dan aksesibel. Berfokus pada kuantitatif pasar modal dan informatika hukum."
       },
       "footer": {
         "tagline": "Melihat realita berdasarkan pedoman data empiris yang objektif.",

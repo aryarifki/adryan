@@ -25,11 +25,9 @@
   <meta name="twitter:title" content="{{ t.title }}">
   <meta name="twitter:description" content="{{ t.description }}">
   <meta name="twitter:image" content="{{ site.url }}/assets/og.png">
-  <meta name="twitter:creator" content="@sugarate">
 
   <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/avatar.png">
 
   <!-- Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,34 +35,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/assets/style.css?v=20261015-pe">
+  <link rel="stylesheet" href="/assets/style.css?v=20261015-pe2">
 
-  <!-- JSON-LD Structured Data: Person & CreativeWork Portfolio -->
+  <!-- JSON-LD Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Person",
-        "@id": "{{ site.url }}/#person",
-        "name": "{{ site.author }}",
-        "alternateName": "{{ site.alias }}",
-        "jobTitle": "{{ site.role }}",
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization",
+        "name": "{{ site.name }}",
         "url": "{{ site.url }}",
-        "email": "mailto:{{ site.email }}",
-        "image": "{{ site.url }}{{ site.avatar }}",
+        "logo": "{{ site.url }}/assets/favicon.svg",
         "sameAs": [
-          "https://github.com/aryarifki",
-          "https://linkedin.com/in/aryarifki",
-          "https://www.instagram.com/rifqiaarya"
-        ],
-        "knowsAbout": [
-          "Quantitative Market Analytics",
-          "Data Engineering & Pipelines",
-          "FastAPI & Next.js Fullstack",
-          "PostgreSQL & Redis Caching",
-          "Legal Informatics & Anti-WAF Scraping",
-          "Cloudflare Zero Trust Architecture"
+          "https://github.com/aryarifki"
         ]
       },
       {
@@ -73,7 +58,7 @@
         "url": "{{ site.url }}",
         "name": "{{ site.name }}",
         "description": "{{ t.description }}",
-        "publisher": { "@id": "{{ site.url }}/#person" }
+        "publisher": { "@id": "{{ site.url }}/#organization" }
       }
     ]
   }
@@ -90,7 +75,7 @@
 
   {{> partials/footer.dve}}
 
-  <!-- Progressive Interactive Script (< 8KB) -->
-  <script src="/assets/main.js?v=20261015-pe" defer></script>
+  <!-- Progressive Interactive Script (< 5KB) -->
+  <script src="/assets/main.js?v=20261015-pe2" defer></script>
 </body>
 </html>
