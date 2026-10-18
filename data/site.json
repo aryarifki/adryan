@@ -26,6 +26,13 @@
       "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"></polyline><polyline points=\"17 6 23 6 23 12\"></polyline></svg>"
     },
     {
+      "label": "Komunitas InvestOwl (@theinvestowl_id)",
+      "url": "https://t.me/theinvestowl_id",
+      "handle": "@theinvestowl_id",
+      "icon": "send",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>"
+    },
+    {
       "label": "O-Crawler Portal",
       "url": "https://ocrawler.avenia.my.id/",
       "handle": "ocrawler",
@@ -107,6 +114,7 @@
       "category": "quant",
       "isDeployed": true,
       "liveUrl": "https://investowl.avenia.my.id/",
+      "communityUrl": "https://t.me/theinvestowl_id",
       "repoUrl": "https://github.com/aryarifki/investowl",
       "targetUrl": "https://investowl.avenia.my.id/",
       "actionText": "Luncurkan Web App",
