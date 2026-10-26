@@ -306,7 +306,19 @@
 <section class="section ownership-section" id="ownership" aria-labelledby="ownership-heading">
   <div class="container">
     <div class="ownership-grid">
-      <!-- Simulated KSEI Mutation Radar -->
+      <!-- 1. Narrative & Structural Context (Top on mobile, left on desktop) -->
+      <div class="ownership-narrative">
+        <span class="section-eyebrow">STRUCTURAL INTELLIGENCE</span>
+        <h2 id="ownership-heading" class="section-title">Mapping Indonesian Equity Market DNA</h2>
+        <p class="section-desc" style="margin-bottom: 1.25rem;">
+          Dengan mengindeks data kustodian sentral KSEI dan memetakan jaringan konglomerasi pengendali, Investowl memungkinkan trader melihat melampaui pergerakan harga dangkal menuju struktur penerima manfaat sebenarnya (Ultimate Beneficial Owner).
+        </p>
+        <p class="section-desc">
+          Temukan pola sindikasi broker, akun nominee terafiliasi, dan mutasi pemegang saham bulanan &gt;5% di seluruh emiten yang tercatat di Bursa Efek Indonesia.
+        </p>
+      </div>
+
+      <!-- 2. Simulated KSEI Mutation Radar Card -->
       <div class="data-card" aria-label="Simulasi Data Radar Mutasi KSEI">
         <div class="data-card-header">
           <span>SAMPLE_KSEI_MUTATION_RADAR</span>
@@ -343,18 +355,6 @@
         <div class="network-graph-card">
           <img src="/assets/resources/graph-net.png" alt="Dark metallic graph map showing connected glowing network nodes" width="560" height="180" loading="lazy">
         </div>
-      </div>
-
-      <!-- Narrative & Structural Context -->
-      <div>
-        <span class="section-eyebrow">STRUCTURAL INTELLIGENCE</span>
-        <h2 id="ownership-heading" class="section-title">Mapping Indonesian Equity Market DNA</h2>
-        <p class="section-desc" style="margin-bottom: 1.5rem;">
-          Dengan mengindeks data kustodian sentral KSEI dan memetakan jaringan konglomerasi pengendali, Investowl memungkinkan trader melihat melampaui pergerakan harga dangkal menuju struktur penerima manfaat sebenarnya (Ultimate Beneficial Owner).
-        </p>
-        <p class="section-desc">
-          Temukan pola sindikasi broker, akun nominee terafiliasi, dan mutasi pemegang saham bulanan &gt;5% di seluruh emiten yang tercatat di Bursa Efek Indonesia.
-        </p>
       </div>
     </div>
   </div>
