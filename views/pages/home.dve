@@ -313,6 +313,10 @@
           <span class="mono" style="color:var(--accent-amber);">LIVE_STREAM</span>
         </div>
         
+        <div class="table-scroll-hint" aria-hidden="true">
+          <span>&larr; Geser tabel untuk melihat seluruh kolom data &rarr;</span>
+        </div>
+        
         <div class="table-responsive">
           <table class="table-simulated">
             <thead>

@@ -2,7 +2,7 @@
 <html lang="{{ t.htmlLang }}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{#slot title}}{{ site.name }} — {{ site.tagline }}{{/slot}}</title>
   <meta name="description" content="{{ t.description }}">
   <meta name="theme-color" content="{{ site.themeColor }}">
@@ -32,10 +32,10 @@
   <!-- High Legibility Web Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet (Obsidian Noir Quantitative Theme) -->
-  <link rel="stylesheet" href="/assets/style.css?v=20261027-noir">
+  <link rel="stylesheet" href="/assets/style.css?v=20261027-v3">
 
   <!-- JSON-LD Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
@@ -77,7 +77,10 @@
 
   {{> partials/footer.dve}}
 
+  <!-- Mobile Drawer rendered outside header to avoid stacking/backdrop-filter containment -->
+  {{> partials/drawer.dve}}
+
   <!-- Progressive Interactive Script (< 5KB) -->
-  <script src="/assets/main.js?v=20261027-noir" defer></script>
+  <script src="/assets/main.js?v=20261027-v3" defer></script>
 </body>
 </html>

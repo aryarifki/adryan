@@ -1,6 +1,6 @@
 /**
  * Avenia.id (Investowl) — Quantitative Telemetry Client Controller
- * Lightweight Vanilla JS (< 4KB, Zero External Dependencies)
+ * Ultra-Lightweight Vanilla JS (< 4KB, Zero External Dependencies)
  */
 (function () {
   'use strict';
@@ -15,15 +15,17 @@
   var closeBtn = document.getElementById('mobile-close-btn');
   var drawer = document.getElementById('mobile-nav-drawer');
   var backdrop = document.getElementById('mobile-nav-backdrop');
-  var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  var mobileLinks = document.querySelectorAll('.mobile-nav-link, .btn-primary-full, .btn-secondary-full');
 
   function openMobileMenu() {
     if (!drawer) return;
     drawer.removeAttribute('hidden');
     if (toggleBtn) {
       toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.classList.add('is-active');
     }
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   }
 
   function closeMobileMenu() {
@@ -31,26 +33,42 @@
     drawer.setAttribute('hidden', '');
     if (toggleBtn) {
       toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.classList.remove('is-active');
     }
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   }
 
   if (toggleBtn) {
-    toggleBtn.addEventListener('click', function () {
-      var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      if (isExpanded) {
-        closeMobileMenu();
-      } else {
+    toggleBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isHidden = drawer ? drawer.hasAttribute('hidden') : true;
+      if (isHidden) {
         openMobileMenu();
+      } else {
+        closeMobileMenu();
       }
     });
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
-  if (backdrop) backdrop.addEventListener('click', closeMobileMenu);
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closeMobileMenu();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closeMobileMenu();
+    });
+  }
 
   mobileLinks.forEach(function (link) {
-    link.addEventListener('click', closeMobileMenu);
+    link.addEventListener('click', function () {
+      closeMobileMenu();
+    });
   });
 
   // ESC key dismisses drawer

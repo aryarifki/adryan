@@ -4,7 +4,7 @@
     <a class="brand-logo-link" href="{{ base }}" aria-label="Investowl — Avenia.id Halaman Utama">
       <img src="/assets/resources/investowl-logo.png" alt="Investowl logo" class="brand-logo-img" width="36" height="36">
       <div class="brand-text">
-        <span class="brand-name">Investowl<span class="brand-accent">.</span></span>
+        <span class="brand-name">Investowl<span class="brand-accent">.id</span></span>
         <span class="brand-tag">Market Intelligence</span>
       </div>
     </a>
@@ -21,9 +21,9 @@
       </ul>
     </nav>
 
-    <!-- Header Right Actions: Live Launch CTA -->
+    <!-- Header Right Actions: Live Launch CTA on desktop & Hamburger on mobile -->
     <div class="header-right">
-      <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-header-action" aria-label="Buka Platform Investowl">
+      <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-header-action" aria-label="Buka Platform Investowl (Live)">
         <span>Buka Investowl</span>
         <span aria-hidden="true">&nearr;</span>
       </a>
@@ -34,42 +34,6 @@
         <span class="burger-bar" aria-hidden="true"></span>
         <span class="burger-bar" aria-hidden="true"></span>
       </button>
-    </div>
-  </div>
-
-  <!-- Mobile & Tablet Navigation Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-nav-drawer" hidden>
-    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
-    <div class="mobile-nav-content" role="dialog" aria-modal="true" aria-label="Menu navigasi mobile">
-      <div class="mobile-nav-header">
-        <div class="brand-logo-link">
-          <img src="/assets/resources/investowl-logo.png" alt="Investowl logo" class="brand-logo-img" width="32" height="32">
-          <span class="mobile-brand-title">Investowl<span class="brand-accent">.id</span></span>
-        </div>
-        <button type="button" class="mobile-close-btn" id="mobile-close-btn" aria-label="Tutup menu navigasi">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="mobile-nav-links" aria-label="Menu Mobile Links">
-        <a class="mobile-nav-link" href="#overview"><span>[01] OVERVIEW</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#values"><span>[02] VALUES</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#projects"><span>[03] PRODUCTS &amp; REPO</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#methodology"><span>[04] TELEMETRY</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#ownership"><span>[05] STRUCTURE</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#insights"><span>[06] RISET DATA</span><span aria-hidden="true">&rarr;</span></a>
-        <a class="mobile-nav-link" href="#dispatch"><span>[07] DATA DISPATCH</span><span aria-hidden="true">&rarr;</span></a>
-      </nav>
-
-      <div class="mobile-nav-footer">
-        <a class="btn-primary-full" href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer">
-          <span>Buka Platform (Live)</span>
-          <span aria-hidden="true">&nearr;</span>
-        </a>
-      </div>
     </div>
   </div>
 </header>
