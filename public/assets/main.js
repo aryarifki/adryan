@@ -1,15 +1,15 @@
 /**
- * Avenia.id — Progressive Engagement Client Controller
- * Lightweight Vanilla JS (< 5KB uncompressed, zero dependencies)
+ * Avenia.id (Investowl) — Quantitative Telemetry Client Controller
+ * Lightweight Vanilla JS (< 4KB, Zero External Dependencies)
  */
 (function () {
   'use strict';
 
-  // Mark JS enabled
+  // Mark JS active on root
   document.documentElement.classList.add('js-enabled');
 
   // ══════════════════════════════════════════════════════════════════════════
-  // 1. MOBILE NAVIGATION DRAWER CONTROLLER
+  // 1. MOBILE & TABLET NAVIGATION DRAWER CONTROLLER
   // ══════════════════════════════════════════════════════════════════════════
   var toggleBtn = document.getElementById('mobile-toggle-btn');
   var closeBtn = document.getElementById('mobile-close-btn');
@@ -53,7 +53,7 @@
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // ESC key listener to close drawer
+  // ESC key dismisses drawer
   window.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && drawer && !drawer.hasAttribute('hidden')) {
       closeMobileMenu();
@@ -62,17 +62,17 @@
 
 
   // ══════════════════════════════════════════════════════════════════════════
-  // 2. INTERACTIVE TECH STACK & CATEGORY FILTERING
+  // 2. INTERACTIVE PRODUCT & ECOSYSTEM FILTERING
   // ══════════════════════════════════════════════════════════════════════════
   var filterButtons = document.querySelectorAll('.filter-tab-btn');
-  var projectCards = document.querySelectorAll('.project-card');
+  var productCards = document.querySelectorAll('.product-card, .project-card');
 
-  if (filterButtons.length > 0 && projectCards.length > 0) {
+  if (filterButtons.length > 0 && productCards.length > 0) {
     filterButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var targetFilter = btn.getAttribute('data-filter');
 
-        // Update Active Tab State
+        // Update active tab UI state
         filterButtons.forEach(function (b) {
           b.classList.remove('active');
           b.setAttribute('aria-selected', 'false');
@@ -80,8 +80,8 @@
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
 
-        // Filter Project Cards with smooth visibility transition
-        projectCards.forEach(function (card) {
+        // Filter cards with smooth opacity and transform transition
+        productCards.forEach(function (card) {
           var category = card.getAttribute('data-category');
           if (targetFilter === 'all' || category === targetFilter) {
             card.style.display = 'flex';
@@ -91,7 +91,7 @@
             });
           } else {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(8px)';
+            card.style.transform = 'translateY(6px)';
             setTimeout(function () {
               if (card.style.opacity === '0') {
                 card.style.display = 'none';
@@ -105,46 +105,12 @@
 
 
   // ══════════════════════════════════════════════════════════════════════════
-  // 3. COPY EMAIL TO CLIPBOARD WITH REALTIME FEEDBACK
+  // 3. ACTIVE NAVIGATION SPY (INTERSECTION OBSERVER)
   // ══════════════════════════════════════════════════════════════════════════
-  var copyEmailBtn = document.getElementById('copy-email-btn');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', function () {
-      var email = copyEmailBtn.getAttribute('data-email');
-      var labelEl = copyEmailBtn.querySelector('.copy-label');
-      var successEl = copyEmailBtn.querySelector('.copy-success');
+  var desktopNavLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  var trackedSections = document.querySelectorAll('section[id]');
 
-      if (!email) return;
-
-      var triggerSuccess = function () {
-        if (labelEl && successEl) {
-          labelEl.style.display = 'none';
-          successEl.style.display = 'inline';
-          setTimeout(function () {
-            labelEl.style.display = 'inline';
-            successEl.style.display = 'none';
-          }, 2400);
-        }
-      };
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(triggerSuccess).catch(function () {
-          window.location.href = 'mailto:' + email;
-        });
-      } else {
-        window.location.href = 'mailto:' + email;
-      }
-    });
-  }
-
-
-  // ══════════════════════════════════════════════════════════════════════════
-  // 4. ACTIVE NAVIGATION SPYING (INTERSECTION OBSERVER)
-  // ══════════════════════════════════════════════════════════════════════════
-  var desktopNavLinks = document.querySelectorAll('.desktop-nav .nav-item');
-  var targetSections = document.querySelectorAll('section[id]');
-
-  if ('IntersectionObserver' in window && targetSections.length > 0 && desktopNavLinks.length > 0) {
+  if ('IntersectionObserver' in window && trackedSections.length > 0 && desktopNavLinks.length > 0) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -159,16 +125,16 @@
           });
         }
       });
-    }, { rootMargin: '-20% 0px -70% 0px' });
+    }, { rootMargin: '-25% 0px -65% 0px' });
 
-    targetSections.forEach(function (sec) {
+    trackedSections.forEach(function (sec) {
       observer.observe(sec);
     });
   }
 
 
   // ══════════════════════════════════════════════════════════════════════════
-  // 5. NEWSLETTER SUBMISSION SIMULATION
+  // 4. DATA DISPATCH NEWSLETTER FORM CONTROLLER
   // ══════════════════════════════════════════════════════════════════════════
   var newsletterForm = document.getElementById('newsletter-form');
   var newsletterFeedback = document.getElementById('newsletter-feedback');
@@ -179,7 +145,7 @@
       var input = newsletterForm.querySelector('input[type="email"]');
       if (input && input.value) {
         if (newsletterFeedback) {
-          newsletterFeedback.textContent = '✓ Terima kasih! Alamat ' + input.value + ' telah ditambahkan ke Data Dispatch.';
+          newsletterFeedback.textContent = '✓ Terima kasih! Alamat ' + input.value + ' telah terdaftar pada Data Dispatch mingguan.';
           newsletterFeedback.style.display = 'block';
         }
         input.value = '';

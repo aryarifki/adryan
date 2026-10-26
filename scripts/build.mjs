@@ -41,6 +41,8 @@ export function build({ quiet = false } = {}) {
       telemetry: data.telemetry,
       categories: data.categories,
       bento: data.bento,
+      values: data.values,
+      kseiMutations: data.kseiMutations,
       insights: data.insights,
       newsletter: data.newsletter,
       skills: data.skills,

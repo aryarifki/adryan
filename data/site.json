@@ -4,9 +4,9 @@
     "url": "https://avenia.my.id",
     "name": "Avenia.id",
     "fullName": "Avenia.id — Riset Data & Visualisasi Realita",
-    "tagline": "Melihat Realita, Dipandu oleh Data",
+    "tagline": "Quantitative Market Intelligence & Smart Money Telemetry",
     "brandKicker": "Independent Data Journalism & Public Quant Analytics",
-    "themeColor": "#2563EB",
+    "themeColor": "#141210",
     "repoUrl": "https://github.com/aryarifki/aryarifki.github.io",
     "year": 2026
   },
@@ -70,10 +70,26 @@
     }
   ],
   "categories": [
-    { "key": "all", "label": "Semua Proyek", "count": 5 },
-    { "key": "quant", "label": "Pasar Modal & Quant", "count": 2 },
-    { "key": "legal", "label": "Legal AI & Ingestion", "count": 2 },
-    { "key": "platform", "label": "Bot & Automation", "count": 1 }
+    {
+      "key": "all",
+      "label": "Semua Proyek",
+      "count": 5
+    },
+    {
+      "key": "quant",
+      "label": "Pasar Modal & Quant",
+      "count": 2
+    },
+    {
+      "key": "legal",
+      "label": "Legal AI & Ingestion",
+      "count": 2
+    },
+    {
+      "key": "platform",
+      "label": "Bot & Automation",
+      "count": 1
+    }
   ],
   "bento": [
     {
@@ -118,7 +134,14 @@
       "repoUrl": "https://github.com/aryarifki/investowl",
       "targetUrl": "https://investowl.avenia.my.id/",
       "actionText": "Luncurkan Web App",
-      "stack": ["Next.js 16", "FastAPI", "Python 3.10+", "PostgreSQL", "Redis L1/L2", "Tailwind CSS v4"],
+      "stack": [
+        "Next.js 16",
+        "FastAPI",
+        "Python 3.10+",
+        "PostgreSQL",
+        "Redis L1/L2",
+        "Tailwind CSS v4"
+      ],
       "year": "2026",
       "badge": "Flagship Platform",
       "featured": true,
@@ -135,7 +158,13 @@
       "repoUrl": "https://github.com/aryarifki/O-Crawler",
       "targetUrl": "https://ocrawler.avenia.my.id/",
       "actionText": "Buka Portal O-Crawler",
-      "stack": ["FastAPI", "PostgreSQL", "Cloudflare R2", "Anti-WAF curl_cffi", "WebSocket GUI"],
+      "stack": [
+        "FastAPI",
+        "PostgreSQL",
+        "Cloudflare R2",
+        "Anti-WAF curl_cffi",
+        "WebSocket GUI"
+      ],
       "year": "2026",
       "badge": "High-Speed Ingestion",
       "featured": true,
@@ -152,7 +181,13 @@
       "repoUrl": "https://github.com/aryarifki/SMtracker",
       "targetUrl": "https://github.com/aryarifki/SMtracker",
       "actionText": "Periksa Source Code",
-      "stack": ["Python 3.10+", "Playwright", "scikit-learn", "PostgreSQL", "Telegram Bot API"],
+      "stack": [
+        "Python 3.10+",
+        "Playwright",
+        "scikit-learn",
+        "PostgreSQL",
+        "Telegram Bot API"
+      ],
       "year": "2025",
       "badge": "Quantitative Engine",
       "featured": false,
@@ -169,7 +204,13 @@
       "repoUrl": "https://github.com/aryarifki/owlexia",
       "targetUrl": "https://github.com/aryarifki/owlexia",
       "actionText": "Spesifikasi & Kode Sumber",
-      "stack": ["Python", "LLM Reasoner", "Agentic AI", "Vector Search", "Legal Informatics"],
+      "stack": [
+        "Python",
+        "LLM Reasoner",
+        "Agentic AI",
+        "Vector Search",
+        "Legal Informatics"
+      ],
       "year": "2026",
       "badge": "Agentic Intelligence",
       "featured": false,
@@ -186,7 +227,13 @@
       "repoUrl": "https://github.com/aryarifki/OSX",
       "targetUrl": "https://t.me/avaworkers_bot",
       "actionText": "Buka Bot Telegram (@avaworkers_bot)",
-      "stack": ["Telegram Bot API", "Cloudflare Workers", "Python", "OSX Automation", "Telemetry"],
+      "stack": [
+        "Telegram Bot API",
+        "Cloudflare Workers",
+        "Python",
+        "OSX Automation",
+        "Telemetry"
+      ],
       "year": "2026",
       "badge": "Active Telegram Bot",
       "featured": false,
@@ -204,7 +251,13 @@
       "readTime": "6 menit baca",
       "badge": "Dataset Tersedia",
       "summary": "Analisis inferensial terhadap 464 ribu SID di saham-saham likuid: Bagaimana rotasi dari akun nominee asing ke ritel domestik membentuk zona underwater yang persisten.",
-      "sparkline": [74, 68, 62, 58, 52]
+      "sparkline": [
+        74,
+        68,
+        62,
+        58,
+        52
+      ]
     },
     {
       "title": "Pemetaan Big Data Regulasi: Mengukur Disharmoni Regulasi di Indonesia",
@@ -214,7 +267,13 @@
       "readTime": "8 menit baca",
       "badge": "Corpus MA & MK",
       "summary": "Mengurai relasi antara 2.400+ teks putusan judicial review (MK & MA) dengan tumpang tindih dalam 34.000 korpus peraturan daerah dan sektoral pusat.",
-      "sparkline": [22, 29, 38, 45, 54]
+      "sparkline": [
+        22,
+        29,
+        38,
+        45,
+        54
+      ]
     },
     {
       "title": "Smart Money Flow: Mengapa Saham Defensif BUMN Menjadi Shelter Kuartal III",
@@ -224,7 +283,13 @@
       "readTime": "5 menit baca",
       "badge": "Data Flow KSEI",
       "summary": "Membedah likuiditas perbankan dan rotasi institusional asing saat volatilitas pasar regional memuncak menjelang akhir tahun fiskal.",
-      "sparkline": [40, 48, 55, 63, 60]
+      "sparkline": [
+        40,
+        48,
+        55,
+        63,
+        60
+      ]
     }
   ],
   "newsletter": {
@@ -240,12 +305,13 @@
       "title": "Avenia.id — Riset Data & Visualisasi Realita",
       "description": "Platform riset data independen dan visualisasi realita empiris mengupas dinamika pasar modal Indonesia, hukum, dan fenomena sosial berbasis data terbuka.",
       "nav": {
-        "vision": "Visi",
-        "methodology": "The Avenia Way",
-        "telemetry": "Arsitektur",
-        "projects": "Proyek",
-        "insights": "Riset Data",
-        "cta": "Jelajahi Proyek"
+        "overview": "[01] OVERVIEW",
+        "values": "[02] VALUES",
+        "projects": "[03] PRODUCTS",
+        "telemetry": "[04] TELEMETRY",
+        "ownership": "[05] STRUCTURE",
+        "insights": "[06] RISET DATA",
+        "cta": "Buka Investowl ↗"
       },
       "hero": {
         "badge": "OPEN EMPIRICAL DATA • PUBLIC RESEARCH",
@@ -279,5 +345,55 @@
         "rights": "Hak cipta dilindungi undang-undang. Seluruh dataset disediakan untuk kepentingan riset & edukasi publik."
       }
     }
-  }
+  },
+  "values": [
+    {
+      "num": "// VALUE_01",
+      "title": "Quantitative Rigor",
+      "desc": "Kalkulasi algoritmik, model statistik matematika, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pasar modal.",
+      "icon": "shield"
+    },
+    {
+      "num": "// VALUE_02",
+      "title": "Data Transparency",
+      "desc": "Visibilitas tanpa filter terhadap transaksi broker, mutasi kepemilikan KSEI, dan parameter volume foreign flow tanpa heuristik tersembunyi.",
+      "icon": "database"
+    },
+    {
+      "num": "// VALUE_03",
+      "title": "Market Intelligence",
+      "desc": "Pelacakan institusi tingkat lanjut, pemetaan fase struktural Wyckoff, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).",
+      "icon": "cpu"
+    }
+  ],
+  "kseiMutations": [
+    {
+      "entity": "INSTITUTIONAL_ALPHA",
+      "type": "DOMESTIC",
+      "mutation": "+4.85M SHARES",
+      "status": "ACCUM",
+      "statusClass": "badge-positive"
+    },
+    {
+      "entity": "FOREIGN_CUSTODY_A",
+      "type": "FOREIGN",
+      "mutation": "+12.10M SHARES",
+      "status": "ACCUM",
+      "statusClass": "badge-positive"
+    },
+    {
+      "entity": "SYNDICATE_NET_B",
+      "type": "MIXED",
+      "mutation": "MUTATION SHIFT",
+      "status": "MAPPED",
+      "statusClass": "badge-neutral"
+    },
+    {
+      "entity": "CONGLOMERATE_HOLDING",
+      "type": "UBO NODE",
+      "mutation": "PARENT RESTRUCTURE",
+      "status": "TRACKED",
+      "statusClass": "badge-neutral"
+    }
+  ]
 }

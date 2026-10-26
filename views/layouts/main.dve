@@ -6,7 +6,7 @@
   <title>{{#slot title}}{{ site.name }} — {{ site.tagline }}{{/slot}}</title>
   <meta name="description" content="{{ t.description }}">
   <meta name="theme-color" content="{{ site.themeColor }}">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
   <link rel="canonical" href="{{ canonical }}">
   <link rel="alternate" hreflang="id" href="{{ site.url }}/">
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
@@ -17,25 +17,25 @@
   <meta property="og:title" content="{{ t.title }}">
   <meta property="og:description" content="{{ t.description }}">
   <meta property="og:url" content="{{ canonical }}">
-  <meta property="og:image" content="{{ site.url }}/assets/og.png">
+  <meta property="og:image" content="{{ site.url }}/assets/resources/hero-matrix.png">
   <meta property="og:locale" content="id_ID">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ t.title }}">
   <meta name="twitter:description" content="{{ t.description }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/og.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/resources/hero-matrix.png">
 
   <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Web Fonts (Google Outfit) -->
+  <!-- High Legibility Web Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet (Google Pastel Theme) -->
-  <link rel="stylesheet" href="/assets/style.css?v=20261015-pastel">
+  <!-- Main Stylesheet (Obsidian Noir Quantitative Theme) -->
+  <link rel="stylesheet" href="/assets/style.css?v=20261027-noir">
 
   <!-- JSON-LD Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
@@ -47,9 +47,11 @@
         "@id": "{{ site.url }}/#organization",
         "name": "{{ site.name }}",
         "url": "{{ site.url }}",
-        "logo": "{{ site.url }}/assets/favicon.svg",
+        "logo": "{{ site.url }}/assets/resources/investowl-logo.png",
         "sameAs": [
-          "https://github.com/aryarifki"
+          "https://github.com/aryarifki",
+          "https://investowl.avenia.my.id",
+          "https://t.me/theinvestowl_id"
         ]
       },
       {
@@ -64,7 +66,7 @@
   }
   </script>
 </head>
-<body class="theme-light">
+<body class="theme-obsidian">
   <a class="skip-to-content" href="#main">Menuju konten utama</a>
 
   {{> partials/header.dve}}
@@ -76,6 +78,6 @@
   {{> partials/footer.dve}}
 
   <!-- Progressive Interactive Script (< 5KB) -->
-  <script src="/assets/main.js?v=20261015-pastel" defer></script>
+  <script src="/assets/main.js?v=20261027-noir" defer></script>
 </body>
 </html>
