@@ -2,7 +2,7 @@
   <div class="container header-container">
     <!-- Brand Identity (Investowl / Avenia.id) -->
     <a class="brand-logo-link" href="{{ base }}" aria-label="Investowl — Avenia.id Halaman Utama">
-      <img src="/assets/resources/investowl-logo.png" alt="Investowl logo" class="brand-logo-img" width="36" height="36">
+      <img src="/assets/resources/investowl-logo.png" alt="Investowl logo" class="brand-logo-img" width="44" height="44">
       <div class="brand-text">
         <span class="brand-name">Investowl<span class="brand-accent">.id</span></span>
         <span class="brand-tag">Market Intelligence</span>

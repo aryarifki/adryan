@@ -4,7 +4,7 @@
       <!-- Col 1: Brand & Philosophy -->
       <div class="footer-brand">
         <div class="footer-brand-title">
-          <img src="/assets/resources/investowl-logo.png" alt="Investowl icon" class="footer-logo-img" width="28" height="28">
+          <img src="/assets/resources/investowl-logo.png" alt="Investowl icon" class="footer-logo-img" width="36" height="36">
           <span class="brand-name">Investowl<span class="brand-accent">.id</span></span>
         </div>
         <p class="footer-desc">
