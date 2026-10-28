@@ -47,7 +47,7 @@
         "@id": "{{ site.url }}/#organization",
         "name": "{{ site.name }}",
         "url": "{{ site.url }}",
-        "logo": "{{ site.url }}/assets/resources/investowl-logo.png",
+        "logo": "{{ site.url }}/assets/resources/investowl-logo-v2.png",
         "sameAs": [
           "https://github.com/aryarifki",
           "https://investowl.avenia.my.id",
