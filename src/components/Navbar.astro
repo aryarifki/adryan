@@ -1,0 +1,197 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import { navigation, site } from '../data/site';
+---
+
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-ink-900/35 backdrop-blur-md"
+>
+  <div class="container-page">
+    <div class="flex h-[74px] items-center justify-between gap-5">
+      <Logo />
+
+      <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
+        {
+          navigation.map((item) => (
+            <div class="nav-group group relative">
+              <a href={item.href} class="nav-link" aria-haspopup="true">
+                {item.label}
+                <Icon
+                  name="chevron-down"
+                  size={13}
+                  class="mt-px text-slate-500 transition-transform duration-300 group-hover:rotate-180"
+                />
+              </a>
+
+              <div class="nav-panel">
+                <div class="px-3 pb-1.5 pt-2">
+                  <p class="text-[9px] font-bold uppercase tracking-[0.24em] text-slate-500">
+                    {item.label}
+                  </p>
+                </div>
+                {item.items.map((link) => (
+                  <a
+                    href={link.href}
+                    class="nav-panel-link"
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
+                  >
+                    <span class="mt-0.5 grid size-8 shrink-0 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-peach-300">
+                      <Icon name={link.external ? 'arrow-up-right' : 'arrow-right'} size={14} />
+                    </span>
+                    <span class="min-w-0">
+                      <span class="flex items-center gap-2 text-[12.5px] font-semibold text-white">
+                        {link.label}
+                        {link.badge && (
+                          <span class="rounded-full border border-peach-400/25 bg-peach-400/10 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-[0.12em] text-peach-300">
+                            {link.badge}
+                          </span>
+                        )}
+                      </span>
+                      <span class="mt-0.5 block text-[11px] leading-[1.5] text-slate-500">
+                        {link.description}
+                      </span>
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </nav>
+
+      <div class="hidden items-center gap-5 lg:flex">
+        <a
+          href={site.investowl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[13px] font-semibold text-slate-300 transition-colors hover:text-white"
+        >
+          Log in
+        </a>
+        <a
+          href={site.investowl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline"
+        >
+          Sign up
+          <Icon name="arrow-up-right" size={14} />
+        </a>
+      </div>
+
+      <button
+        type="button"
+        data-menu-button
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open navigation menu"
+        class="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-white transition hover:border-peach-400/40 hover:text-peach-300 lg:hidden"
+      >
+        <span data-icon-open><Icon name="menu" size={19} /></span>
+        <span data-icon-close><Icon name="close" size={19} /></span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    data-mobile-menu
+    hidden
+    class="max-h-[calc(100dvh-74px)] overflow-y-auto border-t border-white/10 bg-ink-900/95 backdrop-blur-2xl lg:hidden"
+  >
+    <div class="container-page py-5">
+      <nav aria-label="Mobile">
+        {
+          navigation.map((item) => (
+            <details class="group border-b border-white/[0.06]">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-3.5 text-[14px] font-semibold text-white [&::-webkit-details-marker]:hidden">
+                {item.label}
+                <Icon
+                  name="chevron-down"
+                  size={16}
+                  class="text-slate-500 transition-transform duration-300 group-open:rotate-180"
+                />
+              </summary>
+              <div class="pb-2 pl-1">
+                {item.items.map((link) => (
+                  <a
+                    href={link.href}
+                    class="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-[13px] text-slate-400 transition hover:bg-white/[0.04] hover:text-peach-300"
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
+                  >
+                    <span>{link.label}</span>
+                    <Icon
+                      name={link.external ? 'arrow-up-right' : 'arrow-right'}
+                      size={13}
+                      class="text-slate-600"
+                    />
+                  </a>
+                ))}
+              </div>
+            </details>
+          ))
+        }
+      </nav>
+
+      <div class="mt-6 flex items-center gap-3">
+        <a
+          href={site.investowl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-center text-[13px] font-semibold text-slate-200"
+        >
+          Log in
+        </a>
+        <a
+          href={site.investowl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 rounded-full border border-peach-400 bg-peach-400 px-4 py-3 text-center text-[13px] font-bold text-ink-950"
+        >
+          Sign up
+        </a>
+      </div>
+
+      <p class="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-600">
+        <span class="relative flex size-1.5">
+          <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-60"></span>
+          <span class="relative inline-flex size-1.5 rounded-full bg-emerald-400"></span>
+        </span>
+        Data pipeline online · T+1 sync
+      </p>
+    </div>
+  </div>
+</header>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-button]');
+  const menu = document.querySelector<HTMLElement>('[data-mobile-menu]');
+
+  const setMenu = (open: boolean) => {
+    if (!button || !menu) return;
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    menu.hidden = !open;
+    document.body.classList.toggle('overflow-hidden', open);
+  };
+
+  button?.addEventListener('click', () => {
+    setMenu(button.getAttribute('aria-expanded') !== 'true');
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenu(false);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) setMenu(false);
+  });
+</script>

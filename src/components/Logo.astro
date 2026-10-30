@@ -1,0 +1,43 @@
+---
+interface Props {
+  class?: string;
+  href?: string;
+  size?: 'sm' | 'md';
+}
+
+const { class: className = '', href = '/', size = 'md' } = Astro.props;
+const isSmall = size === 'sm';
+---
+
+<a href={href} class:list={['group inline-flex items-center gap-2.5', className]} aria-label="Avenia home">
+  <span
+    class:list={[
+      'relative grid place-items-center overflow-hidden rounded-[11px] bg-gradient-to-br from-peach-200 via-peach-400 to-peach-600 text-ink-950 shadow-[0_10px_28px_-12px_rgba(255,154,68,0.9),inset_0_1px_0_rgba(255,255,255,0.5)] transition-transform duration-300 group-hover:-rotate-3',
+      isSmall ? 'size-8' : 'size-9',
+    ]}
+  >
+    <span class="absolute inset-0 bg-[radial-gradient(circle_at_30%_15%,rgba(255,255,255,0.55),transparent_45%)]" aria-hidden="true"></span>
+    <svg
+      viewBox="0 0 24 24"
+      class:list={[isSmall ? 'size-[18px]' : 'size-5', 'relative']}
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5.8 18.2 12 5.6l6.2 12.6"></path>
+      <path d="M8.8 14.2h6.4"></path>
+      <circle cx="19" cy="5.8" r="1.7" fill="currentColor" stroke="none"></circle>
+    </svg>
+  </span>
+  <span
+    class:list={[
+      'font-extrabold tracking-[-0.045em] text-white',
+      isSmall ? 'text-[17px]' : 'text-[19px]',
+    ]}
+  >
+    avenia<span class="text-peach-400">.id</span>
+  </span>
+</a>

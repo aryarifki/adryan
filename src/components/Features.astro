@@ -1,0 +1,85 @@
+---
+import Icon from './Icon.astro';
+import { features } from '../data/site';
+---
+
+<section id="features" class="relative py-20 lg:py-28" aria-labelledby="features-title">
+  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="absolute left-1/2 top-1/3 size-[520px] -translate-x-1/2 rounded-full bg-peach-400/[0.04] blur-[120px]"></div>
+  </div>
+
+  <div class="container-page">
+    <div class="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16 xl:gap-24">
+      <div class="reveal lg:sticky lg:top-28 lg:self-start">
+        <span class="eyebrow">Features</span>
+        <h2 id="features-title" class="section-title mt-4">
+          World-class market intelligence
+        </h2>
+        <p class="section-copy mt-5 max-w-md">
+          Institutional rigor without the institutional gatekeeping. Every layer of the
+          desk is built to be inspected, challenged, and reproduced — from the raw feed
+          to the final signal.
+        </p>
+        <a href="#dashboard" class="link-accent mt-7">
+          Read more about our features
+          <Icon name="arrow-right" size={15} />
+        </a>
+
+        <div class="mt-12 hidden max-w-[290px] border-l border-white/10 pl-5 lg:block">
+          <p class="text-[12.5px] italic leading-6 text-slate-500">
+            “If you can’t trace it, we don’t publish it.”
+          </p>
+          <p class="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.2em] text-slate-600">
+            Avenia research principle
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-3.5">
+        {
+          features.map((feature, index) => (
+            <article
+              class:list={[
+                'reveal group relative overflow-hidden rounded-2xl border p-6 transition duration-300 sm:p-7',
+                feature.active
+                  ? 'border-white/10 bg-white/[0.06] shadow-[0_28px_70px_-45px_rgba(0,0,0,0.95)] backdrop-blur-xl'
+                  : 'border-transparent bg-white/[0.012] hover:border-peach-400/25 hover:bg-white/[0.03]',
+              ]}
+              style={`--reveal-delay: ${index * 80}ms`}
+            >
+              {feature.active && (
+                <span
+                  class="pointer-events-none absolute -right-10 -top-10 size-36 rounded-full bg-peach-400/10 blur-[50px]"
+                  aria-hidden="true"
+                />
+              )}
+
+              <div class="relative flex items-start gap-5">
+                <span class="relative grid size-12 shrink-0 place-items-center rounded-full border border-peach-400/25 bg-peach-400/[0.08] text-peach-300 shadow-[0_0_34px_-10px_rgba(255,184,121,0.65)]">
+                  <span class="absolute inset-2 rounded-full bg-peach-400/15 blur-md" aria-hidden="true"></span>
+                  <Icon name={feature.icon} size={20} class="relative" />
+                </span>
+
+                <div class="min-w-0 flex-1 pt-0.5">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="text-[17px] font-bold tracking-[-0.02em] text-white sm:text-lg">
+                      {feature.title}
+                    </h3>
+                    <span class="font-mono text-[9px] tracking-[0.16em] text-white/20">
+                      {feature.number}
+                    </span>
+                  </div>
+                  <p class="mt-2 text-[13px] leading-[1.7] text-slate-400">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+
+              <span class="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-peach-400/40 to-transparent transition-transform duration-500 group-hover:scale-x-100"></span>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

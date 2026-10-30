@@ -1,0 +1,283 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+---
+
+<section id="app" class="relative overflow-hidden py-20 lg:py-28" aria-labelledby="app-title">
+  <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute left-[8%] top-1/2 size-[480px] -translate-y-1/2 rounded-full bg-peach-400/[0.07] blur-[120px]"></div>
+    <div class="absolute bottom-0 right-[12%] size-[360px] rounded-full bg-violet-700/[0.10] blur-[110px]"></div>
+  </div>
+
+  <div class="container-page">
+    <div class="grid items-center gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-16">
+      <!-- Phone composition -->
+      <div
+        class="reveal relative mx-auto h-[440px] w-full max-w-[500px] [perspective:1600px] sm:h-[540px] lg:order-1"
+        aria-label="Avenia mobile app preview on two angled phones"
+      >
+        <div class="absolute inset-[12%] rounded-full bg-peach-400/[0.12] blur-[80px] animate-pulse-soft" aria-hidden="true"></div>
+
+        <!-- Back phone: portfolio -->
+        <div class="absolute left-[1%] top-[9%] z-10 w-[52%] max-w-[248px] -rotate-[9deg] transition-transform duration-700 hover:-translate-y-2 hover:-rotate-[5deg]">
+          <div class="phone-shell">
+            <div class="phone-screen aspect-[9/19] p-2.5 pt-8">
+              <div class="phone-notch"></div>
+
+              <div class="flex items-center justify-between px-1 text-[6px] font-semibold text-slate-500">
+                <span>9:41</span>
+                <span class="flex items-center gap-1">
+                  <span class="h-1.5 w-2.5 rounded-[2px] border border-slate-500"></span>
+                  <span class="h-1.5 w-2.5 rounded-[2px] bg-slate-500"></span>
+                </span>
+              </div>
+
+              <div class="mt-3 flex items-center justify-between px-1">
+                <div>
+                  <p class="text-[6px] font-bold uppercase tracking-[0.18em] text-slate-500">Total balance</p>
+                  <p class="mt-1 font-mono text-[17px] font-semibold tracking-[-0.05em] text-white">
+                    $48,290.<span class="text-slate-500">12</span>
+                  </p>
+                </div>
+                <img
+                  src="/assets/avatar.png"
+                  alt=""
+                  width="28"
+                  height="28"
+                  loading="lazy"
+                  class="size-7 rounded-full border border-white/10 object-cover"
+                />
+              </div>
+
+              <div class="mt-1.5 flex items-center gap-1.5 px-1">
+                <span class="rounded-full bg-emerald-400/10 px-1.5 py-0.5 text-[6px] font-bold text-emerald-400">+12.4%</span>
+                <span class="text-[6px] text-slate-600">this month</span>
+              </div>
+
+              <div class="mt-3 rounded-xl border border-peach-400/15 bg-peach-400/[0.055] p-2.5">
+                <div class="pr-6 sm:pr-9">
+                  <svg viewBox="0 0 190 74" class="h-14 w-full" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="phoneChartFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#FFB879" stop-opacity="0.35"></stop>
+                      <stop offset="100%" stop-color="#FFB879" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0 60C16 56 22 44 38 47S62 30 78 35 102 20 118 25s22-8 38-5 22-6 34-10v64H0Z"
+                    fill="url(#phoneChartFill)"></path>
+                  <path
+                    d="M0 60C16 56 22 44 38 47S62 30 78 35 102 20 118 25s22-8 38-5 22-6 34-10"
+                    stroke="#FFB879"
+                    stroke-width="1.5"
+                    stroke-linecap="round"></path>
+                  <circle cx="156" cy="16" r="2.2" fill="#FFB879"></circle>
+                  </svg>
+                </div>
+                <div class="mt-1 flex justify-between font-mono text-[5.5px] text-slate-600">
+                  <span>01</span><span>08</span><span>15</span><span>22</span><span>30</span>
+                </div>
+              </div>
+
+              <div class="mt-2.5 grid grid-cols-3 gap-1.5">
+                {
+                  [
+                    { icon: 'plus', label: 'Buy' },
+                    { icon: 'arrow-up', label: 'Sell' },
+                    { icon: 'exchange', label: 'Swap' },
+                  ].map((action) => (
+                    <div class="rounded-lg border border-white/[0.06] bg-white/[0.035] py-2 text-center">
+                      <Icon name={action.icon} size={11} class="mx-auto text-peach-300" />
+                      <p class="mt-1 text-[6px] font-semibold text-slate-400">{action.label}</p>
+                    </div>
+                  ))
+                }
+              </div>
+
+              <div class="mt-3 flex items-center justify-between px-1">
+                <p class="text-[6.5px] font-bold uppercase tracking-[0.14em] text-slate-500">Top assets</p>
+                <span class="text-[6px] font-semibold text-peach-400">See all</span>
+              </div>
+              <div class="mt-1.5 space-y-1.5">
+                {
+                  [
+                    { symbol: '₿', name: 'Bitcoin', price: '$67,412', change: '+4.8%', tone: 'text-peach-300 bg-peach-400/10' },
+                    { symbol: 'Ξ', name: 'Ethereum', price: '$3,284', change: '+2.1%', tone: 'text-violet-300 bg-violet-400/10' },
+                  ].map((asset) => (
+                    <div class="flex items-center gap-2 rounded-lg border border-white/[0.05] bg-white/[0.025] p-1.5">
+                      <span class:list={['grid size-6 place-items-center rounded-full text-[10px] font-bold', asset.tone]}>{asset.symbol}</span>
+                      <div class="min-w-0 flex-1">
+                        <p class="truncate text-[7px] font-semibold text-slate-200">{asset.name}</p>
+                        <p class="text-[5.5px] text-slate-600">{asset.price}</p>
+                      </div>
+                      <span class="text-[6px] font-semibold text-emerald-400">{asset.change}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Front phone: markets -->
+        <div class="absolute right-[0%] top-[2%] z-20 w-[55%] max-w-[262px] rotate-[7deg] transition-transform duration-700 hover:-translate-y-2 hover:rotate-[3deg]">
+          <div class="phone-shell">
+            <div class="phone-screen aspect-[9/19] p-2.5 pt-8">
+              <div class="phone-notch"></div>
+
+              <div class="flex items-center justify-between px-1 text-[6px] font-semibold text-slate-500">
+                <span>9:41</span>
+                <span class="flex items-center gap-1">
+                  <span class="h-1.5 w-2.5 rounded-[2px] border border-slate-500"></span>
+                  <span class="h-1.5 w-2.5 rounded-[2px] bg-slate-500"></span>
+                </span>
+              </div>
+
+              <div class="mt-3 flex items-center justify-between px-1">
+                <div>
+                  <p class="text-[5.5px] font-bold uppercase tracking-[0.18em] text-slate-500">Markets</p>
+                  <p class="mt-0.5 text-[13px] font-bold tracking-[-0.03em] text-white">Watchlist</p>
+                </div>
+                <span class="grid size-7 place-items-center rounded-full border border-white/[0.08] bg-white/[0.035] text-slate-400">
+                  <Icon name="search" size={11} />
+                </span>
+              </div>
+
+              <div class="mt-2.5 flex rounded-lg border border-white/[0.06] bg-white/[0.025] p-0.5 text-[6px] font-semibold">
+                <span class="flex-1 rounded-md bg-peach-400/10 py-1 text-center text-peach-300">All</span>
+                <span class="flex-1 py-1 text-center text-slate-500">Gainers</span>
+                <span class="flex-1 py-1 text-center text-slate-500">New</span>
+              </div>
+
+              <div class="mt-2.5 space-y-1.5">
+                {
+                  [
+                    { symbol: '₿', name: 'Bitcoin', ticker: 'BTC', price: '$67,412.80', change: '+4.82%', tone: 'text-peach-300 bg-peach-400/10', spark: 'M0 20C8 18 12 12 20 14S32 5 40 8s10-5 18-2 10-3 14-4' },
+                    { symbol: 'Ξ', name: 'Ethereum', ticker: 'ETH', price: '$3,284.10', change: '+2.14%', tone: 'text-violet-300 bg-violet-400/10', spark: 'M0 22C8 18 12 20 20 15S32 12 40 14s10-6 18-4 10-4 14-6' },
+                    { symbol: 'S', name: 'Solana', ticker: 'SOL', price: '$148.20', change: '+6.31%', tone: 'text-teal-300 bg-teal-400/10', spark: 'M0 24C8 22 12 14 20 17S32 8 40 11s10-6 18-3 10-6 14-8' },
+                    { symbol: '₮', name: 'Tether', ticker: 'USDT', price: '$1.0002', change: '+0.01%', tone: 'text-emerald-300 bg-emerald-400/10', spark: 'M0 16C8 16 12 15 20 16S32 14 40 15s10-1 18 0 10-1 14 0' },
+                  ].map((asset) => (
+                    <div class="rounded-lg border border-white/[0.05] bg-white/[0.025] px-2 py-1.5">
+                      <div class="flex items-center gap-1.5">
+                        <span class:list={['grid size-6 place-items-center rounded-full text-[9px] font-bold', asset.tone]}>{asset.symbol}</span>
+                        <div class="min-w-0 flex-1">
+                          <p class="truncate text-[7px] font-semibold text-slate-200">{asset.name}</p>
+                          <p class="text-[5px] uppercase tracking-[0.12em] text-slate-600">{asset.ticker}</p>
+                        </div>
+                        <div class="text-right">
+                          <p class="font-mono text-[6.5px] font-semibold text-white">{asset.price}</p>
+                          <p class="text-[5.5px] font-semibold text-emerald-400">{asset.change}</p>
+                        </div>
+                      </div>
+                      <svg viewBox="0 0 120 26" class="mt-1 h-4 w-full" fill="none" aria-hidden="true">
+                        <path d={asset.spark} stroke={asset.ticker === 'ETH' || asset.ticker === 'SOL' ? '#A78BFA' : '#FFB879'} stroke-width="1.2" stroke-linecap="round"></path>
+                      </svg>
+                    </div>
+                  ))
+                }
+              </div>
+
+              <div class="absolute inset-x-2.5 bottom-2 rounded-xl border border-white/[0.08] bg-ink-800/95 p-1.5 backdrop-blur-xl">
+                <div class="flex items-center justify-around">
+                  {
+                    [
+                      { icon: 'dashboard', label: 'Home', active: false },
+                      { icon: 'chart', label: 'Markets', active: true },
+                      { icon: 'wallet', label: 'Wallet', active: false },
+                      { icon: 'user', label: 'Profile', active: false },
+                    ].map((item) => (
+                      <div class:list={['flex flex-col items-center gap-0.5 rounded-lg px-2 py-1', item.active ? 'text-peach-300' : 'text-slate-600']}>
+                        <Icon name={item.icon} size={10} />
+                        <span class="text-[4.5px] font-semibold">{item.label}</span>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating chips -->
+        <div class="glass-strong absolute -left-1 bottom-[12%] z-30 hidden items-center gap-2 rounded-xl px-3 py-2 shadow-xl animate-float sm:flex">
+          <span class="grid size-6 place-items-center rounded-md bg-emerald-400/10 text-emerald-400">
+            <Icon name="check" size={12} />
+          </span>
+          <span>
+            <span class="block text-[7px] font-bold uppercase tracking-[0.16em] text-slate-500">Synced</span>
+            <span class="block text-[9px] font-semibold text-white">T+1 telemetry</span>
+          </span>
+        </div>
+
+        <div class="glass-strong absolute -right-1 top-[4%] z-30 hidden items-center gap-2 rounded-full px-3 py-1.5 shadow-xl animate-float-fast sm:flex">
+          <span class="size-1.5 rounded-full bg-peach-400 shadow-[0_0_10px_2px_rgba(255,184,121,0.55)]"></span>
+          <span class="text-[7.5px] font-bold uppercase tracking-[0.16em] text-peach-200">Live desk</span>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="reveal max-w-[500px] lg:order-2">
+        <span class="eyebrow">Our app</span>
+        <h2 id="app-title" class="section-title mt-4">
+          Trusted platform anytime &amp; anywhere
+        </h2>
+        <p class="section-copy mt-5">
+          The same auditable intelligence, rebuilt for a 6-inch screen. Track flow,
+          review your thesis, and act before the session closes — with the full data
+          lineage one tap away.
+        </p>
+
+        <a href={site.investowl} target="_blank" rel="noopener noreferrer" class="link-accent mt-6">
+          Open the mobile desk
+          <Icon name="arrow-right" size={15} />
+        </a>
+
+        <div class="mt-8 flex flex-wrap items-center gap-2.5">
+          <a
+            href={site.investowl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2.5 transition duration-300 hover:border-peach-400/40 hover:bg-white/[0.06]"
+          >
+            <Icon name="apple" size={19} class="text-white" />
+            <span class="text-left leading-tight">
+              <span class="block text-[7px] font-medium uppercase tracking-[0.12em] text-slate-500">Open on</span>
+              <span class="block text-[12px] font-bold text-white">Web App</span>
+            </span>
+          </a>
+
+          <a
+            href={site.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2.5 transition duration-300 hover:border-peach-400/40 hover:bg-white/[0.06]"
+          >
+            <Icon name="play" size={18} class="text-white" />
+            <span class="text-left leading-tight">
+              <span class="block text-[7px] font-medium uppercase tracking-[0.12em] text-slate-500">Join on</span>
+              <span class="block text-[12px] font-bold text-white">Telegram</span>
+            </span>
+          </a>
+
+          <a
+            href={site.url}
+            class="group flex items-center gap-2.5 rounded-xl border border-peach-400/20 bg-peach-400/[0.06] py-1.5 pl-1.5 pr-3 transition duration-300 hover:border-peach-400/50 hover:bg-peach-400/10"
+            aria-label="Open avenia.my.id — scan the QR code to visit"
+          >
+            <span class="grid size-10 place-items-center overflow-hidden rounded-lg bg-white">
+              <img src="/assets/qr.svg" alt="" width="36" height="36" class="size-9" loading="lazy" />
+            </span>
+            <span class="text-left leading-tight">
+              <span class="block text-[7px] font-medium uppercase tracking-[0.12em] text-peach-400/70">Scan to</span>
+              <span class="block text-[11px] font-bold text-peach-200">Open site</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="mt-3.5 text-[10px] leading-5 text-slate-600">
+          The full desk runs in any modern browser. No app store account required.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

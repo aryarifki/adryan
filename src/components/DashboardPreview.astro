@@ -1,0 +1,430 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import Sparkline from './Sparkline.astro';
+import { dashboardAssets, dashboardHistory } from '../data/site';
+
+const navItems = [
+  { label: 'Dashboard', icon: 'dashboard', active: true },
+  { label: 'Exchange', icon: 'exchange', active: false },
+  { label: 'Wallet', icon: 'wallet', active: false },
+  { label: 'Chart', icon: 'chart', active: false },
+  { label: 'Profile', icon: 'user', active: false },
+  { label: 'Settings', icon: 'settings', active: false },
+];
+
+const assetSymbols: Record<string, string> = {
+  BTC: '₿',
+  ETH: 'Ξ',
+  USDT: '₮',
+};
+
+const assetTones: Record<string, string> = {
+  BTC: 'border-peach-400/20 bg-peach-400/10 text-peach-300',
+  ETH: 'border-violet-400/20 bg-violet-400/10 text-violet-300',
+  USDT: 'border-emerald-400/20 bg-emerald-400/10 text-emerald-300',
+};
+---
+
+<section id="dashboard" class="relative py-20 lg:py-28" aria-labelledby="dashboard-title">
+  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="absolute left-1/2 top-10 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-peach-400/[0.055] blur-[130px]"></div>
+  </div>
+
+  <div class="container-page">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Securely buy, sell, store</span>
+      <h2 id="dashboard-title" class="section-title mt-4">
+        Start your crypto investments now
+      </h2>
+      <p class="section-copy mx-auto mt-4 max-w-xl">
+        One workspace for price action, portfolio health, and the flow behind the
+        candles. Built for people who want the evidence, not just the entry price.
+      </p>
+    </div>
+
+    <div class="reveal relative mt-12 lg:mt-14">
+      <div class="pointer-events-none absolute -inset-x-5 -inset-y-6 -z-10 rounded-[40px] bg-peach-400/[0.05] blur-3xl sm:-inset-x-6" aria-hidden="true"></div>
+
+      <div
+        class="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#0B0911]/95 shadow-[0_70px_150px_-70px_rgba(0,0,0,1)] backdrop-blur-xl sm:rounded-[28px]"
+        role="img"
+        aria-label="Illustrative preview of the Avenia trading dashboard"
+      >
+        <!-- Browser chrome -->
+        <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-white/[0.06] bg-white/[0.012] px-3.5 py-2.5 sm:px-5">
+          <div class="flex items-center gap-1.5" aria-hidden="true">
+            <span class="size-2.5 rounded-full bg-[#FF5F57]/70"></span>
+            <span class="size-2.5 rounded-full bg-[#FEBC2E]/70"></span>
+            <span class="size-2.5 rounded-full bg-[#28C840]/70"></span>
+          </div>
+          <div class="hidden items-center gap-1.5 rounded-md border border-white/[0.06] bg-white/[0.02] px-3 py-1 sm:flex">
+            <Icon name="lock" size={9} class="text-slate-600" />
+            <span class="font-mono text-[8px] tracking-[0.03em] text-slate-500">app.avenia.id/terminal</span>
+          </div>
+          <div class="flex items-center justify-end gap-2.5">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/[0.08] px-2 py-0.5 text-[7px] font-bold uppercase tracking-[0.16em] text-emerald-400">
+              <span class="size-1 rounded-full bg-emerald-400"></span>
+              Live
+            </span>
+            <span class="hidden font-mono text-[8px] text-slate-600 sm:inline">v2.4.1</span>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-[212px_minmax(0,1fr)] xl:grid-cols-[212px_minmax(0,1fr)_264px]">
+          <!-- Sidebar -->
+          <aside class="hidden flex-col border-r border-white/[0.06] bg-white/[0.012] p-4 lg:flex">
+            <Logo size="sm" href="#dashboard" />
+
+            <p class="mt-7 px-2 text-[7.5px] font-bold uppercase tracking-[0.22em] text-slate-600">
+              Workspace
+            </p>
+            <nav class="mt-2 space-y-1" aria-label="Dashboard preview navigation">
+              {
+                navItems.map((item) => (
+                  <div
+                    class:list={[
+                      'flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[10.5px] font-semibold transition',
+                      item.active
+                        ? 'border border-peach-400/15 bg-peach-400/[0.09] text-peach-300'
+                        : 'border border-transparent text-slate-500 hover:bg-white/[0.03] hover:text-slate-300',
+                    ]}
+                  >
+                    <Icon name={item.icon} size={14} />
+                    {item.label}
+                    {item.active && <span class="ml-auto size-1 rounded-full bg-peach-400"></span>}
+                  </div>
+                ))
+              }
+            </nav>
+
+            <div class="mt-6 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
+              <div class="flex items-center justify-between">
+                <span class="text-[8px] font-bold uppercase tracking-[0.16em] text-slate-500">
+                  Portfolio health
+                </span>
+                <span class="font-mono text-[10px] font-semibold text-peach-300">92%</span>
+              </div>
+              <div class="mt-2 h-1 overflow-hidden rounded-full bg-white/[0.06]">
+                <div class="h-full w-[92%] rounded-full bg-gradient-to-r from-peach-500 to-peach-300"></div>
+              </div>
+              <p class="mt-2 text-[8px] leading-4 text-slate-600">Low concentration risk</p>
+            </div>
+
+            <div class="mt-auto flex items-center gap-2.5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-2.5">
+              <img
+                src="/assets/avatar.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+                class="size-8 rounded-full border border-white/10 object-cover"
+              />
+              <div class="min-w-0">
+                <p class="truncate text-[9.5px] font-semibold text-slate-200">Aryan R.</p>
+                <p class="truncate text-[7.5px] text-slate-600">Research desk</p>
+              </div>
+              <Icon name="settings" size={13} class="ml-auto shrink-0 text-slate-600" />
+            </div>
+          </aside>
+
+          <!-- Main panel -->
+          <div class="min-w-0 p-4 sm:p-5 lg:p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p class="text-[7.5px] font-bold uppercase tracking-[0.2em] text-slate-600">Overview</p>
+                <h3 class="mt-1 text-[17px] font-bold tracking-[-0.02em] text-white sm:text-lg">
+                  Good morning, Aryan
+                </h3>
+                <p class="mt-0.5 text-[9px] text-slate-500">Here’s what moved while you were away.</p>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <div class="hidden h-8 w-40 items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.025] px-3 text-[9px] text-slate-600 sm:flex">
+                  <Icon name="search" size={12} />
+                  Search assets…
+                </div>
+                <div class="relative grid size-8 place-items-center rounded-lg border border-white/[0.08] bg-white/[0.025] text-slate-400">
+                  <Icon name="bell" size={13} />
+                  <span class="absolute right-1.5 top-1.5 size-1 rounded-full bg-peach-400"></span>
+                </div>
+                <img
+                  src="/assets/avatar.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  class="size-8 rounded-full border border-white/10 object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Asset cards -->
+            <div class="mt-5 grid gap-2.5 sm:grid-cols-3">
+              {
+                dashboardAssets.map((asset) => (
+                  <div class="group rounded-xl border border-white/[0.08] bg-white/[0.022] p-3.5 transition duration-300 hover:border-peach-400/30 hover:bg-white/[0.035]">
+                    <div class="flex items-center gap-2.5">
+                      <span
+                        class:list={[
+                          'grid size-8 shrink-0 place-items-center rounded-full border text-[13px] font-bold',
+                          assetTones[asset.ticker],
+                        ]}
+                        aria-hidden="true"
+                      >
+                        {assetSymbols[asset.ticker]}
+                      </span>
+                      <div class="min-w-0">
+                        <p class="truncate text-[10px] font-semibold text-slate-200">{asset.name}</p>
+                        <p class="text-[7.5px] uppercase tracking-[0.14em] text-slate-600">{asset.ticker}</p>
+                      </div>
+                    </div>
+                    <div class="mt-3 flex items-end justify-between gap-2">
+                      <div>
+                        <p class="font-mono text-[13px] font-semibold tracking-[-0.04em] text-white">
+                          {asset.price}
+                        </p>
+                        <p
+                          class:list={[
+                            'mt-0.5 text-[8px] font-semibold',
+                            asset.up ? 'text-emerald-400' : 'text-rose-400',
+                          ]}
+                        >
+                          {asset.change} <span class="font-medium text-slate-600">24h</span>
+                        </p>
+                      </div>
+                      <Sparkline
+                        values={asset.spark}
+                        id={`asset-spark-${asset.ticker}`}
+                        class="h-7 w-[70px] shrink-0"
+                      />
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+
+            <!-- Main chart -->
+            <div class="mt-3 rounded-xl border border-white/[0.08] bg-[#0C0A12]/90 p-4">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p class="text-[7.5px] font-bold uppercase tracking-[0.2em] text-slate-600">
+                    Market overview
+                  </p>
+                  <div class="mt-1 flex items-baseline gap-2">
+                    <p class="font-mono text-[19px] font-semibold tracking-[-0.05em] text-white sm:text-[21px]">
+                      $67,412.80
+                    </p>
+                    <span class="rounded-full bg-emerald-400/[0.08] px-1.5 py-0.5 text-[8px] font-bold text-emerald-400">
+                      +4.82%
+                    </span>
+                  </div>
+                  <p class="mt-0.5 text-[8px] text-slate-600">BTC / USDT · last 30 days</p>
+                </div>
+
+                <div class="flex rounded-lg border border-white/[0.08] bg-white/[0.02] p-0.5 text-[8px] font-semibold">
+                  <span class="rounded-md px-2 py-1 text-slate-500">1D</span>
+                  <span class="rounded-md px-2 py-1 text-slate-500">1W</span>
+                  <span class="rounded-md bg-peach-400/10 px-2 py-1 text-peach-300">1M</span>
+                  <span class="rounded-md px-2 py-1 text-slate-500">1Y</span>
+                </div>
+              </div>
+
+              <div class="relative mt-4 pr-6 sm:pr-8">
+                <svg
+                  viewBox="0 0 720 210"
+                  class="h-[145px] w-full sm:h-[185px]"
+                  preserveAspectRatio="none"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <linearGradient id="dashChartFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#FFB879" stop-opacity="0.26"></stop>
+                      <stop offset="55%" stop-color="#FF9A44" stop-opacity="0.08"></stop>
+                      <stop offset="100%" stop-color="#FF9A44" stop-opacity="0"></stop>
+                    </linearGradient>
+                    <linearGradient id="dashChartStroke" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#FFE2C7"></stop>
+                      <stop offset="55%" stop-color="#FFC38F"></stop>
+                      <stop offset="100%" stop-color="#FFA45A"></stop>
+                    </linearGradient>
+                  </defs>
+
+                  <g stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 7">
+                    <line x1="0" y1="30" x2="720" y2="30"></line>
+                    <line x1="0" y1="75" x2="720" y2="75"></line>
+                    <line x1="0" y1="120" x2="720" y2="120"></line>
+                    <line x1="0" y1="165" x2="720" y2="165"></line>
+                  </g>
+
+                  <path
+                    d="M0 170 C30 160 55 145 85 150 C120 155 140 128 175 132 C210 136 230 112 265 118 C300 124 320 92 355 100 C390 108 410 75 445 84 C480 93 500 58 535 64 C570 70 590 44 625 50 C660 56 685 30 720 24 L720 210 L0 210 Z"
+                    fill="url(#dashChartFill)"></path>
+
+                  <path
+                    d="M0 185 C40 178 65 165 100 170 C140 175 160 150 200 155 C240 160 260 135 300 140 C340 145 360 120 400 128 C440 136 460 108 500 116 C540 124 560 96 600 104 C640 112 680 84 720 90"
+                    stroke="#7C3AED"
+                    stroke-opacity="0.45"
+                    stroke-width="1.4"
+                    stroke-dasharray="5 7"
+                    vector-effect="non-scaling-stroke"></path>
+
+                  <path
+                    class="chart-line"
+                    pathLength="1"
+                    d="M0 170 C30 160 55 145 85 150 C120 155 140 128 175 132 C210 136 230 112 265 118 C300 124 320 92 355 100 C390 108 410 75 445 84 C480 93 500 58 535 64 C570 70 590 44 625 50 C660 56 685 30 720 24"
+                    stroke="url(#dashChartStroke)"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    vector-effect="non-scaling-stroke"></path>
+
+                  <line
+                    x1="535"
+                    y1="16"
+                    x2="535"
+                    y2="210"
+                    stroke="#FFB879"
+                    stroke-opacity="0.25"
+                    stroke-width="1"
+                    stroke-dasharray="3 5"
+                    vector-effect="non-scaling-stroke"></line>
+                  <circle cx="535" cy="64" r="9" fill="#FFB879" fill-opacity="0.12"></circle>
+                  <circle cx="535" cy="64" r="3.5" fill="#FFB879" stroke="#0C0A12" stroke-width="2"></circle>
+                </svg>
+
+                <!-- HTML axis labels sit in the right gutter so they never cover the plot -->
+                <div
+                  class="pointer-events-none absolute right-0 top-0 h-[145px] w-6 font-mono text-[7.5px] text-slate-500 sm:h-[185px]"
+                  aria-hidden="true"
+                >
+                  <span class="absolute right-0 -translate-y-1/2 text-[8px]" style="top:14.3%">$70k</span>
+                  <span class="absolute right-0 -translate-y-1/2 text-[8px]" style="top:35.7%">$66k</span>
+                  <span class="absolute right-0 -translate-y-1/2 text-[8px]" style="top:57.1%">$62k</span>
+                  <span class="absolute right-0 -translate-y-1/2 text-[8px]" style="top:78.6%">$58k</span>
+                </div>
+
+                <div class="pointer-events-none absolute left-[68%] top-0 z-10 -translate-x-1/2 scale-90 rounded-lg border border-white/10 bg-ink-800/95 px-2.5 py-1.5 shadow-xl backdrop-blur-md sm:left-[72%] sm:scale-100">
+                  <p class="text-[6.5px] font-bold uppercase tracking-[0.16em] text-slate-500">BTC / USDT</p>
+                  <p class="mt-0.5 font-mono text-[10px] font-semibold text-white">$67,412</p>
+                </div>
+
+                <div class="mt-1 flex justify-between pl-1 font-mono text-[8px] text-slate-500">
+                  <span>01 Oct</span>
+                  <span>08 Oct</span>
+                  <span>15 Oct</span>
+                  <span>22 Oct</span>
+                  <span>30 Oct</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right rail -->
+          <aside class="hidden flex-col border-l border-white/[0.06] bg-white/[0.012] p-4 xl:flex">
+            <div class="flex items-center justify-between">
+              <p class="text-[7.5px] font-bold uppercase tracking-[0.22em] text-slate-500">
+                My cards
+              </p>
+              <span class="grid size-5 place-items-center rounded-md border border-white/[0.08] text-slate-500">
+                <Icon name="plus" size={10} />
+              </span>
+            </div>
+
+            <div class="relative mt-3 overflow-hidden rounded-xl border border-white/20 bg-[linear-gradient(135deg,#FFD0A6_0%,#FFB879_38%,#FF9A44_58%,#7C3AED_125%)] p-4 text-ink-950 shadow-[0_18px_40px_-18px_rgba(255,154,68,0.5)]">
+              <span class="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/25 blur-2xl"></span>
+              <span class="pointer-events-none absolute -bottom-10 -left-6 size-24 rounded-full bg-violet-700/30 blur-2xl"></span>
+              <div class="relative flex items-start justify-between">
+                <span class="text-[9px] font-extrabold tracking-[0.12em]">AVENIA</span>
+                <Icon name="card" size={15} class="opacity-70" />
+              </div>
+              <p class="relative mt-7 font-mono text-[10px] font-semibold tracking-[0.16em]">
+                •••• &nbsp;•••• &nbsp;•••• &nbsp;4829
+              </p>
+              <div class="relative mt-4 flex items-end justify-between text-[7px] font-bold uppercase tracking-[0.1em]">
+                <span>Research desk</span>
+                <span>VISA</span>
+              </div>
+            </div>
+
+            <div class="mt-3 rounded-xl border border-white/[0.08] bg-white/[0.025] p-3.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[7.5px] font-bold uppercase tracking-[0.18em] text-slate-500">
+                  Profit
+                </span>
+                <Icon name="trend-up" size={12} class="text-emerald-400" />
+              </div>
+              <p class="mt-1.5 font-mono text-[17px] font-semibold tracking-[-0.04em] text-white">
+                +$8,420.60
+              </p>
+              <p class="mt-0.5 text-[8px] font-semibold text-emerald-400">+18.6% all time</p>
+              <div class="mt-3 flex h-7 items-end gap-1" aria-hidden="true">
+                {[32, 46, 40, 58, 52, 68, 61, 82, 74, 96].map((height, index) => (
+                  <span
+                    class:list={[
+                      'flex-1 rounded-sm',
+                      index === 9 ? 'bg-peach-400' : 'bg-peach-400/25',
+                    ]}
+                    style={`height:${height}%`}
+                  ></span>
+                ))}
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <p class="text-[7.5px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                  History
+                </p>
+                <span class="text-[7.5px] font-semibold text-peach-400">View all</span>
+              </div>
+              <ul class="mt-2 space-y-2.5">
+                {
+                  dashboardHistory.map((item) => (
+                    <li class="flex items-center gap-2.5">
+                      <span class="grid size-7 shrink-0 place-items-center rounded-full border border-white/[0.08] bg-white/[0.03] text-slate-400">
+                        <Icon name={item.icon} size={11} />
+                      </span>
+                      <div class="min-w-0 flex-1">
+                        <p class="truncate text-[8.5px] font-semibold text-slate-200">{item.title}</p>
+                        <p class="truncate text-[7px] text-slate-600">{item.meta}</p>
+                      </div>
+                      <span
+                        class:list={[
+                          'shrink-0 font-mono text-[8px] font-semibold',
+                          item.positive ? 'text-emerald-400' : 'text-slate-400',
+                        ]}
+                      >
+                        {item.amount}
+                      </span>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4">
+              <div class="relative overflow-hidden rounded-xl border border-peach-400/20 bg-peach-400/[0.06] p-3">
+                <span class="pointer-events-none absolute -right-6 -top-6 size-20 rounded-full bg-peach-400/15 blur-2xl"></span>
+                <div class="relative flex items-center gap-2">
+                  <Icon name="sparkles" size={12} class="text-peach-300" />
+                  <p class="text-[9px] font-bold text-white">Pro Features</p>
+                </div>
+                <p class="relative mt-1 text-[7.5px] leading-4 text-slate-500">
+                  Flow alerts, custom screens, and full export.
+                </p>
+                <span class="relative mt-2.5 block rounded-lg bg-peach-400 py-1.5 text-center text-[8px] font-bold text-ink-950">
+                  Upgrade desk
+                </span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal mt-4 text-center text-[9px] tracking-[0.02em] text-slate-600">
+      Product preview. Figures are illustrative and do not represent live quotes.
+    </p>
+  </div>
+</section>

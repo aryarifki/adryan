@@ -1,107 +1,151 @@
-# Avenia.id — Progressive Engagement Portfolio Platform
+# Avenia.id — Quantitative Market Intelligence
 
-Landing page portofolio personal & platform jurnalisme data independen untuk domain [avenia.my.id](https://avenia.my.id), dikompilasi statis dengan [DVE (Deserve View Engine)](https://github.com/NeaByteLab/DVE) dan dideploy ke GitHub Pages via GitHub Actions.
+Landing page statis untuk [avenia.my.id](https://avenia.my.id): riset kuantitatif kripto dan ekuitas Indonesia dengan data yang bisa diaudit. Dibangun ulang dari nol dengan **Astro 6**, **Tailwind CSS 4**, dan tema gelap beraksen peach `#FFB879`.
 
-Dirancang dengan prinsip **Progressive Engagement**:
-- **80% Tema Terang**: Palet putih lembut & slate alabaster dengan tipografi kontras tinggi (WCAG AA/AAA) dan ruang napas luas.
-- **2 Immersion Zones**: Aksen gelap pekat (*Deep Obsidian Navy* `#0B0F19` pada *Architecture Telemetry Radar* dan *Deep Charcoal* `#0D1117` pada *Data Dispatch CTA*).
-- **Zero Client-Side Framework**: 100% pre-rendered HTML statis pada build time, didukung Vanilla JS super-ringan (< 2 KB gzip) untuk filter interaktif dan navigasi responsif.
+Repo ini menggantikan scaffold DVE lama. Seluruh halaman di-prerender saat build; tidak ada framework client-side, tidak ada runtime server.
 
 ---
 
-## 📁 Struktur Direktori
+## Stack
+
+| Bagian | Teknologi |
+| --- | --- |
+| Static site | Astro 6 (`output: 'static'`) |
+| Styling | Tailwind CSS 4 via `@tailwindcss/vite` |
+| Tipografi | Plus Jakarta Sans + JetBrains Mono (Google Fonts) |
+| Visual | CSS/SVG murni — koin 3D, chart dashboard, mockup ponsel, QR |
+| Deploy | GitHub Actions → GitHub Pages (`withastro/action@v3`) |
+
+Tidak ada dependency UI atau animation library. Semua ikon adalah SVG inline di `src/components/Icon.astro`.
+
+---
+
+## Menjalankan lokal
+
+Prasyarat: **Node.js >= 22.12** dan npm.
+
+```bash
+npm install
+npm run dev       # http://localhost:4321
+npm run build     # output ke dist/
+npm run preview   # cek hasil build secara lokal
+npm run check     # type-check Astro/TypeScript
+```
+
+> `vite` dipin di `^7.3.7`. Tailwind 4.2 tidak kompatibel dengan Vite 8/rolldown
+> (`Missing field 'tsconfigPaths'`), jadi jangan naikkan Vite tanpa menguji build.
+
+---
+
+## Struktur
 
 ```
 adryan/
-├── data/
-│   └── site.json          # Data terpusat: metadata situs, profil, 6 proyek, telemetri, insights
-├── views/
-│   ├── layouts/
-│   │   └── main.dve       # HTML shell: head, meta SEO, JSON-LD Schema, script injection
-│   ├── partials/
-│   │   ├── header.dve     # Header sticky, desktop nav, & mobile drawer hamburger
-│   │   └── footer.dve     # Footer multi-kolom, link sosial, & badge DVE
-│   └── pages/
-│       └── home.dve       # Halaman utama (Hero, Bento, Telemetri, Filter Proyek, Insights, Bio)
+├── src/
+│   ├── pages/index.astro          # komposisi halaman
+│   ├── layouts/Layout.astro       # <head>, SEO, JSON-LD, font, reveal script
+│   ├── components/
+│   │   ├── Navbar.astro           # nav sticky + menu mobile
+│   │   ├── Hero.astro             # headline, CTA, komposisi koin & kartu
+│   │   ├── StatsBar.astro         # metrik platform
+│   │   ├── Features.astro         # tiga pilar metodologi
+│   │   ├── DashboardPreview.astro # mockup dashboard (HTML/CSS/SVG)
+│   │   ├── MobileApp.astro        # dua mockup ponsel + QR
+│   │   ├── Testimonials.astro     # placeholder launch
+│   │   ├── CtaBanner.astro
+│   │   ├── Footer.astro
+│   │   ├── Logo.astro, Icon.astro, Sparkline.astro
+│   ├── data/site.ts               # SEMUA konten, link, metrik, nav
+│   └── styles/global.css          # token tema, glow, koin, ponsel, animasi
 ├── public/
-│   ├── assets/
-│   │   ├── style.css      # CSS tokenized: tema terang, immersion zones, responsif (360px–1440px)
-│   │   ├── main.js        # Vanilla JS: filter kategori, mobile drawer, copy email, feedback
-│   │   ├── avatar.png     # Foto profil pengembang
-│   │   ├── og.png         # OpenGraph social share card (1200x630)
-│   │   └── favicon.svg    # Vector icon
-│   └── CNAME              # Domain custom: avenia.my.id
-├── scripts/
-│   ├── build.mjs          # Kompiler DVE → dist/index.html + copy assets statis
-│   └── dev.mjs            # Local dev server (re-compile otomatis saat request)
-├── dist/                  # Output build siap saji untuk GitHub Pages
-└── package.json           # Node engine & dependency (@neabyte/dve)
+│   ├── assets/                    # avatar, logo, og.png, qr.svg, favicon
+│   └── CNAME                      # avenia.my.id
+├── astro.config.mjs
+└── .github/workflows/deploy.yml
 ```
 
 ---
 
-## 🚀 Perintah Operasional
+## Mengubah konten
 
-### 1. Instalasi Dependensi
-```bash
-npm install
-```
+Hampir semua teks dan link berada di **`src/data/site.ts`**:
 
-### 2. Menjalankan Server Lokal (Development)
-```bash
-npm run dev
-# Server aktif di: http://localhost:3000
-```
-Server development akan otomatis mengompilasi ulang template DVE dan berkas `data/site.json` pada setiap permintaan halaman.
+- `site` — nama, domain, URL produk, Telegram, GitHub.
+- `navigation` — item navbar dan dropdown.
+- `stats` — tiga metrik di bawah hero.
+- `features` — tiga kartu pilar.
+- `dashboardAssets`, `dashboardHistory` — isi mockup dashboard.
+- `testimonials` — kutipan dan profil.
+- `footerColumns`, `socials`.
 
-### 3. Membangun Berkas Statis (Production Build)
-```bash
-npm run build
-```
-Hasil kompilasi akan diletakkan di direktori `dist/` (termasuk `dist/index.html`, `dist/assets/`, dan file `CNAME`).
+Teks hero, judul section, dan CTA ada langsung di komponen masing-masing agar mudah diubah secara visual.
 
----
+### Peringatan: testimoni masih placeholder
 
-## 🛠️ Panduan Menambah atau Mengganti Proyek
+Kutipan di `testimonials` **belum terverifikasi** dan sengaja diberi label
+"Launch preview — endorsements are placeholder copy pending verification" di halaman.
+Ganti dengan endorsemen nyata (atau hapus section-nya) sebelum mempromosikan situs secara publik.
+Jangan mengarang nama, jabatan, atau kutipan.
 
-Semua data proyek disimpan secara terstruktur di dalam file [`data/site.json`](file:///root/adryan/data/site.json) pada bagian array `"projects"`.
+### Angka dan klaim
 
-### Format Objek Proyek:
-```json
-{
-  "name": "Nama Proyek",
-  "slug": "nama-slug",
-  "category": "quant",             // Pilihan: "quant" | "legal" | "platform"
-  "isDeployed": true,              // true jika sudah live publik, false jika masih source code
-  "liveUrl": "https://...",        // URL aplikasi live
-  "repoUrl": "https://github.com/...", // URL repositori GitHub
-  "targetUrl": "https://...",      // URL tujuan klik utama kartu
-  "stack": ["Next.js 16", "FastAPI", "PostgreSQL"],
-  "year": "2026",
-  "badge": "Flagship Platform",
-  "featured": true,
-  "tag": "Pasar Modal & BEI",
-  "summary": "Deskripsi singkat 1-2 kalimat mengenai fungsionalitas dan nilai rekayasa proyek.",
-  "en": "English summary description for international visitors."
-}
-```
-
-### Menyesuaikan Kategori Filter:
-Jika Anda menambahkan kategori baru, perbarui juga array `"categories"` di `data/site.json`:
-```json
-"categories": [
-  { "key": "all", "label": "Semua Proyek", "count": 6 },
-  { "key": "quant", "label": "Pasar Modal & Quant", "count": 2 },
-  { "key": "legal", "label": "Legal AI & Ingestion", "count": 2 },
-  { "key": "platform", "label": "Platform & DevOps", "count": 2 }
-]
-```
-Setelah mengedit `data/site.json`, jalankan `npm run build` untuk menerapkan perubahan ke `dist/`.
+Metrik (`890+` sekuritas, `2,400+` putusan, `< 0.5ms` cache) berasal dari data internal
+yang sudah ada di situs lama. Figure di mockup dashboard diberi label ilustratif.
+Jika angka berubah, perbarui `stats` dan pastikan sumbernya tetap bisa ditunjukkan.
 
 ---
 
-## 🌐 Deploy ke GitHub Pages
+## Palet dan token desain
 
-Deploy otomatis telah dikonfigurasi melalui GitHub Actions:
-1. Pastikan repo GitHub Anda diatur: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. Setiap commit yang di-push ke branch `main` akan memicu workflow build otomatis yang menjalankan `npm run build` dan mempublikasikan folder `dist/` ke domain `avenia.my.id`.
+Didefinisikan di `src/styles/global.css` melalui `@theme`:
+
+| Token | Nilai | Pemakaian |
+| --- | --- | --- |
+| `ink-900` | `#0E0C15` | background utama |
+| `ink-800` | `#13111C` | surface / kartu |
+| `ink-950` | `#08060D` | teks di atas aksen |
+| `peach-300` | `#FFD0A6` | aksen terang |
+| `peach-400` | `#FFB879` | aksen utama |
+| `peach-500` | `#FF9A44` | gradient / hover |
+
+Efek ambient memakai radial gradient peach dan violet, glassmorphism
+(`.glass`, `.glass-strong`), serta grid blueprint tipis di background.
+Animasi dimatikan otomatis saat `prefers-reduced-motion: reduce`.
+
+---
+
+## Deploy ke GitHub Pages
+
+Workflow `.github/workflows/deploy.yml` berjalan pada push ke `main`:
+
+1. `withastro/action@v3` melakukan install, build, dan upload artifact.
+2. `actions/deploy-pages@v4` mempublikasikan ke GitHub Pages.
+
+Di repo GitHub, set **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Custom domain `avenia.my.id` dibaca dari `public/CNAME` (ikut tersalin ke `dist/`).
+
+DNS yang dipakai:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` | IP GitHub Pages (4 record) |
+| CNAME | `www` | `aryarifki.github.io` |
+
+`site` dan `base` di `astro.config.mjs` sudah diset ke `https://avenia.my.id` dan `/`.
+Jika suatu saat dipindah ke sub-path, ubah keduanya bersamaan.
+
+---
+
+## Catatan aset
+
+- `public/assets/og.png` — kartu OpenGraph 1200×630, dibuat khusus untuk tema ini.
+- `public/assets/qr.svg` — QR ke `https://avenia.my.id`, dipakai di section mobile.
+- `public/assets/favicon.svg` — mark "A" peach.
+- `avatar.png` dan `investowl-logo-v2.png` dipertahankan dari situs sebelumnya.
+- Aset berat DVE (`resources/`, `hero-canvas.js`, `main.js`, `style.css`) sudah dihapus.
+
+---
+
+## Lisensi
+
+MIT. Konten riset, nama, dan merek Avenia tetap milik pemiliknya.

@@ -1,0 +1,55 @@
+---
+interface Props {
+  values: number[];
+  id: string;
+  class?: string;
+  stroke?: string;
+}
+
+const { values, id, class: className = '', stroke = '#FFB879' } = Astro.props;
+
+const width = 96;
+const height = 32;
+const pad = 3;
+const min = Math.min(...values);
+const max = Math.max(...values);
+const span = max - min || 1;
+
+const points = values.map((value, index) => {
+  const x = (index / (values.length - 1)) * width;
+  const y = height - pad - ((value - min) / span) * (height - pad * 2);
+  return [x, y] as const;
+});
+
+let line = `M${points[0][0].toFixed(2)},${points[0][1].toFixed(2)}`;
+for (let i = 1; i < points.length; i += 1) {
+  const [px, py] = points[i - 1];
+  const [cx, cy] = points[i];
+  const mid = ((px + cx) / 2).toFixed(2);
+  line += ` C${mid},${py.toFixed(2)} ${mid},${cy.toFixed(2)} ${cx.toFixed(2)},${cy.toFixed(2)}`;
+}
+
+const area = `${line} L${width},${height} L0,${height} Z`;
+---
+
+<svg
+  viewBox={`0 0 ${width} ${height}`}
+  class={className}
+  fill="none"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+>
+  <defs>
+    <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color={stroke} stop-opacity="0.28"></stop>
+      <stop offset="100%" stop-color={stroke} stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+  <path d={area} fill={`url(#${id})`}></path>
+  <path
+    d={line}
+    stroke={stroke}
+    stroke-width="1.6"
+    stroke-linecap="round"
+    vector-effect="non-scaling-stroke"></path>
+</svg>
