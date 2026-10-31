@@ -5,7 +5,7 @@ import { partners, site } from '../data/site';
 
 <section
   id="overview"
-  class="relative overflow-hidden pb-12 pt-28 sm:pt-30 lg:pb-10 lg:pt-28"
+  class="relative overflow-hidden pb-12 pt-28 sm:pt-32 lg:pb-16 lg:pt-32"
   aria-labelledby="hero-title"
 >
   <!-- Ambient light, kept behind the content -->
@@ -16,24 +16,24 @@ import { partners, site } from '../data/site';
   </div>
 
   <div class="container-page">
-    <div class="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8 xl:gap-12">
-      <!-- Copy -->
-      <div class="max-w-[590px]">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 xl:gap-14">
+      <!-- Copy (Hero Left) -->
+      <div class="max-w-[620px]">
         <div
-          class="reveal inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.035] py-1.5 pl-2 pr-3.5 backdrop-blur-md"
+          class="reveal inline-flex items-center gap-2.5 rounded-full border border-peach-400/25 bg-peach-400/[0.05] py-1.5 pl-2.5 pr-4 backdrop-blur-md"
         >
-          <span class="relative flex size-4 items-center justify-center">
-            <span class="absolute size-4 animate-ping rounded-full bg-peach-400/30"></span>
-            <span class="relative size-1.5 rounded-full bg-peach-400 shadow-[0_0_10px_2px_rgba(255,184,121,0.55)]"></span>
+          <span class="relative flex size-3.5 items-center justify-center">
+            <span class="absolute size-3.5 animate-ping rounded-full bg-peach-400/30"></span>
+            <span class="relative size-1.5 rounded-full bg-peach-400 shadow-[0_0_10px_2px_rgba(255,184,121,0.7)]"></span>
           </span>
-          <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-300 sm:text-[10px]">
-            KSEI &amp; BEI Data Pipeline Online
+          <span class="font-mono text-[9.5px] font-bold uppercase tracking-[0.2em] text-peach-300 sm:text-[10.5px]">
+            KSEI &amp; BEI DATA PIPELINE ONLINE
           </span>
         </div>
 
         <h1
           id="hero-title"
-          class="reveal mt-5 text-balance text-[2.65rem] font-extrabold leading-[1.02] tracking-[-0.05em] text-white sm:text-[3.45rem] lg:text-[3.75rem] xl:text-[3.95rem]"
+          class="reveal mt-5 text-balance text-[2.75rem] font-extrabold leading-[1.04] tracking-[-0.045em] text-white sm:text-[3.45rem] lg:text-[3.75rem] xl:text-[4.05rem]"
           style="--reveal-delay: 60ms"
         >
           Quantitative Market Intelligence
@@ -41,21 +41,23 @@ import { partners, site } from '../data/site';
         </h1>
 
         <p
-          class="reveal mt-4 max-w-[510px] text-[15px] leading-[1.7] text-slate-400 sm:text-[16px] sm:leading-[1.72]"
+          class="reveal mt-4 max-w-[530px] text-[15px] leading-[1.72] text-slate-300/90 sm:text-[16px] sm:leading-[1.75]"
           style="--reveal-delay: 120ms"
         >
           Platform analitik kuantitatif, pelacakan smart-money (bandarmologi), dan pemetaan
           kepemilikan saham bursa Indonesia (BEI) berbasis matematika inferensial &amp; data empiris terbuka.
         </p>
 
-        <div class="reveal mt-7 flex flex-col gap-3 sm:flex-row sm:items-center" style="--reveal-delay: 180ms">
+        <!-- CTA Buttons -->
+        <div class="reveal mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center" style="--reveal-delay: 180ms">
           <a
             href={site.investowl}
             target="_blank"
             rel="noopener noreferrer"
             class="btn-primary group"
+            aria-label="Buka Platform Investowl (Live Web App)"
           >
-            Luncurkan Platform Live
+            <span>Luncurkan Platform Live</span>
             <Icon
               name="arrow-up-right"
               size={16}
@@ -66,39 +68,41 @@ import { partners, site } from '../data/site';
             <span class="grid size-6 place-items-center rounded-full border border-white/10 bg-white/[0.05] text-peach-300 transition group-hover:border-peach-400/30">
               <Icon name="play" size={10} class="ml-0.5" />
             </span>
-            Katalog Proyek
+            <span>Eksplorasi Katalog Proyek</span>
           </a>
         </div>
 
+        <!-- Metrics Ribbon -->
         <div
-          class="reveal mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-[10.5px] font-medium text-slate-500 sm:text-[11px]"
+          class="reveal mt-8 grid grid-cols-3 gap-3 rounded-2xl border border-white/[0.08] bg-ink-900/60 p-3.5 backdrop-blur-md sm:gap-4 sm:p-4"
           style="--reveal-delay: 220ms"
+          aria-label="Ringkasan Metrik Telemetri"
         >
-          <span class="inline-flex items-center gap-1.5">
-            <Icon name="check" size={13} class="text-peach-400" />
-            99.8% Akurasi Data
-          </span>
-          <span class="inline-flex items-center gap-1.5">
-            <Icon name="check" size={13} class="text-peach-400" />
-            Mutasi KSEI Harian T+1
-          </span>
-          <span class="inline-flex items-center gap-1.5">
-            <Icon name="check" size={13} class="text-peach-400" />
-            WYCKOFF Phase Engine
-          </span>
+          <div class="border-r border-white/[0.06] pr-2">
+            <span class="block font-mono text-lg font-extrabold text-peach-300 sm:text-xl">99.8%</span>
+            <span class="mt-0.5 block text-[11px] font-medium text-slate-400">Akurasi Data</span>
+          </div>
+          <div class="border-r border-white/[0.06] px-2">
+            <span class="block font-mono text-lg font-extrabold text-white sm:text-xl">KSEI / BEI</span>
+            <span class="mt-0.5 block text-[11px] font-medium text-slate-400">Mutasi T+1</span>
+          </div>
+          <div class="pl-2">
+            <span class="block font-mono text-lg font-extrabold text-emerald-400 sm:text-xl">WYCKOFF</span>
+            <span class="mt-0.5 block text-[11px] font-medium text-slate-400">Phase Engine</span>
+          </div>
         </div>
 
-        <!-- Stack marks: two rows by three columns -->
-        <div class="reveal mt-8 border-t border-white/[0.08] pt-5" style="--reveal-delay: 280ms">
-          <p class="text-[8.5px] font-bold uppercase tracking-[0.24em] text-slate-600">
-            Arsitektur &amp; Fondasi Sistem
+        <!-- Architecture Stack -->
+        <div class="reveal mt-8 border-t border-white/[0.08] pt-4.5" style="--reveal-delay: 260ms">
+          <p class="text-[8.5px] font-bold uppercase tracking-[0.24em] text-slate-500">
+            Arsitektur Pipeline &amp; Komputasi Kuantitatif
           </p>
-          <div class="mt-3.5 grid grid-cols-3 gap-x-4 gap-y-3">
+          <div class="mt-3 grid grid-cols-3 gap-x-3 gap-y-2.5 sm:grid-cols-6 sm:gap-x-4">
             {
               partners.map((partner) => (
-                <div class="flex items-center gap-2 text-slate-500 opacity-60 transition duration-300 hover:text-slate-300 hover:opacity-100">
-                  <Icon name={partner.icon} size={14} class="shrink-0 text-slate-400" />
-                  <span class="truncate text-[10.5px] font-semibold tracking-[-0.01em] sm:text-[11.5px]">
+                <div class="flex items-center gap-1.5 text-slate-400/80 transition duration-300 hover:text-white">
+                  <Icon name={partner.icon} size={13} class="shrink-0 text-peach-400/70" />
+                  <span class="truncate text-[10.5px] font-semibold tracking-[-0.01em]">
                     {partner.name}
                   </span>
                 </div>
@@ -108,144 +112,92 @@ import { partners, site } from '../data/site';
         </div>
       </div>
 
-      <!-- Visual composition -->
+      <!-- Hero Right: Live Radar Telemetry Terminal -->
       <div
-        class="reveal relative mx-auto aspect-square w-full max-w-[500px] lg:max-w-[560px]"
+        class="reveal relative mx-auto w-full max-w-[540px] lg:max-w-none"
         style="--reveal-delay: 160ms"
-        aria-label="InvestOwl Quantitative Telemetry Radar"
+        aria-label="Visualisasi Radar Telemetri Pasar"
       >
-        <div class="absolute inset-[7%] rounded-full bg-peach-400/[0.16] blur-[85px] animate-pulse-soft" aria-hidden="true"></div>
-        <div class="absolute left-[0%] top-[10%] size-44 rounded-full bg-violet-700/20 blur-[75px]" aria-hidden="true"></div>
+        <!-- Glow Backdrops -->
+        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-peach-500/15 via-violet-600/10 to-transparent blur-2xl" aria-hidden="true"></div>
 
-        <!-- Orbit system -->
-        <div class="absolute inset-[3%] rounded-full border border-white/[0.07]" aria-hidden="true"></div>
-        <div class="absolute inset-[13%] rounded-full border border-dashed border-peach-400/25 animate-orbit" aria-hidden="true">
-          <span class="absolute -top-1 left-1/2 size-2 -translate-x-1/2 rounded-full bg-peach-300 shadow-[0_0_14px_3px_rgba(255,184,121,0.55)]"></span>
-          <span class="absolute -bottom-0.5 left-[18%] size-1 rounded-full bg-peach-400/70"></span>
-        </div>
-        <div class="absolute inset-[27%] rounded-full border border-white/[0.06]" aria-hidden="true"></div>
+        <!-- Terminal Card Frame -->
+        <div class="relative overflow-hidden rounded-2xl border border-white/12 bg-ink-900/90 shadow-[0_24px_60px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+          <!-- Terminal Header Bar -->
+          <div class="flex h-11 items-center justify-between border-b border-white/[0.08] bg-white/[0.025] px-4">
+            <div class="flex items-center gap-2">
+              <span class="size-2.5 rounded-full bg-rose-500/70"></span>
+              <span class="size-2.5 rounded-full bg-amber-500/70"></span>
+              <span class="size-2.5 rounded-full bg-emerald-500/70"></span>
+              <span class="ml-2 font-mono text-[11px] font-semibold tracking-wider text-slate-400">
+                RADAR_TELEMETRY_LIVE.IDX
+              </span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="size-1.5 animate-pulse rounded-full bg-emerald-400"></span>
+              <span class="font-mono text-[9.5px] font-bold text-emerald-400">FEED_SYNC</span>
+            </div>
+          </div>
 
-        <!-- CSS 3D coin medallion with Minimalist Owl Emblem -->
-        <div class="absolute inset-0 z-10 grid place-items-center">
-          <div class="coin-scene">
-            <div class="coin">
-              <span class="coin-symbol flex items-center justify-center">
-                <svg viewBox="0 0 48 48" class="size-20 drop-shadow-[0_4px_16px_rgba(201,92,15,0.7)]" fill="none" aria-hidden="true">
-                  <!-- Minimalist Owl Emblem -->
-                  <path
-                    d="M24 4.5 L39 10 V23 C39 32.5 32.5 40.5 24 43.5 C15.5 40.5 9 32.5 9 23 V10 L24 4.5 Z"
-                    stroke="#FFF0E2"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="opacity-90"
-                  />
-                  <path
-                    d="M14 15.5 L20.5 19 L24 16.5 L27.5 19 L34 15.5"
-                    stroke="#FFF0E2"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <circle cx="19" cy="24" r="4.5" stroke="#FFF0E2" stroke-width="1.6" />
-                  <circle cx="19" cy="24" r="1.6" fill="#FFF0E2" />
-                  <circle cx="29" cy="24" r="4.5" stroke="#FFF0E2" stroke-width="1.6" />
-                  <circle cx="29" cy="24" r="1.6" fill="#FFF0E2" />
-                  <polygon points="24,24.5 22.2,28.5 25.8,28.5" fill="#FFF0E2" />
-                  <path
-                    d="M15.5 31.5 C18.5 34.5 21 36.5 24 37.5 C27 36.5 29.5 34.5 32.5 31.5"
-                    stroke="#FFF0E2"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                  />
-                </svg>
+          <!-- Terminal Screen / Image Container -->
+          <div class="relative overflow-hidden bg-black/40">
+            <img
+              src="/assets/resources/hero-matrix.png"
+              alt="Obsidian dark matrix with quantitative financial data vectors"
+              width="560"
+              height="290"
+              class="h-[250px] w-full object-cover object-center brightness-95 sm:h-[280px]"
+              loading="eager"
+            />
+            <!-- Dark Vignette Overlay -->
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent opacity-80"></div>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/40 via-transparent to-ink-900/40"></div>
+
+            <!-- Floating Overlay Badge with Minimalist Owl Emblem -->
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-xl border border-white/10 bg-ink-900/80 p-2.5 backdrop-blur-md">
+              <div class="flex items-center gap-2.5">
+                <div class="grid size-8 place-items-center rounded-lg border border-peach-400/30 bg-peach-500/10 text-peach-300">
+                  <svg viewBox="0 0 48 48" class="size-5" fill="none">
+                    <path
+                      d="M24 5 L38 10 V22 C38 31 32 38.5 24 41.5 C16 38.5 10 31 10 22 V10 L24 5 Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <circle cx="19.5" cy="21.5" r="3.5" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="28.5" cy="21.5" r="3.5" stroke="currentColor" stroke-width="1.8" />
+                    <polygon points="24,22 22.5,25.5 25.5,25.5" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-[11px] font-bold text-white">Investowl Microstructure Engine</span>
+                  <span class="block font-mono text-[9.5px] text-slate-400">Idx Volume-Weighted Flow Tracker</span>
+                </div>
+              </div>
+              <span class="rounded border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 font-mono text-[9px] font-bold text-emerald-300">
+                T+1 VERIFIED
               </span>
             </div>
           </div>
-        </div>
 
-        <!-- Live flow chip -->
-        <div class="absolute left-0 top-[14%] z-20 hidden items-center gap-2 rounded-full border border-peach-400/20 bg-ink-900/75 px-3 py-1.5 shadow-lg backdrop-blur-md sm:flex">
-          <span class="relative flex size-1.5">
-            <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-70"></span>
-            <span class="relative inline-flex size-1.5 rounded-full bg-emerald-400"></span>
-          </span>
-          <span class="text-[8px] font-bold uppercase tracking-[0.2em] text-peach-200">RADAR IDX LIVE</span>
-        </div>
-
-        <!-- Price card: BBRI / IDX -->
-        <div class="glass-strong absolute right-0 top-[7%] z-20 w-[48%] max-w-[212px] rounded-2xl p-3.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)] animate-float-slow">
-          <div class="flex items-center justify-between gap-2">
-            <span class="truncate text-[8.5px] font-bold uppercase tracking-[0.16em] text-slate-400">
-              BBRI / IDX
-            </span>
-            <span class="shrink-0 rounded-full bg-emerald-400/10 px-1.5 py-0.5 text-[8.5px] font-bold text-emerald-400">
-              +2.14%
-            </span>
+          <!-- Telemetry Ticker Grid (4 Columns) -->
+          <div class="grid grid-cols-2 divide-x divide-y divide-white/[0.06] border-t border-white/[0.08] bg-ink-900/95 sm:grid-cols-4 sm:divide-y-0">
+            <div class="p-3 sm:p-3.5">
+              <span class="block font-mono text-[9px] font-bold tracking-wider text-slate-500">SMART_MONEY</span>
+              <span class="mt-1 block font-mono text-[12px] font-extrabold text-emerald-400 sm:text-[13px]">+12.4B ACC</span>
+            </div>
+            <div class="p-3 sm:p-3.5">
+              <span class="block font-mono text-[9px] font-bold tracking-wider text-slate-500">FOREIGN_FLOW</span>
+              <span class="mt-1 block font-mono text-[12px] font-extrabold text-emerald-400 sm:text-[13px]">+84.2M NET</span>
+            </div>
+            <div class="p-3 sm:p-3.5">
+              <span class="block font-mono text-[9px] font-bold tracking-wider text-slate-500">DOMESTIC_ACC</span>
+              <span class="mt-1 block font-mono text-[12px] font-extrabold text-rose-400 sm:text-[13px]">-32.1M DIST</span>
+            </div>
+            <div class="p-3 sm:p-3.5">
+              <span class="block font-mono text-[9px] font-bold tracking-wider text-slate-500">REGIME_STATE</span>
+              <span class="mt-1 block font-mono text-[11px] font-extrabold text-peach-300 sm:text-[12px]">ACCUMULATION</span>
+            </div>
           </div>
-          <p class="mt-1.5 font-mono text-[16px] font-semibold tracking-[-0.04em] text-white">
-            Rp 4.880<span class="text-[11px] text-slate-500 font-normal"> / lbr</span>
-          </p>
-          <svg viewBox="0 0 120 34" class="mt-2 h-8 w-full" fill="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="heroSparkFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#FFB879" stop-opacity="0.30"></stop>
-                <stop offset="100%" stop-color="#FFB879" stop-opacity="0"></stop>
-              </linearGradient>
-            </defs>
-            <path
-              d="M0 29C12 27 18 18 30 20S48 9 61 13 82 5 95 9s17-4 25-5v30H0Z"
-              fill="url(#heroSparkFill)"></path>
-            <path
-              d="M0 29C12 27 18 18 30 20S48 9 61 13 82 5 95 9s17-4 25-5"
-              stroke="#FFB879"
-              stroke-width="1.6"
-              stroke-linecap="round"></path>
-            <circle cx="95" cy="9" r="2.2" fill="#FFB879"></circle>
-          </svg>
-        </div>
-
-        <!-- Telemetry flow card: Smart Money Net Inflow -->
-        <div class="glass-strong absolute bottom-[5%] left-0 z-20 w-[54%] max-w-[230px] rounded-2xl p-4 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)] animate-float">
-          <div class="flex items-center justify-between gap-2">
-            <span class="text-[8.5px] font-bold uppercase tracking-[0.16em] text-slate-400">
-              Smart Money Flow
-            </span>
-            <Icon name="trend-up" size={13} class="text-emerald-400" />
-          </div>
-          <p class="mt-1.5 font-mono text-[18px] font-semibold tracking-[-0.05em] text-white">
-            +Rp 842,6 <span class="text-[11px] text-slate-400">Milyar</span>
-          </p>
-          <div class="mt-3 flex h-8 items-end gap-1" aria-hidden="true">
-            {
-              [28, 44, 36, 58, 49, 72, 63, 84, 76, 96].map((height, index) => (
-                <span
-                  class:list={[
-                    'flex-1 rounded-sm',
-                    index === 9
-                      ? 'bg-peach-400'
-                      : 'bg-gradient-to-t from-peach-400/15 to-peach-400/45',
-                  ]}
-                  style={`height:${height}%`}
-                ></span>
-              ))
-            }
-          </div>
-          <div class="mt-2.5 flex items-center justify-between text-[8px] font-medium text-slate-500">
-            <span>Fase Wyckoff</span>
-            <span class="font-semibold text-emerald-400">Akumulasi</span>
-          </div>
-        </div>
-
-        <!-- Lineage badge -->
-        <div class="absolute bottom-[15%] right-0 z-20 hidden items-center gap-2.5 rounded-xl border border-white/10 bg-ink-800/85 px-3 py-2 shadow-lg backdrop-blur-md sm:flex">
-          <span class="grid size-7 place-items-center rounded-lg border border-peach-400/20 bg-peach-400/10 text-peach-300">
-            <Icon name="shield" size={14} />
-          </span>
-          <span>
-            <span class="block text-[7.5px] font-bold uppercase tracking-[0.18em] text-slate-500">Data Lineage</span>
-            <span class="block text-[10px] font-semibold text-white">100% Data KSEI &amp; IDX</span>
-          </span>
         </div>
       </div>
     </div>

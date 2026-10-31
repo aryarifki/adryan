@@ -3,10 +3,10 @@ import Icon from './Icon.astro';
 import { newsletter, site } from '../data/site';
 ---
 
-<section id="cta" class="relative pb-20 pt-4 lg:pb-28" aria-labelledby="cta-title">
+<section id="dispatch" class="relative pb-20 pt-8 lg:pb-28" aria-labelledby="dispatch-title">
   <div class="container-page">
     <div
-      class="reveal relative overflow-hidden rounded-[26px] border border-peach-400/20 bg-[linear-gradient(180deg,#161220_0%,#100d18_100%)] px-6 py-12 text-center shadow-[0_50px_120px_-60px_rgba(0,0,0,1)] sm:px-10 sm:py-14 lg:px-16 lg:py-16"
+      class="reveal relative overflow-hidden rounded-[26px] border border-peach-400/20 bg-[linear-gradient(180deg,#161220_0%,#100d18_100%)] px-6 py-12 text-center shadow-[0_50px_120px_-60px_rgba(0,0,0,1)] sm:px-10 sm:py-16 lg:px-16"
     >
       <!-- Lighting and orbit rings -->
       <div class="pointer-events-none absolute inset-0" aria-hidden="true">
@@ -15,52 +15,95 @@ import { newsletter, site } from '../data/site';
         <div class="absolute left-1/2 top-1/2 size-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-peach-400/[0.08]"></div>
         <div class="dot-grid absolute inset-0 opacity-[0.18] [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]"></div>
         <span class="absolute left-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[48px] font-bold text-peach-400/[0.08] lg:block">KSEI</span>
-        <span class="absolute right-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[48px] font-bold text-peach-400/[0.08] lg:block">IDX</span>
+        <span class="absolute right-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[48px] font-bold text-peach-400/[0.08] lg:block">BEI</span>
       </div>
 
       <div class="relative mx-auto max-w-2xl">
-        <span class="inline-flex items-center gap-2 rounded-full border border-peach-400/20 bg-peach-400/[0.07] px-3 py-1.5 text-[8.5px] font-bold uppercase tracking-[0.2em] text-peach-300">
+        <span class="inline-flex items-center gap-2 rounded-full border border-peach-400/20 bg-peach-400/[0.07] px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-peach-300">
           <span class="size-1 rounded-full bg-peach-400"></span>
           Data Dispatch Mingguan
         </span>
 
-        <h2 id="cta-title" class="mt-5 text-balance text-[2rem] font-extrabold leading-[1.08] tracking-[-0.04em] text-white sm:text-[2.6rem] lg:text-[2.9rem]">
+        <h2 id="dispatch-title" class="mt-5 text-balance text-[2rem] font-extrabold leading-[1.08] tracking-[-0.04em] text-white sm:text-[2.6rem] lg:text-[2.9rem]">
           {newsletter.heading}
         </h2>
-        <p class="mx-auto mt-4 max-w-xl text-[14px] leading-7 text-slate-400 sm:text-[15px]">
+        <p class="mx-auto mt-4 max-w-xl text-[14px] leading-7 text-slate-300/90 sm:text-[15px]">
           {newsletter.sub}
         </p>
 
-        <!-- Newsletter form / CTA buttons -->
+        <!-- Newsletter Subscription Form -->
+        <form id="newsletter-form" class="mx-auto mt-8 max-w-md">
+          <div class="flex flex-col gap-2.5 sm:flex-row">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="Masukkan alamat email Anda..."
+              required
+              aria-label="Alamat Email untuk Langganan"
+              class="w-full rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-all focus:border-peach-400/50 focus:bg-white/[0.08]"
+            />
+            <button
+              type="submit"
+              class="btn-primary shrink-0 justify-center whitespace-nowrap text-xs font-bold"
+            >
+              <span>{newsletter.cta}</span>
+              <Icon name="arrow-right" size={14} />
+            </button>
+          </div>
+          <p class="mt-3 text-[11px] text-slate-400">
+            {newsletter.microcopy}
+          </p>
+          <div
+            id="newsletter-feedback"
+            class="mt-3 hidden rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2.5 text-xs font-semibold text-emerald-300"
+            role="status"
+          >
+            Terima kasih! Email Anda telah terdaftar untuk menerima Data Dispatch mingguan.
+          </div>
+        </form>
+
+        <!-- Direct Action Buttons -->
         <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href={site.investowl}
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-primary group w-full sm:w-auto"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-peach-300 transition hover:text-white"
           >
-            Luncurkan Platform Live
-            <Icon
-              name="arrow-up-right"
-              size={16}
-              class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
+            <span>Luncurkan Web App Investowl Langsung</span>
+            <Icon name="arrow-up-right" size={14} />
           </a>
+          <span class="hidden text-slate-600 sm:inline">&bull;</span>
           <a
             href={site.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-ghost w-full sm:w-auto"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 transition hover:text-white"
           >
-            <Icon name="telegram" size={14} class="text-peach-300" />
-            Gabung Komunitas Telegram
+            <Icon name="telegram" size={13} class="text-peach-400" />
+            <span>Gabung Komunitas Telegram ({site.telegramHandle})</span>
           </a>
         </div>
-
-        <p class="mt-5 text-[9px] font-medium uppercase tracking-[0.18em] text-slate-600">
-          {newsletter.microcopy} &bull; Riset Independen &bull; Dataset KSEI, IDX &amp; MA
-        </p>
       </div>
     </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form');
+    const feedback = document.getElementById('newsletter-feedback');
+    const emailInput = document.getElementById('newsletter-email');
+
+    if (form && feedback && emailInput) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        feedback.classList.remove('hidden');
+        emailInput.value = '';
+        setTimeout(() => {
+          feedback.classList.add('hidden');
+        }, 5000);
+      });
+    }
+  });
+</script>

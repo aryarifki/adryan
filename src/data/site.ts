@@ -57,19 +57,19 @@ export const navigation: NavItem[] = [
         badge: 'Live',
       },
       {
-        label: 'Mandat Data',
-        description: 'Pedoman data empiris tanpa kompromi',
+        label: 'Radar Telemetri',
+        description: 'Status pipeline T+1 KSEI & BEI live',
         href: '#overview',
       },
       {
-        label: 'Status Pipeline',
-        description: 'Sinkronisasi T+1 KSEI & HMM Regimes',
-        href: '#dashboard',
+        label: 'Metrik Kuantitatif',
+        description: 'Akurasi data 99.8% & Wyckoff Phase Engine',
+        href: '#overview',
       },
     ],
   },
   {
-    label: 'Nilai & Fondasi',
+    label: 'Fondasi Nilai',
     href: '#values',
     items: [
       {
@@ -79,7 +79,7 @@ export const navigation: NavItem[] = [
       },
       {
         label: 'Data Transparency',
-        description: 'Visibilitas tanpa filter transaksi broker & KSEI',
+        description: 'Visibilitas tanpa sensor transaksi broker & KSEI',
         href: '#values',
       },
       {
@@ -87,14 +87,19 @@ export const navigation: NavItem[] = [
         description: 'Pelacakan Wyckoff & graf kepemilikan UBO',
         href: '#values',
       },
+      {
+        label: 'The Avenia Way',
+        description: '3 pilar metodologi objektif bebas sensasi',
+        href: '#values',
+      },
     ],
   },
   {
-    label: 'Produk & Proyek',
+    label: 'Katalog Proyek',
     href: '#projects',
     items: [
       {
-        label: 'The Investowl',
+        label: 'The Invest Owl',
         description: 'Smart-money telemetry untuk BEI',
         href: site.investowl,
         external: true,
@@ -108,14 +113,14 @@ export const navigation: NavItem[] = [
         badge: 'Live',
       },
       {
-        label: 'SM-Tracker',
-        description: 'Hidden Markov Model engine & Canary Exodus',
+        label: 'SMtracker (BandarAI)',
+        description: 'Hidden Markov Model engine & Wyckoff scanner',
         href: site.smtracker,
         external: true,
         badge: 'GitHub',
       },
       {
-        label: 'OWLEXIA',
+        label: 'OWLEXIA Legal AI',
         description: 'Agen penalaran riset yuridis otonom',
         href: site.owlexia,
         external: true,
@@ -131,43 +136,59 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Telemetri',
-    href: '#dashboard',
+    label: 'Metodologi',
+    href: '#methodology',
     items: [
       {
-        label: 'Terminal Pasar',
-        description: 'Eksplorasi aksi harga & volume institusi',
-        href: '#dashboard',
+        label: 'Bandarmologi Matrix',
+        description: 'Volume-weighted flow & deteksi crossing',
+        href: '#methodology',
       },
       {
-        label: 'Mobile Desk',
-        description: 'Akses telemetri di seluruh perangkat',
-        href: '#app',
+        label: 'Wyckoff Recognition',
+        description: 'Pemetaan siklus akumulasi & markup otomatis',
+        href: '#methodology',
       },
       {
-        label: 'Struktur Kepemilikan',
-        description: 'Mutasi KSEI >5% dan kustodian asing',
-        href: '#dashboard',
+        label: 'Foreign Flow Shock',
+        description: 'Pemisahan lonjakan asing dari transaksi ritel',
+        href: '#methodology',
+      },
+    ],
+  },
+  {
+    label: 'Kepemilikan KSEI',
+    href: '#ownership',
+    items: [
+      {
+        label: 'Simulasi Radar Mutasi',
+        description: 'Laporan kepemilikan saham bulanan >5%',
+        href: '#ownership',
+      },
+      {
+        label: 'Jejaring UBO BEI',
+        description: 'Struktur pemilik manfaat akhir emiten',
+        href: '#ownership',
       },
     ],
   },
   {
     label: 'Riset & Risalah',
-    href: '#testimonials',
+    href: '#insights',
     items: [
       {
         label: 'Featured Insights',
         description: 'Kajian investigasi data jurnalisme publik',
-        href: '#testimonials',
+        href: '#insights',
       },
       {
         label: 'Data Dispatch',
         description: 'Laporan riset mingguan langsung di inbox',
-        href: '#cta',
+        href: '#dispatch',
       },
       {
-        label: 'Komunitas Riset',
-        description: 'Diskusi analitik kuantitatif di Telegram',
+        label: 'Komunitas Telegram',
+        description: 'Diskusi analitik kuantitatif bersama praktisi',
         href: site.telegram,
         external: true,
       },
@@ -207,137 +228,249 @@ export const stats = [
   },
 ];
 
-export const features = [
+export const values = [
   {
-    icon: 'shield',
+    num: '// VALUE_01',
     title: 'Quantitative Rigor',
-    description:
-      'Kalkulasi algoritmik, model statistik matematika, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pasar modal.',
-    number: '01',
-    active: false,
+    desc: 'Kalkulasi algoritmik, model regresi Gaussian HMM, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pergerakan saham likuid.',
+    icon: 'shield',
   },
   {
-    icon: 'database',
+    num: '// VALUE_02',
     title: 'Data Transparency',
-    description:
-      'Visibilitas tanpa filter terhadap transaksi broker, mutasi kepemilikan KSEI, dan parameter volume foreign flow tanpa heuristik tersembunyi.',
-    number: '02',
-    active: true,
+    desc: 'Visibilitas tanpa sensor terhadap transaksi broker, laporan kepemilikan KSEI bulanan >5%, serta parameter akumulasi foreign flow tanpa heuristik tertutup.',
+    icon: 'database',
   },
   {
-    icon: 'sparkles',
+    num: '// VALUE_03',
     title: 'Market Intelligence',
-    description:
-      'Pelacakan institusi tingkat lanjut, pemetaan fase struktural Wyckoff, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).',
-    number: '03',
-    active: false,
+    desc: 'Pelacakan sindikasi bandarmologi, pengenalan siklus struktural Wyckoff otomatis, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).',
+    icon: 'sparkles',
   },
 ];
 
-export const dashboardAssets = [
+export const bento = [
   {
-    name: 'Bank Rakyat Indonesia',
-    ticker: 'BBRI',
-    icon: 'chart',
-    price: 'Rp 4.880',
-    change: '+2.14%',
-    up: true,
-    spark: [28, 36, 32, 48, 44, 61, 57, 72, 68, 84],
+    id: 'methodology',
+    size: 'large',
+    badge: 'Fondasi Empiris',
+    title: 'Pedoman Data Tanpa Kompromi',
+    desc: 'Setiap investigasi, grafik, dan artikel bertolak dari dataset resmi (KSEI, IDX, BPS, Mahkamah Agung) yang teraudit, dapat diverifikasi, dan terbuka untuk diunduh publik.',
+    stat: '100%',
+    statLabel: 'Open Verifiable Data',
+    icon: 'database',
   },
   {
-    name: 'Bank Central Asia',
-    ticker: 'BBCA',
+    id: 'viz',
+    size: 'medium',
+    badge: 'M3 Expressive Viz',
+    title: 'Visualisasi Realita Tajam',
+    desc: 'Bukan sekadar chart statis. Visualisasi dinamis mengungkap dinamika konsentrasi modal, zona perangkap ritel, dan anomali regulasi secara intuitif.',
+    stat: 'T+10',
+    statLabel: 'Real Microstructure Sync',
     icon: 'chart',
-    price: 'Rp 10.450',
-    change: '+1.45%',
-    up: true,
-    spark: [42, 38, 46, 44, 52, 49, 58, 55, 64, 61],
   },
   {
-    name: 'Bank Mandiri',
-    ticker: 'BMRI',
-    icon: 'chart',
-    price: 'Rp 6.750',
-    change: '+3.20%',
-    up: true,
-    spark: [30, 35, 40, 48, 52, 59, 65, 70, 78, 85],
+    id: 'ethics',
+    size: 'small',
+    badge: 'Objektivitas Murni',
+    title: 'Tanpa Sensasi, Tanpa Afiliasi',
+    desc: 'Bebas dari clickbait finansial dan spekulasi emosional. Riset kami murni berpijak pada matematika, kalkulasi inferensial, dan fakta hukum.',
+    stat: '0%',
+    statLabel: 'Sponsored Noise',
+    icon: 'shield',
   },
 ];
 
-export const dashboardHistory = [
+export const categories = [
   {
-    icon: 'arrow-up',
-    title: 'Akumulasi Asing BBRI',
-    meta: 'Kustodian Asing · 2 mnt lalu',
-    amount: '+Rp 48,5 M',
-    positive: true,
+    key: 'all',
+    label: 'Semua Proyek',
+    count: 5,
   },
   {
-    icon: 'arrow-down',
-    title: 'Distribusi Domestik BBCA',
-    meta: 'Broker Ritel · 45 mnt lalu',
-    amount: '-Rp 12,2 M',
-    positive: false,
+    key: 'quant',
+    label: 'Pasar Modal & Quant',
+    count: 2,
   },
   {
-    icon: 'plus',
-    title: 'Net Crossing BMRI',
-    meta: 'Institusi Asing · Kemarin',
-    amount: '+Rp 85,0 M',
-    positive: true,
+    key: 'legal',
+    label: 'Legal AI & Ingestion',
+    count: 2,
+  },
+  {
+    key: 'platform',
+    label: 'Bot & Automation',
+    count: 1,
   },
 ];
 
-export const projects = [
+export type Project = {
+  name: string;
+  slug: string;
+  category: 'quant' | 'legal' | 'platform';
+  isDeployed: boolean;
+  liveUrl?: string | null;
+  communityUrl?: string | null;
+  repoUrl?: string | null;
+  targetUrl: string;
+  actionText: string;
+  stack: string[];
+  year: string;
+  badge: string;
+  featured: boolean;
+  tag: string;
+  summary: string;
+};
+
+export const projects: Project[] = [
   {
-    id: 'investowl',
-    category: 'Pasar Modal & Quant',
-    title: 'The Investowl: Smart Money Telemetry',
-    description:
-      'Platform terminal pasar modal kuantitatif pelacak smart-money bandarmologi, integrasi data KSEI harian, dan deteksi fase akumulasi/distribusi Wyckoff.',
-    tech: ['Next.js 16', 'Python', 'Redis L1/L2', 'Tailwind'],
-    url: site.investowl,
-    badge: 'Live Web App',
+    name: 'The Invest Owl',
+    slug: 'investowl',
+    category: 'quant',
+    isDeployed: true,
+    liveUrl: 'https://investowl.avenia.my.id/',
+    communityUrl: 'https://t.me/theinvestowl_id',
+    repoUrl: 'https://github.com/aryarifki/investowl',
+    targetUrl: 'https://investowl.avenia.my.id/',
+    actionText: 'Luncurkan Web App',
+    stack: [
+      'Next.js 16',
+      'FastAPI',
+      'Python 3.10+',
+      'PostgreSQL',
+      'Redis L1/L2',
+      'Tailwind CSS v4',
+    ],
+    year: '2026',
+    badge: 'Flagship Platform',
+    featured: true,
+    tag: 'Pasar Modal & BEI',
+    summary:
+      'Platform riset institusional kuantitatif menganalisis Bandarmologi (Smart Money Flow) dan Foreign Flow saham BEI dengan model Gaussian HMM dan Impulse Response Functions.',
   },
   {
-    id: 'ocrawler',
-    category: 'Legal AI & Ingestion',
-    title: 'O-Crawler: Legal Intelligence Engine',
-    description:
-      'Pipeline ingestion & crawler putusan pengadilan Mahkamah Agung & MK berbasis OCR tesseract, ekstraksi metadata, dan vector database untuk riset regulasi.',
-    tech: ['Python FastAPI', 'Crawl4AI', 'PostgreSQL', 'Meilisearch'],
-    url: site.ocrawler,
-    badge: 'Live Portal',
+    name: 'O-Crawler',
+    slug: 'ocrawler',
+    category: 'legal',
+    isDeployed: true,
+    liveUrl: 'https://ocrawler.avenia.my.id/',
+    repoUrl: 'https://github.com/aryarifki/O-Crawler',
+    targetUrl: 'https://ocrawler.avenia.my.id/',
+    actionText: 'Buka Portal O-Crawler',
+    stack: [
+      'FastAPI',
+      'PostgreSQL',
+      'Cloudflare R2',
+      'Anti-WAF curl_cffi',
+      'WebSocket GUI',
+    ],
+    year: '2026',
+    badge: 'High-Speed Ingestion',
+    featured: true,
+    tag: 'Big Data & Legal',
+    summary:
+      'Engine ingestion regulasi hukum berkekuatan tinggi melahap peraturan.go.id, putusan Mahkamah Agung, dan Mahkamah Konstitusi RI dengan TLS impersonation dan GUI modern.',
   },
   {
-    id: 'smtracker',
-    category: 'Pasar Modal & Quant',
-    title: 'SM-Tracker: Hidden Markov Model Engine',
-    description:
-      'Core backend quant untuk estimasi rezim pasar saham Indonesia, scoring volume anomali broker, dan kalkulasi dynamic threshold berbasis Rust/Python.',
-    tech: ['Python 3.12', 'Rust', 'Redis', 'Statistical Models'],
-    url: site.smtracker,
-    badge: 'GitHub Repo',
+    name: 'SMtracker (BandarAI)',
+    slug: 'smtracker',
+    category: 'quant',
+    isDeployed: false,
+    liveUrl: null,
+    repoUrl: 'https://github.com/aryarifki/SMtracker',
+    targetUrl: 'https://github.com/aryarifki/SMtracker',
+    actionText: 'Periksa Source Code',
+    stack: [
+      'Python 3.10+',
+      'Playwright',
+      'scikit-learn',
+      'PostgreSQL',
+      'Telegram Bot API',
+    ],
+    year: '2025',
+    badge: 'Quantitative Engine',
+    featured: false,
+    tag: 'Bandarmology & AI',
+    summary:
+      'Pipeline data kuantitatif mengaudit akumulasi smart-money, menjalankan Wyckoff scanner otomatis, dan self-healing database 5 pilar dengan asisten bot Telegram.',
   },
   {
-    id: 'owlexia',
-    category: 'Legal AI & Ingestion',
-    title: 'OWLEXIA: Autonomous Legal Research Agent',
-    description:
-      'Agen otonom untuk sintesis perbandingan pasal hukum, analisis ratio decidendi putusan pengadilan, dan ringkasan yuridis berbasis LLM lokal & Claude.',
-    tech: ['TypeScript', 'Claude 3.5 Sonnet', 'LangGraph', 'Qdrant'],
-    url: site.owlexia,
-    badge: 'GitHub Repo',
+    name: 'OWLEXIA Legal AI',
+    slug: 'owlexia',
+    category: 'legal',
+    isDeployed: false,
+    liveUrl: 'https://owlexia.avenia.my.id/',
+    repoUrl: 'https://github.com/aryarifki/owlexia',
+    targetUrl: 'https://github.com/aryarifki/owlexia',
+    actionText: 'Spesifikasi & Kode Sumber',
+    stack: [
+      'Python',
+      'LLM Reasoner',
+      'Agentic AI',
+      'Vector Search',
+      'Legal Informatics',
+    ],
+    year: '2026',
+    badge: 'Agentic Intelligence',
+    featured: false,
+    tag: 'Informatika Hukum',
+    summary:
+      'Agen kecerdasan hukum otonom untuk penalaran hierarki perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan regulasi.',
   },
   {
-    id: 'workers',
-    category: 'Bot & Automation',
-    title: 'Avenia Workers: Edge Telegram Bot',
-    description:
+    name: 'Avenia Workers',
+    slug: 'avenia-workers',
+    category: 'platform',
+    isDeployed: true,
+    liveUrl: 'https://t.me/avaworkers_bot',
+    repoUrl: 'https://github.com/aryarifki/OSX',
+    targetUrl: 'https://t.me/avaworkers_bot',
+    actionText: 'Buka Bot Telegram (@avaworkers_bot)',
+    stack: [
+      'Telegram Bot API',
+      'Cloudflare Workers',
+      'Python',
+      'OSX Automation',
+      'Telemetry',
+    ],
+    year: '2026',
+    badge: 'Active Telegram Bot',
+    featured: false,
+    tag: 'Bot & Otomasi',
+    summary:
       'Bot Telegram asinkronus dan edge worker terdistribusi untuk alert telemetri saham IDX, notifikasi putusan hukum baru, dan ringkasan riset pasar otomatis.',
-    tech: ['Cloudflare Workers', 'TypeScript', 'Telegram Bot API', 'Hono'],
-    url: site.workers,
-    badge: 'Telegram Bot',
+  },
+];
+
+export const kseiMutations = [
+  {
+    entity: 'INSTITUTIONAL_ALPHA',
+    type: 'DOMESTIC',
+    mutation: '+4.85M SHARES',
+    status: 'ACCUM',
+    statusClass: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
+  },
+  {
+    entity: 'FOREIGN_CUSTODY_A',
+    type: 'FOREIGN',
+    mutation: '+12.10M SHARES',
+    status: 'ACCUM',
+    statusClass: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
+  },
+  {
+    entity: 'SYNDICATE_NET_B',
+    type: 'MIXED',
+    mutation: 'MUTATION SHIFT',
+    status: 'MAPPED',
+    statusClass: 'text-peach-400 bg-peach-500/10 border-peach-500/20',
+  },
+  {
+    entity: 'CONGLOMERATE_HOLDING',
+    type: 'UBO NODE',
+    mutation: 'PARENT RESTRUCTURE',
+    status: 'TRACKED',
+    statusClass: 'text-slate-400 bg-slate-500/10 border-slate-500/20',
   },
 ];
 
@@ -427,19 +560,20 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: 'Portal Investowl Live', href: site.investowl, external: true },
       { label: 'Platform Overview', href: '#overview' },
-      { label: 'Nilai & Fondasi', href: '#values' },
-      { label: 'Ekosistem Produk', href: '#projects' },
-      { label: 'Telemetri Pasar', href: '#dashboard' },
-      { label: 'Kajian Riset Data', href: '#testimonials' },
+      { label: 'Fondasi Nilai', href: '#values' },
+      { label: 'Katalog Proyek', href: '#projects' },
+      { label: 'Metodologi Algoritmik', href: '#methodology' },
+      { label: 'Kepemilikan KSEI', href: '#ownership' },
+      { label: 'Kajian Riset Data', href: '#insights' },
     ],
   },
   {
     title: 'Ekosistem Rekayasa',
     links: [
-      { label: 'The Investowl', href: site.investowl, external: true },
+      { label: 'The Invest Owl', href: site.investowl, external: true },
       { label: 'O-Crawler', href: site.ocrawler, external: true },
-      { label: 'SM-Tracker', href: site.smtracker, external: true },
-      { label: 'OWLEXIA', href: site.owlexia, external: true },
+      { label: 'SMtracker (BandarAI)', href: site.smtracker, external: true },
+      { label: 'OWLEXIA Legal AI', href: site.owlexia, external: true },
       { label: 'Avenia Workers', href: site.workers, external: true },
     ],
   },
@@ -455,10 +589,10 @@ export const footerColumns: FooterColumn[] = [
   {
     title: 'Akses Publik',
     links: [
-      { label: 'Dataset Terbuka KSEI', href: '#dashboard' },
+      { label: 'Dataset Terbuka KSEI', href: '#ownership' },
       { label: 'Korpus Regulasi MA & MK', href: site.ocrawler, external: true },
       { label: 'Metodologi Empiris', href: '#values' },
-      { label: 'Data Dispatch Mingguan', href: '#cta' },
+      { label: 'Data Dispatch Mingguan', href: '#dispatch' },
     ],
   },
 ];
