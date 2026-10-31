@@ -1,32 +1,23 @@
 {
   "name": "avenia-site",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Personal landing page for avenia.my.id, rendered statically with DVE (Deserve View Engine).",
   "type": "module",
-  "description": "Avenia.id — quantitative market intelligence landing page, built with Astro and Tailwind CSS.",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=20"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.4.8",
-    "tailwindcss": "^4.2.4"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.12",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.7"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/dev.mjs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aryarifki/adryan.git"
+    "url": "git+https://github.com/aryarifki/aryarifki.github.io.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@neabyte/dve": "^0.1.1"
+  }
 }

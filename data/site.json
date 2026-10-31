@@ -1,0 +1,399 @@
+{
+  "site": {
+    "domain": "avenia.my.id",
+    "url": "https://avenia.my.id",
+    "name": "avenia.id",
+    "fullName": "avenia.id — Riset Data & Visualisasi Realita",
+    "tagline": "Quantitative Market Intelligence & Smart Money Telemetry",
+    "brandKicker": "Independent Data Journalism & Public Quant Analytics",
+    "themeColor": "#141210",
+    "repoUrl": "https://github.com/aryarifki/aryarifki.github.io",
+    "year": 2026
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/aryarifki",
+      "handle": "@aryarifki",
+      "icon": "github",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>"
+    },
+    {
+      "label": "The Investowl",
+      "url": "https://investowl.avenia.my.id/",
+      "handle": "investowl",
+      "icon": "trending-up",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"></polyline><polyline points=\"17 6 23 6 23 12\"></polyline></svg>"
+    },
+    {
+      "label": "Komunitas InvestOwl (@theinvestowl_id)",
+      "url": "https://t.me/theinvestowl_id",
+      "handle": "@theinvestowl_id",
+      "icon": "send",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>"
+    },
+    {
+      "label": "O-Crawler Portal",
+      "url": "https://ocrawler.avenia.my.id/",
+      "handle": "ocrawler",
+      "icon": "database",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>"
+    },
+    {
+      "label": "Avenia Workers (@avaworkers_bot)",
+      "url": "https://t.me/avaworkers_bot",
+      "handle": "@avaworkers_bot",
+      "icon": "send",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>"
+    }
+  ],
+  "telemetry": [
+    {
+      "value": "890+",
+      "label": "Emiten BEI Terindeks",
+      "sub": "Sinkronisasi T+1 & HMM Regimes"
+    },
+    {
+      "value": "2.400+",
+      "label": "Putusan Hukum & Regulasi",
+      "sub": "MA, MK, & Peraturan Resmi"
+    },
+    {
+      "value": "< 0.5ms",
+      "label": "Latensi L1/L2 Cache",
+      "sub": "In-Memory RAM + Redis Cluster"
+    },
+    {
+      "value": "100%",
+      "label": "Data Empiris Terbuka",
+      "sub": "Dataset KSEI, IDX, & MA Teraudit"
+    }
+  ],
+  "categories": [
+    {
+      "key": "all",
+      "label": "Semua Proyek",
+      "count": 5
+    },
+    {
+      "key": "quant",
+      "label": "Pasar Modal & Quant",
+      "count": 2
+    },
+    {
+      "key": "legal",
+      "label": "Legal AI & Ingestion",
+      "count": 2
+    },
+    {
+      "key": "platform",
+      "label": "Bot & Automation",
+      "count": 1
+    }
+  ],
+  "bento": [
+    {
+      "id": "methodology",
+      "size": "large",
+      "badge": "Fondasi Empiris",
+      "title": "Pedoman Data Tanpa Kompromi",
+      "desc": "Setiap investigasi, grafik, dan artikel bertolak dari dataset resmi (KSEI, IDX, BPS, Mahkamah Agung) yang teraudit, dapat diverifikasi, dan terbuka untuk diunduh publik.",
+      "stat": "100%",
+      "statLabel": "Open Verifiable Data",
+      "icon": "database"
+    },
+    {
+      "id": "viz",
+      "size": "medium",
+      "badge": "M3 Expressive Viz",
+      "title": "Visualisasi Realita Tajam",
+      "desc": "Bukan sekadar chart statis. Visualisasi dinamis mengungkap dinamika konsentrasi modal, zona perangkap ritel, dan anomali regulasi secara intuitif.",
+      "stat": "T+10",
+      "statLabel": "Real Microstructure Sync",
+      "icon": "chart"
+    },
+    {
+      "id": "ethics",
+      "size": "small",
+      "badge": "Objektivitas Murni",
+      "title": "Tanpa Sensasi, Tanpa Afiliasi",
+      "desc": "Bebas dari clickbait finansial dan spekulasi emosional. Riset kami murni berpijak pada matematika, kalkulasi inferensial, dan fakta hukum.",
+      "stat": "0%",
+      "statLabel": "Sponsored Noise",
+      "icon": "shield"
+    }
+  ],
+  "projects": [
+    {
+      "name": "The Invest Owl",
+      "slug": "investowl",
+      "category": "quant",
+      "isDeployed": true,
+      "liveUrl": "https://investowl.avenia.my.id/",
+      "communityUrl": "https://t.me/theinvestowl_id",
+      "repoUrl": "https://github.com/aryarifki/investowl",
+      "targetUrl": "https://investowl.avenia.my.id/",
+      "actionText": "Luncurkan Web App",
+      "stack": [
+        "Next.js 16",
+        "FastAPI",
+        "Python 3.10+",
+        "PostgreSQL",
+        "Redis L1/L2",
+        "Tailwind CSS v4"
+      ],
+      "year": "2026",
+      "badge": "Flagship Platform",
+      "featured": true,
+      "tag": "Pasar Modal & BEI",
+      "summary": "Platform riset institusional kuantitatif menganalisis Bandarmologi (Smart Money Flow) dan Foreign Flow saham BEI dengan model Gaussian HMM dan Impulse Response Functions.",
+      "en": "Institutional-grade quantitative analytics platform tracking Smart Money and Foreign Flow across Indonesian equities using HMM and econometric models."
+    },
+    {
+      "name": "O-Crawler",
+      "slug": "ocrawler",
+      "category": "legal",
+      "isDeployed": true,
+      "liveUrl": "https://ocrawler.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/O-Crawler",
+      "targetUrl": "https://ocrawler.avenia.my.id/",
+      "actionText": "Buka Portal O-Crawler",
+      "stack": [
+        "FastAPI",
+        "PostgreSQL",
+        "Cloudflare R2",
+        "Anti-WAF curl_cffi",
+        "WebSocket GUI"
+      ],
+      "year": "2026",
+      "badge": "High-Speed Ingestion",
+      "featured": true,
+      "tag": "Big Data & Legal",
+      "summary": "Engine ingestion regulasi hukum berkekuatan tinggi melahap peraturan.go.id, putusan Mahkamah Agung, dan Mahkamah Konstitusi RI dengan TLS impersonation dan GUI modern.",
+      "en": "High-speed legal data ingestion engine crawling statutory regulations and supreme court rulings with anti-WAF TLS impersonation and real-time GUI."
+    },
+    {
+      "name": "SMtracker (BandarAI)",
+      "slug": "smtracker",
+      "category": "quant",
+      "isDeployed": false,
+      "liveUrl": null,
+      "repoUrl": "https://github.com/aryarifki/SMtracker",
+      "targetUrl": "https://github.com/aryarifki/SMtracker",
+      "actionText": "Periksa Source Code",
+      "stack": [
+        "Python 3.10+",
+        "Playwright",
+        "scikit-learn",
+        "PostgreSQL",
+        "Telegram Bot API"
+      ],
+      "year": "2025",
+      "badge": "Quantitative Engine",
+      "featured": false,
+      "tag": "Bandarmology & AI",
+      "summary": "Pipeline data kuantitatif mengaudit akumulasi smart-money, menjalankan Wyckoff scanner otomatis, dan self-healing database 5 pilar dengan asisten bot Telegram.",
+      "en": "End-to-end data engineering pipeline auditing smart-money accumulation to statistically evaluate price trajectories with automated Telegram alerts."
+    },
+    {
+      "name": "OWLEXIA Legal AI",
+      "slug": "owlexia",
+      "category": "legal",
+      "isDeployed": false,
+      "liveUrl": "https://owlexia.avenia.my.id/",
+      "repoUrl": "https://github.com/aryarifki/owlexia",
+      "targetUrl": "https://github.com/aryarifki/owlexia",
+      "actionText": "Spesifikasi & Kode Sumber",
+      "stack": [
+        "Python",
+        "LLM Reasoner",
+        "Agentic AI",
+        "Vector Search",
+        "Legal Informatics"
+      ],
+      "year": "2026",
+      "badge": "Agentic Intelligence",
+      "featured": false,
+      "tag": "Informatika Hukum",
+      "summary": "Agen kecerdasan hukum otonom untuk penalaran hierarki perundang-undangan Indonesia, penelusuran yurisprudensi MA/MK, dan audit kepatuhan regulasi.",
+      "en": "Autonomous legal intelligence agentic AI for Indonesian statutory law reasoning, jurisprudence retrieval, and automated legal compliance analysis."
+    },
+    {
+      "name": "Avenia Workers",
+      "slug": "avenia-workers",
+      "category": "platform",
+      "isDeployed": true,
+      "liveUrl": "https://t.me/avaworkers_bot",
+      "repoUrl": "https://github.com/aryarifki/OSX",
+      "targetUrl": "https://t.me/avaworkers_bot",
+      "actionText": "Buka Bot Telegram (@avaworkers_bot)",
+      "stack": [
+        "Telegram Bot API",
+        "Cloudflare Workers",
+        "Python",
+        "OSX Automation",
+        "Telemetry"
+      ],
+      "year": "2026",
+      "badge": "Active Telegram Bot",
+      "featured": false,
+      "tag": "Bot & Automation",
+      "summary": "Asisten bot Telegram cerdas dan sistem orkestrasi worker untuk otomatisasi operasional, telemetri server, dan manajemen layanan komputasi ekosistem Avenia.",
+      "en": "Intelligent Telegram bot assistant and worker orchestration system for operational automation, server telemetry, and service management."
+    }
+  ],
+  "insights": [
+    {
+      "title": "Anatomi Perangkap Modal Ritel BEI: Di Balik Fenomena 'Pahlawan Bursa'",
+      "slug": "anatomi-perangkap-modal-ritel",
+      "category": "Pasar Modal",
+      "date": "Oktober 2026",
+      "readTime": "6 menit baca",
+      "badge": "Dataset Tersedia",
+      "summary": "Analisis inferensial terhadap 464 ribu SID di saham-saham likuid: Bagaimana rotasi dari akun nominee asing ke ritel domestik membentuk zona underwater yang persisten.",
+      "sparkline": [
+        74,
+        68,
+        62,
+        58,
+        52
+      ]
+    },
+    {
+      "title": "Pemetaan Big Data Regulasi: Mengukur Disharmoni Regulasi di Indonesia",
+      "slug": "disharmoni-regulasi-usaha",
+      "category": "Hukum & Tata Kelola",
+      "date": "September 2026",
+      "readTime": "8 menit baca",
+      "badge": "Corpus MA & MK",
+      "summary": "Mengurai relasi antara 2.400+ teks putusan judicial review (MK & MA) dengan tumpang tindih dalam 34.000 korpus peraturan daerah dan sektoral pusat.",
+      "sparkline": [
+        22,
+        29,
+        38,
+        45,
+        54
+      ]
+    },
+    {
+      "title": "Smart Money Flow: Mengapa Saham Defensif BUMN Menjadi Shelter Kuartal III",
+      "slug": "smart-money-shelter-bumn",
+      "category": "Makroekonomi",
+      "date": "Agustus 2026",
+      "readTime": "5 menit baca",
+      "badge": "Data Flow KSEI",
+      "summary": "Membedah likuiditas perbankan dan rotasi institusional asing saat volatilitas pasar regional memuncak menjelang akhir tahun fiskal.",
+      "sparkline": [
+        40,
+        48,
+        55,
+        63,
+        60
+      ]
+    }
+  ],
+  "newsletter": {
+    "heading": "Dapatkan Laporan Riset Mingguan Langsung di Inbox Anda",
+    "sub": "Bukan spam. Tanpa sensasi. Hanya visualisasi data tajam, kajian inferensial pasar modal, dan ringkasan hukum yang siap diuji.",
+    "cta": "Langganan Data Dispatch",
+    "microcopy": "Gratis setiap Senin pagi. Berhenti langganan kapan saja."
+  },
+  "i18n": {
+    "en": {
+      "lang": "id",
+      "htmlLang": "id",
+      "title": "avenia.id — Quantitative Market Intelligence & Telemetry",
+      "description": "Platform analitik kuantitatif, pelacakan smart-money (bandarmologi), dan pemetaan kepemilikan saham bursa Indonesia (BEI) berbasis matematika inferensial & data empiris terbuka.",
+      "nav": {
+        "overview": "[01] OVERVIEW",
+        "values": "[02] VALUES",
+        "projects": "[03] PRODUCTS",
+        "telemetry": "[04] TELEMETRY",
+        "ownership": "[05] STRUCTURE",
+        "insights": "[06] RISET DATA",
+        "cta": "Buka Investowl ↗"
+      },
+      "hero": {
+        "badge": "OPEN EMPIRICAL DATA • PUBLIC RESEARCH",
+        "headlinePre": "Melihat Realita,",
+        "headlineHighlight": "Dipandu oleh Data.",
+        "sub": "Platform riset data independen, analitik pasar modal institusional, dan mesin kecerdasan regulasi hukum. Membedah fenomena nyata tanpa sensasi spekulatif.",
+        "ctaPrimary": "Lihat 5 Proyek Unggulan",
+        "ctaSecondary": "Metodologi Empiris"
+      },
+      "bento": {
+        "heading": "The Avenia Way",
+        "sub": "Tiga pilar metodologi yang membedakan analisis Avenia dari spekulasi pasar konvensional."
+      },
+      "telemetry": {
+        "kicker": "Ekosistem & Arsitektur Inti",
+        "heading": "Sinergi Data Pipeline, Microservices & Edge Security",
+        "sub": "Integrasi menyeluruh dari pengikisan data anti-WAF, penyimpanan multi-tier terdistribusi, hingga antarmuka analitik Next.js 16 berkecepatan tinggi."
+      },
+      "projects": {
+        "kicker": "Karya Rekayasa Nyata",
+        "heading": "Proyek Unggulan & Ekosistem",
+        "sub": "Aplikasi web berkinerja tinggi, pipeline kuantitatif, dan bot otomasi yang aktif beroperasi di ekosistem Avenia."
+      },
+      "insights": {
+        "kicker": "Laporan Investigasi Kuantitatif",
+        "heading": "Featured Insights & Riset Terbuka",
+        "sub": "Kajian mendalam berbasis dataset resmi yang dapat diaudit publik, terbebas dari bias sensasi pasar."
+      },
+      "footer": {
+        "tagline": "Melihat realita berdasarkan pedoman data empiris yang objektif.",
+        "rights": "Hak cipta dilindungi undang-undang. Seluruh dataset disediakan untuk kepentingan riset & edukasi publik."
+      }
+    }
+  },
+  "values": [
+    {
+      "num": "// VALUE_01",
+      "title": "Quantitative Rigor",
+      "desc": "Kalkulasi algoritmik, model statistik matematika, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pasar modal.",
+      "icon": "shield"
+    },
+    {
+      "num": "// VALUE_02",
+      "title": "Data Transparency",
+      "desc": "Visibilitas tanpa filter terhadap transaksi broker, mutasi kepemilikan KSEI, dan parameter volume foreign flow tanpa heuristik tersembunyi.",
+      "icon": "database"
+    },
+    {
+      "num": "// VALUE_03",
+      "title": "Market Intelligence",
+      "desc": "Pelacakan institusi tingkat lanjut, pemetaan fase struktural Wyckoff, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).",
+      "icon": "cpu"
+    }
+  ],
+  "kseiMutations": [
+    {
+      "entity": "INSTITUTIONAL_ALPHA",
+      "type": "DOMESTIC",
+      "mutation": "+4.85M SHARES",
+      "status": "ACCUM",
+      "statusClass": "badge-positive"
+    },
+    {
+      "entity": "FOREIGN_CUSTODY_A",
+      "type": "FOREIGN",
+      "mutation": "+12.10M SHARES",
+      "status": "ACCUM",
+      "statusClass": "badge-positive"
+    },
+    {
+      "entity": "SYNDICATE_NET_B",
+      "type": "MIXED",
+      "mutation": "MUTATION SHIFT",
+      "status": "MAPPED",
+      "statusClass": "badge-neutral"
+    },
+    {
+      "entity": "CONGLOMERATE_HOLDING",
+      "type": "UBO NODE",
+      "mutation": "PARENT RESTRUCTURE",
+      "status": "TRACKED",
+      "statusClass": "badge-neutral"
+    }
+  ]
+}

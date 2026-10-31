@@ -1,0 +1,40 @@
+<!-- Mobile & Tablet Navigation Drawer (Rendered outside header to prevent backdrop-filter containment) -->
+<div class="mobile-nav-drawer" id="mobile-nav-drawer" hidden>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <div class="mobile-nav-content" role="dialog" aria-modal="true" aria-label="Menu navigasi mobile">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-link">
+        <img src="/assets/resources/investowl-logo-v2.png" alt="Avenia logo" class="brand-logo-img" width="40" height="40">
+        <span class="mobile-brand-title">avenia<span class="brand-accent">.id</span></span>
+      </div>
+      <button type="button" class="mobile-close-btn" id="mobile-close-btn" aria-label="Tutup menu navigasi">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links" aria-label="Menu Mobile Links">
+      <a class="mobile-nav-link" href="#overview"><span>[01] OVERVIEW</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#values"><span>[02] VALUES</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#projects"><span>[03] PRODUCTS &amp; REPO</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#methodology"><span>[04] TELEMETRY</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#ownership"><span>[05] STRUCTURE</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#insights"><span>[06] RISET DATA</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="#dispatch"><span>[07] DATA DISPATCH</span><span aria-hidden="true">&rarr;</span></a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <a class="btn-primary-full" href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer">
+        <span>Luncurkan Web App Live</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
+      <a class="btn-secondary-full" href="https://github.com/aryarifki/aryarifki.github.io" target="_blank" rel="noopener noreferrer">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <span>Source Code Website</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
+    </div>
+  </div>
+</div>

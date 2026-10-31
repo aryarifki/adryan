@@ -1,0 +1,39 @@
+<header class="site-header" id="site-header">
+  <div class="container header-container">
+    <!-- Brand Identity (Avenia.id) -->
+    <a class="brand-logo-link" href="{{ base }}" aria-label="Avenia.id Halaman Utama">
+      <img src="/assets/resources/investowl-logo-v2.png" alt="Avenia logo" class="brand-logo-img" width="44" height="44">
+      <div class="brand-text">
+        <span class="brand-name">avenia<span class="brand-accent">.id</span></span>
+        <span class="brand-tag">Market Intelligence</span>
+      </div>
+    </a>
+
+    <!-- Desktop Technical Navigation -->
+    <nav class="desktop-nav" aria-label="Navigasi Utama">
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="#overview">[01] OVERVIEW</a></li>
+        <li><a class="nav-link" href="#values">[02] VALUES</a></li>
+        <li><a class="nav-link" href="#projects">[03] PRODUCTS</a></li>
+        <li><a class="nav-link" href="#methodology">[04] TELEMETRY</a></li>
+        <li><a class="nav-link" href="#ownership">[05] STRUCTURE</a></li>
+        <li><a class="nav-link" href="#insights">[06] RISET DATA</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header Right Actions: Live Launch CTA on desktop & Hamburger on mobile -->
+    <div class="header-right">
+      <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-header-action" aria-label="Buka Platform Investowl (Live)">
+        <span>Buka Investowl</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
+
+      <!-- Hamburger Toggle Button (Mobile & Tablet) -->
+      <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
+        <span class="burger-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>

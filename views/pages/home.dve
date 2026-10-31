@@ -1,0 +1,443 @@
+{{< layouts/main.dve}}
+{{#block title}}{{ site.name }} — Quantitative Market Intelligence &amp; Telemetry{{/block}}
+{{#block body}}
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 1: [01] OVERVIEW (HERO & LIVE RADAR TELEMETRY)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="hero-section" id="overview" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Hero Left: Strategic Proposition -->
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>KSEI &amp; BEI DATA PIPELINE ONLINE</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-headline">
+          Quantitative Market Intelligence &amp; Smart Money Telemetry
+        </h1>
+
+        <p class="hero-one-liner">
+          Platform analitik kuantitatif, pelacakan smart-money (bandarmologi), dan pemetaan kepemilikan saham bursa Indonesia (BEI) berbasis matematika inferensial &amp; data empiris terbuka.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Buka Platform Investowl (Live Web App)">
+            <span>Luncurkan Platform Live</span>
+            <span aria-hidden="true">&nearr;</span>
+          </a>
+          <a href="#projects" class="btn-secondary-link">
+            <span>Eksplorasi Katalog Proyek &darr;</span>
+          </a>
+        </div>
+
+        <!-- Metrics Ribbon -->
+        <div class="hero-metrics-ribbon" aria-label="Ringkasan Metrik Telemetri">
+          <div class="metric-cell">
+            <span class="metric-val mono">99.8%</span>
+            <span class="metric-lbl">Akurasi Data</span>
+          </div>
+          <div class="metric-cell">
+            <span class="metric-val mono">KSEI / BEI</span>
+            <span class="metric-lbl">Mutasi Harian T+1</span>
+          </div>
+          <div class="metric-cell">
+            <span class="metric-val mono">WYCKOFF</span>
+            <span class="metric-lbl">Phase Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right: Live Radar Telemetry Terminal -->
+      <div class="hero-visual-card" aria-label="Visualisasi Radar Telemetri Pasar">
+        <div class="telemetry-header-bar">
+          <div class="terminal-dots" aria-hidden="true">
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+          </div>
+          <span class="mono">RADAR_TELEMETRY_LIVE.IDX</span>
+        </div>
+
+        <div class="hero-img-container">
+          <img src="/assets/resources/hero-matrix.png" alt="Terminal Avenia live telemetry radar snapshot" width="560" height="280" loading="eager">
+        </div>
+
+        <div class="telemetry-ticker-grid">
+          <div class="ticker-item">
+            <span>SMART_MONEY</span>
+            <span class="ticker-bull">+12.4B ACC</span>
+          </div>
+          <div class="ticker-item">
+            <span>FOREIGN_FLOW</span>
+            <span class="ticker-bull">+84.2M NET</span>
+          </div>
+          <div class="ticker-item">
+            <span>DOMESTIC_ACC</span>
+            <span class="ticker-bear">-32.1M DIST</span>
+          </div>
+          <div class="ticker-item">
+            <span>REGIME_STATE</span>
+            <span class="ticker-neutral">ACCUMULATION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 2: [02] VALUES (CORE FOUNDATION & EVIDENCE-BASED RIGOR)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section values-section" id="values" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">CORE FOUNDATION</span>
+      <h2 id="values-heading" class="section-title">Engineered for Evidence-Based Market Precision</h2>
+      <p class="section-desc">
+        Investowl mengeliminasi noise pasar spekulatif dengan memadukan pemodelan kuantitatif matematika yang ketat dan telemetri struktural mikro pasar modal terverifikasi.
+      </p>
+    </div>
+
+    <div class="values-grid">
+      <article class="value-card">
+        <span class="value-num">// VALUE_01</span>
+        <h3 class="value-title">Quantitative Rigor</h3>
+        <p class="value-desc">
+          Kalkulasi algoritmik, model regresi Gaussian HMM, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pergerakan saham likuid.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <span class="value-num">// VALUE_02</span>
+        <h3 class="value-title">Data Transparency</h3>
+        <p class="value-desc">
+          Visibilitas tanpa sensor terhadap transaksi broker, laporan kepemilikan KSEI bulanan &gt;5%, serta parameter akumulasi foreign flow tanpa heuristik tertutup.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <span class="value-num">// VALUE_03</span>
+        <h3 class="value-title">Market Intelligence</h3>
+        <p class="value-desc">
+          Pelacakan sindikasi bandarmologi, pengenalan siklus struktural Wyckoff otomatis, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 3: [03] PRODUCTS & ECOSYSTEM (KATALOG KARYA & SOURCE CODE)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section products-section" id="projects" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">SYSTEM MODULES &amp; REPOSITORIES</span>
+      <h2 id="products-heading" class="section-title">Quantitative Product Suite &amp; Ecosystem</h2>
+      <p class="section-desc">
+        Aplikasi web analitik, pipeline kuantitatif, dan bot otomasi yang aktif beroperasi di ekosistem Avenia dengan kode sumber terbuka.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="project-filter-bar" role="tablist" aria-label="Filter kategori modul">
+      {{#each categories as cat~}}
+      <button 
+        type="button" 
+        class="filter-tab-btn {{#if @first}}active{{/if}}" 
+        data-filter="{{ cat.key }}" 
+        role="tab" 
+        aria-selected="{{#if @first}}true{{else}}false{{/if}}"
+      >
+        <span>{{ cat.label }}</span>
+        <span class="filter-count">{{ cat.count }}</span>
+      </button>
+      {{~/each}}
+    </div>
+
+    <!-- Products / Projects Grid -->
+    <div class="products-grid" id="projects-grid">
+      {{#each projects as p~}}
+      <article class="product-card {{#if p.featured}}featured-wide{{/if}}" data-category="{{ p.category }}" data-slug="{{ p.slug }}">
+        <div>
+          <div class="product-tag-bar">
+            <span class="product-code">{{ p.tag }} // {{ p.year }}</span>
+            {{#if p.isDeployed}}
+            <span class="product-status-pill status-live" title="Layanan aktif dan dapat diakses">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>LIVE</span>
+            </span>
+            {{else}}
+            <span class="product-status-pill status-source" title="Kode sumber aktif di GitHub">
+              <span>SOURCE CODE</span>
+            </span>
+            {{/if}}
+          </div>
+
+          <h3 class="product-name">
+            <a href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer">
+              {{ p.name }}
+            </a>
+          </h3>
+
+          <p class="product-description">
+            {{ p.summary }}
+          </p>
+
+          <div class="product-stack-list" aria-label="Teknologi yang digunakan">
+            {{#each p.stack as s~}}
+            <span class="stack-tag">{{ s }}</span>
+            {{~/each}}
+          </div>
+        </div>
+
+        <div class="product-card-footer">
+          <a href="{{ p.targetUrl }}" target="_blank" rel="noopener noreferrer" class="product-main-btn" aria-label="Akses {{ p.name }}">
+            {{#if p.actionText}}
+              <span>{{ p.actionText }}</span>
+            {{else}}
+              {{#if p.isDeployed}}
+                <span>Luncurkan Web App</span>
+              {{else}}
+                <span>Periksa Source Code</span>
+              {{/if}}
+            {{/if}}
+            <span aria-hidden="true">&nearr;</span>
+          </a>
+
+          <div class="product-links-group">
+            {{#if p.communityUrl}}
+            <a href="{{ p.communityUrl }}" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Gabung Komunitas Telegram" aria-label="Komunitas Telegram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </a>
+            {{/if}}
+
+            {{#if p.repoUrl}}
+            <a href="{{ p.repoUrl }}" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Buka Repositori GitHub" aria-label="Kode Sumber GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            {{/if}}
+          </div>
+        </div>
+      </article>
+      {{~/each}}
+    </div>
+
+    <!-- Landing Page Source Code Callout Banner -->
+    <div class="landing-source-banner">
+      <div class="source-banner-content">
+        <div class="source-banner-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </div>
+        <div>
+          <h4 class="source-banner-title">Kode Sumber Landing Page Ini</h4>
+          <p class="source-banner-desc">Halaman avenia.my.id dibangun &amp; dikompilasi statis dengan DVE (Deserve View Engine) tanpa runtime framework berat di sisi klien.</p>
+        </div>
+      </div>
+      <a href="https://github.com/aryarifki/aryarifki.github.io" target="_blank" rel="noopener noreferrer" class="btn-source-link">
+        <span>Buka Repositori di GitHub</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 4: [04] TELEMETRY (ANALYTICAL FRAMEWORK & VECTOR GRID)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section telemetry-section" id="methodology" aria-labelledby="telemetry-heading">
+  <div class="container">
+    <div class="telemetry-layout">
+      <div>
+        <span class="section-eyebrow">ANALYTICAL FRAMEWORK</span>
+        <h2 id="telemetry-heading" class="section-title">Systematic Algorithmic Processing</h2>
+        <p class="section-desc">
+          Investowl memproses transaksi bursa mentah, laporan kustodian KSEI, dan keterbukaan informasi emiten BEI melalui filter kuantitatif terstruktur.
+        </p>
+
+        <ul class="telemetry-list">
+          <li class="telemetry-item">
+            <span class="telemetry-icon">[01]</span>
+            <div>
+              <h4 class="telemetry-item-title">Bandarmology Accumulation Matrix</h4>
+              <p class="telemetry-item-text">
+                Menghitung skor akumulasi institusi menggunakan protokol pelacakan broker tertimbang volume (VWAP flow) dan deteksi anomali transfer crossing.
+              </p>
+            </div>
+          </li>
+          <li class="telemetry-item">
+            <span class="telemetry-icon">[02]</span>
+            <div>
+              <h4 class="telemetry-item-title">Wyckoff Phase Recognition</h4>
+              <p class="telemetry-item-text">
+                Pemetaan siklus struktural pasar otomatis dari fase akumulasi awal, spring, hingga breakout markup bervolume tinggi.
+              </p>
+            </div>
+          </li>
+          <li class="telemetry-item">
+            <span class="telemetry-icon">[03]</span>
+            <div>
+              <h4 class="telemetry-item-title">Foreign Flow Shock Analysis</h4>
+              <p class="telemetry-item-text">
+                Mengidentifikasi lonjakan arus dana asing bernilai signifikan dan memisahkan posisi institusi global dari transaksi ritel jangka pendek.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="visual-frame" aria-label="Visualisasi Grid Metrik Makro Finansial">
+        <img src="/assets/resources/macro-grid.png" alt="Investowl live market intelligence and ownership telemetry snapshot" width="600" height="420" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 5: [05] STRUCTURE (SIMULATED KSEI RADAR & NETWORK GRAPH)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section ownership-section" id="ownership" aria-labelledby="ownership-heading">
+  <div class="container">
+    <div class="ownership-grid">
+      <!-- 1. Narrative & Structural Context (Top on mobile, left on desktop) -->
+      <div class="ownership-narrative">
+        <span class="section-eyebrow">STRUCTURAL INTELLIGENCE</span>
+        <h2 id="ownership-heading" class="section-title">Mapping Indonesian Equity Market DNA</h2>
+        <p class="section-desc" style="margin-bottom: 1.25rem;">
+          Dengan mengindeks data kustodian sentral KSEI dan memetakan jaringan konglomerasi pengendali, Investowl memungkinkan trader melihat melampaui pergerakan harga dangkal menuju struktur penerima manfaat sebenarnya (Ultimate Beneficial Owner).
+        </p>
+        <p class="section-desc">
+          Temukan pola sindikasi broker, akun nominee terafiliasi, dan mutasi pemegang saham bulanan &gt;5% di seluruh emiten yang tercatat di Bursa Efek Indonesia.
+        </p>
+      </div>
+
+      <!-- 2. Simulated KSEI Mutation Radar Card -->
+      <div class="data-card" aria-label="Simulasi Data Radar Mutasi KSEI">
+        <div class="data-card-header">
+          <span>SAMPLE_KSEI_MUTATION_RADAR</span>
+          <span class="mono" style="color:var(--accent-amber);">LIVE_STREAM</span>
+        </div>
+        
+        <div class="table-scroll-hint" aria-hidden="true">
+          <span>&larr; Geser tabel untuk melihat seluruh kolom data &rarr;</span>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="table-simulated">
+            <thead>
+              <tr>
+                <th scope="col">ENTITY / BROKER</th>
+                <th scope="col">TYPE</th>
+                <th scope="col">MUTATION</th>
+                <th scope="col">STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each kseiMutations as km~}}
+              <tr>
+                <td>{{ km.entity }}</td>
+                <td>{{ km.type }}</td>
+                <td>{{ km.mutation }}</td>
+                <td><span class="{{ km.statusClass }}">{{ km.status }}</span></td>
+              </tr>
+              {{~/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="network-graph-card">
+          <img src="/assets/resources/graph-net.png" alt="Terminal Avenia BEI 1% and institutional network radar snapshot" width="560" height="180" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 6: [06] FEATURED INSIGHTS (RISET & JURNALISME DATA EMPIRIS)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section insights-section" id="insights" aria-labelledby="insights-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">RISET &amp; INVESTIGASI EMPIRIS</span>
+      <h2 id="insights-heading" class="section-title">Featured Insights &amp; Data Journalism</h2>
+      <p class="section-desc">
+        Kajian mendalam berbasis dataset resmi yang dapat diaudit publik, terbebas dari bias sensasi dan clickbait pasar.
+      </p>
+    </div>
+
+    <div class="insights-grid">
+      {{#each insights as i~}}
+      <article class="insight-card">
+        <div>
+          <div class="insight-topbar">
+            <span class="insight-category-chip">{{ i.category }}</span>
+            <span class="insight-dataset-badge">{{ i.badge }}</span>
+          </div>
+
+          <h3 class="insight-title">{{ i.title }}</h3>
+          <p class="insight-summary">{{ i.summary }}</p>
+        </div>
+
+        <!-- Dynamic Micro-Sparkline Chart -->
+        <div class="insight-sparkline-box" aria-hidden="true">
+          <svg viewBox="0 0 240 44" class="sparkline-svg">
+            <defs>
+              <linearGradient id="sparkgrad-{{ i.slug }}" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ffb879" stop-opacity="0.25"></stop>
+                <stop offset="100%" stop-color="#ffb879" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38 L 230 44 L 10 44 Z" fill="url(#sparkgrad-{{ i.slug }})"></path>
+            <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38" fill="none" stroke="#ffb879" stroke-width="2.2" stroke-linecap="round"></path>
+            <circle cx="230" cy="38" r="4" fill="#141210" stroke="#ffb879" stroke-width="2.5"></circle>
+          </svg>
+        </div>
+
+        <div class="insight-footer">
+          <span>{{ i.date }} &bull; {{ i.readTime }}</span>
+          <span class="insight-action-text">Kajian Lengkap &rarr;</span>
+        </div>
+      </article>
+      {{~/each}}
+    </div>
+  </div>
+</section>
+
+
+{{!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 7: DATA DISPATCH (NEWSLETTER & INTERACTIVE ACTION)
+     ══════════════════════════════════════════════════════════════════════ --}}
+<section class="section section-dark-cta" id="dispatch" aria-labelledby="dispatch-heading">
+  <div class="container">
+    <div class="dark-cta-card">
+      <span class="dark-cta-kicker">Data Dispatch Mingguan</span>
+      <h2 id="dispatch-heading" class="dark-cta-title">{{ newsletter.heading }}</h2>
+      <p class="dark-cta-sub">{{ newsletter.sub }}</p>
+
+      <!-- Newsletter Subscription Form -->
+      <form class="dark-cta-form" id="newsletter-form">
+        <div class="form-input-group">
+          <input type="email" class="dark-cta-input" placeholder="Masukkan alamat email Anda..." required aria-label="Alamat Email untuk Langganan">
+          <button type="submit" class="dark-cta-submit-btn">
+            <span>{{ newsletter.cta }}</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+        <p class="dark-cta-microcopy">{{ newsletter.microcopy }}</p>
+        <div id="newsletter-feedback" class="newsletter-feedback" style="display: none;" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{/block}}
+{{/}}
