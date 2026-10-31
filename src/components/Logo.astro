@@ -2,42 +2,100 @@
 interface Props {
   class?: string;
   href?: string;
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'lg';
+  showSubtitle?: boolean;
 }
 
-const { class: className = '', href = '/', size = 'md' } = Astro.props;
+const {
+  class: className = '',
+  href = '/',
+  size = 'md',
+  showSubtitle = true,
+} = Astro.props;
+
 const isSmall = size === 'sm';
+const isLarge = size === 'lg';
 ---
 
-<a href={href} class:list={['group inline-flex items-center gap-2.5', className]} aria-label="Avenia home">
+<a
+  href={href}
+  class:list={['group inline-flex items-center gap-2.5 transition-opacity hover:opacity-95', className]}
+  aria-label="Investowl.id — Avenia Halaman Utama"
+>
   <span
     class:list={[
-      'relative grid place-items-center overflow-hidden rounded-[11px] bg-gradient-to-br from-peach-200 via-peach-400 to-peach-600 text-ink-950 shadow-[0_10px_28px_-12px_rgba(255,154,68,0.9),inset_0_1px_0_rgba(255,255,255,0.5)] transition-transform duration-300 group-hover:-rotate-3',
-      isSmall ? 'size-8' : 'size-9',
+      'relative grid place-items-center overflow-hidden rounded-[11px] border border-peach-400/30 bg-gradient-to-br from-[#1b1526] via-[#120e1c] to-[#0a0812] text-peach-300 shadow-[0_8px_24px_-10px_rgba(255,184,121,0.55),inset_0_1px_0_rgba(255,255,255,0.12)] transition-transform duration-300 group-hover:-rotate-2 group-hover:scale-105 group-hover:border-peach-400/60',
+      isSmall ? 'size-8 p-1' : isLarge ? 'size-11 p-1.5' : 'size-9 p-1.5',
     ]}
   >
-    <span class="absolute inset-0 bg-[radial-gradient(circle_at_30%_15%,rgba(255,255,255,0.55),transparent_45%)]" aria-hidden="true"></span>
+    <span
+      class="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(255,184,121,0.22),transparent_65%)]"
+      aria-hidden="true"
+    ></span>
+
+    <!-- Elegant Minimalist InvestOwl Emblem SVG -->
     <svg
-      viewBox="0 0 24 24"
-      class:list={[isSmall ? 'size-[18px]' : 'size-5', 'relative']}
+      viewBox="0 0 48 48"
+      class="relative size-full"
       fill="none"
       stroke="currentColor"
-      stroke-width="2.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
       aria-hidden="true"
     >
-      <path d="M5.8 18.2 12 5.6l6.2 12.6"></path>
-      <path d="M8.8 14.2h6.4"></path>
-      <circle cx="19" cy="5.8" r="1.7" fill="currentColor" stroke="none"></circle>
+      <defs>
+        <linearGradient id="logoEmblemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFE3C8" />
+          <stop offset="45%" stop-color="#FFB879" />
+          <stop offset="100%" stop-color="#FF9033" />
+        </linearGradient>
+      </defs>
+
+      <!-- Shield Frame -->
+      <path
+        d="M24 4.5 L39 10 V23 C39 32.5 32.5 40.5 24 43.5 C15.5 40.5 9 32.5 9 23 V10 L24 4.5 Z"
+        stroke="url(#logoEmblemGrad)"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="opacity-90"
+      />
+      <!-- Brow / Horns -->
+      <path
+        d="M14 15.5 L20.5 19 L24 16.5 L27.5 19 L34 15.5"
+        stroke="url(#logoEmblemGrad)"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <!-- Telemetry Eyes -->
+      <circle cx="19" cy="24" r="4.5" stroke="url(#logoEmblemGrad)" stroke-width="1.6" />
+      <circle cx="19" cy="24" r="1.6" fill="url(#logoEmblemGrad)" />
+      <circle cx="29" cy="24" r="4.5" stroke="url(#logoEmblemGrad)" stroke-width="1.6" />
+      <circle cx="29" cy="24" r="1.6" fill="url(#logoEmblemGrad)" />
+      <!-- Sharp Beak -->
+      <polygon points="24,24.5 22.2,28.5 25.8,28.5" fill="url(#logoEmblemGrad)" />
+      <!-- Wings -->
+      <path
+        d="M15.5 31.5 C18.5 34.5 21 36.5 24 37.5 C27 36.5 29.5 34.5 32.5 31.5"
+        stroke="url(#logoEmblemGrad)"
+        stroke-width="1.6"
+        stroke-linecap="round"
+      />
     </svg>
   </span>
-  <span
-    class:list={[
-      'font-extrabold tracking-[-0.045em] text-white',
-      isSmall ? 'text-[17px]' : 'text-[19px]',
-    ]}
-  >
-    avenia<span class="text-peach-400">.id</span>
+
+  <span class="flex flex-col">
+    <span
+      class:list={[
+        'font-extrabold tracking-[-0.04em] text-white transition-colors group-hover:text-peach-200',
+        isSmall ? 'text-[16px] leading-tight' : 'text-[19px] leading-none',
+      ]}
+    >
+      Investowl<span class="text-peach-400">.id</span>
+    </span>
+    {showSubtitle && !isSmall && (
+      <span class="mt-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-slate-500">
+        Market Intelligence
+      </span>
+    )}
   </span>
 </a>

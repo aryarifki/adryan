@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { site } from '../data/site';
+import { newsletter, site } from '../data/site';
 ---
 
 <section id="cta" class="relative pb-20 pt-4 lg:pb-28" aria-labelledby="cta-title">
@@ -14,32 +14,32 @@ import { site } from '../data/site';
         <div class="absolute left-1/2 top-1/2 size-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.06]"></div>
         <div class="absolute left-1/2 top-1/2 size-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-peach-400/[0.08]"></div>
         <div class="dot-grid absolute inset-0 opacity-[0.18] [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]"></div>
-        <span class="absolute left-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[64px] font-bold text-peach-400/[0.09] lg:block">₿</span>
-        <span class="absolute right-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[64px] font-bold text-peach-400/[0.09] lg:block">Ξ</span>
+        <span class="absolute left-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[48px] font-bold text-peach-400/[0.08] lg:block">KSEI</span>
+        <span class="absolute right-[7%] top-1/2 hidden -translate-y-1/2 font-mono text-[48px] font-bold text-peach-400/[0.08] lg:block">IDX</span>
       </div>
 
       <div class="relative mx-auto max-w-2xl">
         <span class="inline-flex items-center gap-2 rounded-full border border-peach-400/20 bg-peach-400/[0.07] px-3 py-1.5 text-[8.5px] font-bold uppercase tracking-[0.2em] text-peach-300">
           <span class="size-1 rounded-full bg-peach-400"></span>
-          Open access
+          Data Dispatch Mingguan
         </span>
 
-        <h2 id="cta-title" class="mt-5 text-balance text-[2rem] font-extrabold leading-[1.08] tracking-[-0.04em] text-white sm:text-[2.6rem] lg:text-[3rem]">
-          Let’s turn market noise into an edge.
+        <h2 id="cta-title" class="mt-5 text-balance text-[2rem] font-extrabold leading-[1.08] tracking-[-0.04em] text-white sm:text-[2.6rem] lg:text-[2.9rem]">
+          {newsletter.heading}
         </h2>
         <p class="mx-auto mt-4 max-w-xl text-[14px] leading-7 text-slate-400 sm:text-[15px]">
-          Start with the live platform, or talk to us about a research desk for your
-          fund. Open methodology, auditable data, and no lock-in.
+          {newsletter.sub}
         </p>
 
-        <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <!-- Newsletter form / CTA buttons -->
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href={site.investowl}
             target="_blank"
             rel="noopener noreferrer"
             class="btn-primary group w-full sm:w-auto"
           >
-            Explore the platform
+            Luncurkan Platform Live
             <Icon
               name="arrow-up-right"
               size={16}
@@ -53,12 +53,12 @@ import { site } from '../data/site';
             class="btn-ghost w-full sm:w-auto"
           >
             <Icon name="telegram" size={14} class="text-peach-300" />
-            Join the community
+            Gabung Komunitas Telegram
           </a>
         </div>
 
         <p class="mt-5 text-[9px] font-medium uppercase tracking-[0.18em] text-slate-600">
-          Independent research · Open methodology · Built in Indonesia
+          {newsletter.microcopy} &bull; Riset Independen &bull; Dataset KSEI, IDX &amp; MA
         </p>
       </div>
     </div>

@@ -2,10 +2,10 @@
 import { stats } from '../data/site';
 ---
 
-<section class="relative pb-6" aria-label="Platform metrics">
+<section class="relative pb-6" aria-label="Metrik telemetri platform">
   <div class="container-page">
     <div
-      class="reveal grid grid-cols-1 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)] backdrop-blur-md sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+      class="reveal grid grid-cols-1 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)] backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4 sm:divide-y-0 lg:divide-x"
     >
       {
         stats.map((stat, index) => (
@@ -14,10 +14,10 @@ import { stats } from '../data/site';
               0{index + 1}
             </span>
             <div class="flex items-end gap-3">
-              <span class="font-mono text-[2.15rem] font-semibold leading-none tracking-[-0.06em] text-white sm:text-[2.4rem]">
+              <span class="font-mono text-[2.15rem] font-semibold leading-none tracking-[-0.06em] text-white sm:text-[2.3rem]">
                 {stat.value}
               </span>
-              <span class="max-w-[92px] pb-1 text-[8.5px] font-bold uppercase leading-[1.5] tracking-[0.16em] text-peach-400">
+              <span class="max-w-[100px] pb-1 text-[8.5px] font-bold uppercase leading-[1.4] tracking-[0.14em] text-peach-400">
                 {stat.label}
               </span>
             </div>
