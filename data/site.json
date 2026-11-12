@@ -45,6 +45,13 @@
       "handle": "@avaworkers_bot",
       "icon": "send",
       "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>"
+    },
+    {
+      "label": "Gapura Media (@gapuramedia)",
+      "url": "https://instagram.com/gapuramedia",
+      "handle": "@gapuramedia",
+      "icon": "instagram",
+      "iconSvg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>"
     }
   ],
   "telemetry": [
@@ -73,7 +80,7 @@
     {
       "key": "all",
       "label": "Semua Proyek",
-      "count": 5
+      "count": 6
     },
     {
       "key": "quant",
@@ -87,8 +94,8 @@
     },
     {
       "key": "platform",
-      "label": "Bot & Automation",
-      "count": 1
+      "label": "Platform & Automation",
+      "count": 2
     }
   ],
   "bento": [
@@ -240,6 +247,32 @@
       "tag": "Bot & Automation",
       "summary": "Asisten bot Telegram cerdas dan sistem orkestrasi worker untuk otomatisasi operasional, telemetri server, dan manajemen layanan komputasi ekosistem Avenia.",
       "en": "Intelligent Telegram bot assistant and worker orchestration system for operational automation, server telemetry, and service management."
+    },
+    {
+      "name": "Gapura Media Engine",
+      "slug": "gapura",
+      "category": "platform",
+      "isDeployed": true,
+      "liveUrl": "https://gapura.avenia.my.id/",
+      "communityUrl": null,
+      "instagramUrl": "https://instagram.com/gapuramedia",
+      "repoUrl": "https://github.com/aryarifki/gapura",
+      "targetUrl": "https://gapura.avenia.my.id/",
+      "actionText": "Buka Dashboard Gapura",
+      "stack": [
+        "Node.js",
+        "Express",
+        "Satori + Sharp",
+        "Multi-Agent AI",
+        "PostgreSQL",
+        "n8n Workflow"
+      ],
+      "year": "2026",
+      "badge": "Newsroom AI Automation",
+      "featured": false,
+      "tag": "Editorial AI & Instagram",
+      "summary": "Platform otomasi ruang redaksi modern untuk akun Instagram @gapuramedia dengan 6 agen AI otonom, workflow n8n, dan render deterministik SVG-to-PNG.",
+      "en": "Modern autonomous newsroom editorial automation platform producing quantitative market & legal regulation Instagram content with multi-agent AI and SVG-to-PNG rendering."
     }
   ],
   "insights": [
@@ -318,7 +351,7 @@
         "headlinePre": "Melihat Realita,",
         "headlineHighlight": "Dipandu oleh Data.",
         "sub": "Platform riset data independen, analitik pasar modal institusional, dan mesin kecerdasan regulasi hukum. Membedah fenomena nyata tanpa sensasi spekulatif.",
-        "ctaPrimary": "Lihat 5 Proyek Unggulan",
+        "ctaPrimary": "Lihat 6 Proyek Unggulan",
         "ctaSecondary": "Metodologi Empiris"
       },
       "bento": {

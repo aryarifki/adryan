@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet (Obsidian Noir Quantitative Theme) -->
-  <link rel="stylesheet" href="/assets/style.css?v=20261027-v4">
+  <link rel="stylesheet" href="/assets/style.css?v=20261112-v1">
 
   <!-- JSON-LD Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
@@ -84,6 +84,6 @@
   {{> partials/drawer.dve}}
 
   <!-- Progressive Interactive Script (< 5KB) -->
-  <script src="/assets/main.js?v=20261027-v4" defer></script>
+  <script src="/assets/main.js?v=20261112-v1" defer></script>
 </body>
 </html>
