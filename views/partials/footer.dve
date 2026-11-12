@@ -17,6 +17,8 @@
         <span class="footer-heading">Platform Directory</span>
         <ul class="footer-menu">
           <li><a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer">Portal Investowl Live &nearr;</a></li>
+          <li><a href="https://terminal.avenia.my.id/" target="_blank" rel="noopener noreferrer">Terminal Avenia Live &nearr;</a></li>
+          <li><a href="https://gapura.avenia.my.id/" target="_blank" rel="noopener noreferrer">Gapura Media Engine &nearr;</a></li>
           <li><a href="#overview">[01] Platform Overview</a></li>
           <li><a href="#values">[02] Core Foundation</a></li>
           <li><a href="#projects">[03] Product &amp; Ecosystem</a></li>

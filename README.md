@@ -14,7 +14,7 @@ Dirancang dengan prinsip **Progressive Engagement**:
 ```
 adryan/
 ├── data/
-│   └── site.json          # Data terpusat: metadata situs, profil, 6 proyek, telemetri, insights
+│   └── site.json          # Data terpusat: metadata situs, profil, 7 proyek, telemetri, insights
 ├── views/
 │   ├── layouts/
 │   │   └── main.dve       # HTML shell: head, meta SEO, JSON-LD Schema, script injection
@@ -90,10 +90,10 @@ Semua data proyek disimpan secara terstruktur di dalam file [`data/site.json`](f
 Jika Anda menambahkan kategori baru, perbarui juga array `"categories"` di `data/site.json`:
 ```json
 "categories": [
-  { "key": "all", "label": "Semua Proyek", "count": 6 },
-  { "key": "quant", "label": "Pasar Modal & Quant", "count": 2 },
+  { "key": "all", "label": "Semua Proyek", "count": 7 },
+  { "key": "quant", "label": "Pasar Modal & Quant", "count": 3 },
   { "key": "legal", "label": "Legal AI & Ingestion", "count": 2 },
-  { "key": "platform", "label": "Platform & DevOps", "count": 2 }
+  { "key": "platform", "label": "Platform & Automation", "count": 2 }
 ]
 ```
 Setelah mengedit `data/site.json`, jalankan `npm run build` untuk menerapkan perubahan ke `dist/`.
