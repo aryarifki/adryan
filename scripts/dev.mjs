@@ -30,6 +30,14 @@ createServer((req, res) => {
       // Rebuild only for page requests so assets stay fast.
       build({ quiet: true })
       pathname += 'index.html'
+    } else if (!extname(pathname)) {
+      // Clean URL support without trailing slash (e.g. /privacy)
+      build({ quiet: true })
+      if (existsSync(join(distDir, pathname, 'index.html'))) {
+        pathname += '/index.html'
+      } else if (existsSync(join(distDir, `${pathname}.html`))) {
+        pathname += '.html'
+      }
     }
 
     const filePath = normalize(join(distDir, pathname))

@@ -135,7 +135,7 @@
           var id = entry.target.id;
           desktopNavLinks.forEach(function (link) {
             var href = link.getAttribute('href');
-            if (href === '#' + id) {
+            if (href && (href === '#' + id || href === '/#' + id || href.endsWith('#' + id))) {
               link.setAttribute('aria-current', 'true');
             } else {
               link.removeAttribute('aria-current');

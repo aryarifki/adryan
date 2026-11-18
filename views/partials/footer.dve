@@ -14,17 +14,18 @@
 
       <!-- Col 2: Platform Directory -->
       <div class="footer-col-nav">
-        <span class="footer-heading">Platform Directory</span>
+        <span class="footer-heading">Platform &amp; Legal</span>
         <ul class="footer-menu">
           <li><a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer">Portal Investowl Live &nearr;</a></li>
           <li><a href="https://terminal.avenia.my.id/" target="_blank" rel="noopener noreferrer">Terminal Avenia Live &nearr;</a></li>
           <li><a href="https://gapura.avenia.my.id/" target="_blank" rel="noopener noreferrer">Gapura Media Engine &nearr;</a></li>
-          <li><a href="#overview">[01] Platform Overview</a></li>
-          <li><a href="#values">[02] Core Foundation</a></li>
-          <li><a href="#projects">[03] Product &amp; Ecosystem</a></li>
-          <li><a href="#methodology">[04] Telemetry Engine</a></li>
-          <li><a href="#ownership">[05] Structural Intelligence</a></li>
-          <li><a href="#insights">[06] Riset &amp; Jurnalisme Data</a></li>
+          <li><a href="/#overview">[01] Platform Overview</a></li>
+          <li><a href="/#values">[02] Core Foundation</a></li>
+          <li><a href="/#projects">[03] Product &amp; Ecosystem</a></li>
+          <li><a href="/#methodology">[04] Telemetry Engine</a></li>
+          <li><a href="/#ownership">[05] Structural Intelligence</a></li>
+          <li><a href="/#insights">[06] Riset &amp; Jurnalisme Data</a></li>
+          <li><a href="/privacy/">[07] Kebijakan Privasi (Privacy) &rarr;</a></li>
         </ul>
       </div>
 
@@ -57,9 +58,16 @@
     <div class="footer-divider" aria-hidden="true"></div>
 
     <div class="footer-bottom-bar">
-      <p class="footer-copyright">
-        &copy; {{ site.year }} {{ site.name }} (Investowl). Hak cipta dilindungi undang-undang. Seluruh dataset disediakan untuk kepentingan riset &amp; edukasi publik.
-      </p>
+      <div class="footer-bottom-info">
+        <p class="footer-copyright">
+          &copy; {{ site.year }} {{ site.name }} (Investowl). Hak cipta dilindungi undang-undang. Seluruh dataset disediakan untuk kepentingan riset &amp; edukasi publik.
+        </p>
+        <div class="footer-legal-bar">
+          <a href="/privacy/" class="footer-legal-link">Kebijakan Privasi (Privacy Policy)</a>
+          <span class="footer-legal-sep" aria-hidden="true">&bull;</span>
+          <span class="footer-legal-tag">UU PDP No. 27/2022 Compliant</span>
+        </div>
+      </div>
 
       <div class="footer-badges">
         <a href="https://github.com/aryarifki/aryarifki.github.io" target="_blank" rel="noopener noreferrer" class="badge-pill" title="Lihat kode sumber landing page ini di GitHub">

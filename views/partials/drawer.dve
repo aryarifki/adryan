@@ -16,13 +16,14 @@
     </div>
 
     <nav class="mobile-nav-links" aria-label="Menu Mobile Links">
-      <a class="mobile-nav-link" href="#overview"><span>[01] OVERVIEW</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#values"><span>[02] VALUES</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#projects"><span>[03] PRODUCTS &amp; REPO</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#methodology"><span>[04] TELEMETRY</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#ownership"><span>[05] STRUCTURE</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#insights"><span>[06] RISET DATA</span><span aria-hidden="true">&rarr;</span></a>
-      <a class="mobile-nav-link" href="#dispatch"><span>[07] DATA DISPATCH</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#overview"><span>[01] OVERVIEW</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#values"><span>[02] VALUES</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#projects"><span>[03] PRODUCTS &amp; REPO</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#methodology"><span>[04] TELEMETRY</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#ownership"><span>[05] STRUCTURE</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#insights"><span>[06] RISET DATA</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/#dispatch"><span>[07] DATA DISPATCH</span><span aria-hidden="true">&rarr;</span></a>
+      <a class="mobile-nav-link" href="/privacy/"><span>[08] KEBIJAKAN PRIVASI</span><span aria-hidden="true">&rarr;</span></a>
     </nav>
 
     <div class="mobile-nav-footer">
