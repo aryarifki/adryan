@@ -13,11 +13,11 @@
     <nav class="desktop-nav" aria-label="Navigasi Utama">
       <ul class="nav-menu">
         <li><a class="nav-link" href="/#overview">[01] OVERVIEW</a></li>
-        <li><a class="nav-link" href="/#values">[02] VALUES</a></li>
-        <li><a class="nav-link" href="/#projects">[03] PRODUCTS</a></li>
-        <li><a class="nav-link" href="/#methodology">[04] TELEMETRY</a></li>
-        <li><a class="nav-link" href="/#ownership">[05] STRUCTURE</a></li>
-        <li><a class="nav-link" href="/#insights">[06] RISET DATA</a></li>
+        <li><a class="nav-link" href="/#values">[02] NILAI</a></li>
+        <li><a class="nav-link" href="/#projects">[03] PROYEK</a></li>
+        <li><a class="nav-link" href="/#radar">[04] RADAR</a></li>
+        <li><a class="nav-link" href="/#insights">[05] RISET</a></li>
+        <li><a class="nav-link" href="/#dispatch">[06] DISPATCH</a></li>
       </ul>
     </nav>
 

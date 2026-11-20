@@ -170,4 +170,102 @@
       }
     });
   }
+
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // 5. HERO STATS COUNT-UP (ANIMASI ANGKA SAAT MASUK VIEWPORT)
+  // ══════════════════════════════════════════════════════════════════════════
+  var counters = document.querySelectorAll('[data-count]');
+
+  function runCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (isNaN(target)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = target.toLocaleString('id-ID');
+      return;
+    }
+    var duration = 1400;
+    var startTime = null;
+    function step(now) {
+      if (!startTime) startTime = now;
+      var progress = Math.min((now - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased).toLocaleString('id-ID');
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (counters.length > 0) {
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            runCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { counterObserver.observe(el); });
+    } else {
+      counters.forEach(runCounter);
+    }
+  }
+
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // 6. REVEAL ON SCROLL (ANIMASI MASUK SEKSI)
+  // ══════════════════════════════════════════════════════════════════════════
+  var revealEls = document.querySelectorAll('.reveal');
+
+  if (revealEls.length > 0) {
+    if ('IntersectionObserver' in window) {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function (el) { revealObserver.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  }
+
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // 7. RADAR KSEI: PENCARIAN / SARING TABEL LANGSUNG
+  // ══════════════════════════════════════════════════════════════════════════
+  var radarSearch = document.getElementById('radar-search');
+  var radarTable = document.getElementById('radar-table');
+  var radarCount = document.getElementById('radar-count');
+  var radarEmpty = document.getElementById('radar-empty');
+
+  if (radarSearch && radarTable) {
+    var radarRows = radarTable.querySelectorAll('tbody tr');
+
+    function updateRadarCount(visible) {
+      if (radarCount) {
+        radarCount.textContent = visible + '/' + radarRows.length + ' entitas';
+      }
+      if (radarEmpty) {
+        radarEmpty.hidden = visible !== 0;
+      }
+    }
+
+    updateRadarCount(radarRows.length);
+
+    radarSearch.addEventListener('input', function () {
+      var query = radarSearch.value.trim().toLowerCase();
+      var visible = 0;
+      radarRows.forEach(function (row) {
+        var match = query === '' || row.textContent.toLowerCase().indexOf(query) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      updateRadarCount(visible);
+    });
+  }
 })();

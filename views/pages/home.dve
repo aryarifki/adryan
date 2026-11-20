@@ -3,155 +3,151 @@
 {{#block body}}
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 1: [01] OVERVIEW (HERO & LIVE RADAR TELEMETRY)
+     SECTION 1: HERO — pernyataan besar, bukti angka, aksi utama
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="hero-section" id="overview" aria-labelledby="hero-title">
   <div class="container">
-    <div class="hero-grid">
-      <!-- Hero Left: Strategic Proposition -->
-      <div class="hero-content">
-        <div class="status-badge">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>KSEI &amp; BEI DATA PIPELINE ONLINE</span>
+    <div class="hero-top reveal">
+      <span class="hero-eyebrow mono">&lt;/&gt; {{ site.brandKicker }}</span>
+      <span class="status-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>KSEI &amp; BEI DATA PIPELINE ONLINE</span>
+      </span>
+    </div>
+
+    <h1 id="hero-title" class="hero-headline reveal">
+      Membaca pasar modal Indonesia <span class="headline-accent">lewat data</span>, bukan rumor.
+    </h1>
+
+    <p class="hero-one-liner reveal">
+      avenia.id adalah platform analitik kuantitatif independen: pelacakan smart-money (bandarmologi),
+      pemetaan kepemilikan saham BEI, dan jurnalisme data berbasis dataset resmi yang bisa diaudit siapa pun.
+    </p>
+
+    <div class="hero-cta-group reveal">
+      <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Buka Platform Investowl (Live Web App)">
+        <span>Luncurkan Platform Live</span>
+        <span aria-hidden="true">&nearr;</span>
+      </a>
+      <a href="#projects" class="btn-secondary-link">
+        <span>Jelajahi proyek &amp; riset &darr;</span>
+      </a>
+    </div>
+
+    <!-- Strip statistik: angka besar bergaya bukti sosial, animasi count-up -->
+    <div class="stats-strip reveal" aria-label="Statistik cakupan data avenia.id">
+      <div class="stat-cell">
+        <span class="stat-val mono"><span data-count="890">0</span>+</span>
+        <span class="stat-lbl">Emiten BEI Terindeks</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val mono"><span data-count="2400">0</span>+</span>
+        <span class="stat-lbl">Putusan Hukum &amp; Regulasi</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val mono"><span data-count="7">0</span></span>
+        <span class="stat-lbl">Platform &amp; Tools Dibangun</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-val mono"><span data-count="100">0</span>%</span>
+        <span class="stat-lbl">Data Empiris Terbuka</span>
+      </div>
+    </div>
+
+    <!-- Terminal radar: kartu visual khas avenia -->
+    <div class="hero-visual-card reveal" aria-label="Visualisasi Radar Telemetri Pasar">
+      <div class="telemetry-header-bar">
+        <div class="terminal-dots" aria-hidden="true">
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
         </div>
-
-        <h1 id="hero-title" class="hero-headline">
-          Quantitative Market Intelligence &amp; Smart Money Telemetry
-        </h1>
-
-        <p class="hero-one-liner">
-          Platform analitik kuantitatif, pelacakan smart-money (bandarmologi), dan pemetaan kepemilikan saham bursa Indonesia (BEI) berbasis matematika inferensial &amp; data empiris terbuka.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="https://investowl.avenia.my.id/" target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Buka Platform Investowl (Live Web App)">
-            <span>Luncurkan Platform Live</span>
-            <span aria-hidden="true">&nearr;</span>
-          </a>
-          <a href="#projects" class="btn-secondary-link">
-            <span>Eksplorasi Katalog Proyek &darr;</span>
-          </a>
-        </div>
-
-        <!-- Metrics Ribbon -->
-        <div class="hero-metrics-ribbon" aria-label="Ringkasan Metrik Telemetri">
-          <div class="metric-cell">
-            <span class="metric-val mono">99.8%</span>
-            <span class="metric-lbl">Akurasi Data</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-val mono">KSEI / BEI</span>
-            <span class="metric-lbl">Mutasi Harian T+1</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-val mono">WYCKOFF</span>
-            <span class="metric-lbl">Phase Engine</span>
-          </div>
-        </div>
+        <span class="mono">RADAR_TELEMETRY_LIVE.IDX</span>
+        <span class="telemetry-live mono">LIVE_STREAM</span>
       </div>
 
-      <!-- Hero Right: Live Radar Telemetry Terminal -->
-      <div class="hero-visual-card" aria-label="Visualisasi Radar Telemetri Pasar">
-        <div class="telemetry-header-bar">
-          <div class="terminal-dots" aria-hidden="true">
-            <div class="terminal-dot"></div>
-            <div class="terminal-dot"></div>
-            <div class="terminal-dot"></div>
-          </div>
-          <span class="mono">RADAR_TELEMETRY_LIVE.IDX</span>
-        </div>
+      <div class="hero-img-container">
+        <img src="/assets/resources/hero-matrix.png" alt="Terminal Avenia live telemetry radar snapshot" width="1120" height="560" loading="eager">
+      </div>
 
-        <div class="hero-img-container">
-          <img src="/assets/resources/hero-matrix.png" alt="Terminal Avenia live telemetry radar snapshot" width="560" height="280" loading="eager">
+      <div class="telemetry-ticker-grid">
+        <div class="ticker-item">
+          <span>SMART_MONEY</span>
+          <span class="ticker-bull">+12.4B ACC</span>
         </div>
-
-        <div class="telemetry-ticker-grid">
-          <div class="ticker-item">
-            <span>SMART_MONEY</span>
-            <span class="ticker-bull">+12.4B ACC</span>
-          </div>
-          <div class="ticker-item">
-            <span>FOREIGN_FLOW</span>
-            <span class="ticker-bull">+84.2M NET</span>
-          </div>
-          <div class="ticker-item">
-            <span>DOMESTIC_ACC</span>
-            <span class="ticker-bear">-32.1M DIST</span>
-          </div>
-          <div class="ticker-item">
-            <span>REGIME_STATE</span>
-            <span class="ticker-neutral">ACCUMULATION</span>
-          </div>
+        <div class="ticker-item">
+          <span>FOREIGN_FLOW</span>
+          <span class="ticker-bull">+84.2M NET</span>
+        </div>
+        <div class="ticker-item">
+          <span>DOMESTIC_ACC</span>
+          <span class="ticker-bear">-32.1M DIST</span>
+        </div>
+        <div class="ticker-item">
+          <span>REGIME_STATE</span>
+          <span class="ticker-neutral">ACCUMULATION</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Pita berjalan: kosakata ekosistem -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-chunk mono">BANDARMOLOGI ✦ WYCKOFF PHASE ✦ KSEI MUTATION ✦ FOREIGN FLOW ✦ UBO GRAPH ✦ SMART MONEY ✦ HMM REGIME ✦ VWAP FLOW ✦ DATA JOURNALISM ✦ OPEN DATASET ✦&nbsp;</span>
+    <span class="marquee-chunk mono">BANDARMOLOGI ✦ WYCKOFF PHASE ✦ KSEI MUTATION ✦ FOREIGN FLOW ✦ UBO GRAPH ✦ SMART MONEY ✦ HMM REGIME ✦ VWAP FLOW ✦ DATA JOURNALISM ✦ OPEN DATASET ✦&nbsp;</span>
+  </div>
+</div>
+
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 2: [02] VALUES (CORE FOUNDATION & EVIDENCE-BASED RIGOR)
+     SECTION 2: NILAI — fondasi kerja (data: values)
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="section values-section" id="values" aria-labelledby="values-heading">
   <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">CORE FOUNDATION</span>
-      <h2 id="values-heading" class="section-title">Engineered for Evidence-Based Market Precision</h2>
+    <div class="section-header reveal">
+      <span class="section-eyebrow mono">&lt;/&gt; Fondasi</span>
+      <h2 id="values-heading" class="section-title">Dibangun di atas bukti, bukan opini</h2>
       <p class="section-desc">
-        Investowl mengeliminasi noise pasar spekulatif dengan memadukan pemodelan kuantitatif matematika yang ketat dan telemetri struktural mikro pasar modal terverifikasi.
+        Tiga prinsip yang menjaga setiap angka, grafik, dan kesimpulan di avenia.id tetap bisa diuji ulang oleh siapa pun.
       </p>
     </div>
 
     <div class="values-grid">
-      <article class="value-card">
-        <span class="value-num">// VALUE_01</span>
-        <h3 class="value-title">Quantitative Rigor</h3>
-        <p class="value-desc">
-          Kalkulasi algoritmik, model regresi Gaussian HMM, dan batasan risiko deterministik mengeliminasi bias emosional subyektif dalam analisis pergerakan saham likuid.
-        </p>
+      {{#each values as v~}}
+      <article class="value-card reveal">
+        <span class="value-num mono">{{ v.num }}</span>
+        <h3 class="value-title">{{ v.title }}</h3>
+        <p class="value-desc">{{ v.desc }}</p>
       </article>
-
-      <article class="value-card">
-        <span class="value-num">// VALUE_02</span>
-        <h3 class="value-title">Data Transparency</h3>
-        <p class="value-desc">
-          Visibilitas tanpa sensor terhadap transaksi broker, laporan kepemilikan KSEI bulanan &gt;5%, serta parameter akumulasi foreign flow tanpa heuristik tertutup.
-        </p>
-      </article>
-
-      <article class="value-card">
-        <span class="value-num">// VALUE_03</span>
-        <h3 class="value-title">Market Intelligence</h3>
-        <p class="value-desc">
-          Pelacakan sindikasi bandarmologi, pengenalan siklus struktural Wyckoff otomatis, dan pengungkapan jejaring graf kepemilikan penerima manfaat akhir (UBO).
-        </p>
-      </article>
+      {{~/each}}
     </div>
   </div>
 </section>
 
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 3: [03] PRODUCTS & ECOSYSTEM (KATALOG KARYA & SOURCE CODE)
+     SECTION 3: SHOWCASE — katalog proyek dengan filter kategori
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="section products-section" id="projects" aria-labelledby="products-heading">
   <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">SYSTEM MODULES &amp; REPOSITORIES</span>
-      <h2 id="products-heading" class="section-title">Quantitative Product Suite &amp; Ecosystem</h2>
+    <div class="section-header reveal">
+      <span class="section-eyebrow mono">&lt;/&gt; Showcase</span>
+      <h2 id="products-heading" class="section-title">Katanya analisis doang, tapi karyanya jadi</h2>
       <p class="section-desc">
-        Aplikasi web analitik, pipeline kuantitatif, dan bot otomasi yang aktif beroperasi di ekosistem Avenia dengan kode sumber terbuka.
+        Tujuh platform, pipeline, dan bot otomasi yang aktif beroperasi di ekosistem Avenia — sebagian besar live dan berkode sumber terbuka. Saring berdasarkan kategori untuk menjelajah.
       </p>
     </div>
 
     <!-- Category Filter Tabs -->
-    <div class="project-filter-bar" role="tablist" aria-label="Filter kategori modul">
+    <div class="project-filter-bar reveal" role="tablist" aria-label="Filter kategori modul">
       {{#each categories as cat~}}
-      <button 
-        type="button" 
-        class="filter-tab-btn {{#if @first}}active{{/if}}" 
-        data-filter="{{ cat.key }}" 
-        role="tab" 
+      <button
+        type="button"
+        class="filter-tab-btn {{#if @first}}active{{/if}}"
+        data-filter="{{ cat.key }}"
+        role="tab"
         aria-selected="{{#if @first}}true{{else}}false{{/if}}"
       >
         <span>{{ cat.label }}</span>
@@ -166,7 +162,7 @@
       <article class="product-card {{#if p.featured}}featured-wide{{/if}}" data-category="{{ p.category }}" data-slug="{{ p.slug }}">
         <div>
           <div class="product-tag-bar">
-            <span class="product-code">{{ p.tag }} // {{ p.year }}</span>
+            <span class="product-code mono">{{ p.tag }} // {{ p.year }}</span>
             {{#if p.isDeployed}}
             <span class="product-status-pill status-live" title="Layanan aktif dan dapat diakses">
               <span class="status-dot" aria-hidden="true"></span>
@@ -235,10 +231,10 @@
     </div>
 
     <!-- Landing Page Source Code Callout Banner -->
-    <div class="landing-source-banner">
+    <div class="landing-source-banner reveal">
       <div class="source-banner-content">
         <div class="source-banner-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         </div>
         <div>
           <h4 class="source-banner-title">Kode Sumber Landing Page Ini</h4>
@@ -255,134 +251,113 @@
 
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 4: [04] TELEMETRY (ANALYTICAL FRAMEWORK & VECTOR GRID)
+     SECTION 4: RADAR — seksi interaktif: tabel mutasi KSEI yang bisa dicari
      ══════════════════════════════════════════════════════════════════════ --}}
-<section class="section telemetry-section" id="methodology" aria-labelledby="telemetry-heading">
+<section class="section radar-section" id="radar" aria-labelledby="radar-heading">
   <div class="container">
-    <div class="telemetry-layout">
-      <div>
-        <span class="section-eyebrow">ANALYTICAL FRAMEWORK</span>
-        <h2 id="telemetry-heading" class="section-title">Systematic Algorithmic Processing</h2>
-        <p class="section-desc">
-          Investowl memproses transaksi bursa mentah, laporan kustodian KSEI, dan keterbukaan informasi emiten BEI melalui filter kuantitatif terstruktur.
-        </p>
+    <div class="section-header reveal">
+      <span class="section-eyebrow mono">&lt;/&gt; Radar Data</span>
+      <h2 id="radar-heading" class="section-title">Lihat sendiri mutasinya, jangan katanya</h2>
+      <p class="section-desc">
+        Cuplikan radar mutasi kepemilikan KSEI: indeks kustodian sentral dipetakan ke jaringan penerima manfaat akhir (UBO).
+        Ketik nama entitas atau tipe untuk menyaring tabelnya langsung.
+      </p>
+    </div>
 
-        <ul class="telemetry-list">
-          <li class="telemetry-item">
-            <span class="telemetry-icon">[01]</span>
-            <div>
-              <h4 class="telemetry-item-title">Bandarmology Accumulation Matrix</h4>
-              <p class="telemetry-item-text">
-                Menghitung skor akumulasi institusi menggunakan protokol pelacakan broker tertimbang volume (VWAP flow) dan deteksi anomali transfer crossing.
-              </p>
-            </div>
-          </li>
-          <li class="telemetry-item">
-            <span class="telemetry-icon">[02]</span>
-            <div>
-              <h4 class="telemetry-item-title">Wyckoff Phase Recognition</h4>
-              <p class="telemetry-item-text">
-                Pemetaan siklus struktural pasar otomatis dari fase akumulasi awal, spring, hingga breakout markup bervolume tinggi.
-              </p>
-            </div>
-          </li>
-          <li class="telemetry-item">
-            <span class="telemetry-icon">[03]</span>
-            <div>
-              <h4 class="telemetry-item-title">Foreign Flow Shock Analysis</h4>
-              <p class="telemetry-item-text">
-                Mengidentifikasi lonjakan arus dana asing bernilai signifikan dan memisahkan posisi institusi global dari transaksi ritel jangka pendek.
-              </p>
-            </div>
-          </li>
-        </ul>
+    <div class="telemetry-strip reveal" aria-label="Cakupan telemetri avenia.id">
+      {{#each telemetry as tm~}}
+      <div class="telemetry-cell">
+        <span class="telemetry-val mono">{{ tm.value }}</span>
+        <span class="telemetry-lbl">{{ tm.label }}</span>
+        <span class="telemetry-sub">{{ tm.sub }}</span>
+      </div>
+      {{~/each}}
+    </div>
+
+    <div class="data-card reveal" aria-label="Radar Mutasi KSEI (sampel data)">
+      <div class="data-card-header">
+        <span class="mono">SAMPLE_KSEI_MUTATION_RADAR</span>
+        <span class="mono data-card-live">LIVE_STREAM</span>
       </div>
 
-      <div class="visual-frame" aria-label="Visualisasi Grid Metrik Makro Finansial">
-        <img src="/assets/resources/macro-grid.png" alt="Investowl live market intelligence and ownership telemetry snapshot" width="600" height="354" loading="lazy">
+      <div class="radar-tools">
+        <label class="radar-search-label" for="radar-search">Saring entitas</label>
+        <input type="search" id="radar-search" class="radar-search" placeholder="Coba: foreign, accum, ubo…" autocomplete="off">
+        <span class="radar-count mono" id="radar-count" role="status"></span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table-simulated" id="radar-table">
+          <thead>
+            <tr>
+              <th scope="col">ENTITY / BROKER</th>
+              <th scope="col">TYPE</th>
+              <th scope="col">MUTATION</th>
+              <th scope="col">STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each kseiMutations as km~}}
+            <tr>
+              <td>{{ km.entity }}</td>
+              <td>{{ km.type }}</td>
+              <td>{{ km.mutation }}</td>
+              <td><span class="{{ km.statusClass }}">{{ km.status }}</span></td>
+            </tr>
+            {{~/each}}
+          </tbody>
+        </table>
+      </div>
+      <p class="radar-empty" id="radar-empty" hidden>Tidak ada entitas yang cocok. Coba kata kunci lain.</p>
+
+      <div class="network-graph-card">
+        <img src="/assets/resources/graph-net.png" alt="Terminal Avenia BEI 1% and institutional network radar snapshot" width="1120" height="360" loading="lazy">
       </div>
     </div>
+
+    <ul class="telemetry-list reveal">
+      <li class="telemetry-item">
+        <span class="telemetry-icon mono">[01]</span>
+        <div>
+          <h4 class="telemetry-item-title">Bandarmology Accumulation Matrix</h4>
+          <p class="telemetry-item-text">Skor akumulasi institusi dari pelacakan broker tertimbang volume (VWAP flow) dan deteksi anomali transfer crossing.</p>
+        </div>
+      </li>
+      <li class="telemetry-item">
+        <span class="telemetry-icon mono">[02]</span>
+        <div>
+          <h4 class="telemetry-item-title">Wyckoff Phase Recognition</h4>
+          <p class="telemetry-item-text">Pemetaan siklus struktural pasar otomatis — dari fase akumulasi awal, spring, hingga breakout markup bervolume tinggi.</p>
+        </div>
+      </li>
+      <li class="telemetry-item">
+        <span class="telemetry-icon mono">[03]</span>
+        <div>
+          <h4 class="telemetry-item-title">Foreign Flow Shock Analysis</h4>
+          <p class="telemetry-item-text">Identifikasi lonjakan arus dana asing signifikan, memisahkan posisi institusi global dari transaksi ritel jangka pendek.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 5: [05] STRUCTURE (SIMULATED KSEI RADAR & NETWORK GRAPH)
-     ══════════════════════════════════════════════════════════════════════ --}}
-<section class="section ownership-section" id="ownership" aria-labelledby="ownership-heading">
-  <div class="container">
-    <div class="ownership-grid">
-      <!-- 1. Narrative & Structural Context (Top on mobile, left on desktop) -->
-      <div class="ownership-narrative">
-        <span class="section-eyebrow">STRUCTURAL INTELLIGENCE</span>
-        <h2 id="ownership-heading" class="section-title">Mapping Indonesian Equity Market DNA</h2>
-        <p class="section-desc" style="margin-bottom: 1.25rem;">
-          Dengan mengindeks data kustodian sentral KSEI dan memetakan jaringan konglomerasi pengendali, Investowl memungkinkan trader melihat melampaui pergerakan harga dangkal menuju struktur penerima manfaat sebenarnya (Ultimate Beneficial Owner).
-        </p>
-        <p class="section-desc">
-          Temukan pola sindikasi broker, akun nominee terafiliasi, dan mutasi pemegang saham bulanan &gt;5% di seluruh emiten yang tercatat di Bursa Efek Indonesia.
-        </p>
-      </div>
-
-      <!-- 2. Simulated KSEI Mutation Radar Card -->
-      <div class="data-card" aria-label="Simulasi Data Radar Mutasi KSEI">
-        <div class="data-card-header">
-          <span>SAMPLE_KSEI_MUTATION_RADAR</span>
-          <span class="mono" style="color:var(--accent-amber);">LIVE_STREAM</span>
-        </div>
-        
-        <div class="table-scroll-hint" aria-hidden="true">
-          <span>&larr; Geser tabel untuk melihat seluruh kolom data &rarr;</span>
-        </div>
-        
-        <div class="table-responsive">
-          <table class="table-simulated">
-            <thead>
-              <tr>
-                <th scope="col">ENTITY / BROKER</th>
-                <th scope="col">TYPE</th>
-                <th scope="col">MUTATION</th>
-                <th scope="col">STATUS</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each kseiMutations as km~}}
-              <tr>
-                <td>{{ km.entity }}</td>
-                <td>{{ km.type }}</td>
-                <td>{{ km.mutation }}</td>
-                <td><span class="{{ km.statusClass }}">{{ km.status }}</span></td>
-              </tr>
-              {{~/each}}
-            </tbody>
-          </table>
-        </div>
-
-        <div class="network-graph-card">
-          <img src="/assets/resources/graph-net.png" alt="Terminal Avenia BEI 1% and institutional network radar snapshot" width="560" height="180" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 6: [06] FEATURED INSIGHTS (RISET & JURNALISME DATA EMPIRIS)
+     SECTION 5: RISET — kajian & jurnalisme data terbaru
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="section insights-section" id="insights" aria-labelledby="insights-heading">
   <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">RISET &amp; INVESTIGASI EMPIRIS</span>
-      <h2 id="insights-heading" class="section-title">Featured Insights &amp; Data Journalism</h2>
+    <div class="section-header reveal">
+      <span class="section-eyebrow mono">&lt;/&gt; Riset Terbaru</span>
+      <h2 id="insights-heading" class="section-title">Kajian yang bisa kamu audit sendiri</h2>
       <p class="section-desc">
-        Kajian mendalam berbasis dataset resmi yang dapat diaudit publik, terbebas dari bias sensasi dan clickbait pasar.
+        Setiap kajian bertolak dari dataset resmi yang terbuka — terbebas dari bias sensasi dan clickbait pasar.
       </p>
     </div>
 
     <div class="insights-grid">
       {{#each insights as i~}}
-      <article class="insight-card">
+      <article class="insight-card reveal">
         <div>
           <div class="insight-topbar">
             <span class="insight-category-chip">{{ i.category }}</span>
@@ -393,7 +368,6 @@
           <p class="insight-summary">{{ i.summary }}</p>
         </div>
 
-        <!-- Dynamic Micro-Sparkline Chart -->
         <div class="insight-sparkline-box" aria-hidden="true">
           <svg viewBox="0 0 240 44" class="sparkline-svg">
             <defs>
@@ -420,16 +394,15 @@
 
 
 {{!-- ══════════════════════════════════════════════════════════════════════
-     SECTION 7: DATA DISPATCH (NEWSLETTER & INTERACTIVE ACTION)
+     SECTION 6: CTA PENUTUP — Data Dispatch
      ══════════════════════════════════════════════════════════════════════ --}}
 <section class="section section-dark-cta" id="dispatch" aria-labelledby="dispatch-heading">
   <div class="container">
-    <div class="dark-cta-card">
-      <span class="dark-cta-kicker">Data Dispatch Mingguan</span>
+    <div class="dark-cta-card reveal">
+      <span class="dark-cta-kicker mono">&lt;/&gt; Data Dispatch Mingguan</span>
       <h2 id="dispatch-heading" class="dark-cta-title">{{ newsletter.heading }}</h2>
       <p class="dark-cta-sub">{{ newsletter.sub }}</p>
 
-      <!-- Newsletter Subscription Form -->
       <form class="dark-cta-form" id="newsletter-form">
         <div class="form-input-group">
           <input type="email" class="dark-cta-input" placeholder="Masukkan alamat email Anda..." required aria-label="Alamat Email untuk Langganan">
