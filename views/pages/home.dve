@@ -378,7 +378,7 @@
             </defs>
             <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38 L 230 44 L 10 44 Z" fill="url(#sparkgrad-{{ i.slug }})"></path>
             <path d="M 10 32 C 60 26, 100 12, 140 18 C 180 24, 210 34, 230 38" fill="none" stroke="#ffb879" stroke-width="2.2" stroke-linecap="round"></path>
-            <circle cx="230" cy="38" r="4" fill="#141210" stroke="#ffb879" stroke-width="2.5"></circle>
+            <circle cx="230" cy="38" r="4" fill="#ffffff" stroke="#ff9e4f" stroke-width="2.5"></circle>
           </svg>
         </div>
 
