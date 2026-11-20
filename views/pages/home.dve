@@ -67,7 +67,7 @@
       </div>
 
       <div class="hero-img-container">
-        <img src="/assets/resources/hero-matrix.png" alt="Terminal Avenia live telemetry radar snapshot" width="1120" height="560" loading="eager">
+        <img src="/assets/resources/hero-foreign-flow.svg" alt="Grafik candlestick BBCA dan aliran dana asing kumulatif (cumulative foreign flow) 100 hari terakhir — Investowl" width="1080" height="930" loading="eager">
       </div>
 
       <div class="telemetry-ticker-grid">
@@ -311,7 +311,7 @@
       <p class="radar-empty" id="radar-empty" hidden>Tidak ada entitas yang cocok. Coba kata kunci lain.</p>
 
       <div class="network-graph-card">
-        <img src="/assets/resources/graph-net.png" alt="Terminal Avenia BEI 1% and institutional network radar snapshot" width="1120" height="360" loading="lazy">
+        <img src="/assets/resources/top10-grup-mtd.svg" alt="Peringkat Top 10 grup konglomerasi BEI berdasarkan rata-rata MTD — Hashim, Happy Hapsoro, SSI Group, Low Tuck Kwong, Lo Kheng Hong, MNC, Provident, Panin, Danantara, Astra" width="1080" height="632" loading="lazy">
       </div>
     </div>
 
