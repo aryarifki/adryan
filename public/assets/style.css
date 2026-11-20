@@ -1703,3 +1703,195 @@ input { font-family: inherit; }
     justify-content: center;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   17. DYNAMIC GRADIENT THEME (2026-11-20)
+   Lapisan tema dinamis: gradien hidup dari palet utama avenia saat ini
+   (amber #ffb879 → #ff9e4f, dengan aksen emerald, cyan, rose seperlunya)
+   di atas dasar obsidian. Animasi digerakkan keyframes + variabel
+   --mx/--my (parallax pointer) dan --scroll (progres scroll) dari main.js.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --grad-amber: linear-gradient(120deg, #ffb879 0%, #ff9e4f 48%, #ffb879 100%);
+  --grad-border: linear-gradient(135deg, rgba(255, 184, 121, 0.65), rgba(56, 189, 248, 0.28) 38%, rgba(16, 185, 129, 0.3) 68%, rgba(255, 158, 79, 0.65));
+  --grad-text: linear-gradient(100deg, #ffd9ad 0%, #ffb879 35%, #ff9e4f 62%, #ffc98f 100%);
+}
+
+body {
+  background:
+    linear-gradient(180deg, #141110 0%, var(--bg-obsidian) 340px, var(--bg-obsidian) 100%);
+}
+
+/* Bilah progres scroll gradien di tepi atas layar */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 300;
+  background: linear-gradient(90deg, var(--accent-amber), var(--info-cyan), var(--bullish-emerald), var(--accent-amber-strong));
+  background-size: 200% 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(var(--scroll, 0));
+  pointer-events: none;
+}
+
+/* — Hero: dua lapisan gradien hidup (drift otomatis + parallax pointer) — */
+.hero-section { isolation: isolate; }
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: -22% -12%;
+  z-index: -2;
+  background:
+    radial-gradient(560px 380px at 84% 6%, rgba(255, 158, 79, 0.28), transparent 65%),
+    radial-gradient(680px 460px at 8% 88%, rgba(56, 189, 248, 0.13), transparent 62%),
+    radial-gradient(520px 360px at 58% 108%, rgba(16, 185, 129, 0.12), transparent 65%),
+    radial-gradient(420px 300px at 30% -6%, rgba(244, 63, 94, 0.08), transparent 60%);
+  filter: blur(28px);
+  animation: gradient-drift 17s ease-in-out infinite alternate;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(480px 300px at calc(72% + var(--mx, 0) * 3%) calc(18% + var(--my, 0) * 3%), rgba(255, 184, 121, 0.14), transparent 65%),
+    radial-gradient(380px 260px at calc(16% - var(--mx, 0) * 2%) calc(64% - var(--my, 0) * 2%), rgba(56, 189, 248, 0.09), transparent 62%);
+  transform: translate3d(calc(var(--mx, 0) * 12px), calc(var(--my, 0) * 9px), 0);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+@keyframes gradient-drift {
+  from { transform: translate3d(-2.5%, -1.5%, 0) scale(1); }
+  to { transform: translate3d(2.5%, 2%, 0) scale(1.07); }
+}
+
+/* — Teks & angka gradien — */
+.headline-accent {
+  background-image: var(--grad-text);
+  background-size: 220% 100%;
+  animation: gradient-pan 7s ease-in-out infinite alternate;
+}
+
+.section-eyebrow {
+  background-image: var(--grad-text);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-pan 9s ease-in-out infinite alternate;
+}
+
+.stat-val, .telemetry-val {
+  background-image: var(--grad-text);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@keyframes gradient-pan {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* — Tombol gradien — */
+.btn-primary, .btn-header-action, .btn-primary-full, .dark-cta-submit-btn {
+  background-image: var(--grad-amber);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  transition: background-position 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btn-primary:hover, .btn-header-action:hover, .btn-primary-full:hover, .dark-cta-submit-btn:hover {
+  background-position: 95% 50%;
+}
+
+.filter-tab-btn.active {
+  background-image: var(--grad-amber);
+  background-size: 200% 100%;
+}
+
+.insight-category-chip {
+  background-image: var(--grad-amber);
+  background-size: 180% 100%;
+}
+
+/* — Kartu dengan bingkai gradien — */
+.stats-strip, .hero-visual-card, .dark-cta-card {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, var(--bg-surface), var(--bg-deep)) padding-box,
+    var(--grad-border) border-box;
+}
+.hero-visual-card {
+  background:
+    linear-gradient(var(--bg-deep), var(--bg-deep)) padding-box,
+    var(--grad-border) border-box;
+}
+.dark-cta-card {
+  background:
+    radial-gradient(720px 340px at 50% -12%, rgba(255, 184, 121, 0.17), transparent 65%) padding-box,
+    linear-gradient(180deg, var(--bg-surface-elevated), var(--bg-surface)) padding-box,
+    var(--grad-border) border-box;
+}
+
+/* Kartu proyek unggulan: bingkai conic berputar perlahan */
+.product-card.featured-wide {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-surface) 55%) padding-box,
+    conic-gradient(from var(--angle), rgba(255, 184, 121, 0.75), rgba(56, 189, 248, 0.3), rgba(16, 185, 129, 0.35), rgba(255, 158, 79, 0.75)) border-box;
+  animation: border-spin 9s linear infinite;
+}
+
+@keyframes border-spin {
+  to { --angle: 360deg; }
+}
+
+/* — Marquee gradien — */
+.marquee {
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 184, 121, 0.07) 22%, rgba(56, 189, 248, 0.05) 55%, rgba(16, 185, 129, 0.06) 78%, transparent),
+    var(--bg-deep);
+}
+.marquee-chunk {
+  background-image: linear-gradient(90deg, var(--text-dim), #e8d9c8 50%, var(--text-dim));
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-pan 11s linear infinite alternate;
+}
+
+/* — Pendaran gradien saat hover — */
+.value-card:hover, .insight-card:hover {
+  box-shadow: 0 22px 44px -22px rgba(255, 158, 79, 0.35);
+}
+.product-card:hover {
+  box-shadow: 0 22px 44px -24px rgba(255, 158, 79, 0.32);
+}
+
+/* — Gerak dikurangi: tema tetap gradien, animasi dimatikan — */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section::before, .headline-accent, .section-eyebrow,
+  .product-card.featured-wide, .marquee-chunk { animation: none; }
+  .hero-section::after { transition: none; transform: none; }
+  body::before { transform: scaleX(0); }
+}

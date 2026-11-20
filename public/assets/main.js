@@ -268,4 +268,59 @@
       updateRadarCount(visible);
     });
   }
+
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // 8. DYNAMIC GRADIENT THEME ENGINE
+  //    --scroll: progres scroll halaman (bilah gradien atas)
+  //    --mx/--my: posisi pointer untuk parallax gradien hero
+  // ══════════════════════════════════════════════════════════════════════════
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion) {
+    var ticking = false;
+
+    function updateScrollVar() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      document.documentElement.style.setProperty('--scroll', ratio.toFixed(4));
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateScrollVar);
+      }
+    }, { passive: true });
+    updateScrollVar();
+
+    var heroSection = document.querySelector('.hero-section');
+    var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+
+    if (heroSection && finePointer) {
+      var heroTicking = false;
+      var lastX = 0;
+      var lastY = 0;
+
+      heroSection.addEventListener('pointermove', function (e) {
+        var rect = heroSection.getBoundingClientRect();
+        lastX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        lastY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+        if (!heroTicking) {
+          heroTicking = true;
+          requestAnimationFrame(function () {
+            document.documentElement.style.setProperty('--mx', lastX.toFixed(3));
+            document.documentElement.style.setProperty('--my', lastY.toFixed(3));
+            heroTicking = false;
+          });
+        }
+      });
+
+      heroSection.addEventListener('pointerleave', function () {
+        document.documentElement.style.setProperty('--mx', '0');
+        document.documentElement.style.setProperty('--my', '0');
+      });
+    }
+  }
 })();
